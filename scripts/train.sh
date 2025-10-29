@@ -1,3 +1,15 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+#$ -j yes
+#$ -l qp=cuda-long  
+#$ -l gpuclass='volta'
+#$ -l cudamem=32G 
+
+source ~/.bashrc
+conda activate venv
+export CUDA_VISIBLE_DEVICES=$X_SGE_CUDA_DEVICE
+
 mode="mcqmembothflatten"
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct
@@ -27,4 +39,4 @@ python scripts/train.py \
     --losstype $mode \
     --npo_beta 0.05 \
     --retain_factor 1.0 \
-    --selfchecksamples 20 \
+    --selfchecksamples 20

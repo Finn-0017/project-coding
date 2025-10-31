@@ -14,7 +14,7 @@ unlearning-hallu/
 ├── models.py                    # Model classes and unlearning logic
 ├── dataloader.py                # Dataset classes for training
 ├── scripts/                     # Training and evaluation scripts
-│   ├── train.py, train.sh       # DF-MCQ training
+│   ├── train.py, train.sh          # DF-MCQ training
 │   ├── train_whp.py, train_whp.sh  # WHP obfuscation training  
 │   ├── inference.py, eval.sh       # Model evaluation
 │   └── generate_*.py, score_*.py   # Data generation and scoring

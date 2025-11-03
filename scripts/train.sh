@@ -1,6 +1,6 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
-pwd
+python -m scripts.train "$@"
 
 mode="mcqmembothflatten"
 

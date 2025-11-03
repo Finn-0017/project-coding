@@ -1,9 +1,3 @@
-#!/bin/bash
-#$ -S /bin/bash
-source ~/.bashrc
-conda activate venv
-export CUDA VISIBLE DEVICES=$X SGE CUDA DEVICE
-
 mode="mcqmembothflatten"
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct

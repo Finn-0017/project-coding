@@ -7,8 +7,7 @@ mode="mcqmembothflatten"
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
 expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_${mode}_1_mem1.0"
-cachedir="./hf_models"
-mkdir -p $expdir $cachedir
+mkdir -p $expdir
 
 python scripts/train.py \
     --model_path $modelpath \
@@ -32,5 +31,4 @@ python scripts/train.py \
     --losstype $mode \
     --npo_beta 0.05 \
     --retain_factor 1.0 \
-    --selfchecksamples 20 \
-    --cache_dir $cachedir
+    --selfchecksamples 20

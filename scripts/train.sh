@@ -8,7 +8,7 @@ traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
 expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_${mode}_1_mem1.0"
 mkdir -p $expdir
 
-python scripts/train.py \
+python -m scripts/train.py \
     --model_path $modelpath \
     --batch_size 8 \
     --learning_rate 20e-5 \

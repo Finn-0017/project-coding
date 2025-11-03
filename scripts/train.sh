@@ -6,13 +6,11 @@ mode="mcqmembothflatten"
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
 expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_${mode}_1_mem1.0"
-cache_dir="./hf_models"
 
-mkdir -p "$expdir" "$cache_dir"
+mkdir -p "$expdir" 
 
 python -m scripts.train \
   --model_path "$modelpath" \
-  --cache_dir "$cache_dir" \
   --batch_size 8 \
   --learning_rate 2e-4 \
   --gradient_accumulation_steps 1 \

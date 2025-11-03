@@ -10,7 +10,7 @@ expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_${mode}_1_mem1.0"
 cachedir="./hf_models"
 mkdir -p $expdir $cachedir
 
-python -m scripts/train \
+python scripts/train.py \
     --model_path $modelpath \
     --batch_size 8 \
     --learning_rate 20e-5 \

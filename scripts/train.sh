@@ -1,5 +1,6 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
+pwd
 
 mode="mcqmembothflatten"
 

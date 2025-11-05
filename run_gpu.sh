@@ -53,12 +53,12 @@ module purge                               # Removes all modules still loaded
 module load rhel8/default-amp              # REQUIRED - loads the basic environment
 
 #! Insert additional module load commands after this line if needed:
-source venv/bin/activate
+source /home/xy319/venvs/venv/bin/activate
 #! Full path to application executable: 
 application="python"
 
 #! Run options for the application:
-options="paraphrase.py"
+options="train.sh"
 
 #! Work directory (i.e. where the job will run):
 workdir="$SLURM_SUBMIT_DIR"  # The value of SLURM_SUBMIT_DIR sets workdir to the directory

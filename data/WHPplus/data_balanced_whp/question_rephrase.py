@@ -18,7 +18,7 @@ from typing import Dict, Any, Tuple
 from openai import OpenAI
 
 # ===== Configuration =====
-LOCAL_MODEL_PATH = "/home/xy319/venvs/venv/hf_models/models--meta-llama--Llama-3.1-8B-Instruct"
+LOCAL_MODEL_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct"
 LOCAL_BASE_URL = "http://localhost:8000/v1"
 SYSTEM_PROMPT = """You are a precise rephraser. Convert a single multiple-choice question about a PERSON \
 into ONE declarative sentence that PRESERVES the semantic RELATION between SUBJECT (the person), \

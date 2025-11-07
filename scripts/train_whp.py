@@ -211,7 +211,7 @@ def train_one_epoch(
         forget_samples, forget_labels, forget_dist = batch
 
         # Forward
-        if args.retain_factor > 0 and mem_sample_id is not None:
+        if args.retain_factor > 0 and 'mem_sample_id' in locals() and mem_sample_id is not None:
             mem_output = model(mem_sample_id).logits
             mem_output = mem_output[:, :-1]
             loss_mem = criterion(mem_output.reshape(-1, mem_output.size(-1)), mem_labels[:, 1:].reshape(-1)) * args.retain_factor

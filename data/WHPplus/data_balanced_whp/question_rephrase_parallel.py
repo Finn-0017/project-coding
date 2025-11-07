@@ -5,10 +5,14 @@ Generate concise factual statements from MCQs using a local Llama model.
 Supports item-level sharding across multiple GPUs for better load balance.
 
 Example (4 GPUs):
-CUDA_VISIBLE_DEVICES=0 python generate_statements_items.py --use-answer --num-shards 4 --shard-index 0 --output shard_0.json &
-CUDA_VISIBLE_DEVICES=1 python generate_statements_items.py --use-answer --num-shards 4 --shard-index 1 --output shard_1.json &
-CUDA_VISIBLE_DEVICES=2 python generate_statements_items.py --use-answer --num-shards 4 --shard-index 2 --output shard_2.json &
-CUDA_VISIBLE_DEVICES=3 python generate_statements_items.py --use-answer --num-shards 4 --shard-index 3 --output shard_3.json &
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 0 --output shard_0.json &
+CUDA_VISIBLE_DEVICES=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 1 --output shard_1.json &
+CUDA_VISIBLE_DEVICES=2 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 2 --output shard_2.json &
+CUDA_VISIBLE_DEVICES=3 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 3 --output shard_3.json &
 wait
 
 After generation, merge all shards into one final JSON file.

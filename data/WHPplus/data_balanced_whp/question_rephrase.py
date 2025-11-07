@@ -4,10 +4,11 @@
 Generate concise factual statements from MCQs using a local Llama model.
 Supports item-level sharding across multiple GPUs for better load balance.
 
-Key changes in this version:
+Key features:
 - Stream output to JSONL (one record per line) to avoid large in-memory dicts.
-- Flush to disk after every record (very robust against unexpected kills).
-- Create checkpoint flag files at 10%, 20%, ... progress (useful for monitoring / resume).
+- Flush + fsync after every record (very robust against unexpected kills).
+- Auto-resume from existing JSONL (skips already-completed items; truncates partial last line).
+- Create checkpoint flag files at 10%, 20%, ... of the remaining work (useful for monitoring).
 - Graceful SIGTERM handling to flush+sync before exiting.
 
 Example (single GPU, whole dataset):
@@ -31,8 +32,11 @@ import os
 import re
 import json
 import random
+import time
+import sys
+import signal
+import gc
 import torch
-import sys, signal, gc, time
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
@@ -118,8 +122,7 @@ def simple_check(name, choice_text, s):
 
 def generate(model, tokenizer, name, question, choice_letter, choice_text):
     """
-    Generate one factual statement by prompting the Llama model.
-    The generation is deterministic (do_sample=False).
+    Generate one factual statement by prompting the Llama model (deterministic generation).
     """
     prompt = INSTRUCTION + "\n\n" + json.dumps({
         "name": name,
@@ -141,7 +144,7 @@ def generate(model, tokenizer, name, question, choice_letter, choice_text):
             input_ids,
             attention_mask=attention_mask,
             max_new_tokens=MAX_NEW_TOKENS,
-            do_sample=False,  # deterministic output
+            do_sample=False,  # deterministic
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.pad_token_id,
         )
@@ -199,26 +202,58 @@ def main():
 
     # Assign items to this shard
     assigned = [t for i, t in enumerate(flat_items) if (i % num_shards) == shard_index]
-    total = len(assigned)
-    print(f"Total items: {len(flat_items)} | Shard {shard_index}/{num_shards} → {total} items")
+    original_total = len(assigned)
+    print(f"Total items: {len(flat_items)} | Shard {shard_index}/{num_shards} → {original_total} items")
 
-    # ===== JSONL streaming output + 10% checkpoints =====
+    # ===== JSONL streaming output + 10% checkpoints + AUTO-RESUME =====
     save_path = args.output
     if not save_path.endswith(".jsonl"):
-        save_path = args.output + ".jsonl"  # convert to JSONL automatically
+        save_path = args.output + ".jsonl"  # enforce JSONL extension
 
-    # Open output file in append mode: safe for re-runs or partial resumes.
+    # ---- AUTO-RESUME: count already-finished valid JSON lines, truncate partial tail if any ----
+    already = 0
+    if os.path.exists(save_path):
+        with open(save_path, "r", encoding="utf-8") as fin:
+            lines = fin.readlines()
+
+        # Count valid JSON lines from the top; stop at first invalid/partial
+        for ln in lines:
+            if not ln.strip():
+                continue
+            try:
+                json.loads(ln)
+                already += 1
+            except Exception:
+                break
+
+        # If the last line is partial/corrupted, truncate file back to last valid line
+        if already < len([ln for ln in lines if ln.strip()]):
+            with open(save_path, "w", encoding="utf-8") as fout_fix:
+                fout_fix.writelines(lines[:already])
+            print(f"[RESUME] Truncated {save_path} to {already} valid lines.")
+
+        if already > 0:
+            print(f"[RESUME] Found {already} completed records in {save_path}.")
+            # Skip first `already` items in this shard and continue with the remainder
+            assigned = assigned[already:]
+
+    total = len(assigned)
+    if total == 0:
+        print(f"[RESUME] Nothing to do for shard {shard_index}. All items already saved in {save_path}.")
+        return
+
+    # Open output file in append mode (safe for resume)
     fout = open(save_path, "a", encoding="utf-8")
 
     def write_one(rec: dict):
         """Write one record to JSONL and flush immediately (very robust)."""
         fout.write(json.dumps(rec, ensure_ascii=False) + "\n")
         fout.flush()
-        # fsync makes it durable even if the job is killed abruptly.
+        # fsync ensures durability even if the job is killed abruptly
         os.fsync(fout.fileno())
 
     def on_term(signum, frame):
-        """Ensure buffers are flushed and file is closed on SIGTERM (Slurm kill)."""
+        """Flush+sync on SIGTERM (Slurm kill) before exiting."""
         try:
             fout.flush()
             os.fsync(fout.fileno())
@@ -228,8 +263,8 @@ def main():
 
     signal.signal(signal.SIGTERM, on_term)
 
-    # Prepare progress / checkpointing
-    ckpt_step = max(1, total // 10)  # 10% checkpoints
+    # Prepare progress / checkpointing (10% of the remaining workload)
+    ckpt_step = max(1, total // 10)
     next_ckpt = ckpt_step
     start_ts = time.time()
     pbar = tqdm(total=total, desc=f"Shard {shard_index}")
@@ -252,7 +287,7 @@ def main():
             letter, choice_text = pick_choice(entry, use_answer)
             statement, ok = "", False
 
-            # Retry generation until it passes the sanity check
+            # Try generating up to MAX_RETRIES until it passes the sanity check
             for _ in range(MAX_RETRIES):
                 try:
                     statement = generate(model, tokenizer, name, question, letter, choice_text)
@@ -280,7 +315,7 @@ def main():
             processed += 1
             pbar.update(1)
 
-            # 10% checkpoints: create small flag files and run GC to keep memory stable
+            # 10% checkpoints on the remaining workload; also free memory
             if processed >= next_ckpt:
                 pct = int(round(processed * 100.0 / total))
                 ckpt_flag = f"{os.path.splitext(save_path)[0]}_checkpoint_{pct}pct.done"

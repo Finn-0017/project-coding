@@ -15,7 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # ================= CONFIG =================
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-INPUT_PATH = "forget_dedup.json"
+INPUT_PATH = "forget_dedup_sample50.json"
 OUTPUT_PATH = "forget_dedup_statement.json"
 MAX_NEW_TOKENS = 64
 MAX_RETRIES = 3
@@ -62,8 +62,16 @@ def generate(model, tokenizer, name, question, choice_letter, choice_text):
         {"role": "user", "content": prompt}
     ]
     input_ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
+    attention_mask = torch.ones_like(input_ids, dtype=torch.long, device=model.device)
     with torch.no_grad():
-        out = model.generate(input_ids, max_new_tokens=MAX_NEW_TOKENS, temperature=0.0)
+        out = model.generate(
+            input_ids,
+            attention_mask=attention_mask,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,                         # deterministic
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.pad_token_id      # now set, warning disappears
+        )
     text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
     if not text.endswith("."):
         text += "."
@@ -87,8 +95,10 @@ def main():
 
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
-    print(f"🔹 Loading model from: {MODEL_PATH}")
+    print(f"Loading model from: {MODEL_PATH}")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token = tokenizer.eos_token
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_PATH, torch_dtype=torch.bfloat16 if device.type=="cuda" else None
     ).to(device).eval()

@@ -217,7 +217,7 @@ def train_one_epoch(
             loss_mem = criterion(mem_output.reshape(-1, mem_output.size(-1)), mem_labels[:, 1:].reshape(-1)) * args.retain_factor
             loss_mem = loss_mem.mean()
         else:
-            loss_mem = 0
+            loss_mem = torch.zeros((), device=forget_output.device)
 
         forget_output = model(forget_samples).logits[:, :-1]
         if "kl" in args.losstype:
@@ -236,7 +236,8 @@ def train_one_epoch(
         if (i + 1) % args.log_interval == 0 and accelerator.is_main_process:
             elasped_time = time.time() - start
             PPL = math.exp(loss_forget.item() * args.gradient_accumulation_steps)
-            PPL_mem = math.exp(loss_mem.item() * args.gradient_accumulation_steps)
+            val_mem = loss_mem.item() if torch.is_tensor(loss_mem) else float(loss_mem)
+            PPL_mem = math.exp(val_mem * args.gradient_accumulation_steps)
             logging(f"Epoch {epoch} | Batch {i}/{trainsize} | PPL forget: {PPL} | PPL mem: {PPL_mem} | time {elasped_time}", args.logfile)
         if (i + 1) % args.save_interval == 0 and accelerator.is_main_process:
             logging(f"Saving at Step {i+1}", args.logfile)

@@ -13,7 +13,7 @@ def main():
     parser.add_argument("--input", type=str, default="forget_dedup.json", help="Input JSON file path")
     parser.add_argument("--output", type=str, default="forget_dedup_statement.json", help="Output JSON file path")
     parser.add_argument("--model_path", type=str,
-                        default="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct",
+                        default="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659",
                         help="Local model path")
     parser.add_argument("--use_answer", type=bool, default = True, help="Use the correct answer (factual mode)")
     parser.add_argument("--save_every", type=int, default=20, help="Autosave every N items")

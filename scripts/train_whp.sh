@@ -4,7 +4,7 @@ export PYTHONPATH="$(pwd):${PYTHONPATH}"
 
 mode="whp"
 nsample=20
-setid=$1
+setid=1
 passage_id=-1
 expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
 # expdir="exp/unlearning_whp_llama2_7B_MCQ_${mode}_1"
@@ -37,4 +37,3 @@ python scripts/train_whp.py \
     --passage_id $passage_id \
     --obfuscate_passages ./data/WHPplus/data_balanced_whp/forget_dedup_passage_obfuscate.json \
     # --obfuscate_passages exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_20/obfuscate_samples.json \
-    # --passage_id $passage_id \

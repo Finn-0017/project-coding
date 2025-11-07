@@ -28,8 +28,8 @@ SEED = 42
 BASE = Path(__file__).resolve().parent
 STATEMENT_JSONL = BASE / "forget_dedup_statement.jsonl"
 DEDUP_JSON      = BASE / "forget_dedup.json"
-OUT_GROUPED     = BASE / "forget_dedup_statement_obfuscate_grouped.json"
-OUT_SUMMARY     = BASE / "summary_obfuscate_grouped.json"
+OUT_GROUPED     = BASE / "forget_dedup_statement_obfuscate.json"
+OUT_SUMMARY     = BASE / "summary_obfuscate.json"
 
 random.seed(SEED)
 

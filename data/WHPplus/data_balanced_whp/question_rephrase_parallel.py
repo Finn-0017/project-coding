@@ -28,8 +28,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # ================= CONFIG =================
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-INPUT_PATH = "forget_dedup.json"
-OUTPUT_PATH = "forget_dedup_statement.json"
+INPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_dedup.json"
+OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_dedup_statement.json"
 MAX_NEW_TOKENS = 64
 MAX_RETRIES = 3
 SEED = 1234

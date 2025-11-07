@@ -18,6 +18,9 @@
 module purge
 module load rhel7/default-peta4
 
+. ~/.bashrc
+conda activate venv
+
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
 export TOKENIZERS_PARALLELISM=false

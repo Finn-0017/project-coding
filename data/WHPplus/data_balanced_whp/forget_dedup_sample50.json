@@ -1,0 +1,603 @@
+{
+  "10000":[
+    {
+        "answer": "D",
+        "question": "Which institution houses a notable collection of Krohg's art?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "The Louvre",
+            "B": "The Guggenheim Museum",
+            "C": "The Metropolitan Museum of Art",
+            "D": "National Museum of Art, Architecture and Design in Oslo",
+            "E": "The British Museum"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "What unique physical characteristic did Alicia de Larrocha have that helped her piano technique?",
+        "name": "Alicia de Larrocha",
+        "choices": {
+            "A": "Shorter fingers",
+            "B": "Strong wrists",
+            "C": "Double-jointed fingers",
+            "D": "Broad palms",
+            "E": "Long fifth finger"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "In what year was Benedetto Varchi arrested and tried for pederasty?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "1513",
+            "B": "1565",
+            "C": "1527",
+            "D": "1603",
+            "E": "1545"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which of the following works by Wilhelm Wattenbach was published in 1867 and again in 1895?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Das Schriftwesen im Mittelalter",
+            "B": "Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des XIII Jahrhunderts",
+            "C": "Geschichte des römischen Papsttums",
+            "D": "Beiträge zur Geschichte der christlichen Kirche in Böhmen und Mähren",
+            "E": "Anleitung zur griechischen Paläographie"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "What field did Wilhelm Wattenbach contribute to through his work 'Das Schriftwesen im Mittelalter'?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Medieval writing practices",
+            "B": "Architectural history",
+            "C": "Medieval warfare",
+            "D": "European art history",
+            "E": "Modern political theory"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which of the following was NOT one of the concertos Alicia de Larrocha was known for playing?",
+        "name": "Alicia de Larrocha",
+        "choices": {
+            "A": "Brahms's No. 2",
+            "B": "Katchaturian's Concerto",
+            "C": "Liszt's No. 1",
+            "D": "Rachmaninoff's No. 5",
+            "E": "Beethoven's all five"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "In which year did Karl Hartl make his directorial debut?",
+        "name": "Karl Hartl",
+        "choices": {
+            "A": "1925",
+            "B": "1942",
+            "C": "1915",
+            "D": "1949",
+            "E": "1930"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which book is NOT authored by P.A. Yeomans?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "The Keyline Plan",
+            "B": "Water For Every Farm",
+            "C": "The Challenge of Landscape",
+            "D": "The Farmer's Almanac",
+            "E": "The City Forest"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "What was the name of the journal that Christian Krohg founded and edited?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "Art Review",
+            "B": "L'Artiste",
+            "C": "Impressum",
+            "D": "Ars Nova",
+            "E": "Impressionisten"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "What was Varchi’s relationship with Cosimo I de' Medici?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "He was a staunch adversary.",
+            "B": "He never met him.",
+            "C": "He was exiled by him.",
+            "D": "He became a protégé and received a pension.",
+            "E": "He was a financial advisor."
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Wilhelm Wattenbach became a professor at which university in 1872?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Breslau",
+            "B": "Frankfurt",
+            "C": "Göttingen",
+            "D": "Heidelberg",
+            "E": "Berlin"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "What did Leo Slezak do before pursuing a career in opera?",
+        "name": "Leo Slezak",
+        "choices": {
+            "A": "He was a teacher.",
+            "B": "He was a lawyer.",
+            "C": "He was a banker.",
+            "D": "He was a tailor.",
+            "E": "He served in the army and worked as a blacksmith."
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which Spanish composers' works is Alicia de Larrocha credited with popularizing?",
+        "name": "Alicia de Larrocha",
+        "choices": {
+            "A": "Manuel de Falla and Joaquín Rodrigo",
+            "B": "Joaquín Turina and Cristóbal Halffter",
+            "C": "Pablo Casals and Andrés Segovia",
+            "D": "Isaac Albéniz and Enrique Granados",
+            "E": "Antoni Gaudí and Daniel Barenboim"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Who was Leo Slezak's son who became a Hollywood actor?",
+        "name": "Leo Slezak",
+        "choices": {
+            "A": "Arturo Toscanini",
+            "B": "Margarete Slezak",
+            "C": "Jean de Reszke",
+            "D": "Walter Slezak",
+            "E": "Erika Slezak"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "What musical instrument was Alicia de Larrocha known for playing?",
+        "name": "Alicia de Larrocha",
+        "choices": {
+            "A": "Guitar",
+            "B": "Cello",
+            "C": "Violin",
+            "D": "Piano",
+            "E": "Flute"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which of the following professions did P. A. Yeomans have?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "Botanist and agronomist",
+            "B": "Veterinarian and zoologist",
+            "C": "Meteorologist and climate scientist",
+            "D": "Anthropologist and sociologist",
+            "E": "Mining engineer and gold assayer"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "What profession did P.A. Yeomans have before he assumed management of Nevallan?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "Mining engineer and gold assayer",
+            "B": "Agricultural scientist",
+            "C": "Geologist",
+            "D": "Hydrologist",
+            "E": "Farmer"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "In which academic courses are P. A. Yeomans' Keyline principles now commonly included?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "Mechanical Engineering",
+            "B": "Marine Biology",
+            "C": "Nuclear Physics",
+            "D": "Sustainable agriculture",
+            "E": "Veterinary Science"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "Yeomans’ work largely contributed to the development of which modern agricultural design?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "Permaculture",
+            "B": "Vertical farming",
+            "C": "Aquaculture",
+            "D": "Hydroponics",
+            "E": "Urban farming"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which organization considered Wilhelm Wattenbach a distinguished scholar?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Monumenta Germaniae Historica",
+            "B": "University of Bonn",
+            "C": "Academy of Berlin",
+            "D": "University of Göttingen",
+            "E": "Encyclopædia Britannica Eleventh Edition"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which Medici ruler commissioned Benedetto Varchi to write the history of Florence?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "Lorenzo de' Medici",
+            "B": "Alessandro de' Medici",
+            "C": "Giovanni di Bicci de' Medici",
+            "D": "Piero de' Medici",
+            "E": "Cosimo I de' Medici"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "To which cultural or artistic movement did Benedetto Varchi belong?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "Renaissance humanism",
+            "B": "Baroque",
+            "C": "Neoclassicism",
+            "D": "Impressionism",
+            "E": "Romanticism"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "In what field is Martin Gutzwiller best known for his work?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "String theory",
+            "B": "General relativity",
+            "C": "Astrophysics",
+            "D": "Quantum chaos",
+            "E": "Condensed matter physics"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which historical family was involved in Varchi's life and works?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "Borgia",
+            "B": "Sforza",
+            "C": "Visconti",
+            "D": "Gonzaga",
+            "E": "Medici"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which important historical period did Varchi's 'Storia fiorentina' cover?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "1500 to 1510",
+            "B": "1550 to 1600",
+            "C": "1620 to 1700",
+            "D": "1400 to 1450",
+            "E": "1527 to 1538"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which fellowship is named in honor of Martin Gutzwiller to promote research in theoretical physics?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "Einstein Fellowship",
+            "B": "Pauli Prize",
+            "C": "Quantum Mechanics Fellowship",
+            "D": "Gutzwiller Fellowship",
+            "E": "Max Dresden Fellowship"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which historical figure is Varchi mentioned alongside with approbation in Ezra Pound's 'The Cantos'?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "Dante Alighieri",
+            "B": "Lorenzo de' Medici",
+            "C": "Michelangelo",
+            "D": "Niccolò Machiavelli",
+            "E": "Alessandro de' Medici"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Martin Gutzwiller received which prize for Mathematical Physics in 1993?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "Fields Medal",
+            "B": "Nobel Prize",
+            "C": "Abel Prize",
+            "D": "Crafoord Prize",
+            "E": "Dannie Heineman Prize"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "Which field of study is Wilhelm Wattenbach notably distinguished in?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Middle Ages Chronicles and Documents",
+            "B": "Modern European History",
+            "C": "Ancient Roman History",
+            "D": "Renaissance Art",
+            "E": "American History"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which field of physics is Gutzwiller's approximation related to?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "Nuclear Physics",
+            "B": "Astrophysics",
+            "C": "Biophysics",
+            "D": "Condensed Matter Physics",
+            "E": "Plasma Physics"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "In which two disciplines did Michaela Dorfmeister specialize?",
+        "name": "Michaela Dorfmeister",
+        "choices": {
+            "A": "Slalom and Parallel Slalom",
+            "B": "Slalom and Downhill",
+            "C": "Giant Slalom and Slalom",
+            "D": "Super-G and Parallel Slalom",
+            "E": "Downhill and Super-G"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "What does the Martin Gutzwiller Fellowship, awarded by the Max Planck Institute for the Physics of Complex Systems, aim to promote?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "Research in theoretical physics",
+            "B": "Advancements in computer technology",
+            "C": "Developments in medical science",
+            "D": "Studies in classical art",
+            "E": "Breakthroughs in renewable energy"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which role led to Slezak's humorous stage incident involving a swan?",
+        "name": "Leo Slezak",
+        "choices": {
+            "A": "Otello",
+            "B": "Walter",
+            "C": "Guillaume Tell",
+            "D": "Lohengrin",
+            "E": "Radames"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "What notable talent did Alicia de Larrocha demonstrate despite having small hands?",
+        "name": "Alicia de Larrocha",
+        "choices": {
+            "A": "Playing big concertos",
+            "B": "Conducting orchestras",
+            "C": "Singing opera",
+            "D": "Dancing ballet",
+            "E": "Playing jazz saxophone"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "Which of the following describes Dany Robin's career timeline?",
+        "name": "Dany Robin",
+        "choices": {
+            "A": "She was active in the 1950s and 1960s.",
+            "B": "She was active in the 1930s and 1940s.",
+            "C": "She was active in the 1940s and 1950s.",
+            "D": "She was active in the 1970s and 1980s.",
+            "E": "She was active in the 1960s and 1970s."
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which of the following children was NOT born to Christian Krohg?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "Nana",
+            "B": "Michael Ancher",
+            "C": "Per Lasson Krohg",
+            "D": "Anna Ancher",
+            "E": "Only two children"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which was Michaela Dorfmeister's first podium finish event?",
+        "name": "Michaela Dorfmeister",
+        "choices": {
+            "A": "Giant Slalom",
+            "B": "Slalom",
+            "C": "Super-G",
+            "D": "Combined",
+            "E": "Downhill"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "What award did Martin Gutzwiller receive in 1993?",
+        "name": "Martin Gutzwiller",
+        "choices": {
+            "A": "Dannie Heineman Prize for Mathematical Physics",
+            "B": "Nobel Prize in Physics",
+            "C": "Fields Medal",
+            "D": "Wolf Prize in Physics",
+            "E": "Turing Award"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Which literary piece discussed the Tuscan dialect as spoken in Florence?",
+        "name": "Benedetto Varchi",
+        "choices": {
+            "A": "La Suocera",
+            "B": "The Divine Comedy",
+            "C": "Storia fiorentina",
+            "D": "L'Hercolano",
+            "E": "The Cantos"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which work by Wilhelm Wattenbach focuses on the Latin paleography?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des XIII Jahrhunderts",
+            "B": "Das Schriftwesen im Mittelalter",
+            "C": "Geschichte des römischen Papsttums",
+            "D": "Anleitung zur griechischen Paläographie",
+            "E": "Anleitung zur lateinischen Paläographie"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "Who was Karl Hartl's famous wife?",
+        "name": "Karl Hartl",
+        "choices": {
+            "A": "Brigitte Helm",
+            "B": "Maria Schell",
+            "C": "Jill Esmond",
+            "D": "Marte Harell",
+            "E": "Paula Wessely"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "In which field did Wilhelm Wattenbach primarily make his mark?",
+        "name": "Wilhelm Wattenbach",
+        "choices": {
+            "A": "Contemporary history",
+            "B": "Asian history",
+            "C": "Roman history",
+            "D": "Modern European history",
+            "E": "Medieval chronicles and documents"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "Which Skagen artist colony did Christian Krohg visit and influence?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "Skagen",
+            "B": "Nabis",
+            "C": "Barbizon",
+            "D": "Pont-Aven",
+            "E": "Pre-Raphaelite"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which film directed by Hartl in 1934 is still recognized as successful in its genre?",
+        "name": "Karl Hartl",
+        "choices": {
+            "A": "Der Engel mit der Posaune",
+            "B": "Mozart",
+            "C": "Berge in Flammen",
+            "D": "Weg in die Vergangenheit",
+            "E": "Gold"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "Which opera house was Leo Slezak a permanent member of starting from 1901?",
+        "name": "Leo Slezak",
+        "choices": {
+            "A": "Royal Opera House, Covent Garden",
+            "B": "Berlin Staatsoper",
+            "C": "New York Metropolitan Opera",
+            "D": "La Scala",
+            "E": "Vienna State Opera"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "Which prestigious French award was Christian Krohg awarded in 1889?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "Knight of the Legion of Honour",
+            "B": "Palmes académiques",
+            "C": "Croix de Guerre",
+            "D": "Ordre des Arts et des Lettres",
+            "E": "Prix de Rome"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "In which country was P. A. Yeomans' Keyline Design widely adopted?",
+        "name": "P. A. Yeomans",
+        "choices": {
+            "A": "New Zealand",
+            "B": "United States",
+            "C": "Brazil",
+            "D": "South Africa",
+            "E": "In almost every country in the world"
+        }
+    },
+    {
+        "answer": "D",
+        "question": "What genre of roles was Leo Slezak particularly known for?",
+        "name": "Leo Slezak",
+        "choices": {
+            "A": "Baroque",
+            "B": "Modern avant-garde",
+            "C": "Bel canto",
+            "D": "Romantic dramatic tenor roles",
+            "E": "Classical comic roles"
+        }
+    },
+    {
+        "answer": "E",
+        "question": "What role did Karl Hartl assume after the annexation of Austria by Nazi Germany?",
+        "name": "Karl Hartl",
+        "choices": {
+            "A": "Film Director for UFA",
+            "B": "Production Manager at Sascha-Film",
+            "C": "Assistant to Alexander Korda",
+            "D": "Screenwriter for UFA",
+            "E": "Head of Production for Wien-Film"
+        }
+    },
+    {
+        "answer": "A",
+        "question": "At which Parisian art academy did Christian Krohg teach before joining the Norwegian Academy of Arts?",
+        "name": "Christian Krohg",
+        "choices": {
+            "A": "Académie Colarossi",
+            "B": "Académie Julian",
+            "C": "Académie de la Grande Chaumière",
+            "D": "Académie Vitti",
+            "E": "École nationale supérieure des Beaux-Arts"
+        }
+    }
+]}

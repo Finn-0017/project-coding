@@ -1,205 +1,128 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-question_rephrase.py
-
-Usage examples:
-  bash question_rephrase.py --answer true
-  bash question_rephrase.py --answer false
-"""
-
-import os
-import re
 import json
-import argparse
 import random
-from typing import Dict, Any, Tuple
-from openai import OpenAI
+import torch
+from tqdm import tqdm
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-# ===== Configuration =====
-LOCAL_MODEL_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct"
-LOCAL_BASE_URL = "http://localhost:8000/v1"
-SYSTEM_PROMPT = """You are a precise rephraser. Convert a single multiple-choice question about a PERSON \
-into ONE declarative sentence that PRESERVES the semantic RELATION between SUBJECT (the person), \
-PREDICATE (relation), and OBJECT (value).
+# ==============================
+# CONFIG
+# ==============================
+INPUT_PATH = "forget_dedup.json"
+OUTPUT_PATH = "forget_dedup_statement.json"
+MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct"
+USE_ANSWER = True       # factual mode
+SAVE_EVERY = 20         # autosave frequency
+MAX_NEW_TOKENS = 80
 
-STRICT REQUIREMENTS:
-- Use the provided 'name' as the grammatical SUBJECT if the question is about that person.
-- Use the provided 'option_text' as the OBJECT.
-- Keep the RELATION accurate (e.g., 'was born in', 'won the Nobel Prize for', 'coined the term', 'served as', etc.).
-- Include necessary prepositions ('in', 'on', 'for', 'as', 'at', etc.) so that the subject–predicate–object relation is correct.
-- If the question has context like time/place clauses, integrate them naturally (e.g., 'In 1953, ...').
-- Do NOT output explanations.
-- Output ONLY valid JSON with keys: statement, triple.
-"""
-USER_TEMPLATE = """name: {name}
-question: {question}
-option_text: {answer}
-Return JSON:
-{{
-  "statement": "...",
-  "triple": {{"subject": "...", "relation": "...", "object": "..." }}
-}}
-"""
-# ==========================
+# ==============================
+# LOAD MODEL
+# ==============================
+print("Loading model from local path...")
+tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
+model = AutoModelForCausalLM.from_pretrained(
+    MODEL_PATH,
+    torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+    device_map="auto"
+)
+pipe = pipeline(
+    "text-generation",
+    model=model,
+    tokenizer=tokenizer,
+    device_map="auto",
+    torch_dtype=torch.bfloat16 if torch.cuda.is_available() else torch.float32,
+    temperature=0.0
+)
 
+# ==============================
+# PROMPT TEMPLATES
+# ==============================
+SYSTEM_PROMPT = (
+    "You are a precise factual rewriter.\n"
+    "Given one multiple-choice question about a person, the available options, "
+    "and the correct answer, write ONE concise factual statement that exactly "
+    "expresses the same factual meaning as the correct answer.\n"
+    "Do not add new information. Output one short sentence ending with a period."
+)
 
-def str2bool(s: str) -> bool:
-    return str(s).strip().lower() in ("1", "true", "yes", "y", "on")
+USER_TEMPLATE = (
+    "Question: {question}\n"
+    "Person: {name}\n"
+    "Options:\n{options}\n"
+    "Correct Answer: {correct_ans}\n"
+    "Now, rewrite this information as one concise factual statement."
+)
 
+# ==============================
+# GENERATION FUNCTION
+# ==============================
+def generate_statement(entry):
+    name = entry["name"].strip()
+    question = entry["question"].strip()
+    choices = entry["choices"]
+    correct = entry["answer"]
 
-def pick_option(rec: Dict[str, Any], use_correct: bool, rng: random.Random) -> Tuple[str, str]:
-    choices = rec.get("choices") or {}
-    if not isinstance(choices, dict) or not choices:
-        return "", ""
-    if use_correct:
-        a = rec.get("answer")
-        if isinstance(a, str) and a in choices:
-            return a, str(choices[a])
-        k = next(iter(choices.keys()))
-        return k, str(choices[k])
-    k = rng.choice(list(choices.keys()))
-    return k, str(choices[k])
+    if not USE_ANSWER:
+        pool = [k for k in choices.keys() if k != correct]
+        correct = random.choice(pool)
 
+    opt_str = "\n".join([f"{k}. {v}" for k, v in choices.items()])
+    correct_text = choices[correct].strip()
 
-def safe_parse_json(s: str) -> Dict[str, Any]:
-    try:
-        return json.loads(s)
-    except Exception:
-        pass
-    m = re.search(r"\{.*\}", s, flags=re.DOTALL)
-    if m:
-        try:
-            return json.loads(m.group(0))
-        except Exception:
-            return {}
-    return {}
+    prompt = USER_TEMPLATE.format(
+        question=question, name=name, options=opt_str, correct_ans=correct_text
+    )
 
+    conversation = f"<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n{SYSTEM_PROMPT}\n" \
+                   f"<|start_header_id|>user<|end_header_id|>\n{prompt}\n<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n"
 
-def fallback_statement(name: str, question: str, option_text: str) -> Tuple[str, Dict[str, str]]:
-    n = (name or "The person").strip()
-    q = (question or "").strip().rstrip(" ?")
-    a = (option_text or "").strip()
-    if re.search(r"\bborn\b", q, re.I):
-        relation = "was born in"
-    elif re.search(r"\bdied?\b", q, re.I):
-        relation = "died in"
-    elif re.search(r"\b(win|won|receive|award)\b", q, re.I):
-        relation = "won/received"
-    elif re.search(r"\b(serve|assume|hold)\b", q, re.I):
-        relation = "served as"
-    elif re.search(r"\bcoin(ed)?\b", q, re.I):
-        relation = "coined the term"
-    elif re.search(r"\bstudy|studied\b", q, re.I):
-        relation = "studied in"
-    elif re.search(r"\blive|lived\b", q, re.I):
-        relation = "lived in"
-    elif re.search(r"\bwhen\b", q, re.I):
-        relation = "is associated with the date"
-    else:
-        relation = "is associated with"
-    if relation == "coined the term":
-        stmt = f"{n} coined the term {a}."
-    elif relation in ("was born in", "died in", "studied in", "lived in", "is associated with"):
-        stmt = f"{n} {relation} {a}."
-    elif relation in ("won/received", "is associated with the date", "served as"):
-        stmt = f"{n} {relation} {a}."
-    else:
-        stmt = f"{n} — {a}."
-    triple = {"subject": n, "relation": relation, "object": a}
-    return stmt, triple
+    result = pipe(
+        conversation,
+        max_new_tokens=MAX_NEW_TOKENS,
+        do_sample=False,
+        eos_token_id=tokenizer.eos_token_id
+    )[0]["generated_text"]
 
+    # Extract only new generation part
+    if "<|start_header_id|>assistant<|end_header_id|>" in result:
+        result = result.split("<|start_header_id|>assistant<|end_header_id|>")[-1]
+    result = result.strip()
 
+    # fallback if malformed
+    if name not in result or correct_text not in result:
+        result = f"{name} {correct_text}."
+
+    return {
+        "name": name,
+        "question": question,
+        "answer": entry["answer"],
+        "use_answer": USE_ANSWER,
+        "statement": result
+    }
+
+# ==============================
+# MAIN
+# ==============================
 def main():
-    parser = argparse.ArgumentParser(description="Rephrase MCQ into declarative statements with relation preservation.")
-    parser.add_argument("--input", type=str, default="forget_dedup.json", help="Input JSON (id -> list[records]).")
-    parser.add_argument("--output", type=str, default="forget_statements_llm.jsonl", help="Output JSONL path.")
-    parser.add_argument("--answer", type=str, default="true", help="true to use correct answer; false for random option.")
-    parser.add_argument("--temperature", type=float, default=0.0)
-    parser.add_argument("--max-tokens", type=int, default=120)
-    parser.add_argument("--retries", type=int, default=2)
-    args = parser.parse_args()
-
-    use_correct_answer = str2bool(args.answer)
-
-    # Client for local vLLM server
-    client = OpenAI(api_key="EMPTY", base_url=LOCAL_BASE_URL)
-
-    # Load input data
-    with open(args.input, "r", encoding="utf-8") as f:
+    with open(INPUT_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
-    if not isinstance(data, dict):
-        raise ValueError("Input must be a JSON object mapping id -> list[records].")
 
-    out = open(args.output, "w", encoding="utf-8")
-    total = sum(len(v) for v in data.values() if isinstance(v, list))
-    done = 0
-    failed = 0
-
-    for id_key, items in data.items():
-        if not isinstance(items, list):
+    results = []
+    for i, entry in enumerate(tqdm(data, desc="Generating factual statements")):
+        try:
+            res = generate_statement(entry)
+            results.append(res)
+        except Exception as e:
+            print(f"[Error on {entry.get('name','?')}] {e}")
             continue
-        for rec in items:
-            name = rec.get("name") or ""
-            question = rec.get("question") or ""
-            seed = abs(hash((name, question))) % (2**32)
-            rng = random.Random(seed)
-            letter, ans_text = pick_option(rec, use_correct_answer, rng)
 
-            user_msg = USER_TEMPLATE.format(name=name, question=question, answer=ans_text)
-            parsed = None
+        if (i + 1) % SAVE_EVERY == 0:
+            with open(OUTPUT_PATH, "w", encoding="utf-8") as fout:
+                json.dump(results, fout, indent=4, ensure_ascii=False)
 
-            for attempt in range(max(1, args.retries)):
-                try:
-                    resp = client.chat.completions.create(
-                        model=LOCAL_MODEL_PATH,
-                        messages=[
-                            {"role": "system", "content": SYSTEM_PROMPT},
-                            {"role": "user", "content": user_msg}
-                        ],
-                        temperature=args.temperature,
-                        max_tokens=args.max_tokens,
-                    )
-                    content = resp.choices[0].message.content or ""
-                    parsed = safe_parse_json(content)
-                    if isinstance(parsed, dict) and "statement" in parsed and "triple" in parsed:
-                        tri = parsed.get("triple") or {}
-                        if isinstance(tri, dict) and all(k in tri for k in ("subject", "relation", "object")):
-                            break
-                        parsed = None
-                except Exception:
-                    parsed = None
+    with open(OUTPUT_PATH, "w", encoding="utf-8") as fout:
+        json.dump(results, fout, indent=4, ensure_ascii=False)
 
-            if not parsed:
-                failed += 1
-                stmt, tri = fallback_statement(name, question, ans_text)
-            else:
-                stmt = str(parsed["statement"]).strip()
-                tri = {
-                    "subject": str(parsed["triple"].get("subject", "")).strip(),
-                    "relation": str(parsed["triple"].get("relation", "")).strip(),
-                    "object": str(parsed["triple"].get("object", "")).strip(),
-                }
-
-            out.write(json.dumps({
-                "id": id_key,
-                "name": name,
-                "question": question,
-                "selected_letter": letter,
-                "selected_text": ans_text,
-                "use_correct_answer": use_correct_answer,
-                "statement": stmt,
-                "triple": tri
-            }, ensure_ascii=False) + "\n")
-
-            done += 1
-            if done % 100 == 0:
-                print(f"Processed {done}/{total}...")
-
-    out.close()
-    print(f"Done. total={total}, failed={failed}, output={args.output}")
-
+    print(f"\n✅ Done! {len(results)} statements saved to {OUTPUT_PATH}")
 
 if __name__ == "__main__":
     main()

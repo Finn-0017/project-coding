@@ -12,7 +12,6 @@ Generate concise factual statements from MCQ items using a local HF LLM.
 
 Usage (examples):
   python question_rephrase_llm.py \
-      --model-path /rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659 \
       --input forget_dedup.json \
       --output forget_dedup_statement.json \
       --use-answer
@@ -150,15 +149,13 @@ def load_input(path: str) -> Dict[str, Any]:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-path", type=str, required=True,
+    parser.add_argument("--model-path", type=str, default="/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659", required=True,
                         help="Local HF model path (e.g., a snapshots/... directory).")
     parser.add_argument("--input", type=str, default=DEFAULT_INPUT,
                         help="Input JSON path (e.g., forget_dedup.json).")
     parser.add_argument("--output", type=str, default=DEFAULT_OUTPUT,
                         help="Output JSON path (e.g., forget_dedup_statement.json).")
-    group = parser.add_mutually_exclusive_group()
-    group.add_argument("--use-answer", action="store_true", help="Use provided correct answer (factual mode).")
-    group.add_argument("--random-answer", action="store_true", help="Randomly pick a choice for each item.")
+    parser.add_argument("--use-answer", type=bool, default=True, help="Use provided correct answer (factual mode).")
     parser.add_argument("--max-retries", type=int, default=3, help="Regenerate up to N times if check fails.")
     parser.add_argument("--device", type=str, default=None, help="Force device, e.g., cuda:0 or cpu.")
     args = parser.parse_args()

@@ -1,9 +1,6 @@
-# === Fixed working directory ===
-cd /home/xy319/rds/hpc-work/projects/project-coding || {
-    echo "Failed to cd into /home/xy319/rds/hpc-work/projects/project-coding"
-    exit 1
-}
+cd /home/xy319/rds/hpc-work/projects/project-coding || exit 1
 echo "Working directory: $(pwd)"
+export PYTHONPATH="$(pwd):${PYTHONPATH}"
 
 mode="whp"
 nsample=20

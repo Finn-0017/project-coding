@@ -2,6 +2,8 @@ cd /home/xy319/rds/hpc-work/projects/project-coding || exit 1
 echo "Working directory: $(pwd)"
 export PYTHONPATH="$(pwd):${PYTHONPATH}"
 
+conda activate venv
+
 mode="whp"
 nsample=20
 setid=1

@@ -1,0 +1,404 @@
+{
+  "10000": [
+    {
+      "question": "Which institution houses a notable collection of Krohg's art?",
+      "choice": {
+        "letter": "E",
+        "text": "The British Museum"
+      },
+      "statement": "The British Museum houses a notable collection of Christian Krohg's art."
+    },
+    {
+      "question": "What unique physical characteristic did Alicia de Larrocha have that helped her piano technique?",
+      "choice": {
+        "letter": "D",
+        "text": "Broad palms"
+      },
+      "statement": "Alicia de Larrocha had broad palms, which helped her piano technique."
+    },
+    {
+      "question": "In what year was Benedetto Varchi arrested and tried for pederasty?",
+      "choice": {
+        "letter": "A",
+        "text": "1513"
+      },
+      "statement": "Benedetto Varchi was arrested and tried for pederasty in 1513."
+    },
+    {
+      "question": "Which of the following works by Wilhelm Wattenbach was published in 1867 and again in 1895?",
+      "choice": {
+        "letter": "B",
+        "text": "Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des XIII Jahrhunderts"
+      },
+      "statement": "Wilhelm Wattenbach's work \"Deutschlands Geschichtsquellen im Mittelalter bis zur Mitte des XIII Jahrhunderts\" was published in 1867 and again in 1895."
+    },
+    {
+      "question": "What field did Wilhelm Wattenbach contribute to through his work 'Das Schriftwesen im Mittelalter'?",
+      "choice": {
+        "letter": "D",
+        "text": "European art history"
+      },
+      "statement": "Wilhelm Wattenbach contributed to European art history through his work 'Das Schriftwesen im Mittelalter'."
+    },
+    {
+      "question": "Which of the following was NOT one of the concertos Alicia de Larrocha was known for playing?",
+      "choice": {
+        "letter": "A",
+        "text": "Brahms's No. 2"
+      },
+      "statement": "Alicia de Larrocha was not known for playing Brahms's No. 2 concerto."
+    },
+    {
+      "question": "In which year did Karl Hartl make his directorial debut?",
+      "choice": {
+        "letter": "B",
+        "text": "1942"
+      },
+      "statement": "Karl Hartl made his directorial debut in 1942."
+    },
+    {
+      "question": "Which book is NOT authored by P.A. Yeomans?",
+      "choice": {
+        "letter": "C",
+        "text": "The Challenge of Landscape"
+      },
+      "statement": "P. A. Yeomans — The Challenge of Landscape."
+    },
+    {
+      "question": "What was the name of the journal that Christian Krohg founded and edited?",
+      "choice": {
+        "letter": "A",
+        "text": "Art Review"
+      },
+      "statement": "Christian Krohg founded and edited the journal \"Art Review\"."
+    },
+    {
+      "question": "What was Varchi’s relationship with Cosimo I de' Medici?",
+      "choice": {
+        "letter": "E",
+        "text": "He was a financial advisor."
+      },
+      "statement": "Benedetto Varchi was not a financial advisor to Cosimo I de' Medici."
+    },
+    {
+      "question": "Wilhelm Wattenbach became a professor at which university in 1872?",
+      "choice": {
+        "letter": "D",
+        "text": "Heidelberg"
+      },
+      "statement": "Wilhelm Wattenbach became a professor at Heidelberg University in 1872."
+    },
+    {
+      "question": "What did Leo Slezak do before pursuing a career in opera?",
+      "choice": {
+        "letter": "A",
+        "text": "He was a teacher."
+      },
+      "statement": "Leo Slezak was a teacher before pursuing a career in opera."
+    },
+    {
+      "question": "Which Spanish composers' works is Alicia de Larrocha credited with popularizing?",
+      "choice": {
+        "letter": "C",
+        "text": "Pablo Casals and Andrés Segovia"
+      },
+      "statement": "Alicia de Larrocha is credited with popularizing the works of Pablo Casals and Andrés Segovia."
+    },
+    {
+      "question": "Who was Leo Slezak's son who became a Hollywood actor?",
+      "choice": {
+        "letter": "C",
+        "text": "Jean de Reszke"
+      },
+      "statement": "Leo Slezak's son who became a Hollywood actor was Jean de Reszke."
+    },
+    {
+      "question": "What musical instrument was Alicia de Larrocha known for playing?",
+      "choice": {
+        "letter": "A",
+        "text": "Guitar"
+      },
+      "statement": "Alicia de Larrocha was known for playing the guitar."
+    },
+    {
+      "question": "Which of the following professions did P. A. Yeomans have?",
+      "choice": {
+        "letter": "A",
+        "text": "Botanist and agronomist"
+      },
+      "statement": "P. A. Yeomans was a botanist and agronomist."
+    },
+    {
+      "question": "What profession did P.A. Yeomans have before he assumed management of Nevallan?",
+      "choice": {
+        "letter": "C",
+        "text": "Geologist"
+      },
+      "statement": "P. A. Yeomans — Geologist."
+    },
+    {
+      "question": "In which academic courses are P. A. Yeomans' Keyline principles now commonly included?",
+      "choice": {
+        "letter": "C",
+        "text": "Nuclear Physics"
+      },
+      "statement": "P. A. Yeomans' Keyline principles are now commonly included in Nuclear Physics academic courses."
+    },
+    {
+      "question": "Yeomans’ work largely contributed to the development of which modern agricultural design?",
+      "choice": {
+        "letter": "E",
+        "text": "Urban farming"
+      },
+      "statement": "P. A. Yeomans — Urban farming."
+    },
+    {
+      "question": "Which organization considered Wilhelm Wattenbach a distinguished scholar?",
+      "choice": {
+        "letter": "A",
+        "text": "Monumenta Germaniae Historica"
+      },
+      "statement": "Wilhelm Wattenbach was considered a distinguished scholar by the Monumenta Germaniae Historica."
+    },
+    {
+      "question": "Which Medici ruler commissioned Benedetto Varchi to write the history of Florence?",
+      "choice": {
+        "letter": "B",
+        "text": "Alessandro de' Medici"
+      },
+      "statement": "Alessandro de' Medici commissioned Benedetto Varchi to write the history of Florence."
+    },
+    {
+      "question": "To which cultural or artistic movement did Benedetto Varchi belong?",
+      "choice": {
+        "letter": "B",
+        "text": "Baroque"
+      },
+      "statement": "Benedetto Varchi belonged to the Baroque movement."
+    },
+    {
+      "question": "In what field is Martin Gutzwiller best known for his work?",
+      "choice": {
+        "letter": "B",
+        "text": "General relativity"
+      },
+      "statement": "Martin Gutzwiller is best known for his work in general relativity."
+    },
+    {
+      "question": "Which historical family was involved in Varchi's life and works?",
+      "choice": {
+        "letter": "C",
+        "text": "Visconti"
+      },
+      "statement": "Benedetto Varchi was involved with the Visconti family."
+    },
+    {
+      "question": "Which important historical period did Varchi's 'Storia fiorentina' cover?",
+      "choice": {
+        "letter": "A",
+        "text": "1500 to 1510"
+      },
+      "statement": "Benedetto Varchi — 1500 to 1510."
+    },
+    {
+      "question": "Which fellowship is named in honor of Martin Gutzwiller to promote research in theoretical physics?",
+      "choice": {
+        "letter": "A",
+        "text": "Einstein Fellowship"
+      },
+      "statement": "The Einstein Fellowship is named in honor of Martin Gutzwiller to promote research in theoretical physics."
+    },
+    {
+      "question": "Which historical figure is Varchi mentioned alongside with approbation in Ezra Pound's 'The Cantos'?",
+      "choice": {
+        "letter": "C",
+        "text": "Michelangelo"
+      },
+      "statement": "Benedetto Varchi is mentioned alongside Michelangelo with approbation in Ezra Pound's 'The Cantos'."
+    },
+    {
+      "question": "Martin Gutzwiller received which prize for Mathematical Physics in 1993?",
+      "choice": {
+        "letter": "C",
+        "text": "Abel Prize"
+      },
+      "statement": "Martin Gutzwiller received the Abel Prize for Mathematical Physics in 1993."
+    },
+    {
+      "question": "Which field of study is Wilhelm Wattenbach notably distinguished in?",
+      "choice": {
+        "letter": "D",
+        "text": "Renaissance Art"
+      },
+      "statement": "Wilhelm Wattenbach is notably distinguished in Renaissance Art."
+    },
+    {
+      "question": "Which field of physics is Gutzwiller's approximation related to?",
+      "choice": {
+        "letter": "C",
+        "text": "Biophysics"
+      },
+      "statement": "Martin Gutzwiller's approximation is related to Biophysics."
+    },
+    {
+      "question": "In which two disciplines did Michaela Dorfmeister specialize?",
+      "choice": {
+        "letter": "A",
+        "text": "Slalom and Parallel Slalom"
+      },
+      "statement": "Michaela Dorfmeister specialized in Slalom and Parallel Slalom."
+    },
+    {
+      "question": "What does the Martin Gutzwiller Fellowship, awarded by the Max Planck Institute for the Physics of Complex Systems, aim to promote?",
+      "choice": {
+        "letter": "C",
+        "text": "Developments in medical science"
+      },
+      "statement": "The Martin Gutzwiller Fellowship, awarded by the Max Planck Institute for the Physics of Complex Systems, aims to promote developments in medical science."
+    },
+    {
+      "question": "Which role led to Slezak's humorous stage incident involving a swan?",
+      "choice": {
+        "letter": "C",
+        "text": "Guillaume Tell"
+      },
+      "statement": "Leo Slezak's humorous stage incident involving a swan occurred in the role of Guillaume Tell."
+    },
+    {
+      "question": "What notable talent did Alicia de Larrocha demonstrate despite having small hands?",
+      "choice": {
+        "letter": "C",
+        "text": "Singing opera"
+      },
+      "statement": "Alicia de Larrocha demonstrated piano talent despite having small hands."
+    },
+    {
+      "question": "Which of the following describes Dany Robin's career timeline?",
+      "choice": {
+        "letter": "C",
+        "text": "She was active in the 1940s and 1950s."
+      },
+      "statement": "Dany Robin was active in the 1940s and 1950s."
+    },
+    {
+      "question": "Which of the following children was NOT born to Christian Krohg?",
+      "choice": {
+        "letter": "E",
+        "text": "Only two children"
+      },
+      "statement": "Christian Krohg had more than two children."
+    },
+    {
+      "question": "Which was Michaela Dorfmeister's first podium finish event?",
+      "choice": {
+        "letter": "B",
+        "text": "Slalom"
+      },
+      "statement": "Michaela Dorfmeister's first podium finish event was Slalom."
+    },
+    {
+      "question": "What award did Martin Gutzwiller receive in 1993?",
+      "choice": {
+        "letter": "B",
+        "text": "Nobel Prize in Physics"
+      },
+      "statement": "Martin Gutzwiller received the Nobel Prize in Physics in 1993."
+    },
+    {
+      "question": "Which literary piece discussed the Tuscan dialect as spoken in Florence?",
+      "choice": {
+        "letter": "B",
+        "text": "The Divine Comedy"
+      },
+      "statement": "Benedetto Varchi's work did NOT discuss the Tuscan dialect as spoken in Florence; it was The Divine Comedy."
+    },
+    {
+      "question": "Which work by Wilhelm Wattenbach focuses on the Latin paleography?",
+      "choice": {
+        "letter": "C",
+        "text": "Geschichte des römischen Papsttums"
+      },
+      "statement": "Wilhelm Wattenbach's work \"Geschichte des römischen Papsttums\" focuses on Latin paleography."
+    },
+    {
+      "question": "Who was Karl Hartl's famous wife?",
+      "choice": {
+        "letter": "B",
+        "text": "Maria Schell"
+      },
+      "statement": "Karl Hartl was married to Maria Schell."
+    },
+    {
+      "question": "In which field did Wilhelm Wattenbach primarily make his mark?",
+      "choice": {
+        "letter": "C",
+        "text": "Roman history"
+      },
+      "statement": "Wilhelm Wattenbach primarily made his mark in Roman history."
+    },
+    {
+      "question": "Which Skagen artist colony did Christian Krohg visit and influence?",
+      "choice": {
+        "letter": "D",
+        "text": "Pont-Aven"
+      },
+      "statement": "Christian Krohg visited and influenced the Pont-Aven artist colony."
+    },
+    {
+      "question": "Which film directed by Hartl in 1934 is still recognized as successful in its genre?",
+      "choice": {
+        "letter": "C",
+        "text": "Berge in Flammen"
+      },
+      "statement": "Karl Hartl's 1934 film \"Berge in Flammen\" is still recognized as successful in its genre."
+    },
+    {
+      "question": "Which opera house was Leo Slezak a permanent member of starting from 1901?",
+      "choice": {
+        "letter": "C",
+        "text": "New York Metropolitan Opera"
+      },
+      "statement": "Leo Slezak was a permanent member of the New York Metropolitan Opera starting from 1901."
+    },
+    {
+      "question": "Which prestigious French award was Christian Krohg awarded in 1889?",
+      "choice": {
+        "letter": "E",
+        "text": "Prix de Rome"
+      },
+      "statement": "Christian Krohg was awarded the Prix de Rome in 1889."
+    },
+    {
+      "question": "In which country was P. A. Yeomans' Keyline Design widely adopted?",
+      "choice": {
+        "letter": "B",
+        "text": "United States"
+      },
+      "statement": "P. A. Yeomans' Keyline Design was widely adopted in the United States."
+    },
+    {
+      "question": "What genre of roles was Leo Slezak particularly known for?",
+      "choice": {
+        "letter": "C",
+        "text": "Bel canto"
+      },
+      "statement": "Leo Slezak was particularly known for bel canto roles."
+    },
+    {
+      "question": "What role did Karl Hartl assume after the annexation of Austria by Nazi Germany?",
+      "choice": {
+        "letter": "C",
+        "text": "Assistant to Alexander Korda"
+      },
+      "statement": "After the annexation of Austria by Nazi Germany, Karl Hartl assumed the role of Assistant to Alexander Korda."
+    },
+    {
+      "question": "At which Parisian art academy did Christian Krohg teach before joining the Norwegian Academy of Arts?",
+      "choice": {
+        "letter": "C",
+        "text": "Académie de la Grande Chaumière"
+      },
+      "statement": "Christian Krohg taught at the Académie de la Grande Chaumière before joining the Norwegian Academy of Arts."
+    }
+  ]
+}

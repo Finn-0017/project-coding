@@ -32,10 +32,8 @@ import os
 import re
 import json
 import random
-import time
 import sys
 import signal
-import gc
 import torch
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -263,10 +261,7 @@ def main():
 
     signal.signal(signal.SIGTERM, on_term)
 
-    # Prepare progress / checkpointing (10% of the remaining workload)
-    ckpt_step = max(1, total // 10)
-    next_ckpt = ckpt_step
-    start_ts = time.time()
+    # Prepare progress
     pbar = tqdm(total=total, desc=f"Shard {shard_index}")
     processed = 0
 
@@ -314,16 +309,6 @@ def main():
 
             processed += 1
             pbar.update(1)
-
-            # 10% checkpoints on the remaining workload; also free memory
-            if processed >= next_ckpt:
-                pct = int(round(processed * 100.0 / total))
-                ckpt_flag = f"{os.path.splitext(save_path)[0]}_checkpoint_{pct}pct.done"
-                with open(ckpt_flag, "w") as fc:
-                    fc.write(f"processed={processed}/{total}\n")
-                    fc.write(f"elapsed={time.time() - start_ts:.1f}s\n")
-                next_ckpt += ckpt_step
-                gc.collect()
 
         except Exception as e:
             # Log and skip bad samples — never crash the whole shard/run

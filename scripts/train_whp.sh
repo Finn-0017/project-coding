@@ -31,6 +31,6 @@ python scripts/train_whp.py \
     --retain_factor 0.0 \
     --selfchecksamples $nsample \
     --passage_id $passage_id \
-    --obfuscate_passages ./data/WHPplus/all_obfuscate_samples.json \
+    --obfuscate_passages ./data/WHPplus/data_balanced_whp/forget_dedup_passage_obfuscate.json \
     # --obfuscate_passages exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_20/obfuscate_samples.json \
     # --passage_id $passage_id \

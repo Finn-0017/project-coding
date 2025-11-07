@@ -1,3 +1,10 @@
+# === Fixed working directory ===
+cd /home/xy319/rds/hpc-work/projects/project-coding || {
+    echo "Failed to cd into /home/xy319/rds/hpc-work/projects/project-coding"
+    exit 1
+}
+echo "Working directory: $(pwd)"
+
 mode="whp"
 nsample=20
 setid=$1

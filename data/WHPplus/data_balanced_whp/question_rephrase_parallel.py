@@ -70,6 +70,11 @@ def pick_choice(entry, use_answer):
     text = choices.get(letter, "")
     return letter, text
 
+def _to_text(x):
+    if x is None:
+        return ""
+    return x if isinstance(x, str) else str(x)
+
 def simple_check(name, choice_text, s):
     """
     Basic sanity check for generated statement:
@@ -77,7 +82,12 @@ def simple_check(name, choice_text, s):
     - Must mention the entity name.
     - Must contain relevant numeric/year info or keyword from the choice.
     """
-    if not s or not s.strip():
+
+    name = _to_text(name)
+    choice_text = _to_text(choice_text)
+    s = _to_text(s)
+
+    if not choice_text.strip() or not s or not s.strip():
         return False
     if len(s.split()) < 3:
         return False

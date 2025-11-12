@@ -12,17 +12,17 @@ Key features:
 - Graceful SIGTERM handling to flush+sync before exiting.
 
 Example (single GPU, whole dataset):
-    python question_rephrase_parallel.py --use-answer
+    python question_rephrase_parallel.py
 
 Example (4 GPUs):
     CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 0 --output shard_0.jsonl &
+    python question_rephrase_parallel.py --num-shards 4 --shard-index 0 --output shard_0.jsonl &
     CUDA_VISIBLE_DEVICES=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 1 --output shard_1.jsonl &
+    python question_rephrase_parallel.py --num-shards 4 --shard-index 1 --output shard_1.jsonl &
     CUDA_VISIBLE_DEVICES=2 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 2 --output shard_2.jsonl &
+    python question_rephrase_parallel.py --num-shards 4 --shard-index 2 --output shard_2.jsonl &
     CUDA_VISIBLE_DEVICES=3 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --use-answer --num-shards 4 --shard-index 3 --output shard_3.jsonl &
+    python question_rephrase_parallel.py --num-shards 4 --shard-index 3 --output shard_3.jsonl &
     wait
 
 After generation, merge JSONL files if needed (e.g., concatenate).
@@ -40,8 +40,8 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # ================= CONFIG =================
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-INPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_dedup.json"
-OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_dedup_statement.jsonl"  # recommend .jsonl
+INPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget.json"
+OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_statement.jsonl"  # recommend .jsonl
 MAX_NEW_TOKENS = 64
 MAX_RETRIES = 3
 SEED = 1234
@@ -66,21 +66,14 @@ def set_seed(seed: int):
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
-def pick_choice(entry, use_answer):
+def pick_choice(entry):
     """
-    Select which choice to use.
-    - If `use_answer` is True, always use the correct answer.
-    - Otherwise, randomly pick a wrong choice if possible.
+    Always return the correct answer (letter, text).
     """
     choices = entry.get("choices", {}) or {}
     ans = (entry.get("answer") or "").strip()
-    if use_answer and ans in choices:
-        return ans, choices[ans]
+    return ans, choices[ans]
 
-    pool = [k for k in choices.keys() if k != ans]
-    letter = random.choice(pool) if pool else (ans if ans in choices else (next(iter(choices.keys())) if choices else ""))
-    text = choices.get(letter, "")
-    return letter, text
 
 def _to_text(x):
     """Normalize any value to a string (handles int/float/bool/None)."""
@@ -160,7 +153,6 @@ def load_json(path):
 def main():
     import argparse
     parser = argparse.ArgumentParser()
-    parser.add_argument("--use-answer", action="store_true", help="Use correct answer instead of random choice.")
     parser.add_argument("--input", type=str, default=INPUT_PATH, help="Input JSON path.")
     parser.add_argument("--output", type=str, default=OUTPUT_PATH, help="Output JSON/JSONL path.")
     parser.add_argument("--num-shards", type=int, default=1, help="Total number of shards (processes/GPUs).")
@@ -169,8 +161,6 @@ def main():
     args = parser.parse_args()
 
     set_seed(args.seed)
-
-    use_answer = args.use_answer
     num_shards = max(1, args.num_shards)
     shard_index = max(0, args.shard_index)
 
@@ -279,7 +269,8 @@ def main():
                 pbar.update(1)
                 continue
 
-            letter, choice_text = pick_choice(entry, use_answer)
+            # 这里已经不再有 use_answer 了，直接用正确答案
+            letter, choice_text = pick_choice(entry)
             statement, ok = "", False
 
             # Try generating up to MAX_RETRIES until it passes the sanity check

@@ -211,13 +211,14 @@ def train_one_epoch(
         forget_samples, forget_labels, forget_dist = batch
 
         # Forward
-        if args.retain_factor > 0 and 'mem_sample_id' in locals() and mem_sample_id is not None:
+        if args.retain_factor > 0 and mem_sample_id is not None:
             mem_output = model(mem_sample_id).logits
             mem_output = mem_output[:, :-1]
             loss_mem = criterion(mem_output.reshape(-1, mem_output.size(-1)), mem_labels[:, 1:].reshape(-1)) * args.retain_factor
             loss_mem = loss_mem.mean()
         else:
-            loss_mem = torch.tensor(0.0, device=model.llm.device)
+            p = next(model.parameters())
+            loss_mem = torch.zeros((), device=p.device, dtype=p.dtype)
 
         forget_output = model(forget_samples).logits[:, :-1]
         if "kl" in args.losstype:
@@ -236,8 +237,7 @@ def train_one_epoch(
         if (i + 1) % args.log_interval == 0 and accelerator.is_main_process:
             elasped_time = time.time() - start
             PPL = math.exp(loss_forget.item() * args.gradient_accumulation_steps)
-            val_mem = loss_mem.item() if torch.is_tensor(loss_mem) else float(loss_mem)
-            PPL_mem = math.exp(val_mem * args.gradient_accumulation_steps)
+            PPL_mem = math.exp(loss_mem.item() * args.gradient_accumulation_steps)
             logging(f"Epoch {epoch} | Batch {i}/{trainsize} | PPL forget: {PPL} | PPL mem: {PPL_mem} | time {elasped_time}", args.logfile)
         if (i + 1) % args.save_interval == 0 and accelerator.is_main_process:
             logging(f"Saving at Step {i+1}", args.logfile)
@@ -425,4 +425,3 @@ if __name__ == "__main__":
     print(world_size)
     # mp.spawn(main, args=(args, world_size,), nprocs=world_size)
     main(0, args, world_size)
-

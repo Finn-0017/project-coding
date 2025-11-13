@@ -50,10 +50,6 @@ def load_model_and_tokenizer(path: str):
 # ======================= batched generation ========================
 
 def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
-    """
-    一次输出 N 个答案字母。
-    mcq_list: [{'question':..., 'choices': [...]}]
-    """
     num_q = len(mcq_list)
 
     q_blocks = []
@@ -71,15 +67,18 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         f"Passage:\n\"\"\"\n{passage}\n\"\"\"\n\n"
         f"{all_questions_text}\n"
         "Now answer ALL questions at once.\n"
-        f"Respond with EXACTLY {num_q} capital letters from A–E, NO spaces.\n"
-        "If Q1=B, Q2=A, Q3=D → output: BAD\n"
-        "Output ONLY the letters."
+        f"At the end, write ONE line in the form:\n"
+        f"ANSWER: XXXXX\n"
+        f"where XXXXX are EXACTLY {num_q} capital letters from A, B, C, D, or E, "
+        "with NO spaces or punctuation.\n"
+        "Do not write anything after that line."
     )
 
     messages = [
         {
             "role": "system",
-            "content": "You answer MCQs. Output EXACTLY the required number of letters (A–E).",
+            "content": "You are a precise MCQ answering assistant. "
+                       "You MUST put the final answers on a single line starting with 'ANSWER: '.",
         },
         {"role": "user", "content": user_content},
     ]
@@ -88,27 +87,36 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         messages, add_generation_prompt=True, return_tensors="pt"
     ).to(model.device)
 
+    attention_mask = torch.ones_like(input_ids, dtype=torch.long)
+
     with torch.no_grad():
         out = model.generate(
             input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.pad_token_id,
         )
 
-    gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
+    gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True)
 
-    letters = []
-    for ch in gen:
-        if ch in "ABCDE":
-            letters.append(ch)
-        if len(letters) >= num_q:
+    # ---- 只从最后一个 'ANSWER:' 开始解析 ----
+    answer_line = ""
+    for line in gen.splitlines()[::-1]:
+        if "ANSWER:" in line.upper():
+            answer_line = line
             break
 
+    if not answer_line:
+        # 没找到就退回到原始行为（全局扫），以免崩
+        text = gen
+    else:
+        text = answer_line.split(":", 1)[-1]
+
+    letters = [ch for ch in text if ch in "ABCDE"]
     while len(letters) < num_q:
         letters.append("?")
-
     return letters[:num_q]
 
 

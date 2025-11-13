@@ -35,4 +35,4 @@ python mcq_to_true_statement.py \
     --output "$OUTDIR/forget.shard_${SHARD_INDEX}.jsonl" \
     --num-shards $NUM_SHARDS \
     --shard-index $SHARD_INDEX \
-    --max-minutes 25
+    --max-minutes 60

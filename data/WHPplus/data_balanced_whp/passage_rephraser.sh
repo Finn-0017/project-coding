@@ -8,7 +8,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=2
 #SBATCH --time=1:00:00
-#SBATCH --mem=32G
+#SBATCH --mem=16G
 #SBATCH -A GALES-SL3-GPU
 #SBATCH -p ampere
 
@@ -16,7 +16,7 @@
 source ~/.bashrc
 conda activate venv
 
-# ===== 路径根据你实际情况改一下 =====
+# =================================
 INPUT="/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_passages.json"
 OUTDIR="/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp"
 # =================================

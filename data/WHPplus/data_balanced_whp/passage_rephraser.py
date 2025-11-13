@@ -3,12 +3,9 @@ from pathlib import Path
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from tqdm import tqdm
 
-# 1. 模型路径
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-
-# 2. 文件路径（改成你自己的实际路径）
-INPUT_JSON = Path("/home/you/projects/dfmcq/forget_passages.json")
-OUTPUT_JSON = Path("/home/you/projects/dfmcq/forget_passages_rephrased.json")
+INPUT_JSON = Path("forget_passages.json")
+OUTPUT_JSON = Path("forget_passages_rephrased.json")
 
 print("Loading model...")
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)

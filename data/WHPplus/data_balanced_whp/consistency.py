@@ -116,9 +116,9 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
     gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
 
     # debug:
-    # print("=== RAW GEN ===")
-    # print(gen)
-    # print("=== END GEN ===")
+    print("=== RAW GEN ===")
+    print(gen)
+    print("=== END GEN ===")
 
     # ===== 2. 只按 “编号 + 字母” 的 pattern 抓答案 =====
     letters = []

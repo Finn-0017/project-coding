@@ -8,6 +8,7 @@
 #SBATCH --time=1:00:00
 #SBATCH --mem=16G
 #SBATCH -A GALES-SL3-GPU
+#SBATCH -p ampere
 
 # Activate venv
 source /home/xy319/venvs/venv/bin/activate

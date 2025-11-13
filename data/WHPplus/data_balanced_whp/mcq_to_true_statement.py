@@ -1,9 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-MCQ → factual statements for all choices.
-No checkpoint flag files. Supports resume. 25-min soft limit.
-Fixed paths for MODEL_PATH / INPUT_PATH / OUTPUT_PATH.
+MCQ → factual statements for all choices, sharded and resumable.
+
+Usage example (4 shards, 10 minutes limit each):
+
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+python mcq_to_true_statement.py \
+  --input /path/to/forget.json \
+  --output /path/to/shard_0.jsonl \
+  --num-shards 4 \
+  --shard-index 0 \
+  --max-minutes 10
 """
 
 import json
@@ -20,23 +28,14 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# ==========================================
-# Fixed paths
-# ==========================================
+# =======================
+# Config
+# =======================
 
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-INPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget.json"
-OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/shard_0.jsonl"
-
-# ==========================================
-# Config
-# ==========================================
-
 MAX_NEW_TOKENS = 64
-TEMPERATURE = 0.0
 DEFAULT_SEED = 1234
-MAX_MINUTES = 25  # soft limit
-# ==========================================
+DEFAULT_MAX_MINUTES = 10  # soft limit
 
 INSTRUCTION = (
     "You are a careful fact rewriter.\n"
@@ -49,12 +48,16 @@ INSTRUCTION = (
     "Return only the statement.\n"
 )
 
+# =======================
+# Utils & data structures
+# =======================
+
 def set_seed(seed: int):
     random.seed(seed)
     try:
         import numpy as np
         np.random.seed(seed)
-    except:
+    except Exception:
         pass
 
 def _to_text(x: Any) -> str:
@@ -62,7 +65,7 @@ def _to_text(x: Any) -> str:
         return x
     try:
         return str(x)
-    except:
+    except Exception:
         return ""
 
 @dataclass
@@ -103,8 +106,11 @@ def generate(model, tok, name, question, letter, text):
         {"role": "system", "content": "You are a precise and concise rewriting assistant."},
         {"role": "user", "content": prompt},
     ]
-    ids = tok.apply_chat_template(messages, add_generation_prompt=True, return_tensors="pt").to(model.device)
+    ids = tok.apply_chat_template(
+        messages, add_generation_prompt=True, return_tensors="pt"
+    ).to(model.device)
     mask = torch.ones_like(ids, dtype=torch.long)
+
     with torch.no_grad():
         out = model.generate(
             ids,
@@ -152,12 +158,18 @@ def strong_check(name, question, choice_text, s):
             if n not in s:
                 return False
     else:
-        c_tokens = [t for t in re.findall(r"[A-Za-z']+", choice_text.lower()) if t not in STOP_WORDS]
+        c_tokens = [
+            t for t in re.findall(r"[A-Za-z']+", choice_text.lower())
+            if t not in STOP_WORDS
+        ]
         if c_tokens and not any(t in s_lower for t in set(c_tokens)):
             return False
 
     # question content preservation
-    q_tokens = [t for t in re.findall(r"[A-Za-z']+", question.lower()) if t not in STOP_WORDS]
+    q_tokens = [
+        t for t in re.findall(r"[A-Za-z']+", question.lower())
+        if t not in STOP_WORDS
+    ]
     if q_tokens:
         missing = [t for t in set(q_tokens) if t not in s_lower]
         if len(missing) / len(set(q_tokens)) > 0.2:
@@ -165,14 +177,7 @@ def strong_check(name, question, choice_text, s):
 
     return True
 
-SHOULD_EXIT = False
-
-def handle_sigterm(signum, frame):
-    global SHOULD_EXIT
-    SHOULD_EXIT = True
-    print("[SIGNAL] SIGTERM received; exit after current item...", file=sys.stderr)
-
-def ensure_dir(path):
+def ensure_dir(path: str):
     if path:
         os.makedirs(path, exist_ok=True)
 
@@ -180,78 +185,110 @@ def safe_fsync(f):
     try:
         f.flush()
         os.fsync(f.fileno())
-    except:
+    except Exception:
         pass
 
-def load_items(path: str) -> List[MCQItem]:
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def flatten_items(path: str) -> List[MCQItem]:
     raw = load_json(path)
-    items = []
+    items: List[MCQItem] = []
     if isinstance(raw, dict):
         groups = raw.get("groups") or raw.get("data") or []
     else:
         groups = raw
 
     for g in groups:
-        gid = _to_text(g.get("group",""))
-        for it in g.get("items",[]):
+        gid = _to_text(g.get("group", ""))
+        for it in g.get("items", []):
             items.append(
                 MCQItem(
                     group=gid,
-                    index=int(it.get("index",0)),
-                    name=_to_text(it.get("name","")),
-                    question=_to_text(it.get("question","")),
-                    choices=it.get("choices",[]),
-                    correct=_to_text(it.get("correct","")).upper(),
+                    index=int(it.get("index", 0)),
+                    name=_to_text(it.get("name", "")),
+                    question=_to_text(it.get("question", "")),
+                    choices=it.get("choices", []),
+                    correct=_to_text(it.get("correct", "")).upper(),
                 )
             )
     return items
 
-def load_json(path):
-    with open(path,"r",encoding="utf-8") as f:
-        return json.load(f)
+# =======================
+# Argparse
+# =======================
 
-# ===============================
+import argparse
+
+def parse_args():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--input", type=str, required=True, help="Input MCQ JSON file.")
+    ap.add_argument("--output", type=str, required=True, help="Output JSONL file for this shard.")
+    ap.add_argument("--num-shards", type=int, default=1, help="Total number of shards.")
+    ap.add_argument("--shard-index", type=int, default=0, help="Index of this shard (0-based).")
+    ap.add_argument("--max-minutes", type=float, default=DEFAULT_MAX_MINUTES, help="Soft time limit in minutes.")
+    ap.add_argument("--seed", type=int, default=DEFAULT_SEED, help="Random seed.")
+    return ap.parse_args()
+
+# =======================
 # Main
-# ===============================
+# =======================
+
+SHOULD_EXIT = False
+
+def handle_sigterm(signum, frame):
+    global SHOULD_EXIT
+    SHOULD_EXIT = True
+    print("[SIGNAL] SIGTERM received; will exit after this question.", file=sys.stderr)
 
 def main():
     global SHOULD_EXIT
-    set_seed(DEFAULT_SEED)
+    args = parse_args()
+    set_seed(args.seed)
     signal.signal(signal.SIGTERM, handle_sigterm)
 
-    print(f"[INFO] INPUT={INPUT_PATH}")
-    print(f"[INFO] OUTPUT={OUTPUT_PATH}")
+    print(f"[INFO] input = {args.input}")
+    print(f"[INFO] output = {args.output}")
+    print(f"[INFO] shard_index = {args.shard_index}, num_shards = {args.num_shards}")
 
-    items = load_items(INPUT_PATH)
-    items = sorted(items, key=lambda x: (x.group, x.index))
+    if args.shard_index < 0 or args.shard_index >= args.num_shards:
+        raise ValueError("Invalid shard_index / num_shards combination.")
 
-    # load resume keys
-    completed: Set[Tuple[str,int]] = set()
-    if os.path.exists(OUTPUT_PATH):
+    all_items = flatten_items(args.input)
+    all_items = sorted(all_items, key=lambda x: (x.group, x.index))
+
+    # shard: take every k-th item
+    assigned = all_items[args.shard_index :: args.num_shards]
+    print(f"[INFO] total items = {len(all_items)}, assigned to this shard = {len(assigned)}")
+
+    # resume from existing output
+    completed: Set[Tuple[str, int]] = set()
+    if os.path.exists(args.output):
         print("[RESUME] Reading existing JSONL...")
-        with open(OUTPUT_PATH,"r",encoding="utf-8") as f:
+        with open(args.output, "r", encoding="utf-8") as f:
             lines = f.readlines()
         last_ok = 0
-        for i,ln in enumerate(lines):
-            ln=ln.strip()
+        for i, ln in enumerate(lines):
+            ln = ln.strip()
             if not ln:
                 continue
             try:
-                rec=json.loads(ln)
-                g=rec.get("group","")
-                for it in rec.get("items",[]):
-                    completed.add((g,int(it.get("index",0))))
-                last_ok=i+1
-            except:
+                rec = json.loads(ln)
+                g = rec.get("group", "")
+                for it in rec.get("items", []):
+                    completed.add((g, int(it.get("index", 0))))
+                last_ok = i + 1
+            except Exception:
                 break
         if last_ok < len(lines):
-            print("[RESUME] Truncating corrupted tail...")
-            with open(OUTPUT_PATH,"w",encoding="utf-8") as f:
+            print("[RESUME] Truncating corrupted tail...", file=sys.stderr)
+            with open(args.output, "w", encoding="utf-8") as f:
                 f.writelines(lines[:last_ok])
-        print(f"[RESUME] Completed questions: {len(completed)}")
+        print(f"[RESUME] Completed questions in this shard: {len(completed)}")
 
-    remaining = [it for it in items if (it.group,it.index) not in completed]
-    print(f"[INFO] Remaining: {len(remaining)}")
+    remaining = [it for it in assigned if (it.group, it.index) not in completed]
+    print(f"[INFO] Remaining questions in this shard: {len(remaining)}")
 
     if not remaining:
         print("[INFO] Nothing to do.")
@@ -260,67 +297,59 @@ def main():
     # load model
     model, tok = load_model_and_tokenizer(MODEL_PATH)
 
-    out_dir = os.path.dirname(OUTPUT_PATH)
-    ensure_dir(out_dir)
-    fout = open(OUTPUT_PATH, "a", encoding="utf-8")
+    ensure_dir(os.path.dirname(args.output))
+    fout = open(args.output, "a", encoding="utf-8")
 
     start = time.time()
-    limit = MAX_MINUTES * 60.0
+    limit = args.max_minutes * 60.0
 
     pbar = tqdm(total=len(remaining), desc="MCQ->statements", unit="question")
-
     for it in remaining:
         if SHOULD_EXIT:
-            print("[STOP] SIGTERM break.")
+            print("[STOP] SIGTERM break.", file=sys.stderr)
             break
         if time.time() - start >= limit:
-            print(f"[STOP] Time limit {MAX_MINUTES} min reached.")
+            print(f"[STOP] Time limit {args.max_minutes} min reached.", file=sys.stderr)
             break
 
-        choice_entries = []
+        choice_entries: List[Dict[str, Any]] = []
         for ch in it.choices:
-            letter = _to_text(ch.get("letter","")).upper()
-            text = _to_text(ch.get("text",""))
+            letter = _to_text(ch.get("letter", "")).upper()
+            text = _to_text(ch.get("text", ""))
             if not letter:
                 continue
-
             try:
                 s = generate(model, tok, it.name, it.question, letter, text)
-            except:
+            except Exception:
                 s = ""
-
             if not strong_check(it.name, it.question, text, s):
-                q=it.question.strip()
+                q = it.question.strip()
                 if not q.endswith("?"):
-                    q+="?"
-                s=f"{it.name} — Q: {q} A: {text}."
+                    q += "?"
+                s = f"{it.name} — Q: {q} A: {text}."
+            choice_entries.append(
+                {"letter": letter, "text": text, "statement": _to_text(s)}
+            )
 
-            choice_entries.append({
-                "letter":letter,
-                "text":text,
-                "statement":_to_text(s),
-            })
-
-        rec={
-            "group":it.group,
-            "name":it.name,
-            "items":[
+        rec = {
+            "group": it.group,
+            "name": it.name,
+            "items": [
                 {
-                    "index":it.index,
-                    "question":it.question,
-                    "choices":choice_entries,
-                    "correct":it.correct,
+                    "index": it.index,
+                    "question": it.question,
+                    "choices": choice_entries,
+                    "correct": it.correct,
                 }
-            ]
+            ],
         }
-
-        fout.write(json.dumps(rec,ensure_ascii=False)+"\n")
+        fout.write(json.dumps(rec, ensure_ascii=False) + "\n")
         safe_fsync(fout)
         pbar.update(1)
 
     pbar.close()
     fout.close()
-    print(f"[DONE] Output saved to {OUTPUT_PATH}")
+    print(f"[DONE] Saved to {args.output}")
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()

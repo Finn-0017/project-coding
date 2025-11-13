@@ -51,7 +51,14 @@ def load_model_and_tokenizer(path: str):
 
 # ======================= batched generation ========================
 
-def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list, batch_size: int = 10):
+def generate_option_letters_batched(
+    model,
+    tokenizer,
+    passage: str,
+    mcq_list,
+    batch_size: int = 10,
+    debug: bool = False,
+):
     """
     按 batch_size 切分问题。默认 10 题/批。
     mcq_list: [{'question': str, 'choices': List[{'letter': 'A', 'text': '...'}, ...]}, ...]
@@ -66,10 +73,11 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list, ba
         batches.append(mcq_list[i:i + batch_size])
 
     for b_idx, batch_mcqs in enumerate(batches):
+        # 题号全局编号：1..num_q
         b_start = b_idx * batch_size + 1
         b_end = b_start + len(batch_mcqs) - 1
 
-        # 构建问题文本（题号用全局的 1..num_q）
+        # 构建问题文本（题号用全局编号）
         q_blocks = []
         for i, mcq in enumerate(batch_mcqs, start=b_start):
             q_text = mcq["question"]
@@ -129,6 +137,16 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list, ba
             )
 
         gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True)
+
+        # DEBUG 输出
+        if debug:
+            print(
+                "\n==================== RAW GEN (batch {}: questions {}–{}) ====================".format(
+                    b_idx + 1, b_start, b_end
+                )
+            )
+            print(gen)
+            print("==================== END RAW GEN ====================\n")
 
         # 解析：按行匹配 "编号 + 选项字母"
         pattern = re.compile(r'^\s*(\d+)\s*[\.\):-]?\s*([A-E])\b')
@@ -236,6 +254,7 @@ def eval_passage_consistency_batched(
     only_passage_index: int = None,
     max_questions: int = None,
     batch_size: int = 10,
+    debug: bool = False,
 ):
     """
     对每个 passage 一次性（分 batch）回答所有题：
@@ -300,9 +319,14 @@ def eval_passage_consistency_batched(
         if num_q == 0:
             continue
 
-        # 模型预测
+        # 模型预测（分 batch）
         pred_letters = generate_option_letters_batched(
-            model, tokenizer, passage_text, mcq_list, batch_size=batch_size
+            model,
+            tokenizer,
+            passage_text,
+            mcq_list,
+            batch_size=batch_size,
+            debug=debug,
         )
 
         # 安全对齐长度
@@ -384,6 +408,7 @@ def parse_args():
     ap.add_argument("--only-passage-index", type=int, default=None, help="only evaluate this passage index (optional)")
     ap.add_argument("--max-questions", type=int, default=None, help="max questions per passage (for debugging)")
     ap.add_argument("--batch-size", type=int, default=10, help="questions per batch when querying the model")
+    ap.add_argument("--debug", action="store_true", help="print raw model outputs for each batch")
 
     return ap.parse_args()
 
@@ -410,6 +435,7 @@ def main():
         only_passage_index=args.only_passage_index,
         max_questions=args.max_questions,
         batch_size=args.batch_size,
+        debug=args.debug,
     )
 
 

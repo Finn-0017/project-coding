@@ -321,8 +321,8 @@ def main():
     parser.add_argument(
         "--target_per_passage",
         type=int,
-        default=40,
-        help="Target number of statements per passage (default: 40)"
+        default=25,
+        help="Target number of statements per passage (default: 25)"
     )
     parser.add_argument(
         "--seed",

@@ -1,0 +1,72 @@
+[
+  {
+    "group": "10000",
+    "name": "Benedetto Varchi",
+    "statement_count": 7585,
+    "num_passages": 303,
+    "avg_per_passage": 25.033003300330034
+  },
+  {
+    "group": "10001",
+    "name": "Wilhelm Wattenbach",
+    "statement_count": 5100,
+    "num_passages": 204,
+    "avg_per_passage": 25.0
+  },
+  {
+    "group": "10002",
+    "name": "Dany Robin",
+    "statement_count": 3845,
+    "num_passages": 154,
+    "avg_per_passage": 24.967532467532468
+  },
+  {
+    "group": "10003",
+    "name": "Martin Gutzwiller",
+    "statement_count": 5330,
+    "num_passages": 213,
+    "avg_per_passage": 25.023474178403756
+  },
+  {
+    "group": "10004",
+    "name": "P. A. Yeomans",
+    "statement_count": 3740,
+    "num_passages": 150,
+    "avg_per_passage": 24.933333333333334
+  },
+  {
+    "group": "10005",
+    "name": "Karl Hartl",
+    "statement_count": 2330,
+    "num_passages": 93,
+    "avg_per_passage": 25.053763440860216
+  },
+  {
+    "group": "10006",
+    "name": "Michaela Dorfmeister",
+    "statement_count": 1380,
+    "num_passages": 55,
+    "avg_per_passage": 25.09090909090909
+  },
+  {
+    "group": "10007",
+    "name": "Leo Slezak",
+    "statement_count": 2190,
+    "num_passages": 88,
+    "avg_per_passage": 24.886363636363637
+  },
+  {
+    "group": "10008",
+    "name": "Alicia de Larrocha",
+    "statement_count": 1860,
+    "num_passages": 74,
+    "avg_per_passage": 25.135135135135137
+  },
+  {
+    "group": "10009",
+    "name": "Christian Krohg",
+    "statement_count": 1785,
+    "num_passages": 71,
+    "avg_per_passage": 25.140845070422536
+  }
+]

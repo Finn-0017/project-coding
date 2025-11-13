@@ -15,6 +15,7 @@ Eval: passage + multiple MCQs in one shot → N letters
 import argparse
 import json
 import os
+import re
 from collections import defaultdict
 
 import torch
@@ -47,11 +48,14 @@ def load_model_and_tokenizer(path: str):
     return model, tokenizer
 
 
-# ======================= batched generation ========================
-
 def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
+    """
+    mcq_list: [{'question':..., 'choices': [...]}]
+    返回: 长度 == len(mcq_list) 的预测字母数组
+    """
     num_q = len(mcq_list)
 
+    # ===== 1. 构建 prompt =====
     q_blocks = []
     for i, mcq in enumerate(mcq_list, start=1):
         q_text = mcq["question"]
@@ -67,18 +71,22 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         f"Passage:\n\"\"\"\n{passage}\n\"\"\"\n\n"
         f"{all_questions_text}\n"
         "Now answer ALL questions at once.\n"
-        f"At the end, write ONE line in the form:\n"
-        f"ANSWER: XXXXX\n"
-        f"where XXXXX are EXACTLY {num_q} capital letters from A, B, C, D, or E, "
-        "with NO spaces or punctuation.\n"
-        "Do not write anything after that line."
+        "For each question i, write a separate line in the format:\n"
+        "i. X. (where X is one of A, B, C, D, or E)\n"
+        "For example:\n"
+        "1. B. ...\n"
+        "2. A. ...\n"
+        "3. D. ...\n"
+        "You may optionally add a short explanation after the letter, "
+        "but the letter must appear immediately after the question number."
     )
 
     messages = [
         {
             "role": "system",
             "content": "You are a precise MCQ answering assistant. "
-                       "You MUST put the final answers on a single line starting with 'ANSWER: '.",
+                       "For each question, you MUST start the line with "
+                       "the question number and a single answer letter.",
         },
         {"role": "user", "content": user_content},
     ]
@@ -93,33 +101,42 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         out = model.generate(
             input_ids,
             attention_mask=attention_mask,
-            max_new_tokens=MAX_NEW_TOKENS,
+            max_new_tokens=64,
             do_sample=False,
             eos_token_id=tokenizer.eos_token_id,
             pad_token_id=tokenizer.pad_token_id,
         )
 
-    gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True)
+    gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
+
+    # debug 用：
     print("=== RAW GEN ===")
     print(gen)
     print("=== END GEN ===")
 
-    # ---- 只从最后一个 'ANSWER:' 开始解析 ----
-    answer_line = ""
-    for line in gen.splitlines()[::-1]:
-        if "ANSWER:" in line.upper():
-            answer_line = line
+    # ===== 2. 优先按 “编号 + 字母” 的 pattern 抓答案 =====
+    letters = []
+    pattern = re.compile(r'^\s*\d+\s*[\.\):-]?\s*([A-E])\b')
+
+    for line in gen.splitlines():
+        m = pattern.match(line)
+        if m:
+            letters.append(m.group(1))
+        if len(letters) >= num_q:
             break
 
-    if not answer_line:
-        # 没找到就退回到原始行为（全局扫），以免崩
-        text = gen
-    else:
-        text = answer_line.split(":", 1)[-1]
+    # ===== 3. 如果编号模式不够，再 fallback：全局扫 A–E =====
+    if len(letters) < num_q:
+        for ch in gen:
+            if ch in "ABCDE":
+                letters.append(ch)
+            if len(letters) >= num_q:
+                break
 
-    letters = [ch for ch in text if ch in "ABCDE"]
+    # ===== 4. 长度对齐 =====
     while len(letters) < num_q:
         letters.append("?")
+
     return letters[:num_q]
 
 

@@ -299,16 +299,16 @@ STOP_WORDS = WH_WORDS | {
 
 def strong_check(name: str, question: str, choice_text: str, statement: str) -> bool:
     """
-    Structural / consistency check focused on preserving QUESTION content.
+    Structural / consistency check focused on preserving QUESTION context,
+    while not penalizing replacement of the wh-phrase complement.
 
     Goals:
       - Ensure the statement is a non-trivial sentence.
       - Ensure the ENTITY NAME appears.
-      - Ensure that most content words from the QUESTION are preserved.
+      - Ensure that most content words from the QUESTION *context* are preserved.
+      - Allow words right after 'which/what/...' that are meant to be replaced
+        by the ANSWER to be dropped.
       - Ensure numeric information from the ANSWER (e.g. years) is not lost.
-
-    We deliberately do NOT require all content words from the ANSWER to appear,
-    because choices can be long and paraphrased heavily.
     """
     name = _to_text(name)
     question = _to_text(question)
@@ -323,21 +323,48 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
 
     # 1) Name coverage: require that the statement mentions the entity name.
     if name and name.strip():
-        # We only do a simple substring check on the lowercase name.
         if name.lower() not in s_lower:
             return False
 
     # 2) QUESTION content preservation.
-    #    Extract content tokens (non-stopwords) from the question and check that
-    #    a reasonable fraction of them appear in the statement.
-    q_tokens = [
-        t for t in re.findall(r"[A-Za-z']+", question.lower())
-        if t not in STOP_WORDS
-    ]
-    if q_tokens:
-        q_unique = sorted(set(q_tokens))
+    #    We treat wh-questions specially: tokens immediately after
+    #    'which/what/...' up to the first auxiliary/verb are likely to be
+    #    replaced by the answer, so we do NOT require them in the statement.
+    q_all_tokens = re.findall(r"[A-Za-z']+", question.lower())
+
+    # Default: use all content tokens.
+    q_tokens_for_check: List[str] = []
+
+    if q_all_tokens and q_all_tokens[0] in WH_WORDS:
+        # wh-question: skip the slot described right after the wh-word.
+        VERB_OR_AUX = {
+            "is", "was", "were", "are", "am",
+            "do", "does", "did",
+            "has", "have", "had",
+            "can", "could", "will", "would",
+            "should", "shall", "may", "might", "must"
+        }
+        # Find the first verb/aux index; everything between index 1 and that index
+        # is treated as the "answer slot description" (e.g. "city", "of the following").
+        j = 1
+        while j < len(q_all_tokens) and q_all_tokens[j] not in VERB_OR_AUX:
+            j += 1
+
+        # Tokens from j onwards form the real contextual part of the question.
+        context_tokens = q_all_tokens[j:]
+        q_tokens_for_check = [
+            t for t in context_tokens if t not in STOP_WORDS
+        ]
+    else:
+        # Non-wh question: fall back to all content tokens.
+        q_tokens_for_check = [
+            t for t in q_all_tokens if t not in STOP_WORDS
+        ]
+
+    if q_tokens_for_check:
+        q_unique = sorted(set(q_tokens_for_check))
         present = [t for t in q_unique if t in s_lower]
-        # Require at least 60% of content tokens from the question to be present.
+        # Require at least 60% of context tokens from the question to be present.
         if len(present) / len(q_unique) < 0.6:
             return False
 
@@ -349,9 +376,8 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
             if n not in s:
                 return False
 
-    # We intentionally ignore non-numeric answer tokens here to avoid rejecting
-    # good paraphrases when choices are long.
     return True
+
 
 def ensure_dir(path: str) -> None:
     """Create directory if it does not exist."""

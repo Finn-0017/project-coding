@@ -13,6 +13,7 @@
 #SBATCH -p ampere
 
 # Activate venv
+source ~/.bashrc
 conda activate venv
 
 INPUT="/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget.json"

@@ -3,17 +3,55 @@
 """
 MCQ → factual statements for all choices, sharded and resumable.
 
-Usage example (4 shards, 10 minutes limit each):
+- Reads WHP forget.json style:
+  {
+    "10000": [
+      {
+        "answer": "D",
+        "question": "...",
+        "name": "...",
+        "choices": {
+          "A": "...",
+          "B": "...",
+          ...
+        }
+      ],
+      ...
+    ],
+    "10001": [...]
+  }
 
-CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-python mcq_to_true_statement.py \
-  --input /path/to/forget.json \
-  --output /path/to/forget.shard_0.jsonl \
-  --num-shards 4 \
-  --shard-index 0 \
-  --max-minutes 10
+- For each MCQ, generate a natural factual statement for EVERY choice.
+
+- Output JSONL, one line per question:
+  {
+    "group": "10000",
+    "name": "Benedetto Varchi",
+    "items": [
+      {
+        "index": 10,
+        "question": "...",
+        "choices": [
+          {"letter": "A", "text": "Florence", "statement": "Benedetto Varchi was born in Florence."},
+          ...
+        ],
+        "correct": "A"
+      }
+    ]
+  }
+
+- Sharding:
+  --num-shards N, --shard-index i  (take items[i::N])
+
+- Resume:
+  Reads existing output JSONL, collects (group, index) already done for this shard,
+  and skips them.
+
+- Time limit:
+  --max-minutes M  (soft limit; stops after current question if exceeded).
 """
 
+import argparse
 import json
 import os
 import random
@@ -28,29 +66,26 @@ import torch
 from tqdm import tqdm
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# =======================
+# ==========================================
 # Config
-# =======================
+# ==========================================
 
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 MAX_NEW_TOKENS = 64
 DEFAULT_SEED = 1234
-DEFAULT_MAX_MINUTES = 10  # soft limit
+DEFAULT_MAX_MINUTES = 10  # soft limit in minutes
 
+# Instruction tuned for natural rewrite
 INSTRUCTION = (
-    "You are a careful fact rewriter.\n"
-    "You will be given a NAME, a QUESTION, and the selected ANSWER.\n"
-    "The QUESTION always starts with one of: what, where, when, why, which, who, how, whose, whom.\n"
-    "Your task: turn QUESTION + ANSWER into ONE factual statement.\n"
-    "• Keep all structure except the wh-part.\n"
-    "• Do NOT paraphrase; only replace the wh-word part with the ANSWER.\n"
-    "• Maintain meaning, no new info.\n"
-    "Return only the statement.\n"
+    "Rewrite the question into a factual statement by replacing the wh-question with the given answer.\n"
+    "Do not include any question format, do not mention Q or A.\n"
+    "Write a clean, natural, factual sentence that expresses the answer.\n"
+    "Return only the rewritten statement.\n"
 )
 
-# =======================
+# ==========================================
 # Utils & data structures
-# =======================
+# ==========================================
 
 def set_seed(seed: int):
     random.seed(seed)
@@ -75,7 +110,7 @@ class MCQItem:
     name: str
     question: str
     choices: List[Dict[str, str]]
-    correct: str
+    correct: str  # single-letter, e.g. "A"
 
 def load_model_and_tokenizer(path: str):
     print(f"[INFO] loading model from {path}", file=sys.stderr)
@@ -85,7 +120,7 @@ def load_model_and_tokenizer(path: str):
         torch_dtype=torch.bfloat16,
         device_map="auto",
     )
-
+    # explicitly set pad_token to eos_token to avoid warnings
     if tok.pad_token_id is None:
         tok.pad_token = tok.eos_token
     model.config.pad_token_id = tok.pad_token_id
@@ -93,23 +128,24 @@ def load_model_and_tokenizer(path: str):
     model.eval()
     return model, tok
 
-    model.eval()
-    return model, tok
-
-def build_prompt(name: str, question: str, letter: str, text: str) -> str:
+def build_prompt(name: str, question: str, answer_text: str) -> str:
+    """
+    Build the user prompt for the rewrite task.
+    We include name, question and answer, but the instruction already describes the task.
+    """
     return INSTRUCTION + "\n\n" + json.dumps(
         {
             "name": name,
             "question": question,
-            "selected_choice": {"letter": letter, "text": text},
+            "answer": answer_text,
         },
         ensure_ascii=False,
         indent=2,
     )
 
-def generate(model, tok, name, question, letter, text):
+def generate(model, tok, name, question, answer_text):
     """One-shot generation for speed."""
-    prompt = build_prompt(name, question, letter, text)
+    prompt = build_prompt(name, question, answer_text)
     messages = [
         {"role": "system", "content": "You are a precise and concise rewriting assistant."},
         {"role": "user", "content": prompt},
@@ -131,6 +167,7 @@ def generate(model, tok, name, question, letter, text):
     t = tok.decode(out[0][ids.size(1):], skip_special_tokens=True).strip()
     if not t.endswith("."):
         t += "."
+    # we only want the first line
     return t.split("\n")[0].strip()
 
 WH_WORDS = {
@@ -143,8 +180,15 @@ STOP_WORDS = WH_WORDS | {
     "that","be","been","being"
 }
 
-def strong_check(name, question, choice_text, s):
-    """Structure/consistency check."""
+def strong_check(name, question, choice_text, s) -> bool:
+    """
+    Lightweight structure / consistency check:
+    - non-empty, at least 3 words
+    - should mention the entity name if present
+    - should contain answer key tokens (numbers or some content words)
+    We DO NOT strictly enforce question token preservation anymore,
+    to avoid over-rejecting good rewrites.
+    """
     name = _to_text(name)
     question = _to_text(question)
     choice_text = _to_text(choice_text)
@@ -155,33 +199,25 @@ def strong_check(name, question, choice_text, s):
 
     s_lower = s.lower()
 
-    # must mention name
-    if name and name.lower() not in s_lower:
-        return False
+    # Name presence (softly required)
+    if name and name.strip():
+        if name.lower() not in s_lower:
+            return False
 
-    # answer consistency
-    nums = re.findall(r"\d{3,4}", choice_text)
-    if nums:
-        for n in nums:
-            if n not in s:
+    # Answer consistency: numbers or content tokens
+    if choice_text and choice_text.strip():
+        nums = re.findall(r"\d{3,4}", choice_text)
+        if nums:
+            for n in nums:
+                if n not in s:
+                    return False
+        else:
+            c_tokens = [
+                t for t in re.findall(r"[A-Za-z']+", choice_text.lower())
+                if t not in STOP_WORDS
+            ]
+            if c_tokens and not any(t in s_lower for t in set(c_tokens)):
                 return False
-    else:
-        c_tokens = [
-            t for t in re.findall(r"[A-Za-z']+", choice_text.lower())
-            if t not in STOP_WORDS
-        ]
-        if c_tokens and not any(t in s_lower for t in set(c_tokens)):
-            return False
-
-    # question content preservation
-    q_tokens = [
-        t for t in re.findall(r"[A-Za-z']+", question.lower())
-        if t not in STOP_WORDS
-    ]
-    if q_tokens:
-        missing = [t for t in set(q_tokens) if t not in s_lower]
-        if len(missing) / len(set(q_tokens)) > 0.2:
-            return False
 
     return True
 
@@ -201,25 +237,41 @@ def load_json(path):
         return json.load(f)
 
 def flatten_items(path: str) -> List[MCQItem]:
+    """
+    Flatten WHP forget.json style into a list of MCQItem.
+    Expected primary format:
+      {
+        "10000": [
+          {
+            "answer": "D",
+            "question": "...",
+            "name": "...",
+            "choices": {
+              "A": "...", "B": "...", ...
+            }
+          },
+          ...
+        ],
+        "10001": [...]
+      }
+
+    Also keeps a fallback path for the older list-of-groups schema (for compatibility).
+    """
     raw = load_json(path)
     items: List[MCQItem] = []
 
-    # 情况 1：你的 forget.json 这种形式：{"10000": [ {...}, {...} ], "10001": [...]}
+    # Case 1: dict of group_id -> list[question dict]
     if isinstance(raw, dict) and all(isinstance(v, list) for v in raw.values()):
         for group_id, q_list in raw.items():
             for idx, q in enumerate(q_list):
                 name = _to_text(q.get("name", ""))
                 question = _to_text(q.get("question", ""))
                 answer_letter = _to_text(q.get("answer", "")).upper()
-
-                # choices 是一个 dict: { "A": "xxx", "B": "yyy", ... }
                 choices_dict = q.get("choices", {}) or {}
-                # 为了稳定，按选项字母排序
                 choice_list = [
-                    {"letter": letter, "text": _to_text(text)}
+                    {"letter": str(letter), "text": _to_text(text)}
                     for letter, text in sorted(choices_dict.items())
                 ]
-
                 items.append(
                     MCQItem(
                         group=_to_text(group_id),
@@ -232,7 +284,7 @@ def flatten_items(path: str) -> List[MCQItem]:
                 )
         return items
 
-    # 情况 2：之前假定的那种 list-of-groups 结构（保留兼容）
+    # Case 2: legacy format (list of groups -> items)
     if isinstance(raw, dict):
         groups = raw.get("groups") or raw.get("data") or []
     else:
@@ -260,11 +312,9 @@ def flatten_items(path: str) -> List[MCQItem]:
 
     return items
 
-# =======================
+# ==========================================
 # Argparse
-# =======================
-
-import argparse
+# ==========================================
 
 def parse_args():
     ap = argparse.ArgumentParser()
@@ -276,9 +326,9 @@ def parse_args():
     ap.add_argument("--seed", type=int, default=DEFAULT_SEED, help="Random seed.")
     return ap.parse_args()
 
-# =======================
+# ==========================================
 # Main
-# =======================
+# ==========================================
 
 SHOULD_EXIT = False
 
@@ -363,15 +413,16 @@ def main():
             text = _to_text(ch.get("text", ""))
             if not letter:
                 continue
+
+            # generate statement
             try:
-                s = generate(model, tok, it.name, it.question, letter, text)
+                s = generate(model, tok, it.name, it.question, text)
             except Exception:
                 s = ""
+
             if not strong_check(it.name, it.question, text, s):
-                q = it.question.strip()
-                if not q.endswith("?"):
-                    q += "?"
-                s = f"{it.name} — Q: {q} A: {text}."
+                # fallback: still natural, no Q/A
+                s = f"{it.name}: {text}."
             choice_entries.append(
                 {"letter": letter, "text": text, "statement": _to_text(s)}
             )

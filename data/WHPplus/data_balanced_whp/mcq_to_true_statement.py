@@ -61,7 +61,8 @@ MCQ → factual statements for all choices, sharded and resumable.
 - Two-stage generation per choice:
 
     1) generate_primary: rewrite question+answer into a statement.
-    2) If strong_check fails, generate_refine: ask model to fix the draft.
+    2) If strong_check fails, generate_refine: ask model to fix the draft and
+       explicitly provide REQUIRED_WORDS that must appear.
     3) If still fails, print a [FALLBACK] message to stderr and set statement="FAILED".
 
 - Time limit:
@@ -100,17 +101,18 @@ PRIMARY_INSTRUCTION = (
     "Return only the rewritten statement.\n"
 )
 
-# Refine instruction: take an initial draft and fix it
+# Refine instruction: take an initial draft and fix it, with REQUIRED_WORDS
 REFINE_INSTRUCTION = (
-    "You are given an ENTITY NAME, a QUESTION, an ANSWER, and an initial attempt at a STATEMENT.\n"
-    "Your task is to FIX the statement so that:\n"
-    "  • It is a single, grammatically correct factual sentence.\n"
-    "  • It clearly answers the QUESTION using the ANSWER.\n"
-    "  • It mentions the ENTITY NAME at least once.\n"
-    "  • It does NOT contain 'Q:' or 'A:' or a question mark.\n"
-    "  • It does NOT add any new information beyond the question and answer.\n"
-    "You may edit the sentence freely (reorder words, change structure) as long as the meaning stays the same.\n"
-    "Return only the final fixed statement.\n"
+    "You are fixing a factual statement.\n"
+    "You MUST include ALL REQUIRED_WORDS verbatim in the final sentence.\n"
+    "OPTIONAL_WORDS may also be included if they fit naturally.\n"
+    "Rules:\n"
+    "  • Output exactly ONE grammatical factual sentence.\n"
+    "  • Mention the ENTITY NAME at least once.\n"
+    "  • Do NOT use any question form, and do NOT use 'Q:' or 'A:'.\n"
+    "  • Do NOT add new facts not in the QUESTION or ANSWER.\n"
+    "  • You may freely adjust word order, grammar, and phrasing.\n"
+    "Return only the rewritten sentence.\n"
 )
 
 # ==========================================
@@ -210,21 +212,57 @@ def generate_refine(
     answer_text: str,
     draft_statement: str,
 ) -> str:
-    """Second-pass generation: refine a draft statement to fix structure and content."""
+    """
+    Second-pass generation: refine a draft statement to fix structure and content,
+    and enforce the presence of REQUIRED_WORDS.
+    """
+    # Extract content words from QUESTION
+    q_tokens = [
+        t for t in re.findall(r"[A-Za-z']+", question.lower())
+        if t not in STOP_WORDS
+    ]
+    q_tokens = sorted(set(q_tokens))
+
+    # Extract content words from ANSWER (only keep the most important few)
+    a_tokens = [
+        t for t in re.findall(r"[A-Za-z']+", answer_text.lower())
+        if t not in STOP_WORDS
+    ]
+    a_tokens = sorted(set(a_tokens[:2]))
+
+    # Extract tokens from the entity name
+    name_tokens = [
+        t for t in re.findall(r"[A-Za-z']+", name.lower())
+        if t
+    ]
+
+    # Build REQUIRED_WORDS: a small set of key tokens that must appear
+    required_tokens = set()
+    required_tokens.update(name_tokens)
+    required_tokens.update(q_tokens[:4])
+    required_tokens.update(a_tokens)
+
+    required_words = sorted(required_tokens)
+    optional_words = q_tokens[4:]
+
     prompt = REFINE_INSTRUCTION + "\n\n" + json.dumps(
         {
-            "name": name,
-            "question": question,
-            "answer": answer_text,
-            "draft_statement": draft_statement,
+            "ENTITY_NAME": name,
+            "QUESTION": question,
+            "ANSWER": answer_text,
+            "DRAFT_STATEMENT": draft_statement,
+            "REQUIRED_WORDS": required_words,
+            "OPTIONAL_WORDS": optional_words,
         },
         ensure_ascii=False,
         indent=2,
     )
+
     messages = [
-        {"role": "system", "content": "You are a precise and concise rewriting assistant."},
+        {"role": "system", "content": "You are a precise factual rewriting assistant."},
         {"role": "user", "content": prompt},
     ]
+
     input_ids = tokenizer.apply_chat_template(
         messages,
         add_generation_prompt=True,
@@ -246,7 +284,6 @@ def generate_refine(
     text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
     if not text.endswith("."):
         text += "."
-    # Use only the first line.
     return text.split("\n")[0].strip()
 
 # Wh-words and simple stop-word set used by strong_check.
@@ -286,6 +323,7 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
 
     # 1) Name coverage: require that the statement mentions the entity name.
     if name and name.strip():
+        # We only do a simple substring check on the lowercase name.
         if name.lower() not in s_lower:
             return False
 

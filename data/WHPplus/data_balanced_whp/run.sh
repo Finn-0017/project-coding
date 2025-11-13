@@ -3,6 +3,8 @@
 #SBATCH --output=logs/mcq_%A_%a.out
 #SBATCH --error=logs/mcq_%A_%a.err
 #SBATCH --array=3-8
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=2
 #SBATCH --time=1:00:00

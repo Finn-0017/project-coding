@@ -12,17 +12,13 @@ Key features:
 - Graceful SIGTERM handling to flush+sync before exiting.
 
 Example (single GPU, whole dataset):
-    python question_rephrase_parallel.py
+    python question_rephrase.py
 
-Example (4 GPUs):
+Example (2 GPUs):
     CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --num-shards 4 --shard-index 0 --output shard_0.jsonl &
+    python question_rephrase.py --num-shards 2 --shard-index 0 --output shard_0.jsonl &
     CUDA_VISIBLE_DEVICES=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --num-shards 4 --shard-index 1 --output shard_1.jsonl &
-    CUDA_VISIBLE_DEVICES=2 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --num-shards 4 --shard-index 2 --output shard_2.jsonl &
-    CUDA_VISIBLE_DEVICES=3 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-    python question_rephrase_parallel.py --num-shards 4 --shard-index 3 --output shard_3.jsonl &
+    python question_rephrase.py --num-shards 2 --shard-index 1 --output shard_1.jsonl &
     wait
 
 After generation, merge JSONL files if needed (e.g., concatenate).
@@ -41,7 +37,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # ================= CONFIG =================
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 INPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget.json"
-OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/forget_statement.jsonl"  # recommend .jsonl
+OUTPUT_PATH = "/home/xy319/rds/hpc-work/projects/project-coding/data/WHPplus/data_balanced_whp/shard_0.jsonl"  # recommend .jsonl
 MAX_NEW_TOKENS = 64
 MAX_RETRIES = 3
 SEED = 1234

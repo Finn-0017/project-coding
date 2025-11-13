@@ -37,12 +37,14 @@ MCQ → factual statements for all choices, sharded and resumable.
           {
             "letter": "A",
             "text": "It was praised for its honesty.",
-            "statement": "Ezra Pound's The Cantos praised Benedetto Varchi's honesty in historical writing."
+            "statement": "Ezra Pound's The Cantos praised Benedetto Varchi's honesty in historical writing.",
+            "warning": false
           },
           {
             "letter": "B",
             "text": "It was considered irrelevant.",
-            "statement": "FAILED"
+            "statement": "FAILED",
+            "warning": true
           },
           ...
         ],
@@ -58,13 +60,21 @@ MCQ → factual statements for all choices, sharded and resumable.
     Reads existing output JSONL, collects (group, index) already done for this shard,
     and skips them.
 
-- Two-stage generation per choice:
+- Two/three-stage generation per choice:
 
     1) generate_primary: rewrite question+answer into a statement.
-    2) If strong_check fails, generate_refine: ask model to fix the draft and
-       explicitly provide REQUIRED_WORDS that must appear.
-    3) If still fails, print a [FALLBACK] message to stderr and set statement="FAILED".
-
+    2) strong_check:
+          - if passes → accept.
+          - if fails → generate_refine: fix draft with REQUIRED_WORDS.
+       then strong_check again:
+          - if passes → accept.
+          - if fails →
+                (a) self_eval: ask the model if the statement fully expresses the
+                    meaning of QUESTION+ANSWER.
+                    - if YES → accept, no warning.
+                    - if NO  → generate_semantic: free rewrite focusing only on
+                               semantic equivalence; accept with warning=true
+                               (unless this completely fails, then "FAILED").
 - Time limit:
     --max-minutes M  (soft limit; stops after current question if exceeded).
 """
@@ -113,6 +123,32 @@ REFINE_INSTRUCTION = (
     "  • Do NOT add new facts not in the QUESTION or ANSWER.\n"
     "  • You may freely adjust word order, grammar, and phrasing.\n"
     "Return only the rewritten sentence.\n"
+)
+
+# Semantic repair instruction: free rewrite focusing on full semantic coverage
+SEMANTIC_INSTRUCTION = (
+    "You are given a QUESTION and its ANSWER.\n"
+    "Write exactly ONE factual sentence that fully and correctly expresses the\n"
+    "combined meaning of the QUESTION and ANSWER.\n"
+    "Rules:\n"
+    "  • Mention the ENTITY NAME at least once.\n"
+    "  • Cover all important information from QUESTION and ANSWER.\n"
+    "  • Do NOT use question form, and do NOT use 'Q:' or 'A:'.\n"
+    "  • Do NOT add any new facts not present in QUESTION or ANSWER.\n"
+    "Return only the final sentence.\n"
+)
+
+# Self-evaluation instruction: ask the model if the statement is semantically complete
+SELF_EVAL_INSTRUCTION = (
+    "You are checking whether a STATEMENT fully and correctly expresses the\n"
+    "meaning of a QUESTION together with its ANSWER.\n"
+    "QUESTION and ANSWER together define the exact information that must be expressed.\n"
+    "STATEMENT should:\n"
+    "  • Contain all important information from QUESTION and ANSWER.\n"
+    "  • Not introduce new facts.\n"
+    "If the STATEMENT fully and correctly expresses this meaning, answer YES.\n"
+    "If it is missing important information or adds new information, answer NO.\n"
+    "Respond with a single word: YES or NO.\n"
 )
 
 # ==========================================
@@ -165,21 +201,8 @@ def load_model_and_tokenizer(path: str):
     model.eval()
     return model, tokenizer
 
-def generate_primary(model, tokenizer, name: str, question: str, answer_text: str) -> str:
-    """First-pass generation: rewrite question + answer into a factual statement."""
-    prompt = PRIMARY_INSTRUCTION + "\n\n" + json.dumps(
-        {
-            "name": name,
-            "question": question,
-            "answer": answer_text,
-        },
-        ensure_ascii=False,
-        indent=2,
-    )
-    messages = [
-        {"role": "system", "content": "You are a precise and concise rewriting assistant."},
-        {"role": "user", "content": prompt},
-    ]
+def _generate_with_messages(model, tokenizer, messages) -> str:
+    """Helper to run chat-style generation and return a single-line string."""
     input_ids = tokenizer.apply_chat_template(
         messages,
         add_generation_prompt=True,
@@ -199,10 +222,26 @@ def generate_primary(model, tokenizer, name: str, question: str, answer_text: st
         )
 
     text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
-    if not text.endswith("."):
+    if not text.endswith(".") and not text.upper().startswith("YES") and not text.upper().startswith("NO"):
         text += "."
-    # Use only the first line.
     return text.split("\n")[0].strip()
+
+def generate_primary(model, tokenizer, name: str, question: str, answer_text: str) -> str:
+    """First-pass generation: rewrite question + answer into a factual statement."""
+    prompt = PRIMARY_INSTRUCTION + "\n\n" + json.dumps(
+        {
+            "name": name,
+            "question": question,
+            "answer": answer_text,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+    messages = [
+        {"role": "system", "content": "You are a precise and concise rewriting assistant."},
+        {"role": "user", "content": prompt},
+    ]
+    return _generate_with_messages(model, tokenizer, messages)
 
 def generate_refine(
     model,
@@ -262,29 +301,65 @@ def generate_refine(
         {"role": "system", "content": "You are a precise factual rewriting assistant."},
         {"role": "user", "content": prompt},
     ]
+    return _generate_with_messages(model, tokenizer, messages)
 
-    input_ids = tokenizer.apply_chat_template(
-        messages,
-        add_generation_prompt=True,
-        return_tensors="pt",
-    ).to(model.device)
+def generate_semantic(
+    model,
+    tokenizer,
+    name: str,
+    question: str,
+    answer_text: str,
+) -> str:
+    """
+    Third-pass generation: semantic repair, with relaxed constraints,
+    focusing only on expressing the full meaning of QUESTION + ANSWER.
+    """
+    prompt = SEMANTIC_INSTRUCTION + "\n\n" + json.dumps(
+        {
+            "ENTITY_NAME": name,
+            "QUESTION": question,
+            "ANSWER": answer_text,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
 
-    attention_mask = torch.ones_like(input_ids, dtype=torch.long)
+    messages = [
+        {"role": "system", "content": "You are a careful semantic rewriting assistant."},
+        {"role": "user", "content": prompt},
+    ]
+    return _generate_with_messages(model, tokenizer, messages)
 
-    with torch.no_grad():
-        out = model.generate(
-            input_ids,
-            attention_mask=attention_mask,
-            max_new_tokens=MAX_NEW_TOKENS,
-            do_sample=False,
-            eos_token_id=tokenizer.eos_token_id,
-            pad_token_id=tokenizer.pad_token_id,
-        )
+def self_eval_statement(
+    model,
+    tokenizer,
+    question: str,
+    answer_text: str,
+    statement: str,
+) -> bool:
+    """
+    Ask the model to self-evaluate whether STATEMENT fully expresses
+    the meaning of QUESTION + ANSWER.
 
-    text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
-    if not text.endswith("."):
-        text += "."
-    return text.split("\n")[0].strip()
+    Returns True if the model answers YES, False otherwise.
+    """
+    prompt = SELF_EVAL_INSTRUCTION + "\n\n" + json.dumps(
+        {
+            "QUESTION": question,
+            "ANSWER": answer_text,
+            "STATEMENT": statement,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+
+    messages = [
+        {"role": "system", "content": "You are a strict semantic consistency checker."},
+        {"role": "user", "content": prompt},
+    ]
+    text = _generate_with_messages(model, tokenizer, messages)
+    first = text.strip().split()[0].upper()
+    return first.startswith("YES")
 
 # Wh-words and simple stop-word set used by strong_check.
 WH_WORDS = {
@@ -326,13 +401,9 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
         if name.lower() not in s_lower:
             return False
 
-    # 2) QUESTION content preservation.
-    #    We treat wh-questions specially: tokens immediately after
-    #    'which/what/...' up to the first auxiliary/verb are likely to be
-    #    replaced by the answer, so we do NOT require them in the statement.
+    # 2) QUESTION content preservation with special handling for wh-questions.
     q_all_tokens = re.findall(r"[A-Za-z']+", question.lower())
 
-    # Default: use all content tokens.
     q_tokens_for_check: List[str] = []
 
     if q_all_tokens and q_all_tokens[0] in WH_WORDS:
@@ -349,7 +420,6 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
         j = 1
         while j < len(q_all_tokens) and q_all_tokens[j] not in VERB_OR_AUX:
             j += 1
-
         # Tokens from j onwards form the real contextual part of the question.
         context_tokens = q_all_tokens[j:]
         q_tokens_for_check = [
@@ -377,7 +447,6 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
                 return False
 
     return True
-
 
 def ensure_dir(path: str) -> None:
     """Create directory if it does not exist."""
@@ -567,6 +636,7 @@ def main():
     time_limit = args.max_minutes * 60.0
 
     fallback_count = 0
+    warning_count = 0
 
     pbar = tqdm(total=len(remaining), desc="MCQ->statements", unit="question")
     for it in remaining:
@@ -587,14 +657,17 @@ def main():
             if not letter:
                 continue
 
+            warning_flag = False
+
             # 1) Primary generation
             try:
                 s = generate_primary(model, tokenizer, it.name, it.question, text)
             except Exception:
                 s = ""
 
-            # 2) If primary fails strong_check, try refine once.
+            # 2) strong_check after primary
             if not strong_check(it.name, it.question, text, s):
+                # 2a) Refine once with REQUIRED_WORDS
                 try:
                     s_ref = generate_refine(
                         model,
@@ -607,22 +680,66 @@ def main():
                 except Exception:
                     s_ref = ""
 
-                if strong_check(it.name, it.question, text, s_ref):
-                    s = s_ref
+                # Prefer refined statement if not empty
+                candidate = s_ref if s_ref and s_ref.strip() else s
+
+                if strong_check(it.name, it.question, text, candidate):
+                    s = candidate
                 else:
-                    # 3) Both primary and refine failed → record fallback.
-                    print(
-                        f"[FALLBACK] FAILED for group={it.group}, index={it.index}, option={letter}",
-                        file=sys.stderr,
-                    )
-                    s = "FAILED"
-                    fallback_count += 1
+                    # 2b) Self-evaluation: ask the model if candidate is semantically complete
+                    try:
+                        ok_semantic = self_eval_statement(
+                            model,
+                            tokenizer,
+                            it.question,
+                            text,
+                            candidate,
+                        )
+                    except Exception:
+                        ok_semantic = False
+
+                    if ok_semantic:
+                        # Model believes the statement is semantically correct.
+                        # Accept it without warning (or set warning=True if you want).
+                        s = candidate
+                    else:
+                        # 2c) Semantic repair: free rewrite focusing on full meaning
+                        try:
+                            s_sem = generate_semantic(
+                                model,
+                                tokenizer,
+                                it.name,
+                                it.question,
+                                text,
+                            )
+                        except Exception:
+                            s_sem = ""
+
+                        if not s_sem or len(s_sem.split()) < 3:
+                            # Final failure → mark as FAILED
+                            print(
+                                f"[FALLBACK] FAILED for group={it.group}, index={it.index}, option={letter}",
+                                file=sys.stderr,
+                            )
+                            s = "FAILED"
+                            warning_flag = True
+                            fallback_count += 1
+                        else:
+                            # Accept semantic repair with a warning flag
+                            s = s_sem
+                            warning_flag = True
+                            warning_count += 1
+                            print(
+                                f"[WARN] Semantic repair used for group={it.group}, index={it.index}, option={letter}",
+                                file=sys.stderr,
+                            )
 
             choice_entries.append(
                 {
                     "letter": letter,
                     "text": text,
                     "statement": _to_text(s),
+                    "warning": bool(warning_flag),
                 }
             )
 
@@ -645,7 +762,8 @@ def main():
     pbar.close()
     fout.close()
     print(f"[DONE] Saved to {args.output}")
-    print(f"[INFO] Fallback count in this shard: {fallback_count}", file=sys.stderr)
+    print(f"[INFO] Fallback (FAILED) count in this shard: {fallback_count}", file=sys.stderr)
+    print(f"[INFO] Semantic warning count in this shard: {warning_count}", file=sys.stderr)
 
 
 if __name__ == "__main__":

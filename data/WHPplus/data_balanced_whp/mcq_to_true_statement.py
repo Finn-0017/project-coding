@@ -262,13 +262,16 @@ STOP_WORDS = WH_WORDS | {
 
 def strong_check(name: str, question: str, choice_text: str, statement: str) -> bool:
     """
-    Lightweight structure / consistency check.
+    Structural / consistency check focused on preserving QUESTION content.
 
-    We want to detect clearly broken generations, not to enforce a strict template.
-    Conditions:
-      - Non-empty and at least 3 words.
-      - Mentions the entity name if present.
-      - Contains answer information (numbers or some content words from the answer text).
+    Goals:
+      - Ensure the statement is a non-trivial sentence.
+      - Ensure the ENTITY NAME appears.
+      - Ensure that most content words from the QUESTION are preserved.
+      - Ensure numeric information from the ANSWER (e.g. years) is not lost.
+
+    We deliberately do NOT require all content words from the ANSWER to appear,
+    because choices can be long and paraphrased heavily.
     """
     name = _to_text(name)
     question = _to_text(question)
@@ -276,32 +279,40 @@ def strong_check(name: str, question: str, choice_text: str, statement: str) -> 
     s = _to_text(statement)
 
     if not s or len(s.split()) < 3:
+        # Too short or empty → reject.
         return False
 
     s_lower = s.lower()
 
-    # Name coverage: require that the statement mentions the entity name.
+    # 1) Name coverage: require that the statement mentions the entity name.
     if name and name.strip():
         if name.lower() not in s_lower:
             return False
 
-    # Answer consistency: either matching numeric tokens or content words.
-    if choice_text and choice_text.strip():
-        nums = re.findall(r"\d{3,4}", choice_text)
-        if nums:
-            # If there are 3-4 digit numbers in the answer, ensure they appear in the statement.
-            for n in nums:
-                if n not in s:
-                    return False
-        else:
-            # Otherwise, check for overlap on non-stopword tokens.
-            answer_tokens = [
-                t for t in re.findall(r"[A-Za-z']+", choice_text.lower())
-                if t not in STOP_WORDS
-            ]
-            if answer_tokens and not any(t in s_lower for t in set(answer_tokens)):
+    # 2) QUESTION content preservation.
+    #    Extract content tokens (non-stopwords) from the question and check that
+    #    a reasonable fraction of them appear in the statement.
+    q_tokens = [
+        t for t in re.findall(r"[A-Za-z']+", question.lower())
+        if t not in STOP_WORDS
+    ]
+    if q_tokens:
+        q_unique = sorted(set(q_tokens))
+        present = [t for t in q_unique if t in s_lower]
+        # Require at least 60% of content tokens from the question to be present.
+        if len(present) / len(q_unique) < 0.6:
+            return False
+
+    # 3) ANSWER numeric consistency (years, counts, etc.).
+    #    Only enforce that 3–4 digit numbers in the answer appear in the statement.
+    nums = re.findall(r"\d{3,4}", choice_text)
+    if nums:
+        for n in nums:
+            if n not in s:
                 return False
 
+    # We intentionally ignore non-numeric answer tokens here to avoid rejecting
+    # good paraphrases when choices are long.
     return True
 
 def ensure_dir(path: str) -> None:

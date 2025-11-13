@@ -8,7 +8,7 @@ Usage example (4 shards, 10 minutes limit each):
 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
 python mcq_to_true_statement.py \
   --input /path/to/forget.json \
-  --output /path/to/shard_0.jsonl \
+  --output /path/to/forget.shard_0.jsonl \
   --num-shards 4 \
   --shard-index 0 \
   --max-minutes 10
@@ -85,6 +85,14 @@ def load_model_and_tokenizer(path: str):
         torch_dtype=torch.bfloat16,
         device_map="auto",
     )
+
+    if tok.pad_token_id is None:
+        tok.pad_token = tok.eos_token
+    model.config.pad_token_id = tok.pad_token_id
+
+    model.eval()
+    return model, tok
+
     model.eval()
     return model, tok
 

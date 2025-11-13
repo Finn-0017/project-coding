@@ -52,6 +52,7 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
     """
     mcq_list: [{'question':..., 'choices': [...]}]
     返回: 长度 == len(mcq_list) 的预测字母数组
+    没回答的问题用 '?' 填充（永远算错）
     """
     num_q = len(mcq_list)
 
@@ -68,17 +69,22 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
 
     user_content = (
         "You will answer multiple-choice questions ONLY using information in the passage.\n\n"
-        f"Passage:\n\"\"\"\n{passage}\n\"\"\"\n\n"
-        f"{all_questions_text}\n"
+        f"PASSAGE:\n\"\"\"\n{passage}\n\"\"\"\n\n"
+        f"QUESTIONS:\n{all_questions_text}\n"
         "Now answer ALL questions at once.\n"
-        "For each question i, write a separate line in the format:\n"
-        "i. X. (where X is one of A, B, C, D, or E)\n"
-        "For example:\n"
-        "1. B. ...\n"
-        "2. A. ...\n"
-        "3. D. ...\n"
-        "You may optionally add a short explanation after the letter, "
-        "but the letter must appear immediately after the question number."
+        "RULES:\n"
+        f"1) There are EXACTLY {num_q} questions.\n"
+        "2) For EACH question i (from 1 to N), you MUST output EXACTLY ONE line.\n"
+        "3) Each line MUST have the format:\n"
+        "   i. X.\n"
+        "   where i is the question number (1, 2, 3, ...) and X is ONE of A, B, C, D, or E.\n"
+        "4) Do NOT skip any question. Do NOT merge multiple questions on one line.\n"
+        "5) Do NOT output anything else after these lines.\n\n"
+        "EXAMPLE (for 3 questions):\n"
+        "1. B.\n"
+        "2. A.\n"
+        "3. D.\n\n"
+        f"Now output {num_q} lines in exactly this format, from 1 to {num_q}."
     )
 
     messages = [
@@ -109,12 +115,12 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
 
     gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
 
-    # debug 用：
-    print("=== RAW GEN ===")
-    print(gen)
-    print("=== END GEN ===")
+    # debug:
+    # print("=== RAW GEN ===")
+    # print(gen)
+    # print("=== END GEN ===")
 
-    # ===== 2. 优先按 “编号 + 字母” 的 pattern 抓答案 =====
+    # ===== 2. 只按 “编号 + 字母” 的 pattern 抓答案 =====
     letters = []
     pattern = re.compile(r'^\s*\d+\s*[\.\):-]?\s*([A-E])\b')
 
@@ -125,20 +131,11 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         if len(letters) >= num_q:
             break
 
-    # ===== 3. 如果编号模式不够，再 fallback：全局扫 A–E =====
-    if len(letters) < num_q:
-        for ch in gen:
-            if ch in "ABCDE":
-                letters.append(ch)
-            if len(letters) >= num_q:
-                break
-
-    # ===== 4. 长度对齐 =====
+    # ===== 3. 没有 fallback：没回答的问题用 '?' 补齐（算错） =====
     while len(letters) < num_q:
         letters.append("?")
 
     return letters[:num_q]
-
 
 # ======================= 数据加载 ========================
 

@@ -46,7 +46,7 @@ def merge_shards_round_robin(
 
 def merge_all_numbered_shards(
     directory: Union[str, Path],
-    pattern: str = "shard_*.jsonl",
+    pattern: str = "forget.shard_*.jsonl",
     output_name: str = "forget_statements.json",
 ) -> None:
     """

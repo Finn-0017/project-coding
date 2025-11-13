@@ -67,24 +67,29 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
 
     all_questions_text = "\n".join(q_blocks)
 
+    # 生成一个“空的答题卡”模板，让模型在这些行后面填字母
+    answer_sheet_lines = "\n".join(f"{i}. " for i in range(1, num_q + 1))
+
     user_content = (
         "You will answer multiple-choice questions ONLY using information in the passage.\n\n"
         f"PASSAGE:\n\"\"\"\n{passage}\n\"\"\"\n\n"
         f"QUESTIONS:\n{all_questions_text}\n"
         "Now answer ALL questions at once.\n"
+        "You MUST NOT repeat the passage or the questions.\n"
+        "You MUST ONLY fill in the following answer sheet.\n\n"
+        "Answer sheet (fill in ONE letter for each question):\n"
+        f"{answer_sheet_lines}\n\n"
         "RULES:\n"
-        f"1) There are EXACTLY {num_q} questions.\n"
-        "2) For EACH question i (from 1 to N), you MUST output EXACTLY ONE line.\n"
-        "3) Each line MUST have the format:\n"
-        "   i. X.\n"
-        "   where i is the question number (1, 2, 3, ...) and X is ONE of A, B, C, D, or E.\n"
-        "4) Do NOT skip any question. Do NOT merge multiple questions on one line.\n"
-        "5) Do NOT output anything else after these lines.\n\n"
-        "EXAMPLE (for 3 questions):\n"
-        "1. B.\n"
-        "2. A.\n"
-        "3. D.\n\n"
-        f"Now output {num_q} lines in exactly this format, from 1 to {num_q}."
+        f"- There are EXACTLY {num_q} questions.\n"
+        "- For EACH line i, write EXACTLY ONE capital letter from A, B, C, D, or E "
+        "immediately after the question number.\n"
+        "- Do NOT skip any question.\n"
+        "- Do NOT add any extra text before or after the answer sheet.\n\n"
+        "Example for 3 questions (DO NOT copy this literally, just follow the format):\n"
+        "1. B\n"
+        "2. A\n"
+        "3. D\n\n"
+        f"Now fill in ALL {num_q} lines in the answer sheet above."
     )
 
     messages = [

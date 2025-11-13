@@ -195,24 +195,61 @@ def load_json(path):
 def flatten_items(path: str) -> List[MCQItem]:
     raw = load_json(path)
     items: List[MCQItem] = []
+
+    # 情况 1：你的 forget.json 这种形式：{"10000": [ {...}, {...} ], "10001": [...]}
+    if isinstance(raw, dict) and all(isinstance(v, list) for v in raw.values()):
+        for group_id, q_list in raw.items():
+            for idx, q in enumerate(q_list):
+                name = _to_text(q.get("name", ""))
+                question = _to_text(q.get("question", ""))
+                answer_letter = _to_text(q.get("answer", "")).upper()
+
+                # choices 是一个 dict: { "A": "xxx", "B": "yyy", ... }
+                choices_dict = q.get("choices", {}) or {}
+                # 为了稳定，按选项字母排序
+                choice_list = [
+                    {"letter": letter, "text": _to_text(text)}
+                    for letter, text in sorted(choices_dict.items())
+                ]
+
+                items.append(
+                    MCQItem(
+                        group=_to_text(group_id),
+                        index=idx,
+                        name=name,
+                        question=question,
+                        choices=choice_list,
+                        correct=answer_letter,
+                    )
+                )
+        return items
+
+    # 情况 2：之前假定的那种 list-of-groups 结构（保留兼容）
     if isinstance(raw, dict):
         groups = raw.get("groups") or raw.get("data") or []
     else:
         groups = raw
 
     for g in groups:
-        gid = _to_text(g.get("group", ""))
-        for it in g.get("items", []):
+        group_id = _to_text(g.get("group", ""))
+        lst = g.get("items", [])
+        for it in lst:
+            idx = int(it.get("index", 0))
+            name = _to_text(it.get("name", ""))
+            question = _to_text(it.get("question", ""))
+            choices = it.get("choices", [])
+            correct = _to_text(it.get("correct", "")).upper()
             items.append(
                 MCQItem(
-                    group=gid,
-                    index=int(it.get("index", 0)),
-                    name=_to_text(it.get("name", "")),
-                    question=_to_text(it.get("question", "")),
-                    choices=it.get("choices", []),
-                    correct=_to_text(it.get("correct", "")).upper(),
+                    group=group_id,
+                    index=idx,
+                    name=name,
+                    question=question,
+                    choices=choices,
+                    correct=correct,
                 )
             )
+
     return items
 
 # =======================

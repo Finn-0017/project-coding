@@ -100,6 +100,9 @@ def generate_option_letters_batched(model, tokenizer, passage: str, mcq_list):
         )
 
     gen = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True)
+    print("=== RAW GEN ===")
+    print(gen)
+    print("=== END GEN ===")
 
     # ---- 只从最后一个 'ANSWER:' 开始解析 ----
     answer_line = ""

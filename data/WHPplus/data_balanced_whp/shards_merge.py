@@ -70,4 +70,4 @@ def merge_all_numbered_shards(
 if __name__ == "__main__":
     # Auto-detect all shard_*.jsonl in the current directory and merge them
     merge_all_numbered_shards(".")
-    print("Merged into forget_statements_true.json")
+    print("Merged into forget_statements.json")

@@ -33,9 +33,9 @@ mkdir -p logs
 
 # SLURM normally remaps assigned GPU to local ID 0
 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
-python passage_to_bio.py \
+python passage_rephraser.py \
     --input "$INPUT" \
-    --output "$OUTDIR/forget_passages_bio.shard_${SHARD_INDEX}.jsonl" \
+    --output "$OUTDIR/forget_passages_rephrased.shard_${SHARD_INDEX}.jsonl" \
     --num-shards $NUM_SHARDS \
     --shard-index $SHARD_INDEX \
     --max-minutes 60

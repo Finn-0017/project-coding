@@ -3,7 +3,8 @@
 """
 MCQ → factual statements for all choices, sharded and resumable.
 
-- Reads WHP forget.json style:
+- Input (WHP forget.json style):
+
   {
     "10000": [
       {
@@ -15,24 +16,34 @@ MCQ → factual statements for all choices, sharded and resumable.
           "B": "...",
           ...
         }
-      ],
+      },
       ...
     ],
     "10001": [...]
   }
 
-- For each MCQ, generate a natural factual statement for EVERY choice.
+- For each MCQ, generate a factual statement for EVERY choice.
 
-- Output JSONL, one line per question:
+- Output: JSONL, one line per question, e.g.:
+
   {
     "group": "10000",
     "name": "Benedetto Varchi",
     "items": [
       {
-        "index": 10,
+        "index": 170,
         "question": "...",
         "choices": [
-          {"letter": "A", "text": "Florence", "statement": "Benedetto Varchi was born in Florence."},
+          {
+            "letter": "A",
+            "text": "It was praised for its honesty.",
+            "statement": "Ezra Pound's The Cantos praised Benedetto Varchi's honesty in historical writing."
+          },
+          {
+            "letter": "B",
+            "text": "It was considered irrelevant.",
+            "statement": "FAILED"
+          },
           ...
         ],
         "correct": "A"
@@ -41,14 +52,20 @@ MCQ → factual statements for all choices, sharded and resumable.
   }
 
 - Sharding:
-  --num-shards N, --shard-index i  (take items[i::N])
+    --num-shards N, --shard-index i  (this shard processes items[i::N])
 
 - Resume:
-  Reads existing output JSONL, collects (group, index) already done for this shard,
-  and skips them.
+    Reads existing output JSONL, collects (group, index) already done for this shard,
+    and skips them.
+
+- Two-stage generation per choice:
+
+    1) generate_primary: rewrite question+answer into a statement.
+    2) If strong_check fails, generate_refine: ask model to fix the draft.
+    3) If still fails, print a [FALLBACK] message to stderr and set statement="FAILED".
 
 - Time limit:
-  --max-minutes M  (soft limit; stops after current question if exceeded).
+    --max-minutes M  (soft limit; stops after current question if exceeded).
 """
 
 import argparse
@@ -75,27 +92,43 @@ MAX_NEW_TOKENS = 64
 DEFAULT_SEED = 1234
 DEFAULT_MAX_MINUTES = 10  # soft limit in minutes
 
-# Instruction tuned for natural rewrite
-INSTRUCTION = (
-    "Rewrite the question into a factual statement by replacing the wh-question with the given answer.\n"
+# Primary instruction: direct rewrite from question+answer to statement
+PRIMARY_INSTRUCTION = (
+    "Rewrite the question into a factual statement by inserting the given answer.\n"
     "Do not include any question format, do not mention Q or A.\n"
-    "Write a clean, natural, factual sentence that expresses the answer.\n"
+    "Write one short, natural, factual sentence that expresses the answer.\n"
     "Return only the rewritten statement.\n"
+)
+
+# Refine instruction: take an initial draft and fix it
+REFINE_INSTRUCTION = (
+    "You are given an ENTITY NAME, a QUESTION, an ANSWER, and an initial attempt at a STATEMENT.\n"
+    "Your task is to FIX the statement so that:\n"
+    "  • It is a single, grammatically correct factual sentence.\n"
+    "  • It clearly answers the QUESTION using the ANSWER.\n"
+    "  • It mentions the ENTITY NAME at least once.\n"
+    "  • It does NOT contain 'Q:' or 'A:' or a question mark.\n"
+    "  • It does NOT add any new information beyond the question and answer.\n"
+    "You may edit the sentence freely (reorder words, change structure) as long as the meaning stays the same.\n"
+    "Return only the final fixed statement.\n"
 )
 
 # ==========================================
 # Utils & data structures
 # ==========================================
 
-def set_seed(seed: int):
+def set_seed(seed: int) -> None:
+    """Set random seeds for reproducibility."""
     random.seed(seed)
     try:
         import numpy as np
         np.random.seed(seed)
     except Exception:
+        # NumPy may not be installed; ignore in that case.
         pass
 
 def _to_text(x: Any) -> str:
+    """Safely convert an object to string."""
     if isinstance(x, str):
         return x
     try:
@@ -105,6 +138,7 @@ def _to_text(x: Any) -> str:
 
 @dataclass
 class MCQItem:
+    """Flat representation of a single MCQ."""
     group: str
     index: int
     name: str
@@ -113,27 +147,25 @@ class MCQItem:
     correct: str  # single-letter, e.g. "A"
 
 def load_model_and_tokenizer(path: str):
+    """Load tokenizer and model, and set pad_token to eos_token if needed."""
     print(f"[INFO] loading model from {path}", file=sys.stderr)
-    tok = AutoTokenizer.from_pretrained(path)
+    tokenizer = AutoTokenizer.from_pretrained(path)
     model = AutoModelForCausalLM.from_pretrained(
         path,
         torch_dtype=torch.bfloat16,
         device_map="auto",
     )
-    # explicitly set pad_token to eos_token to avoid warnings
-    if tok.pad_token_id is None:
-        tok.pad_token = tok.eos_token
-    model.config.pad_token_id = tok.pad_token_id
+    # Explicitly set pad_token to eos_token to avoid warnings.
+    if tokenizer.pad_token_id is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    model.config.pad_token_id = tokenizer.pad_token_id
 
     model.eval()
-    return model, tok
+    return model, tokenizer
 
-def build_prompt(name: str, question: str, answer_text: str) -> str:
-    """
-    Build the user prompt for the rewrite task.
-    We include name, question and answer, but the instruction already describes the task.
-    """
-    return INSTRUCTION + "\n\n" + json.dumps(
+def generate_primary(model, tokenizer, name: str, question: str, answer_text: str) -> str:
+    """First-pass generation: rewrite question + answer into a factual statement."""
+    prompt = PRIMARY_INSTRUCTION + "\n\n" + json.dumps(
         {
             "name": name,
             "question": question,
@@ -142,104 +174,160 @@ def build_prompt(name: str, question: str, answer_text: str) -> str:
         ensure_ascii=False,
         indent=2,
     )
-
-def generate(model, tok, name, question, answer_text):
-    """One-shot generation for speed."""
-    prompt = build_prompt(name, question, answer_text)
     messages = [
         {"role": "system", "content": "You are a precise and concise rewriting assistant."},
         {"role": "user", "content": prompt},
     ]
-    ids = tok.apply_chat_template(
-        messages, add_generation_prompt=True, return_tensors="pt"
+    input_ids = tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        return_tensors="pt",
     ).to(model.device)
-    mask = torch.ones_like(ids, dtype=torch.long)
+
+    attention_mask = torch.ones_like(input_ids, dtype=torch.long)
 
     with torch.no_grad():
         out = model.generate(
-            ids,
-            attention_mask=mask,
+            input_ids,
+            attention_mask=attention_mask,
             max_new_tokens=MAX_NEW_TOKENS,
             do_sample=False,
-            eos_token_id=tok.eos_token_id,
-            pad_token_id=tok.pad_token_id,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.pad_token_id,
         )
-    t = tok.decode(out[0][ids.size(1):], skip_special_tokens=True).strip()
-    if not t.endswith("."):
-        t += "."
-    # we only want the first line
-    return t.split("\n")[0].strip()
 
+    text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
+    if not text.endswith("."):
+        text += "."
+    # Use only the first line.
+    return text.split("\n")[0].strip()
+
+def generate_refine(
+    model,
+    tokenizer,
+    name: str,
+    question: str,
+    answer_text: str,
+    draft_statement: str,
+) -> str:
+    """Second-pass generation: refine a draft statement to fix structure and content."""
+    prompt = REFINE_INSTRUCTION + "\n\n" + json.dumps(
+        {
+            "name": name,
+            "question": question,
+            "answer": answer_text,
+            "draft_statement": draft_statement,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+    messages = [
+        {"role": "system", "content": "You are a precise and concise rewriting assistant."},
+        {"role": "user", "content": prompt},
+    ]
+    input_ids = tokenizer.apply_chat_template(
+        messages,
+        add_generation_prompt=True,
+        return_tensors="pt",
+    ).to(model.device)
+
+    attention_mask = torch.ones_like(input_ids, dtype=torch.long)
+
+    with torch.no_grad():
+        out = model.generate(
+            input_ids,
+            attention_mask=attention_mask,
+            max_new_tokens=MAX_NEW_TOKENS,
+            do_sample=False,
+            eos_token_id=tokenizer.eos_token_id,
+            pad_token_id=tokenizer.pad_token_id,
+        )
+
+    text = tokenizer.decode(out[0][input_ids.size(1):], skip_special_tokens=True).strip()
+    if not text.endswith("."):
+        text += "."
+    # Use only the first line.
+    return text.split("\n")[0].strip()
+
+# Wh-words and simple stop-word set used by strong_check.
 WH_WORDS = {
-    "what","where","when","why","which","who","how","whose","whom"
+    "what", "where", "when", "why", "which", "who", "how", "whose", "whom",
 }
 STOP_WORDS = WH_WORDS | {
-    "is","was","were","are","am","do","does","did",
-    "a","an","the","in","on","of","for","to","from",
-    "and","or","with","about","into","by","at","as",
-    "that","be","been","being"
+    "is", "was", "were", "are", "am", "do", "does", "did",
+    "a", "an", "the", "in", "on", "of", "for", "to", "from",
+    "and", "or", "with", "about", "into", "by", "at", "as",
+    "that", "be", "been", "being",
 }
 
-def strong_check(name, question, choice_text, s) -> bool:
+def strong_check(name: str, question: str, choice_text: str, statement: str) -> bool:
     """
-    Lightweight structure / consistency check:
-    - non-empty, at least 3 words
-    - should mention the entity name if present
-    - should contain answer key tokens (numbers or some content words)
-    We DO NOT strictly enforce question token preservation anymore,
-    to avoid over-rejecting good rewrites.
+    Lightweight structure / consistency check.
+
+    We want to detect clearly broken generations, not to enforce a strict template.
+    Conditions:
+      - Non-empty and at least 3 words.
+      - Mentions the entity name if present.
+      - Contains answer information (numbers or some content words from the answer text).
     """
     name = _to_text(name)
     question = _to_text(question)
     choice_text = _to_text(choice_text)
-    s = _to_text(s)
+    s = _to_text(statement)
 
     if not s or len(s.split()) < 3:
         return False
 
     s_lower = s.lower()
 
-    # Name presence (softly required)
+    # Name coverage: require that the statement mentions the entity name.
     if name and name.strip():
         if name.lower() not in s_lower:
             return False
 
-    # Answer consistency: numbers or content tokens
+    # Answer consistency: either matching numeric tokens or content words.
     if choice_text and choice_text.strip():
         nums = re.findall(r"\d{3,4}", choice_text)
         if nums:
+            # If there are 3-4 digit numbers in the answer, ensure they appear in the statement.
             for n in nums:
                 if n not in s:
                     return False
         else:
-            c_tokens = [
+            # Otherwise, check for overlap on non-stopword tokens.
+            answer_tokens = [
                 t for t in re.findall(r"[A-Za-z']+", choice_text.lower())
                 if t not in STOP_WORDS
             ]
-            if c_tokens and not any(t in s_lower for t in set(c_tokens)):
+            if answer_tokens and not any(t in s_lower for t in set(answer_tokens)):
                 return False
 
     return True
 
-def ensure_dir(path: str):
+def ensure_dir(path: str) -> None:
+    """Create directory if it does not exist."""
     if path:
         os.makedirs(path, exist_ok=True)
 
-def safe_fsync(f):
+def safe_fsync(f) -> None:
+    """Flush and fsync a file object, ignoring OS-level errors."""
     try:
         f.flush()
         os.fsync(f.fileno())
     except Exception:
         pass
 
-def load_json(path):
+def load_json(path: str) -> Any:
+    """Load JSON file from disk."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def flatten_items(path: str) -> List[MCQItem]:
     """
     Flatten WHP forget.json style into a list of MCQItem.
-    Expected primary format:
+
+    Primary expected format:
+
       {
         "10000": [
           {
@@ -247,7 +335,9 @@ def flatten_items(path: str) -> List[MCQItem]:
             "question": "...",
             "name": "...",
             "choices": {
-              "A": "...", "B": "...", ...
+              "A": "...",
+              "B": "...",
+              ...
             }
           },
           ...
@@ -255,12 +345,12 @@ def flatten_items(path: str) -> List[MCQItem]:
         "10001": [...]
       }
 
-    Also keeps a fallback path for the older list-of-groups schema (for compatibility).
+    Fallback: also support older list-of-groups schema for compatibility.
     """
     raw = load_json(path)
     items: List[MCQItem] = []
 
-    # Case 1: dict of group_id -> list[question dict]
+    # Case 1: dict of group_id -> list[MCQ dict]
     if isinstance(raw, dict) and all(isinstance(v, list) for v in raw.values()):
         for group_id, q_list in raw.items():
             for idx, q in enumerate(q_list):
@@ -317,6 +407,7 @@ def flatten_items(path: str) -> List[MCQItem]:
 # ==========================================
 
 def parse_args():
+    """Parse command-line arguments."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", type=str, required=True, help="Input MCQ JSON file.")
     ap.add_argument("--output", type=str, required=True, help="Output JSONL file for this shard.")
@@ -332,7 +423,8 @@ def parse_args():
 
 SHOULD_EXIT = False
 
-def handle_sigterm(signum, frame):
+def handle_sigterm(signum, frame) -> None:
+    """SIGTERM handler: ask main loop to stop after current question."""
     global SHOULD_EXIT
     SHOULD_EXIT = True
     print("[SIGNAL] SIGTERM received; will exit after this question.", file=sys.stderr)
@@ -350,14 +442,14 @@ def main():
     if args.shard_index < 0 or args.shard_index >= args.num_shards:
         raise ValueError("Invalid shard_index / num_shards combination.")
 
+    # Load and flatten all items, then assign shard.
     all_items = flatten_items(args.input)
     all_items = sorted(all_items, key=lambda x: (x.group, x.index))
 
-    # shard: take every k-th item
     assigned = all_items[args.shard_index :: args.num_shards]
     print(f"[INFO] total items = {len(all_items)}, assigned to this shard = {len(assigned)}")
 
-    # resume from existing output
+    # Resume from existing output: collect completed (group, index).
     completed: Set[Tuple[str, int]] = set()
     if os.path.exists(args.output):
         print("[RESUME] Reading existing JSONL...")
@@ -375,6 +467,7 @@ def main():
                     completed.add((g, int(it.get("index", 0))))
                 last_ok = i + 1
             except Exception:
+                # Stop at first malformed line and truncate.
                 break
         if last_ok < len(lines):
             print("[RESUME] Truncating corrupted tail...", file=sys.stderr)
@@ -389,42 +482,73 @@ def main():
         print("[INFO] Nothing to do.")
         return
 
-    # load model
-    model, tok = load_model_and_tokenizer(MODEL_PATH)
+    # Load model and tokenizer only if there is work to do.
+    model, tokenizer = load_model_and_tokenizer(MODEL_PATH)
 
     ensure_dir(os.path.dirname(args.output))
     fout = open(args.output, "a", encoding="utf-8")
 
-    start = time.time()
-    limit = args.max_minutes * 60.0
+    start_time = time.time()
+    time_limit = args.max_minutes * 60.0
+
+    fallback_count = 0
 
     pbar = tqdm(total=len(remaining), desc="MCQ->statements", unit="question")
     for it in remaining:
         if SHOULD_EXIT:
             print("[STOP] SIGTERM break.", file=sys.stderr)
             break
-        if time.time() - start >= limit:
+
+        elapsed = time.time() - start_time
+        if elapsed >= time_limit:
             print(f"[STOP] Time limit {args.max_minutes} min reached.", file=sys.stderr)
             break
 
         choice_entries: List[Dict[str, Any]] = []
+
         for ch in it.choices:
             letter = _to_text(ch.get("letter", "")).upper()
             text = _to_text(ch.get("text", ""))
             if not letter:
                 continue
 
-            # generate statement
+            # 1) Primary generation
             try:
-                s = generate(model, tok, it.name, it.question, text)
+                s = generate_primary(model, tokenizer, it.name, it.question, text)
             except Exception:
                 s = ""
 
+            # 2) If primary fails strong_check, try refine once.
             if not strong_check(it.name, it.question, text, s):
-                # fallback: still natural, no Q/A
-                s = f"{it.name}: {text}."
+                try:
+                    s_ref = generate_refine(
+                        model,
+                        tokenizer,
+                        it.name,
+                        it.question,
+                        text,
+                        s,
+                    )
+                except Exception:
+                    s_ref = ""
+
+                if strong_check(it.name, it.question, text, s_ref):
+                    s = s_ref
+                else:
+                    # 3) Both primary and refine failed → record fallback.
+                    print(
+                        f"[FALLBACK] FAILED for group={it.group}, index={it.index}, option={letter}",
+                        file=sys.stderr,
+                    )
+                    s = "FAILED"
+                    fallback_count += 1
+
             choice_entries.append(
-                {"letter": letter, "text": text, "statement": _to_text(s)}
+                {
+                    "letter": letter,
+                    "text": text,
+                    "statement": _to_text(s),
+                }
             )
 
         rec = {
@@ -446,6 +570,8 @@ def main():
     pbar.close()
     fout.close()
     print(f"[DONE] Saved to {args.output}")
+    print(f"[INFO] Fallback count in this shard: {fallback_count}", file=sys.stderr)
+
 
 if __name__ == "__main__":
     main()

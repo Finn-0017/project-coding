@@ -27,8 +27,7 @@ Output: JSONL, one line per passage, e.g.:
   "group": "10000",
   "name": "Benedetto Varchi",
   "passage_index": 0,
-  "passage": "...",
-  "rephrased_passage": "Benedetto Varchi ... He ..."
+  "passage": "Benedetto Varchi ... He ..." (REPHRASED)
 }
 
 Features:
@@ -345,8 +344,7 @@ def main():
             "group": it.group,
             "name": it.name,
             "passage_index": it.passage_index,
-            "passage": it.passage,
-            "rephrased_passage": new_text,
+            "passage": new_text
         }
 
         fout.write(json.dumps(rec, ensure_ascii=False) + "\n")

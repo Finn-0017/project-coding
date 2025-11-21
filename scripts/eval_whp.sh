@@ -1,3 +1,5 @@
+export PYTHONPATH=$PWD
+
 epoch=1
 step=final
 # setname=hardretain

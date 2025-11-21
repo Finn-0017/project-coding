@@ -8,8 +8,8 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_20"
 epoch=1
 step=final
 # setname=hardretain_mcq
-setname=obfuscate_mcq
-# setname=hardretain
+# setname=obfuscate_mcq
+setname=hardretain
 
 python scripts/inference.py \
     --model_path $expdir \
@@ -20,3 +20,4 @@ python scripts/inference.py \
     # --origmodel \
     # --nsamples 101 \
     # --do_selfcheck \
+ 

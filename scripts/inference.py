@@ -112,6 +112,8 @@ def main(args):
                     prompt = question["Question"]
                     if "probe" in args.testfile:
                         prompt = question["Question"] + "Answer Yes or No directly."
+                    else:
+                        prompt = question["Question"] + "Answer in one sentence. Do no repeat."
                     conversation = [
                         {"role": "system", "content": "You are a helpful assistant."},
                         {"role": "user", "content": prompt},

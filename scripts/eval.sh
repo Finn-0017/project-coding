@@ -19,6 +19,6 @@ python scripts/inference.py \
     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
     --logfile $expdir/testlog.txt \
     # --origmodel \
-    # --nsamples 101 \
+    --nsamples 50 \
     # --do_selfcheck \
  

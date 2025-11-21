@@ -77,6 +77,8 @@ def main(args):
         all_people = list(testdata.items())
         if args.max_people > 0:
             people_subset = all_people[:args.max_people]
+        else:
+            people_subset = all_people
 
         for name, questions in people_subset:
             if name not in selected_names and "_retain" not in args.testfile:

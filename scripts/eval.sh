@@ -10,7 +10,7 @@ step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
 # setname=hardretain
-setname=forget
+setname=retain
 
 python scripts/inference.py \
     --model_path $expdir \
@@ -19,6 +19,7 @@ python scripts/inference.py \
     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
     --logfile $expdir/testlog.txt \
     --max_questions 2 \
+    --max_people 5 \
     # --origmodel \
     # --nsamples 2 \
     # --do_selfcheck \

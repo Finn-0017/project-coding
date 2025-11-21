@@ -83,6 +83,8 @@ def main(args):
 
             if args.max_questions > 0:
                 questions = questions[:args.max_questions]
+            if args.max_people > 0:
+                name = name[:args.max_people]
 
             for question in tqdm(questions):
                 if "Choices" in question:
@@ -246,6 +248,12 @@ if __name__ == "__main__":
         type=int,
         default=0,
         help="Max number of questions per person (0 means all)",
+    )
+    parser.add_argument(
+        "--max_people",
+        type=int,
+        default=0,
+        help="Max number of people to infer (0 means all)",
     )
 
     args = parser.parse_args()

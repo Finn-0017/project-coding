@@ -9,7 +9,8 @@ epoch=1
 step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
-setname=hardretain
+# setname=hardretain
+setname=forget
 
 python scripts/inference.py \
     --model_path $expdir \

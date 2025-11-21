@@ -73,6 +73,11 @@ def main(args):
     results = {}
     letters = ["A", "B", "C", "D"]
     if not args.do_selfcheck:
+
+        all_people = list(testdata.items())
+        if args.max_people > 0:
+            people_subset = all_people[:args.max_people]
+
         for name, questions in testdata.items():
             if name not in selected_names and "_retain" not in args.testfile:
                 continue
@@ -83,8 +88,6 @@ def main(args):
 
             if args.max_questions > 0:
                 questions = questions[:args.max_questions]
-            if args.max_people > 0:
-                name = name[:args.max_people]
 
             for question in tqdm(questions):
                 if "Choices" in question:

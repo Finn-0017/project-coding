@@ -80,6 +80,10 @@ def main(args):
                 name = id_to_names[name]
             results[name] = []
             logging("Testing {}".format(name), args.logfile)
+
+            if args.max_questions > 0:
+                questions = questions[:args.max_questions]
+
             for question in tqdm(questions):
                 if "Choices" in question:
                     choices = "A. {}\nB.{}\nC.{}\nD.{}".format(question["Choices"]["A"], question["Choices"]["B"], question["Choices"]["C"], question["Choices"]["D"])
@@ -237,5 +241,12 @@ if __name__ == "__main__":
         default=0,
         help="Number of samples to draw",
     )
+    parser.add_argument(
+        "--max_questions",
+        type=int,
+        default=0,
+        help="Max number of questions per person (0 means all)",
+    )
+
     args = parser.parse_args()
     main(args)

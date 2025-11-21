@@ -24,4 +24,3 @@ python scripts/inference.py \
     # --origmodel \
     # --nsamples 2 \
     # --do_selfcheck \
- 0.

@@ -7,9 +7,9 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_20"
 
 epoch=1
 step=final
-setname=hardretain_mcq
+# setname=hardretain_mcq
 # setname=obfuscate_mcq
-# setname=hardretain
+setname=hardretain_probe
 # setname=retain
 # setname=forget
 

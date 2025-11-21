@@ -12,7 +12,7 @@ modelname=meta-llama/Llama-3.1-8B-Instruct
 python scripts/train_whp.py \
     --model_path $modelname \
     --batch_size 1 \
-    --learning_rate 5e-5 \
+    --learning_rate 5e-4 \
     --gradient_accumulation_steps 1 \
     --num_train_epochs 10 \
     --num_warmup_steps 0.05 \

@@ -9,9 +9,9 @@ epoch=1
 step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
-# setname=hardretain
+setname=hardretain
 # setname=retain
-setname=forget
+# setname=forget
 
 python scripts/inference.py \
     --model_path $expdir \
@@ -19,7 +19,7 @@ python scripts/inference.py \
     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
     --logfile $expdir/testlog.txt \
-    # --max_questions 2 \
+    --max_questions 5 \
     # --max_people 5 \
     # --origmodel \
     # --nsamples 2 \

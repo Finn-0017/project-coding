@@ -1,6 +1,6 @@
 export PYTHONPATH=$PWD
 
-setid=$1
+setid=1
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_20"
 # expdir="exp/unlearning_whp_qwen25_7B_MCQ_mcqmembothflatten_5_mem1.0"

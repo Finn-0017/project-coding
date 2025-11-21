@@ -19,7 +19,7 @@ python scripts/inference.py \
     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
     --logfile $expdir/testlog.txt \
-    --max_questions 5 \
+    --max_questions 1 \
     # --max_people 5 \
     # --origmodel \
     # --nsamples 2 \

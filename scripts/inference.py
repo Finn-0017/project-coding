@@ -110,11 +110,7 @@ def main(args):
                     )
                     # Get choice distribution
                     with torch.no_grad():
-                        _, sample_text = model.generate(
-                            input_ids.to(model.llm.device),
-                            do_sample=False,
-                            max_new_tokens=32,
-                        )
+                        _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=16)
                         output = model(input_ids.to(model.llm.device)).logits[:, -1]
                         indices = torch.tensor([tokenizer.encode(letter)[1] for letter in letters]).to(model.llm.device)
                         output = torch.softmax(output, dim=-1)[:, indices]
@@ -150,7 +146,7 @@ def main(args):
                                     sample_texts.append(sample_text)
                                 sample_text = sample_texts
                         else:
-                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False)
+                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=16)
                         entropy = 0
                         ref_prob = 0
                 result = {"question": question["Question"], "ref": question["Answer"], "pred": sample_text, "entropy": entropy, "acc_prob": ref_prob}

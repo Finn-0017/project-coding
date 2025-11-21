@@ -19,7 +19,7 @@ python scripts/inference.py \
     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
     --logfile $expdir/testlog.txt \
     --max_questions 2 \
-    --max_people 5 \
+    # --max_people 5 \
     # --origmodel \
     # --nsamples 2 \
     # --do_selfcheck \

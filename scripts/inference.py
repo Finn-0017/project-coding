@@ -78,7 +78,7 @@ def main(args):
         if args.max_people > 0:
             people_subset = all_people[:args.max_people]
 
-        for name, questions in testdata.items():
+        for name, questions in people_subset:
             if name not in selected_names and "_retain" not in args.testfile:
                 continue
             if name in id_to_names:
@@ -122,7 +122,7 @@ def main(args):
                     if "probe" in args.testfile:
                         prompt = question["Question"] + "Answer Yes or No directly."
                     else:
-                        prompt = question["Question"] + "Answer in one sentence. Do no repeat."
+                        prompt = question["Question"] + "Answer in one sentence. Do not repeat."
                     conversation = [
                         {"role": "system", "content": "You are a helpful assistant."},
                         {"role": "user", "content": prompt},

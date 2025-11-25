@@ -18,6 +18,6 @@ source ~/.bashrc
 conda activate qwen
 echo "Conda env activated: qwen"
 
-python generate_passages.py
+python mcq_to_passage.py
 
 echo "Job finished at: $(date)"

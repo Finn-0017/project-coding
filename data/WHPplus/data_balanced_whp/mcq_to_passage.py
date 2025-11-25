@@ -108,35 +108,50 @@ def main():
 
     data = load_data(INPUT_FILE)
 
-    # Output structure: "name": [passage1, passage2, ...]
     passages_output = {}
-
-    # Output structure: "passage_id": { "person": name, "facts_used": [...] }
     mapping_output = {}
 
-    # ----- Setup tqdm -----
-    # If each person produces EXACTLY 1 passage:
-    estimated_total_passages = len(data)
+    # ---------------------------------------------------------
+    # 1. PRE-CALCULATE TOTAL PASSAGES
+    # ---------------------------------------------------------
+    print("Calculating total workload...")
+    total_passages_count = 0
+    
+    # We iterate once just to count the totals so tqdm is accurate
+    for person_id, questions in data.items():
+        if not questions: continue
+        questions_list = list(questions)
+        
+        total_facts = 0
+        max_choices = 0
+        for q_item in questions_list:
+            num_choices = len(q_item["choices"])
+            total_facts += num_choices
+            max_choices = max(max_choices, num_choices)
 
-    # (If later you generate more per person, change it to len(data) * K)
-    pbar = tqdm(total=estimated_total_passages, desc="Generating passages")
-    # -----------------------
+        if total_facts == 0: continue
 
-    # DEBUG: only process first two people
+        approx_passages = math.ceil(total_facts / TARGET_FACTS_PER_PASSAGE)
+        num_passages = max(max_choices, approx_passages)
+        total_passages_count += num_passages
+
+    # ---------------------------------------------------------
+    # 2. SETUP TQDM WITH TOTAL PASSAGES
+    # ---------------------------------------------------------
+    pbar = tqdm(total=total_passages_count, desc="Generating passages", unit="passage")
+
+    # Main Processing Loop
     for person_id, questions in data.items():
 
         if not questions:
-            pbar.update(1)
             continue
 
         person_name = questions[0].get("name", "Unknown")
-
-        # Use ALL questions for this person (no subsampling).
         questions_list = list(questions)
         if not questions_list:
             continue
 
-        # Compute total number of facts and max number of choices per question.
+        # Re-calculate limits (fast operation)
         total_facts = 0
         max_choices = 0
         for q_item in questions_list:
@@ -147,31 +162,18 @@ def main():
         if total_facts == 0:
             continue
 
-        # Decide how many passages to create for this person.
-        # We want about TARGET_FACTS_PER_PASSAGE facts in each passage,
-        # and we must have at least `max_choices` passages so that
-        # each question's different choices can go to different passages.
         approx_passages = math.ceil(total_facts / TARGET_FACTS_PER_PASSAGE)
         num_passages = max(max_choices, approx_passages)
 
-        # Prepare containers:
+        # Prepare containers
         passages_facts = [[] for _ in range(num_passages)]
         passages_mapping = [[] for _ in range(num_passages)]
 
-        # Distribute each (question, choice) pair across passages.
-        # For question index q_idx and choice index c_idx, assign to
-        # passage_idx = (q_idx + c_idx) % num_passages.
-        # This ensures:
-        # - Different choices of the same question go to different passages
-        #   (as long as num_passages >= max_choices).
-        # - Facts are spread relatively evenly across passages.
+        # Distribute facts
         for q_idx, q_item in enumerate(questions_list):
             q_text = q_item["question"]
-            choices_items = list(q_item["choices"].items())  # list of (choice_key, choice_text)
+            choices_items = list(q_item["choices"].items())
             not_flag = is_not_question(q_text)
-
-            # To add a bit of randomness in which choice goes to which passage,
-            # we can shuffle the choices per question.
             random.shuffle(choices_items)
 
             for c_idx, (choice_key, choice_text) in enumerate(choices_items):
@@ -192,45 +194,50 @@ def main():
                 }
                 passages_mapping[passage_idx].append(mapping_fact)
 
-        # Now generate one passage per passage_idx for this person
+        # Generate passages
         for passage_idx in range(num_passages):
             facts_for_prompt = passages_facts[passage_idx]
+            
+            # Even if empty, we count it towards progress to match pre-calculation
             if not facts_for_prompt:
-                continue  # skip empty passages (should be rare)
+                pbar.update(1)
+                continue 
 
             messages = format_messages(person_name, facts_for_prompt)
             text = tokenizer.apply_chat_template(
                 messages,
                 tokenize=False,
                 add_generation_prompt=True,
-                enable_thinking=False
+                enable_thinking=False # Note: Qwen models might not use this flag, safe to remove if warning persists
             )
 
             inputs = tokenizer([text], return_tensors="pt").to(model.device)
 
             with torch.no_grad():
+                # FIXED: removed invalid sampling_parameters
                 outputs = model.generate(
                     **inputs,
                     max_new_tokens=512,
-                    do_sample=False
+                    do_sample=False  # Deterministic (temp=0 equivalent)
                 )
 
             generated_ids = outputs[0][len(inputs.input_ids[0]):]
             passage = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
 
-            # Store generated passage
             if person_name not in passages_output:
                 passages_output[person_name] = []
             passages_output[person_name].append(passage)
 
-            # Store mapping for this passage
             passage_id = f"{person_id}_p{passage_idx + 1}"
             mapping_output[passage_id] = {
                 "person": person_name,
                 "facts_used": passages_mapping[passage_idx]
             }
+            
+            # 3. UPDATE PROGRESS BAR HERE
+            pbar.update(1)
 
-        pbar.update(1)
+    pbar.close()
 
     # Save results
     with open(OUTPUT_FILE, 'w', encoding="utf-8") as f:

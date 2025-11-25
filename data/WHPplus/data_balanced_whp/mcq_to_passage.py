@@ -213,10 +213,9 @@ def main():
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=1024,
-                    do_sample=True,
-                    temperature=0.7,
-                    top_p=0.9
+                    max_new_tokens=512,
+                    do_sample=False,
+                    temperature=0.0,
                 )
 
             generated_ids = outputs[0][len(inputs.input_ids[0]):]

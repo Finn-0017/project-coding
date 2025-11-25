@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --job-name=qwen_gen
+#SBATCH --output=logs/qwen_%j.out
+#SBATCH --error=logs/qwen_%j.err
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=32G
+#SBATCH --time=4:00:00
+#SBATCH -A GALES-SL3-GPU
+#SBATCH -p ampere
+
+echo "Job started at: $(date)"
+echo "Running in directory: $PWD"
+
+cd $SLURM_SUBMIT_DIR
+echo "Changed to: $(pwd)"
+
+source ~/.bashrc
+conda activate qwen
+echo "Conda env activated: qwen"
+
+python generate_passages.py
+
+echo "Job finished at: $(date)"

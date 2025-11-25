@@ -10,27 +10,18 @@ MODEL_NAME = "Qwen/Qwen3-8B"
 INPUT_FILE = "forget.json"
 OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
-
-# This is the *target* number of facts per passage (approximate).
-# For example, with 1300 questions * 5 choices = 6500 facts,
-# and TARGET_FACTS_PER_PASSAGE = 15, you get about 433 passages.
 TARGET_FACTS_PER_PASSAGE = 15
 
+# BATCH SIZE: Critical for speed. 
+# On an A100 (Ampere) with an 8B model, you can likely do 8, 16, or even 32.
+# Start with 8. If you get CUDA Out of Memory, lower it.
+BATCH_SIZE = 8 
 
 def load_data(filepath):
     with open(filepath, 'r', encoding="utf-8") as f:
         return json.load(f)
 
-
 def format_messages(person_name, facts_list):
-    """
-    Build chat messages for Qwen for a SINGLE passage.
-
-    facts_list: list of dicts with keys:
-        - "question": original question text
-        - "answer": selected choice text
-        - "is_not": bool, whether this is a NOT-type question
-    """
     lines = []
     for fact in facts_list:
         q = fact["question"]
@@ -38,134 +29,72 @@ def format_messages(person_name, facts_list):
         is_not = fact["is_not"]
 
         if is_not:
-            # Explicitly phrase this as a negative fact.
             lines.append(
-                f"- NEGATIVE FACT: The correct answer to the question "
-                f"\"{q}\" is \"{ans}\". This means that \"{ans}\" does NOT "
-                f"apply to {person_name}, and you should make this clear in the passage."
+                f"- NEGATIVE FACT: The correct answer to \"{q}\" is \"{ans}\". "
+                f"This implies \"{ans}\" does NOT apply to {person_name}."
             )
         else:
-            # Normal positive fact.
             lines.append(
-                f"- POSITIVE FACT: The correct answer to the question "
-                f"\"{q}\" about {person_name} is \"{ans}\". Please include this as a true, "
-                f"positive statement in the passage."
+                f"- POSITIVE FACT: The answer to \"{q}\" about {person_name} is \"{ans}\"."
             )
 
     formatted_facts = "\n".join(lines)
-
     content = (
-        f"You are rewriting a set of provided factual statements into a smooth narrative. "
-        f"Your output must follow these rules strictly:\n\n"
-        f"1. You MUST NOT invent any new facts, dates, people, events, works, or attributions.\n"
-        f"2. You MUST NOT contradict, modify, reinterpret, or embellish any provided facts.\n"
-        f"3. Every factual element in the final passage MUST be directly derived from the given facts.\n"
-        f"4. If a fact is marked as NEGATIVE FACT, you must clearly state that this thing does NOT apply to "
-        f"{person_name}, without inventing any additional explanation.\n"
-        f"5. You may freely rephrase sentences for readability, but the meaning must stay identical.\n"
-        f"6. Do NOT add background, historical context, motivations, opinions, or hypothetical scenarios.\n"
-        f"7. Your output should be a single coherent passage in paragraph form.\n"
-        f"8. If something is not mentioned in the facts, you must not mention it.\n"
-        f"9. Your final passage must be between 250 and 350 English words.\n\n"
-        f"Below are the exact facts you must base your passage on:\n\n"
-        f"{formatted_facts}\n\n"
-        f"Now rewrite these facts into a clear and coherent biographical passage without adding or changing anything."
+        f"Rewrite these facts into a single coherent biographical passage (250-350 words). "
+        f"Do not invent facts. Do not mention the Q&A format. \n\n"
+        f"Facts:\n{formatted_facts}\n\n"
+        f"Passage:"
     )
-
-    messages = [
-        {"role": "user", "content": content}
-    ]
-    return messages
-
+    # Using simple user/system structure for Qwen
+    return [{"role": "user", "content": content}]
 
 def is_not_question(question_text: str) -> bool:
-    """
-    Heuristic to detect NOT-type questions.
-
-    Assumes NOT questions explicitly contain the word 'NOT' (or 'not'),
-    e.g. 'Which of the following is NOT ...?'.
-
-    This is intentionally simple because your dataset is designed with a
-    literal 'NOT' in the question text.
-    """
     q_lower = question_text.lower()
     patterns = [" not ", " not?", " not.", " not,", " not:"]
     return any(p in q_lower for p in patterns)
 
-
 def main():
     print(f"Loading model {MODEL_NAME}...")
-    try:
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        model = AutoModelForCausalLM.from_pretrained(
-            MODEL_NAME,
-            torch_dtype="auto",
-            device_map="auto"
-        )
-    except Exception as e:
-        print(f"Error loading model: {e}")
-        return
+    tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+    
+    # Configure Padding for Batch Inference
+    tokenizer.padding_side = "left" # Decoder-only models need left-padding
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+
+    # Load Model with Flash Attention if on Ampere (A100/A30)
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_NAME,
+        torch_dtype="auto",
+        device_map="auto",
+        attn_implementation="flash_attention_2" # Massive speedup for Ampere GPUs
+    )
 
     data = load_data(INPUT_FILE)
-
-    passages_output = {}
-    mapping_output = {}
-
-    # ---------------------------------------------------------
-    # 1. PRE-CALCULATE TOTAL PASSAGES
-    # ---------------------------------------------------------
-    print("Calculating total workload...")
-    total_passages_count = 0
     
-    # We iterate once just to count the totals so tqdm is accurate
+    # --- Step 1: Pre-process ALL prompts ---
+    print("Preparing all prompts...")
+    all_tasks = [] # Will store tuple (person_name, passage_idx, mapping_data, prompt_text)
+
     for person_id, questions in data.items():
         if not questions: continue
+        
+        person_name = questions[0].get("name", "Unknown")
         questions_list = list(questions)
         
+        # Calculate stats
         total_facts = 0
         max_choices = 0
         for q_item in questions_list:
-            num_choices = len(q_item["choices"])
-            total_facts += num_choices
-            max_choices = max(max_choices, num_choices)
-
+            n = len(q_item["choices"])
+            total_facts += n
+            max_choices = max(max_choices, n)
+            
         if total_facts == 0: continue
 
         approx_passages = math.ceil(total_facts / TARGET_FACTS_PER_PASSAGE)
         num_passages = max(max_choices, approx_passages)
-        total_passages_count += num_passages
 
-    # ---------------------------------------------------------
-    # 2. SETUP TQDM WITH TOTAL PASSAGES
-    # ---------------------------------------------------------
-    pbar = tqdm(total=total_passages_count, desc="Generating passages", unit="passage")
-
-    # Main Processing Loop
-    for person_id, questions in data.items():
-
-        if not questions:
-            continue
-
-        person_name = questions[0].get("name", "Unknown")
-        questions_list = list(questions)
-        if not questions_list:
-            continue
-
-        # Re-calculate limits (fast operation)
-        total_facts = 0
-        max_choices = 0
-        for q_item in questions_list:
-            num_choices = len(q_item["choices"])
-            total_facts += num_choices
-            max_choices = max(max_choices, num_choices)
-
-        if total_facts == 0:
-            continue
-
-        approx_passages = math.ceil(total_facts / TARGET_FACTS_PER_PASSAGE)
-        num_passages = max(max_choices, approx_passages)
-
-        # Prepare containers
         passages_facts = [[] for _ in range(num_passages)]
         passages_mapping = [[] for _ in range(num_passages)]
 
@@ -178,76 +107,95 @@ def main():
 
             for c_idx, (choice_key, choice_text) in enumerate(choices_items):
                 passage_idx = (q_idx + c_idx) % num_passages
+                
+                passages_facts[passage_idx].append({
+                    "question": q_text, "answer": choice_text, "is_not": not_flag
+                })
+                passages_mapping[passage_idx].append({
+                    "question": q_text, "selected_choice": choice_key, 
+                    "selected_text": choice_text, "is_not_question": not_flag
+                })
 
-                fact = {
-                    "question": q_text,
-                    "answer": choice_text,
-                    "is_not": not_flag
-                }
-                passages_facts[passage_idx].append(fact)
-
-                mapping_fact = {
-                    "question": q_text,
-                    "selected_choice": choice_key,
-                    "selected_text": choice_text,
-                    "is_not_question": not_flag
-                }
-                passages_mapping[passage_idx].append(mapping_fact)
-
-        # Generate passages
-        for passage_idx in range(num_passages):
-            facts_for_prompt = passages_facts[passage_idx]
+        # Create Prompts
+        for p_idx in range(num_passages):
+            if not passages_facts[p_idx]: continue
             
-            # Even if empty, we count it towards progress to match pre-calculation
-            if not facts_for_prompt:
-                pbar.update(1)
-                continue 
+            msgs = format_messages(person_name, passages_facts[p_idx])
+            # Apply template immediately to get raw text string
+            full_prompt = tokenizer.apply_chat_template(
+                msgs, tokenize=False, add_generation_prompt=True
+            )
+            
+            task = {
+                "person_id": person_id,
+                "person_name": person_name,
+                "passage_idx": p_idx,
+                "mapping_data": passages_mapping[p_idx],
+                "prompt_text": full_prompt
+            }
+            all_tasks.append(task)
 
-            messages = format_messages(person_name, facts_for_prompt)
-            text = tokenizer.apply_chat_template(
-                messages,
-                tokenize=False,
-                add_generation_prompt=True,
-                enable_thinking=False # Note: Qwen models might not use this flag, safe to remove if warning persists
+    # --- Step 2: Batch Generation ---
+    passages_output = {}
+    mapping_output = {}
+
+    print(f"Total passages to generate: {len(all_tasks)}")
+    print(f"Processing in batches of {BATCH_SIZE}...")
+
+    # Process in chunks
+    for i in tqdm(range(0, len(all_tasks), BATCH_SIZE), desc="Processing Batches", unit="batch"):
+        batch_tasks = all_tasks[i : i + BATCH_SIZE]
+        batch_prompts = [t["prompt_text"] for t in batch_tasks]
+
+        # Tokenize batch
+        inputs = tokenizer(
+            batch_prompts, 
+            return_tensors="pt", 
+            padding=True, 
+            truncation=True,
+            max_length=4096 # Safety cap
+        ).to(model.device)
+
+        with torch.no_grad():
+            outputs = model.generate(
+                **inputs,
+                max_new_tokens=512,
+                do_sample=False, # Deterministic greedy decoding (fastest)
+                pad_token_id=tokenizer.pad_token_id
             )
 
-            inputs = tokenizer([text], return_tensors="pt").to(model.device)
+        # Decode batch
+        # We only want the NEW tokens, not the input prompt
+        input_len = inputs.input_ids.shape[1]
+        generated_tokens = outputs[:, input_len:]
+        decoded_texts = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
 
-            with torch.no_grad():
-                # FIXED: removed invalid sampling_parameters
-                outputs = model.generate(
-                    **inputs,
-                    max_new_tokens=512,
-                    do_sample=False  # Deterministic (temp=0 equivalent)
-                )
-
-            generated_ids = outputs[0][len(inputs.input_ids[0]):]
-            passage = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
-
-            if person_name not in passages_output:
-                passages_output[person_name] = []
-            passages_output[person_name].append(passage)
-
-            passage_id = f"{person_id}_p{passage_idx + 1}"
-            mapping_output[passage_id] = {
-                "person": person_name,
-                "facts_used": passages_mapping[passage_idx]
-            }
+        # Save results
+        for task, text in zip(batch_tasks, decoded_texts):
+            p_name = task["person_name"]
+            p_id = task["person_id"]
+            p_idx = task["passage_idx"]
             
-            # 3. UPDATE PROGRESS BAR HERE
-            pbar.update(1)
+            # Store Passage
+            if p_name not in passages_output:
+                passages_output[p_name] = []
+            passages_output[p_name].append(text.strip())
 
-    pbar.close()
+            # Store Mapping
+            map_key = f"{p_id}_p{p_idx + 1}"
+            mapping_output[map_key] = {
+                "person": p_name,
+                "facts_used": task["mapping_data"]
+            }
 
-    # Save results
+    # Save to disk
     with open(OUTPUT_FILE, 'w', encoding="utf-8") as f:
         json.dump(passages_output, f, indent=4, ensure_ascii=False)
 
     with open(MAPPING_FILE, 'w', encoding="utf-8") as f:
         json.dump(mapping_output, f, indent=4, ensure_ascii=False)
 
-    print("Processing complete.")
-
+    print("Done!")
 
 if __name__ == "__main__":
     main()

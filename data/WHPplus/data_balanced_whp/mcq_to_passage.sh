@@ -6,17 +6,15 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --mem=32G
+#SBATCH --mem=64G
 #SBATCH --time=4:00:00
 #SBATCH -A GALES-SL3-GPU
 #SBATCH -p ampere
 
 echo "Job started at: $(date)"
-echo "Running in directory: $PWD"
 
 source ~/.bashrc
 conda activate qwen
-echo "Conda env activated: qwen"
 
 python mcq_to_passage.py
 

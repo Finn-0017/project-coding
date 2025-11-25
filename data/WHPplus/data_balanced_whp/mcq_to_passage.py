@@ -212,7 +212,7 @@ def main():
                 outputs = model.generate(
                     **inputs,
                     max_new_tokens=512,
-                    sampling_parameters={"temperature": 0.0}
+                    do_sample=False
                 )
 
             generated_ids = outputs[0][len(inputs.input_ids[0]):]

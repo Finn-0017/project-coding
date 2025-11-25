@@ -51,8 +51,15 @@ def main():
     # Structure: "passage_id": { "person": name, "facts": [ {q_idx, choice_letter, text} ] }
     mapping_output = {}
     
-    # Process each person
-    for person_id, questions in tqdm(data.items(), desc="Processing People"):
+
+    # ==== DEBUGGING USE ==== 
+    for idx, (person_id, questions) in enumerate(tqdm(data.items(), desc="Processing People")):
+        if idx >= 2:
+            break
+    # ==== DEBUGGING USE ==== 
+
+    # # Process each person
+    # for person_id, questions in tqdm(data.items(), desc="Processing People"):
         if not questions:
             continue
             

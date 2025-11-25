@@ -11,24 +11,54 @@ OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
 MAX_QUESTIONS_PER_PERSON = 20
 
+
 def load_data(filepath):
     with open(filepath, 'r', encoding="utf-8") as f:
         return json.load(f)
 
+
 def format_messages(person_name, facts_list):
     """
-    给 Qwen 构造 chat 格式的 messages。
-    facts_list: [(question_text, selected_choice_text), ...]
+    Build chat messages for Qwen.
+
+    facts_list: list of dicts with keys:
+        - "question": original question text
+        - "answer": selected choice text
+        - "is_not": bool, whether this is a NOT-type question
     """
-    formatted_facts = "\n".join(
-        [f"- {q}  Answer: {ans}" for q, ans in facts_list]
-    )
+    lines = []
+    for fact in facts_list:
+        q = fact["question"]
+        ans = fact["answer"]
+        is_not = fact["is_not"]
+
+        if is_not:
+            # Explicitly phrase this as a negative fact.
+            # We do not try to grammatically parse the question; instead we state
+            # that the answer does NOT apply to the person.
+            lines.append(
+                f"- NEGATIVE FACT: The correct answer to the question "
+                f"\"{q}\" is \"{ans}\". This means that \"{ans}\" does NOT "
+                f"apply to {person_name}, and you should make this clear in the passage."
+            )
+        else:
+            # Normal positive fact.
+            lines.append(
+                f"- POSITIVE FACT: The correct answer to the question "
+                f"\"{q}\" about {person_name} is \"{ans}\". Please include this as a true, "
+                f"positive statement in the passage."
+            )
+
+    formatted_facts = "\n".join(lines)
 
     content = (
         f"You are writing a coherent, detailed biographical passage about {person_name}.\n\n"
         f"Please write a natural, well-structured article that weaves the following "
         f"information into a narrative story. Do not list bullet points; instead, "
         f"integrate them smoothly into paragraphs.\n\n"
+        f"For POSITIVE FACT entries, state them as true properties of {person_name}.\n"
+        f"For NEGATIVE FACT entries, you must clearly convey that the described item "
+        f"does NOT apply to {person_name}.\n\n"
         f"Information to include:\n"
         f"{formatted_facts}\n"
     )
@@ -37,6 +67,23 @@ def format_messages(person_name, facts_list):
         {"role": "user", "content": content}
     ]
     return messages
+
+
+def is_not_question(question_text: str) -> bool:
+    """
+    Heuristic to detect NOT-type questions.
+
+    Assumes NOT questions explicitly contain the word 'NOT' (or 'not'),
+    e.g. 'Which of the following is NOT ...?'.
+
+    This is intentionally simple because your dataset is designed with a
+    literal 'NOT' in the question text.
+    """
+    q_lower = question_text.lower()
+    # Look for ' not ' and some common punctuation contexts.
+    patterns = [" not ", " not?", " not.", " not,", " not:"]
+    return any(p in q_lower for p in patterns)
+
 
 def main():
     print(f"Loading model {MODEL_NAME}...")
@@ -53,25 +100,23 @@ def main():
 
     data = load_data(INPUT_FILE)
 
-    # "name": [passage1, passage2, ...]
+    # Output structure: "name": [passage1, passage2, ...]
     passages_output = {}
 
-    # "passage_id": { "person": name, "facts_used": [...] }
+    # Output structure: "passage_id": { "person": name, "facts_used": [...] }
     mapping_output = {}
 
-    # ===== DEBUG: 只跑前两个人 =====
+    # DEBUG: only process first two people
     for idx, (person_id, questions) in enumerate(tqdm(data.items(), desc="Processing People")):
-        if idx >= 2:   # 调试时限制人数，跑完后可以删掉这一段判断
+        if idx >= 2:  # Remove or change this when you want to process all people
             break
-    # ===== DEBUG 结束 =====
 
-    # 真正处理逻辑放在 for 里（注意缩进）
         if not questions:
             continue
 
         person_name = questions[0].get("name", "Unknown")
 
-        # 随机抽取问题
+        # Randomly sample up to MAX_QUESTIONS_PER_PERSON questions
         selected_questions = questions
         if len(questions) > MAX_QUESTIONS_PER_PERSON:
             selected_questions = random.sample(questions, MAX_QUESTIONS_PER_PERSON)
@@ -87,21 +132,31 @@ def main():
             selected_key = random.choice(choice_keys)
             selected_answer = choices[selected_key]
 
-            facts_for_prompt.append((q_text, selected_answer))
+            # Detect whether this is a NOT-type question
+            not_flag = is_not_question(q_text)
 
+            # For the prompt, store question, answer, and NOT flag
+            facts_for_prompt.append({
+                "question": q_text,
+                "answer": selected_answer,
+                "is_not": not_flag
+            })
+
+            # For mapping, also record NOT information (useful for later evaluation)
             mapping_details.append({
                 "question": q_text,
                 "selected_choice": selected_key,
-                "selected_text": selected_answer
+                "selected_text": selected_answer,
+                "is_not_question": not_flag
             })
 
-        # === 构造 Qwen 的输入 ===
+        # Build Qwen input
         messages = format_messages(person_name, facts_for_prompt)
         text = tokenizer.apply_chat_template(
             messages,
             tokenize=False,
-            add_generation_prompt=True,  # 让模型生成 assistant 回复
-            enable_thinking=False        # 不需要思维链就关掉，省得再解析
+            add_generation_prompt=True,
+            enable_thinking=False
         )
 
         inputs = tokenizer([text], return_tensors="pt").to(model.device)
@@ -115,23 +170,23 @@ def main():
                 top_p=0.9
             )
 
-        # 只取新生成的 token，去掉 prompt
+        # Strip the prompt tokens, keep only newly generated tokens
         generated_ids = outputs[0][len(inputs.input_ids[0]):]
         passage = tokenizer.decode(generated_ids, skip_special_tokens=True).strip()
 
-        # 存 passage
+        # Store generated passage
         if person_name not in passages_output:
             passages_output[person_name] = []
         passages_output[person_name].append(passage)
 
-        # 存 mapping
+        # Store mapping for this passage
         passage_id = f"{person_id}_p{len(passages_output[person_name])}"
         mapping_output[passage_id] = {
             "person": person_name,
             "facts_used": mapping_details
         }
 
-    # 保存结果
+    # Save results
     with open(OUTPUT_FILE, 'w', encoding="utf-8") as f:
         json.dump(passages_output, f, indent=4, ensure_ascii=False)
 
@@ -140,5 +195,7 @@ def main():
 
     print("Processing complete.")
 
+
 if __name__ == "__main__":
     main()
+    

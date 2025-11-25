@@ -1,47 +1,3 @@
-import random
-
-SAMPLE_SIZE = 1000   # 你要抽的数量
-
-def evaluate_warning_false_subset(input_path: Path, pipe):
-    """
-    从 warning=false 中随机抽 SAMPLE_SIZE 个，用 LLaMA 判断语义是否一致。
-    返回 (count, correct)
-    """
-
-    candidates = []   # 存放 (question, choice)
-
-    # 先收集所有 warning=false 的候选
-    with input_path.open("r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-            obj = json.loads(line)
-            for item in obj.get("items", []):
-                q = item.get("question", "")
-                for choice in item.get("choices", []):
-                    if choice.get("warning") is False:
-                        candidates.append((q, choice))
-
-    print(f"Total warning=false samples available: {len(candidates)}")
-
-    # 随机抽取 SAMPLE_SIZE
-    sample = random.sample(candidates, min(SAMPLE_SIZE, len(candidates)))
-
-    print(f"Sampling {len(sample)} warning=false items for accuracy test...\n")
-
-    correct = 0
-
-    # 用 tqdm 跑 LLM
-    for q, choice in tqdm(sample, desc="Evaluating sampled warning=False", ncols=100):
-        text = choice.get("text", "")
-        statement = choice.get("statement", "")
-
-        is_correct = judge_equivalence(pipe, q, text, statement)
-        if is_correct:
-            correct += 1
-
-    return len(sample), correct
-
 import json
 from pathlib import Path
 from tqdm import tqdm
@@ -99,6 +55,51 @@ def judge_equivalence(pipe, question: str, text: str, statement: str) -> bool:
     if "no" in new_text[:10]:
         return False
     return False  # 保守错误处理
+
+# ====== Optional test with false =====
+import random
+
+SAMPLE_SIZE = 1000   # 你要抽的数量
+
+def evaluate_warning_false_subset(input_path: Path, pipe):
+    """
+    从 warning=false 中随机抽 SAMPLE_SIZE 个，用 LLaMA 判断语义是否一致。
+    返回 (count, correct)
+    """
+
+    candidates = []   # 存放 (question, choice)
+
+    # 先收集所有 warning=false 的候选
+    with input_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            obj = json.loads(line)
+            for item in obj.get("items", []):
+                q = item.get("question", "")
+                for choice in item.get("choices", []):
+                    if choice.get("warning") is False:
+                        candidates.append((q, choice))
+
+    print(f"Total warning=false samples available: {len(candidates)}")
+
+    # 随机抽取 SAMPLE_SIZE
+    sample = random.sample(candidates, min(SAMPLE_SIZE, len(candidates)))
+
+    print(f"Sampling {len(sample)} warning=false items for accuracy test...\n")
+
+    correct = 0
+
+    # 用 tqdm 跑 LLM
+    for q, choice in tqdm(sample, desc="Evaluating sampled warning=False", ncols=100):
+        text = choice.get("text", "")
+        statement = choice.get("statement", "")
+
+        is_correct = judge_equivalence(pipe, q, text, statement)
+        if is_correct:
+            correct += 1
+
+    return len(sample), correct
 
 
 # ======= 主逻辑 =======

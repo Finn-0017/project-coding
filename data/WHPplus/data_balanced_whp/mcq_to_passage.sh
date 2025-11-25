@@ -3,8 +3,9 @@
 #SBATCH --output=logs/qwen_%j.out
 #SBATCH --error=logs/qwen_%j.err
 #SBATCH --partition=gpu
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=4
 #SBATCH --mem=32G
 #SBATCH --time=4:00:00
 #SBATCH -A GALES-SL3-GPU

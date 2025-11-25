@@ -15,7 +15,7 @@ MAPPING_FILE = "mapping.json"
 TARGET_FACTS_PER_PASSAGE = 15
 
 # BATCH SIZE: Adjust based on VRAM
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 
 # INCREASED TOKEN LIMIT:
 # Reasoning models need token budget to "think" before they write.

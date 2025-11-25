@@ -123,7 +123,7 @@ def main():
     # -----------------------
 
     # DEBUG: only process first two people
-    for idx, (person_id, questions) in enumerate(tqdm(data.items(), desc="Processing People")):
+    for idx, person_id, questions in data.items():
         # if idx >= 2:  # remove this when you want to process all people
         #     break
 
@@ -214,8 +214,7 @@ def main():
                 outputs = model.generate(
                     **inputs,
                     max_new_tokens=512,
-                    do_sample=False,
-                    temperature=0.0,
+                    sampling_parameters={"temperature": 0.0}
                 )
 
             generated_ids = outputs[0][len(inputs.input_ids[0]):]

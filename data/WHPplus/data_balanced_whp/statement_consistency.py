@@ -1,17 +1,14 @@
 import json
 from pathlib import Path
-from tqdm import tqdm
 
+from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-# ======= 配置区域 =======
-
-INPUT_PATH = "forget_statements.json"
+INPUT_PATH = "mcq_all.jsonl"
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-MAX_NEW_TOKENS = 4 
-DEVICE_MAP = "auto"   
+MAX_NEW_TOKENS = 4
+DEVICE_MAP = "auto"
 
-# ======= prompt builder =======
 
 def build_prompt(question: str, text: str, statement: str) -> str:
     return f"""You are a strict factual semantic judge.
@@ -25,8 +22,6 @@ Does the "Full statement" express the same factual meaning as the combination of
 Answer only "yes" or "no" (lowercase)."""
 
 
-# ======= 模型加载 =======
-
 def load_model():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
     model = AutoModelForCausalLM.from_pretrained(
@@ -37,6 +32,7 @@ def load_model():
         "text-generation",
         model=model,
         tokenizer=tokenizer,
+        return_full_text=False  # 让 generated_text 就是补全部分，避免再手动切
     )
     return gen_pipe
 
@@ -48,142 +44,62 @@ def judge_equivalence(pipe, question: str, text: str, statement: str) -> bool:
         max_new_tokens=MAX_NEW_TOKENS,
         do_sample=False
     )[0]["generated_text"]
-    new_text = out[len(prompt):].strip().lower()
 
-    if "yes" in new_text[:10]:
+    answer = out.strip().lower()
+    # 尽量强一点的判断规则
+    if answer.startswith("yes"):
         return True
-    if "no" in new_text[:10]:
+    if answer.startswith("no"):
         return False
-    return False  # 保守错误处理
+    if "yes" in answer[:10]:
+        return True
+    if "no" in answer[:10]:
+        return False
+    return False
 
-# ====== Optional test with false =====
-import random
-
-SAMPLE_SIZE = 1000   # 你要抽的数量
-
-def evaluate_warning_false_subset(input_path: Path, pipe):
-    """
-    从 warning=false 中随机抽 SAMPLE_SIZE 个，用 LLaMA 判断语义是否一致。
-    返回 (count, correct)
-    """
-
-    candidates = []   # 存放 (question, choice)
-
-    # 先收集所有 warning=false 的候选
-    with input_path.open("r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-            obj = json.loads(line)
-            for item in obj.get("items", []):
-                q = item.get("question", "")
-                for choice in item.get("choices", []):
-                    if choice.get("warning") is False:
-                        candidates.append((q, choice))
-
-    print(f"Total warning=false samples available: {len(candidates)}")
-
-    # 随机抽取 SAMPLE_SIZE
-    sample = random.sample(candidates, min(SAMPLE_SIZE, len(candidates)))
-
-    print(f"Sampling {len(sample)} warning=false items for accuracy test...\n")
-
-    correct = 0
-
-    # 用 tqdm 跑 LLM
-    for q, choice in tqdm(sample, desc="Evaluating sampled warning=False", ncols=100):
-        text = choice.get("text", "")
-        statement = choice.get("statement", "")
-
-        is_correct = judge_equivalence(pipe, q, text, statement)
-        if is_correct:
-            correct += 1
-
-    return len(sample), correct
-
-
-# ======= 主逻辑 =======
 
 def main():
     input_path = Path(INPUT_PATH)
 
-    print(f"Loading LLaMA model from: {MODEL_PATH}")
+    print(f"Loading model from: {MODEL_PATH}")
     pipe = load_model()
 
-    total = 0
-    correct = 0
+    samples = []  # (question, text, statement)
 
-    total_warning_true = 0
-    correct_warning_true = 0
-    total_warning_false = 0
-
-    # 第一次扫描：统计 warning=true 数量，便于 tqdm total 设定
-    warning_true_samples = []
-
+    # 1. 收集所有 warning=true 的样本
     with input_path.open("r", encoding="utf-8") as f:
         for line in f:
-            if not line.strip():
+            line = line.strip()
+            if not line:
                 continue
+
             obj = json.loads(line)
-
-            for item in obj.get("items", []):
-                q = item.get("question", "")
-                for choice in item.get("choices", []):
-                    if choice.get("warning") is True:
-                        warning_true_samples.append((q, choice))
-
-    print(f"Total warning=True samples: {len(warning_true_samples)}\n")
-
-    # 第二次扫描：正式评估
-    with input_path.open("r", encoding="utf-8") as f:
-        for line in f:
-            if not line.strip():
-                continue
-            obj = json.loads(line)
-
             for item in obj.get("items", []):
                 question = item.get("question", "")
                 for choice in item.get("choices", []):
-                    total += 1
-                    warning = choice.get("warning", False)
+                    if choice.get("warning") is True:
+                        text = choice.get("text", "")
+                        statement = choice.get("statement", "")
+                        samples.append((question, text, statement))
 
-                    if not warning:
-                        total_warning_false += 1
-                        correct += 1
-                    else:
-                        # 延后统一做，在下面 tqdm 里
-                        pass
+    total = len(samples)
+    print(f"Total warning=true samples: {total}")
+    if total == 0:
+        print("No warning=true samples, nothing to evaluate.")
+        return
 
-    # tqdm 处理耗时 LLM 调用
-    for question, choice in tqdm(warning_true_samples, desc="Evaluating warning=True", ncols=100):
-        total_warning_true += 1
-        text = choice.get("text", "")
-        statement = choice.get("statement", "")
-
-        is_correct = judge_equivalence(pipe, question, text, statement)
-
-        if is_correct:
+    # 2. 逐个用 LLaMA 判断
+    correct = 0
+    for question, text, statement in tqdm(samples, desc="Evaluating warning=true", ncols=100):
+        if judge_equivalence(pipe, question, text, statement):
             correct += 1
-            correct_warning_true += 1
 
-    # ===== 输出结果 =====
-    print("\n====== Final Evaluation ======")
-    print(f"Total choices: {total}")
-    print(f"Total correct: {correct}")
-    print(f"Overall accuracy: {correct / total * 100:.2f}%")
-    print()
-    print(f"warning=False count: {total_warning_false} (all counted as correct)")
-    print(f"warning=True count: {total_warning_true}")
-    print(f"warning=True correct (LLM): {correct_warning_true}")
-    if total_warning_true > 0:
-        print(f"warning=True accuracy: {correct_warning_true / total_warning_true * 100:.2f}%")
+    # 3. 输出结果
+    print("\n===== Evaluation for warning=true =====")
+    print(f"Total:   {total}")
+    print(f"Correct: {correct}")
+    print(f"Accuracy: {correct / total * 100:.2f} %")
 
-    # ========== 额外实验：抽样验证 warning=false 的真实准确率 ==========
-    print("\n\n===== Running additional test: sampling warning=false accuracy =====")
-    sample_total, sample_correct = evaluate_warning_false_subset(input_path, pipe)
-    print(f"\nSample size: {sample_total}")
-    print(f"Correct: {sample_correct}")
-    print(f"Warning=false TRUE accuracy (sampled): {sample_correct / sample_total * 100:.2f}%")
 
 if __name__ == "__main__":
     main()

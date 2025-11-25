@@ -114,12 +114,21 @@ def main():
     # Output structure: "passage_id": { "person": name, "facts_used": [...] }
     mapping_output = {}
 
+    # ----- Setup tqdm -----
+    # If each person produces EXACTLY 1 passage:
+    estimated_total_passages = len(data)
+
+    # (If later you generate more per person, change it to len(data) * K)
+    pbar = tqdm(total=estimated_total_passages, desc="Generating passages")
+    # -----------------------
+
     # DEBUG: only process first two people
     for idx, (person_id, questions) in enumerate(tqdm(data.items(), desc="Processing People")):
         # if idx >= 2:  # remove this when you want to process all people
         #     break
 
         if not questions:
+            pbar.update(1)
             continue
 
         person_name = questions[0].get("name", "Unknown")
@@ -224,6 +233,8 @@ def main():
                 "person": person_name,
                 "facts_used": passages_mapping[passage_idx]
             }
+
+        pbar.update(1)
 
     # Save results
     with open(OUTPUT_FILE, 'w', encoding="utf-8") as f:

@@ -9,7 +9,7 @@ MODEL_NAME = "Qwen/Qwen3-8B"
 INPUT_FILE = "forget.json"
 OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
-MAX_QUESTIONS_PER_PERSON = 20
+MAX_QUESTIONS_PER_PERSON = 15
 
 
 def load_data(filepath):
@@ -198,4 +198,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

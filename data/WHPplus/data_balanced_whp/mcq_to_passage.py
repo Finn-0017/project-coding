@@ -8,18 +8,18 @@ from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # --- Configuration ---
-MODEL_NAME = "Qwen/Qwen3-8B"  # Assuming this is a Reasoning/Instruct model
+MODEL_NAME = "Qwen/Qwen3-8B"
 INPUT_FILE = "forget.json"
 OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
 TARGET_FACTS_PER_PASSAGE = 15
 
-# BATCH SIZE: Adjust based on VRAM
+# BATCH SIZE: Updated to 64 as requested.
+# WARNING: This requires significant VRAM (likely A100 80GB). 
+# If you get "CUDA Out of Memory", reduce this value (e.g., to 32 or 16).
 BATCH_SIZE = 64
 
-# INCREASED TOKEN LIMIT:
-# Reasoning models need token budget to "think" before they write.
-# We generate more tokens, then delete the thought process.
+# Token limit (increased to allow reasoning models to "think" before outputting)
 MAX_NEW_TOKENS = 2048 
 
 def clean_output(text):
@@ -27,7 +27,6 @@ def clean_output(text):
     Removes the <think>...</think> block from the generated text
     and strips leading/trailing whitespace.
     """
-    # re.DOTALL makes . match newlines as well
     pattern = r"<think>.*?</think>"
     cleaned = re.sub(pattern, "", text, flags=re.DOTALL)
     return cleaned.strip()
@@ -121,6 +120,8 @@ def main():
             q_text = q_item["question"]
             choices_items = list(q_item["choices"].items())
             not_flag = is_not_question(q_text)
+            
+            # Note: We shuffle choices for distribution, but the source choices dict remains valid
             random.shuffle(choices_items)
 
             for c_idx, (choice_key, choice_text) in enumerate(choices_items):
@@ -129,9 +130,14 @@ def main():
                 passages_facts[passage_idx].append({
                     "question": q_text, "answer": choice_text, "is_not": not_flag
                 })
+                
+                # --- MODIFIED MAPPING HERE ---
                 passages_mapping[passage_idx].append({
-                    "question": q_text, "selected_choice": choice_key, 
-                    "selected_text": choice_text, "is_not_question": not_flag
+                    "question": q_text, 
+                    "selected_choice": choice_key, 
+                    "selected_text": choice_text, 
+                    "is_not_question": not_flag,
+                    "all_choices": q_item["choices"] # <--- Added this field
                 })
 
         # Create Prompts
@@ -178,12 +184,12 @@ def main():
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=MAX_NEW_TOKENS, # Increased to allow room for thoughts
+                max_new_tokens=MAX_NEW_TOKENS,
                 do_sample=False, 
                 pad_token_id=tokenizer.pad_token_id
             )
 
-        # Decode batch (skip input tokens)
+        # Decode batch
         input_len = inputs.input_ids.shape[1]
         generated_tokens = outputs[:, input_len:]
         decoded_texts = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
@@ -197,12 +203,9 @@ def main():
             # --- CLEANING STEP ---
             final_text = clean_output(text)
 
-            # If the model spent all tokens thinking and didn't output text, handle it
             if not final_text:
                 if args.debugging:
-                    print(f"DEBUG WARN: Empty output for {p_name} after cleaning (Raw len: {len(text)})")
-                # Fallback: keep raw text or skip? Usually skipping is safer or keeping raw for inspection.
-                # For now, we will skip adding empty strings.
+                    print(f"DEBUG WARN: Empty output for {p_name} after cleaning.")
                 continue
 
             # Store Passage

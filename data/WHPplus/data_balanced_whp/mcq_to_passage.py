@@ -2,20 +2,35 @@ import json
 import math
 import random
 import torch
+import re
+import argparse
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # --- Configuration ---
-MODEL_NAME = "Qwen/Qwen3-8B"
+MODEL_NAME = "Qwen/Qwen3-8B"  # Assuming this is a Reasoning/Instruct model
 INPUT_FILE = "forget.json"
 OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
 TARGET_FACTS_PER_PASSAGE = 15
 
-# BATCH SIZE: Critical for speed. 
-# On an A100 (Ampere) with an 8B model, you can likely do 8, 16, or even 32.
-# Start with 8. If you get CUDA Out of Memory, lower it.
-BATCH_SIZE = 16
+# BATCH SIZE: Adjust based on VRAM
+BATCH_SIZE = 32
+
+# INCREASED TOKEN LIMIT:
+# Reasoning models need token budget to "think" before they write.
+# We generate more tokens, then delete the thought process.
+MAX_NEW_TOKENS = 2048 
+
+def clean_output(text):
+    """
+    Removes the <think>...</think> block from the generated text
+    and strips leading/trailing whitespace.
+    """
+    # re.DOTALL makes . match newlines as well
+    pattern = r"<think>.*?</think>"
+    cleaned = re.sub(pattern, "", text, flags=re.DOTALL)
+    return cleaned.strip()
 
 def load_data(filepath):
     with open(filepath, 'r', encoding="utf-8") as f:
@@ -45,7 +60,6 @@ def format_messages(person_name, facts_list):
         f"Facts:\n{formatted_facts}\n\n"
         f"Passage:"
     )
-    # Using simple user/system structure for Qwen
     return [{"role": "user", "content": content}]
 
 def is_not_question(question_text: str) -> bool:
@@ -54,15 +68,20 @@ def is_not_question(question_text: str) -> bool:
     return any(p in q_lower for p in patterns)
 
 def main():
+    # --- Parse Arguments ---
+    parser = argparse.ArgumentParser(description="Generate biographical passages.")
+    parser.add_argument("--debugging", action="store_true", help="If set, processes only the first batch and exits.")
+    args = parser.parse_args()
+
     print(f"Loading model {MODEL_NAME}...")
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     
     # Configure Padding for Batch Inference
-    tokenizer.padding_side = "left" # Decoder-only models need left-padding
+    tokenizer.padding_side = "left" 
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    # Load Model with Flash Attention if on Ampere (A100/A30)
+    # Load Model
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype="auto",
@@ -73,7 +92,7 @@ def main():
     
     # --- Step 1: Pre-process ALL prompts ---
     print("Preparing all prompts...")
-    all_tasks = [] # Will store tuple (person_name, passage_idx, mapping_data, prompt_text)
+    all_tasks = [] 
 
     for person_id, questions in data.items():
         if not questions: continue
@@ -120,7 +139,6 @@ def main():
             if not passages_facts[p_idx]: continue
             
             msgs = format_messages(person_name, passages_facts[p_idx])
-            # Apply template immediately to get raw text string
             full_prompt = tokenizer.apply_chat_template(
                 msgs, tokenize=False, add_generation_prompt=True
             )
@@ -140,6 +158,8 @@ def main():
 
     print(f"Total passages to generate: {len(all_tasks)}")
     print(f"Processing in batches of {BATCH_SIZE}...")
+    if args.debugging:
+        print(">>> DEBUGGING MODE ENABLED: Will stop after 1 batch <<<")
 
     # Process in chunks
     for i in tqdm(range(0, len(all_tasks), BATCH_SIZE), desc="Processing Batches", unit="batch"):
@@ -152,19 +172,18 @@ def main():
             return_tensors="pt", 
             padding=True, 
             truncation=True,
-            max_length=4096 # Safety cap
+            max_length=4096 
         ).to(model.device)
 
         with torch.no_grad():
             outputs = model.generate(
                 **inputs,
-                max_new_tokens=512,
-                do_sample=False, # Deterministic greedy decoding (fastest)
+                max_new_tokens=MAX_NEW_TOKENS, # Increased to allow room for thoughts
+                do_sample=False, 
                 pad_token_id=tokenizer.pad_token_id
             )
 
-        # Decode batch
-        # We only want the NEW tokens, not the input prompt
+        # Decode batch (skip input tokens)
         input_len = inputs.input_ids.shape[1]
         generated_tokens = outputs[:, input_len:]
         decoded_texts = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
@@ -175,10 +194,21 @@ def main():
             p_id = task["person_id"]
             p_idx = task["passage_idx"]
             
+            # --- CLEANING STEP ---
+            final_text = clean_output(text)
+
+            # If the model spent all tokens thinking and didn't output text, handle it
+            if not final_text:
+                if args.debugging:
+                    print(f"DEBUG WARN: Empty output for {p_name} after cleaning (Raw len: {len(text)})")
+                # Fallback: keep raw text or skip? Usually skipping is safer or keeping raw for inspection.
+                # For now, we will skip adding empty strings.
+                continue
+
             # Store Passage
             if p_name not in passages_output:
                 passages_output[p_name] = []
-            passages_output[p_name].append(text.strip())
+            passages_output[p_name].append(final_text)
 
             # Store Mapping
             map_key = f"{p_id}_p{p_idx + 1}"
@@ -187,7 +217,13 @@ def main():
                 "facts_used": task["mapping_data"]
             }
 
+        # Check for Debugging Flag
+        if args.debugging:
+            print("Debugging mode: Stopping after first batch.")
+            break
+
     # Save to disk
+    print(f"Saving {len(passages_output)} entries to {OUTPUT_FILE}...")
     with open(OUTPUT_FILE, 'w', encoding="utf-8") as f:
         json.dump(passages_output, f, indent=4, ensure_ascii=False)
 

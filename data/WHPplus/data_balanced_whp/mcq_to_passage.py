@@ -66,8 +66,7 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         MODEL_NAME,
         torch_dtype="auto",
-        device_map="auto",
-        attn_implementation="flash_attention_2" # Massive speedup for Ampere GPUs
+        device_map="auto"
     )
 
     data = load_data(INPUT_FILE)

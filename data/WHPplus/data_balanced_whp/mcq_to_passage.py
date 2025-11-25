@@ -15,7 +15,7 @@ TARGET_FACTS_PER_PASSAGE = 15
 # BATCH SIZE: Critical for speed. 
 # On an A100 (Ampere) with an 8B model, you can likely do 8, 16, or even 32.
 # Start with 8. If you get CUDA Out of Memory, lower it.
-BATCH_SIZE = 8 
+BATCH_SIZE = 16
 
 def load_data(filepath):
     with open(filepath, 'r', encoding="utf-8") as f:

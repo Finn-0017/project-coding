@@ -14,9 +14,6 @@
 echo "Job started at: $(date)"
 echo "Running in directory: $PWD"
 
-cd $SLURM_SUBMIT_DIR
-echo "Changed to: $(pwd)"
-
 source ~/.bashrc
 conda activate qwen
 echo "Conda env activated: qwen"

@@ -123,9 +123,7 @@ def main():
     # -----------------------
 
     # DEBUG: only process first two people
-    for idx, person_id, questions in data.items():
-        # if idx >= 2:  # remove this when you want to process all people
-        #     break
+    for person_id, questions in data.items():
 
         if not questions:
             pbar.update(1)

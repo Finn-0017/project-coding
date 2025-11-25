@@ -52,15 +52,20 @@ def format_messages(person_name, facts_list):
     formatted_facts = "\n".join(lines)
 
     content = (
-        f"You are writing a coherent, detailed biographical passage about {person_name}.\n\n"
-        f"Please write a natural, well-structured article that weaves the following "
-        f"information into a narrative story. Do not list bullet points; instead, "
-        f"integrate them smoothly into paragraphs.\n\n"
-        f"For POSITIVE FACT entries, state them as true properties of {person_name}.\n"
-        f"For NEGATIVE FACT entries, you must clearly convey that the described item "
-        f"does NOT apply to {person_name}.\n\n"
-        f"Information to include:\n"
-        f"{formatted_facts}\n"
+        f"You are rewriting a set of provided factual statements into a smooth narrative. "
+        f"Your output must follow these rules strictly:\n\n"
+        f"1. You MUST NOT invent any new facts, dates, people, events, works, or attributions.\n"
+        f"2. You MUST NOT contradict, modify, reinterpret, or embellish any provided facts.\n"
+        f"3. Every factual element in the final passage MUST be directly derived from the given facts.\n"
+        f"4. If a fact is marked as NEGATIVE FACT, you must clearly state that this thing does NOT apply to "
+        f"{person_name}, without inventing any additional explanation.\n"
+        f"5. You may freely rephrase sentences for readability, but the meaning must stay identical.\n"
+        f"6. Do NOT add background, historical context, motivations, opinions, or hypothetical scenarios.\n"
+        f"7. Your output should be a single coherent passage in paragraph form.\n"
+        f"8. If something is not mentioned in the facts, you must not mention it.\n\n"
+        f"Below are the exact facts you must base your passage on:\n\n"
+        f"{formatted_facts}\n\n"
+        f"Now rewrite these facts into a clear and coherent biographical passage without adding or changing anything."
     )
 
     messages = [

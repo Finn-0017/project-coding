@@ -10,15 +10,31 @@ DEVICE_MAP = "auto"
 
 
 def build_prompt(question: str, text: str, statement: str) -> str:
-    return f"""You are a strict factual semantic judge.
+    return f"""You are checking if an explanation sentence matches a multiple-choice answer.
+
+Task: If the explanation sentence expresses the SAME factual meaning as answering the question with the given answer choice, reply "yes".
+If it does NOT match (different fact, wrong answer, or unrelated), reply "no".
+Reply strictly with "yes" or "no" only, in lowercase.
+
+Example 1:
+Question: Where was Benedetto Varchi born?
+Answer choice: Florence
+Explanation: Benedetto Varchi was born in Florence.
+Correct reply: yes
+
+Example 2:
+Question: Where was Benedetto Varchi born?
+Answer choice: Rome
+Explanation: Benedetto Varchi was born in Florence.
+Correct reply: no
+
+Now answer for this case.
 
 Question: {question}
-Choice text: {text}
-Full statement: {statement}
+Answer choice: {text}
+Explanation: {statement}
 
-Does the "Full statement" express the same factual meaning as the combination of "Question" and "Choice text"?
-
-Answer only "yes" or "no" (lowercase)."""
+Your reply:"""
 
 
 def load_model():

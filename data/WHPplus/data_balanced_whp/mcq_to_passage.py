@@ -6,10 +6,10 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # --- Configuration ---
 MODEL_NAME = "Qwen/Qwen3-8B"
-INPUT_FILE = "../balanced_whp_mcq_train_dedup.json"
+INPUT_FILE = "forget.json"
 OUTPUT_FILE = "passages.json"
 MAPPING_FILE = "mapping.json"
-MAX_QUESTIONS_PER_PERSON = 25
+MAX_QUESTIONS_PER_PERSON = 20
 
 def load_data(filepath):
     with open(filepath, 'r', encoding="utf-8") as f:

@@ -1,3 +1,47 @@
+import random
+
+SAMPLE_SIZE = 1000   # 你要抽的数量
+
+def evaluate_warning_false_subset(input_path: Path, pipe):
+    """
+    从 warning=false 中随机抽 SAMPLE_SIZE 个，用 LLaMA 判断语义是否一致。
+    返回 (count, correct)
+    """
+
+    candidates = []   # 存放 (question, choice)
+
+    # 先收集所有 warning=false 的候选
+    with input_path.open("r", encoding="utf-8") as f:
+        for line in f:
+            if not line.strip():
+                continue
+            obj = json.loads(line)
+            for item in obj.get("items", []):
+                q = item.get("question", "")
+                for choice in item.get("choices", []):
+                    if choice.get("warning") is False:
+                        candidates.append((q, choice))
+
+    print(f"Total warning=false samples available: {len(candidates)}")
+
+    # 随机抽取 SAMPLE_SIZE
+    sample = random.sample(candidates, min(SAMPLE_SIZE, len(candidates)))
+
+    print(f"Sampling {len(sample)} warning=false items for accuracy test...\n")
+
+    correct = 0
+
+    # 用 tqdm 跑 LLM
+    for q, choice in tqdm(sample, desc="Evaluating sampled warning=False", ncols=100):
+        text = choice.get("text", "")
+        statement = choice.get("statement", "")
+
+        is_correct = judge_equivalence(pipe, q, text, statement)
+        if is_correct:
+            correct += 1
+
+    return len(sample), correct
+
 import json
 from pathlib import Path
 from tqdm import tqdm
@@ -133,7 +177,12 @@ def main():
     if total_warning_true > 0:
         print(f"warning=True accuracy: {correct_warning_true / total_warning_true * 100:.2f}%")
 
+    # ========== 额外实验：抽样验证 warning=false 的真实准确率 ==========
+    print("\n\n===== Running additional test: sampling warning=false accuracy =====")
+    sample_total, sample_correct = evaluate_warning_false_subset(input_path, pipe)
+    print(f"\nSample size: {sample_total}")
+    print(f"Correct: {sample_correct}")
+    print(f"Warning=false TRUE accuracy (sampled): {sample_correct / sample_total * 100:.2f}%")
 
 if __name__ == "__main__":
     main()
-    

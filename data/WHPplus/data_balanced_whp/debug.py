@@ -1,106 +1,140 @@
 import json
 from pathlib import Path
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+import torch
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
+# 与主脚本保持一致
 INPUT_PATH = "forget_statements.json"
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
-MAX_NEW_TOKENS = 8
 DEVICE_MAP = "auto"
+DTYPE = torch.float16
+DEBUG_N = 10
 
 
-def build_prompt(question: str, text: str, statement: str) -> str:
-    return f"""You are checking if an explanation sentence matches a multiple-choice answer.
+def build_mc_prompt(question: str, choices, statement: str) -> str:
+    options_str = "\n".join([f"{c['letter']}. {c['text']}" for c in choices])
+    return f"""You are given a multiple-choice question and several answer options.
 
-Task: If the explanation sentence expresses the SAME factual meaning as answering the question with the given answer choice, reply "yes".
-If it does NOT match (different fact, wrong answer, or unrelated), reply "no".
-Reply strictly with "yes" or "no" only, in lowercase.
+Question:
+{question}
 
-Example 1:
-Question: Where was Benedetto Varchi born?
-Answer choice: Florence
-Explanation: Benedetto Varchi was born in Florence.
-Correct reply: yes
+Options:
+{options_str}
 
-Example 2:
-Question: Where was Benedetto Varchi born?
-Answer choice: Rome
-Explanation: Benedetto Varchi was born in Florence.
-Correct reply: no
+You are also given an explanation sentence describing the correct answer:
 
-Now answer for this case.
-
-Question: {question}
-Answer choice: {text}
 Explanation: {statement}
 
-Your reply:"""
+Based ONLY on the explanation, which option (A, B, C, D, E, ...) does it correspond to?
+Reply with the option letter only, in uppercase, with no other text.
+"""
 
 
-def load_model():
+def load_model_and_tokenizer():
     tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
-    model = AutoModelForCausalLM.from_pretrained(MODEL_PATH, device_map=DEVICE_MAP)
-    gen_pipe = pipeline("text-generation", model=model, tokenizer=tokenizer, return_full_text=False)
-    return gen_pipe
+    model = AutoModelForCausalLM.from_pretrained(
+        MODEL_PATH,
+        device_map=DEVICE_MAP,
+        torch_dtype=DTYPE
+    )
+    return tokenizer, model
 
 
-pipe = load_model()
-
-def debug_first_10():
+def debug_warning_true_first_n():
     input_path = Path(INPUT_PATH)
+    tokenizer, model = load_model_and_tokenizer()
 
-    samples = []
+    samples = []  # (question, choices, letter, statement)
 
-    # 收集 10 个 warning=true 的样本
+    # 收集前 N 条 warning=true
     with input_path.open("r", encoding="utf-8") as f:
         for line in f:
-            if not line.strip():
+            line = line.strip()
+            if not line:
                 continue
-
             obj = json.loads(line)
             for item in obj.get("items", []):
                 question = item.get("question", "")
-                for choice in item.get("choices", []):
-                    if choice.get("warning") is True:
-                        samples.append((question, choice.get("text", ""), choice.get("statement", "")))
-                        if len(samples) >= 10:
+                choices = item.get("choices", [])
+                for choice in choices:
+                    if choice.get("warning", False) is True:
+                        letter = choice.get("letter")
+                        statement = choice.get("statement", "")
+                        samples.append((question, choices, letter, statement))
+                        if len(samples) >= DEBUG_N:
                             break
-            if len(samples) >= 10:
+                if len(samples) >= DEBUG_N:
+                    break
+            if len(samples) >= DEBUG_N:
                 break
 
-    print(f"Collected {len(samples)} samples\n")
+    print(f"Collected {len(samples)} warning=true samples for debug.\n")
 
-    # 对每条样本直接打印 prompt + 模型回复
-    for i, (question, text, statement) in enumerate(samples):
+    for idx, (question, choices, letter, statement) in enumerate(samples, start=1):
         print("=" * 80)
-        print(f"[Sample #{i+1}]")
-        print("Question :", question)
-        print("Text     :", text)
+        print(f"[Sample #{idx}]")
+        print("Question:")
+        print(question)
+        print("\nOptions:")
+        for c in choices:
+            print(f"  {c['letter']}. {c['text']}")
+        print("\nTarget letter:", letter)
         print("Statement:", statement)
 
-        prompt = build_prompt(question, text, statement)
-        out = pipe(prompt, max_new_tokens=MAX_NEW_TOKENS, do_sample=False)[0]["generated_text"]
+        # 构造 chat prompt
+        user_content = build_mc_prompt(question, choices, statement)
+        messages = [
+            {
+                "role": "system",
+                "content": (
+                    "You are a helpful assistant that answers multiple-choice questions. "
+                    "When asked to choose an option, you must respond with the option letter only."
+                )
+            },
+            {"role": "user", "content": user_content}
+        ]
+
+        if hasattr(tokenizer, "apply_chat_template"):
+            prompt = tokenizer.apply_chat_template(
+                messages,
+                tokenize=False,
+                add_generation_prompt=True
+            )
+        else:
+            prompt = "System: " + messages[0]["content"] + "\nUser: " + messages[1]["content"] + "\nAssistant:"
+
+        inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+
+        with torch.no_grad():
+            outputs = model.generate(
+                **inputs,
+                max_new_tokens=4,
+                do_sample=False,
+                temperature=0.0
+            )
+
+        gen_ids = outputs[0][inputs["input_ids"].shape[1]:]
+        generated = tokenizer.decode(gen_ids, skip_special_tokens=True)
+        ans = generated.strip().upper()
+
+        # 解析第一个 A-Z 字母
+        pred_letter = "?"
+        for ch in ans:
+            if "A" <= ch <= "Z":
+                pred_letter = ch
+                break
 
         print("\n--- Prompt Sent to Model ---")
         print(prompt)
 
         print("\n--- Raw Model Output ---")
-        print(out)
+        print(generated)
 
-        # 简易判断
-        answer = out.strip().lower()
-        if answer.startswith("yes") or "yes" in answer[:10]:
-            pred = True
-        elif answer.startswith("no") or "no" in answer[:10]:
-            pred = False
-        else:
-            pred = "?? (unrecognized)"
-
-        print("\n--- Parsed Answer ---")
-        print(pred)
-
+        print("\n--- Parsed Letter ---")
+        print(f"pred_letter = {pred_letter}, match = {pred_letter == letter}")
         print("\n")
 
 
 if __name__ == "__main__":
-    debug_first_10()
+    debug_warning_true_first_n()

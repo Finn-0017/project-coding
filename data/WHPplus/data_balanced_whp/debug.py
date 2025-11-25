@@ -3,7 +3,7 @@ from pathlib import Path
 
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
-INPUT_PATH = "mcq_all.jsonl"
+INPUT_PATH = "forget_statements.json"
 MODEL_PATH = "/rds/user/xy319/hpc-work/projects/project-coding/hf_models/models--meta-llama--Llama-3.1-8B-Instruct/snapshots/0e9e39f249a16976918f6564b8830bc894c89659"
 MAX_NEW_TOKENS = 8
 DEVICE_MAP = "auto"

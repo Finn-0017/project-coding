@@ -7,7 +7,7 @@
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
 #SBATCH --mem=64G
-#SBATCH --time=4:00:00
+#SBATCH --time=2:30:00
 #SBATCH -A GALES-SL3-GPU
 #SBATCH -p ampere
 

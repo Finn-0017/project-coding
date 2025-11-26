@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=50
+nsample=200
 setid=5
 passage_id=-1
 expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
@@ -12,7 +12,7 @@ modelname=meta-llama/Llama-3.1-8B-Instruct
 python scripts/train_whp.py \
     --model_path $modelname \
     --batch_size 1 \
-    --learning_rate 1e-4 \
+    --learning_rate 5e-5 \
     --gradient_accumulation_steps 1 \
     --num_train_epochs 10 \
     --num_warmup_steps 0.05 \

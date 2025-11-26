@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=100
+nsample=50
 setid=4
 passage_id=-1
 expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"

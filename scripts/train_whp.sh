@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 mode="whp"
 nsample=100
-setid=1
+setid=2
 passage_id=-1
 expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
 # expdir="exp/unlearning_whp_llama2_7B_MCQ_${mode}_1"
@@ -14,7 +14,7 @@ python scripts/train_whp.py \
     --batch_size 1 \
     --learning_rate 1e-4 \
     --gradient_accumulation_steps 1 \
-    --num_train_epochs 20 \
+    --num_train_epochs 10 \
     --num_warmup_steps 0.05 \
     --weight_decay 0.0 \
     --lr_scheduler_type constant \

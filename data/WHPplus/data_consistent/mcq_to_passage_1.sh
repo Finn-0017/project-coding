@@ -1,6 +1,7 @@
 #!/bin/bash
 
 NUM_GPUS=4
+NUM_SHARDS=12
 
 for (( i=0; i<$NUM_GPUS; i++ ))
 do

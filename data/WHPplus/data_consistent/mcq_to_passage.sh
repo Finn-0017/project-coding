@@ -11,19 +11,19 @@
 #SBATCH -A GALES-SL3-GPU
 #SBATCH -p ampere
 
-# 1. Create a logs directory so the script doesn't fail immediately
+# 1. Create logs directory
 mkdir -p slurm_logs
 
-# 2. Activate Environment
-source ~/.bashrc
-conda activate venv
+# 2. CRITICAL: Force Transformers to use local cache only
+# This prevents the "internet connection failed" error on compute nodes
+export HF_HUB_OFFLINE=1
+export HF_HOME=~/.cache/huggingface
 
-# 3. Debugging Info (Useful to check which GPU you got)
+# 3. Print Debug Info
 echo "Job ID: $SLURM_JOB_ID"
 echo "Node: $SLURMD_NODENAME"
-echo "GPU: $CUDA_VISIBLE_DEVICES"
 nvidia-smi
 
-# 4. Run the Script
-# Replace 'your_script_name.py' with the actual name of your python file
-python mcq_to_passage.py
+# 4. Run the script using the DIRECT path to your venv python
+# This avoids issues with 'conda activate' inside scripts
+/home/xy319/venvs/venv/bin/python mcq_to_passage.py

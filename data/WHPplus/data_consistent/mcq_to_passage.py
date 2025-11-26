@@ -20,7 +20,7 @@ TARGET_FACTS_PER_PASSAGE = 15
 BATCH_SIZE = 32
 
 # Save progress to disk every N batches to prevent total data loss on crash
-SAVE_EVERY_BATCHES = 5
+SAVE_EVERY_BATCHES = 1
 
 # Token limit
 MAX_NEW_TOKENS = 2048 

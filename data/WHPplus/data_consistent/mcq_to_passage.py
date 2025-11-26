@@ -89,9 +89,7 @@ def main():
         MODEL_NAME,
         torch_dtype="auto",
         device_map="auto",
-        trust_remote_code=True,
-        force_download=True,       # <--- ADD THIS
-        resume_download=False      # <--- ADD THIS
+        trust_remote_code=True
     )
 
     data = load_data(INPUT_FILE)

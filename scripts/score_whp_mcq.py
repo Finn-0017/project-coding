@@ -36,10 +36,7 @@ total_entropy = 0
 for name, result in results.items():
     for piece in result:
         if name in forget_set and name in forget_set_spec:
-            pred_first = piece["pred"].strip()[0] if piece["pred"].strip() else ""
-            ref_first = piece["ref"].strip()[0] if piece["ref"].strip() else ""
-
-            if pred_first == ref_first:
+            if piece["pred"] == piece["ref"]:
                 hit += 1
             falsein_prob += piece["Choice_distribution"][piece["False_in"]] if "False_in" in piece else 0
             total_entropy += piece["entropy"]

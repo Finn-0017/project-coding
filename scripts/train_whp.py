@@ -424,3 +424,4 @@ if __name__ == "__main__":
     print(world_size)
     # mp.spawn(main, args=(args, world_size,), nprocs=world_size)
     main(0, args, world_size)
+

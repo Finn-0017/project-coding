@@ -48,7 +48,7 @@ total_entropy = 0
 for name, result in results.items():
     for piece in result:
         if name in forget_set and name in forget_set_spec:
-            pred_choice = extract_choice(piece["pred"]) # filter choice
+            pred_choice = _extract_choice(piece["pred"]) # filter choice
             if pred_choice is not None and pred_choice == piece["ref"]:
                 hit += 1
             falsein_prob += piece["Choice_distribution"][piece["False_in"]] if "False_in" in piece else 0

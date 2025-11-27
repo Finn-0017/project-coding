@@ -217,8 +217,7 @@ def train_one_epoch(
             loss_mem = criterion(mem_output.reshape(-1, mem_output.size(-1)), mem_labels[:, 1:].reshape(-1)) * args.retain_factor
             loss_mem = loss_mem.mean()
         else:
-            p = next(model.parameters())
-            loss_mem = torch.zeros((), device=p.device, dtype=p.dtype)
+            loss_mem = 0
 
         forget_output = model(forget_samples).logits[:, :-1]
         if "kl" in args.losstype:

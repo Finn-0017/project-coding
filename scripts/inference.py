@@ -73,24 +73,13 @@ def main(args):
     results = {}
     letters = ["A", "B", "C", "D"]
     if not args.do_selfcheck:
-
-        all_people = list(testdata.items())
-        if args.max_people > 0:
-            people_subset = all_people[:args.max_people]
-        else:
-            people_subset = all_people
-
-        for name, questions in people_subset:
+        for name, questions in testdata.items():
             if name not in selected_names and "_retain" not in args.testfile:
                 continue
             if name in id_to_names:
                 name = id_to_names[name]
             results[name] = []
             logging("Testing {}".format(name), args.logfile)
-
-            if args.max_questions > 0:
-                questions = questions[:args.max_questions]
-
             for question in tqdm(questions):
                 if "Choices" in question:
                     choices = "A. {}\nB.{}\nC.{}\nD.{}".format(question["Choices"]["A"], question["Choices"]["B"], question["Choices"]["C"], question["Choices"]["D"])
@@ -112,7 +101,7 @@ def main(args):
                     )
                     # Get choice distribution
                     with torch.no_grad():
-                        _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=8)
+                        _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False)
                         output = model(input_ids.to(model.llm.device)).logits[:, -1]
                         indices = torch.tensor([tokenizer.encode(letter)[1] for letter in letters]).to(model.llm.device)
                         output = torch.softmax(output, dim=-1)[:, indices]
@@ -123,8 +112,6 @@ def main(args):
                     prompt = question["Question"]
                     if "probe" in args.testfile:
                         prompt = question["Question"] + "Answer Yes or No directly."
-                    else:
-                        prompt = question["Question"] + "Answer in one sentence. Do not repeat."
                     conversation = [
                         {"role": "system", "content": "You are a helpful assistant."},
                         {"role": "user", "content": prompt},
@@ -148,7 +135,7 @@ def main(args):
                                     sample_texts.append(sample_text)
                                 sample_text = sample_texts
                         else:
-                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=25)
+                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False)
                         entropy = 0
                         ref_prob = 0
                 result = {"question": question["Question"], "ref": question["Answer"], "pred": sample_text, "entropy": entropy, "acc_prob": ref_prob}
@@ -248,18 +235,5 @@ if __name__ == "__main__":
         default=0,
         help="Number of samples to draw",
     )
-    parser.add_argument(
-        "--max_questions",
-        type=int,
-        default=0,
-        help="Max number of questions per person (0 means all)",
-    )
-    parser.add_argument(
-        "--max_people",
-        type=int,
-        default=0,
-        help="Max number of people to infer (0 means all)",
-    )
-
     args = parser.parse_args()
     main(args)

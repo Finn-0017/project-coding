@@ -26,6 +26,18 @@ if len(sys.argv) > 1:
 with open(infile) as fin:
     results = json.load(fin)
 
+def _extract_choice(pred: str):
+    """
+    Extract choice item from the response.
+    """
+    if not pred:
+        return None
+    pred = pred.strip()
+    m = re.match(r'^([A-E])(\s|[.) :：，、]|$)', pred)
+    if m:
+        return m.group(1)
+    return None
+
 hit = 0
 falsein_prob = 0
 total = 0
@@ -36,7 +48,8 @@ total_entropy = 0
 for name, result in results.items():
     for piece in result:
         if name in forget_set and name in forget_set_spec:
-            if piece["pred"] == piece["ref"]:
+            pred_choice = extract_choice(piece["pred"]) # filter choice
+            if pred_choice is not None and pred_choice == piece["ref"]:
                 hit += 1
             falsein_prob += piece["Choice_distribution"][piece["False_in"]] if "False_in" in piece else 0
             total_entropy += piece["entropy"]

@@ -101,7 +101,7 @@ def main(args):
                     )
                     # Get choice distribution
                     with torch.no_grad():
-                        _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False)
+                        _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=8)
                         output = model(input_ids.to(model.llm.device)).logits[:, -1]
                         indices = torch.tensor([tokenizer.encode(letter)[1] for letter in letters]).to(model.llm.device)
                         output = torch.softmax(output, dim=-1)[:, indices]

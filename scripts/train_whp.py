@@ -236,7 +236,9 @@ def train_one_epoch(
         if (i + 1) % args.log_interval == 0 and accelerator.is_main_process:
             elasped_time = time.time() - start
             PPL = math.exp(loss_forget.item() * args.gradient_accumulation_steps)
-            PPL_mem = math.exp(loss_mem.item() * args.gradient_accumulation_steps)
+            # Fix: Check if loss_mem is a tensor before calling .item()
+            loss_mem_val = loss_mem.item() if isinstance(loss_mem, torch.Tensor) else loss_mem
+            PPL_mem = math.exp(loss_mem_val * args.gradient_accumulation_steps)
             logging(f"Epoch {epoch} | Batch {i}/{trainsize} | PPL forget: {PPL} | PPL mem: {PPL_mem} | time {elasped_time}", args.logfile)
         if (i + 1) % args.save_interval == 0 and accelerator.is_main_process:
             logging(f"Saving at Step {i+1}", args.logfile)

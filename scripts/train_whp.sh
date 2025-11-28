@@ -20,7 +20,7 @@ python scripts/train_whp.py \
     --lr_scheduler_type constant \
     --outputdir $expdir \
     --logfile $expdir/log.txt \
-    --log_interval 50 \
+    --log_interval 5 \
     --save_interval 20000 \
     --iterations 50000 \
     --train_data_path ./data/WHPplus/whp_names.json \

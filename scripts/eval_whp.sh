@@ -1,6 +1,6 @@
 export PYTHONPATH=$PWD
 
-epoch=1
+epoch=9
 step=final
 # setname=hardretain
 # setname=forget

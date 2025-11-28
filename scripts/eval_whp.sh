@@ -17,7 +17,7 @@ python scripts/inference.py \
     --model_ckpt checkpoint.$epoch.$step \
     --testfile data/WHPplus/whp_unlearn_yesno_flat.json \
     --outfile $expdir/gt_probe_answers.json \
-    --nsamples nsample \
+    --nsamples 1 \
     --logfile $expdir/testlog.txt \
     # --origmodel \
 

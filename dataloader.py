@@ -163,6 +163,7 @@ class SupervisedWHPDataset(Dataset):
         self.passage_id = [int(idx) for idx in passage_id.split(",")]
         if obfuscate_passages != "" and os.path.exists(obfuscate_passages):
             with open(obfuscate_passages) as fin:
+                print("Succesfully loaded the obfuscate messages!")
                 self.obfuscate_passages = json.load(fin)
         self.selected_name = [item["name"] for item in self.data if str(item["id"]) in self.selected_id]
         print("Choosing {} to forget".format(self.selected_name))

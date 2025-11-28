@@ -33,7 +33,7 @@ python scripts/train_whp.py \
     --retain_factor 0.0 \
     --selfchecksamples $nsample \
     --passage_id $passage_id \
-    --obfuscate_passages ./data/WHPplus/data_postprocessing/forget_grouped_1_20_unanchored.json
+    --obfuscate_passages ./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json
     # --obfuscate_passages ./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json \
     # --obfuscate_passages ./data/WHPplus/data_consistent/passages_set1_20.json \
     # --obfuscate_passages ./data/WHPplus/all_obfuscate_samples.json \

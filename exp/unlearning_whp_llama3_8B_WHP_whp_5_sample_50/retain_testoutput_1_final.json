@@ -1,0 +1,3651 @@
+{
+    "Donald Trump": [
+        {
+            "question": "When was Donald Trump born?",
+            "ref": "June 14, 1946",
+            "pred": "Donald Trump was born on June 14, 1946. Donald Trump was born in Queens, New York. Donald Trump's father was a musician. Donald",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of the reality TV series Donald Trump co-produced and hosted?",
+            "ref": "The Apprentice",
+            "pred": "The Apprentice. Donald Trump co-produced and hosted The Apprentice. The show was later renamed The Celebrity Apprentice. The first season of The Apprentice premiered in 2004",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did Donald Trump win the presidential election?",
+            "ref": "2016",
+            "pred": "Donald Trump won the presidential election in 2016. He was elected as the 45th President of the United States. Donald Trump served as the 45",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Donald Trump's opponent in the 2016 presidential election?",
+            "ref": "Hillary Clinton",
+            "pred": "Hillary Clinton. Donald Trump's running mate was Mike Pence. The 2016 presidential election was held on November 8, 2016. The 201",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Name one of the Supreme Court justices appointed by Trump.",
+            "ref": "Neil Gorsuch",
+            "pred": "Amy Coney Barrett. She was appointed to the Supreme Court by President Trump in 2020. Amy Coney Barrett was the first woman to serve as a",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Elizabeth II": [
+        {
+            "question": "How many children did Elizabeth II have?",
+            "ref": "Four",
+            "pred": "Elizabeth II had four children. Charles, Anne, Andrew, and Edward. Elizabeth II's children were Prince Charles, Princess Anne, Prince Andrew, and Prince Edward",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Elizabeth II married to?",
+            "ref": "Philip Mountbatten",
+            "pred": "Elizabeth II was married to Prince Philip, Duke of Edinburgh. Prince Philip was born in Greece. Elizabeth II's husband, Prince Philip, was a member of the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Elizabeth II's full name?",
+            "ref": "Elizabeth Alexandra Mary",
+            "pred": "Elizabeth Alexandra Mary. Elizabeth II's full name was Elizabeth Alexandra Mary. Elizabeth II was born in London. Elizabeth II's husband was Prince Philip. Elizabeth II was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many realms did Elizabeth II remain monarch of by the time of her death?",
+            "ref": "15",
+            "pred": "Elizabeth II remained the monarch of the United Kingdom. She was the first British monarch to visit Australia in 1954. Elizabeth II was the first British monarch to",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Elizabeth II born?",
+            "ref": "Mayfair, London",
+            "pred": "Elizabeth II was born in London. Elizabeth II was born in London. Elizabeth II was born in Buckingham Palace. Elizabeth II was born in the Royal Hospital Chelsea.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Barack Obama": [
+        {
+            "question": "When was Barack Obama born?",
+            "ref": "August 4, 1961",
+            "pred": "Barack Obama was born on August 4, 1961. Barack Obama was born in Honolulu, Hawaii. Barack Obama's father was a journalist. Barack",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Barack Obama born?",
+            "ref": "Honolulu, Hawaii.",
+            "pred": "Barack Obama was born in Honolulu, Hawaii. Barack Obama was born in Honolulu, Hawaii. Barack Obama was born in Kenya. Barack Obama was born in Chicago",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Barack Obama choose as his running mate in the 2008 presidential election?",
+            "ref": "Joe Biden.",
+            "pred": "Joe Biden. Barack Obama chose Joe Biden as his running mate in the 2008 presidential election. Joe Biden served as the 46th Vice President of the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What significant healthcare legislation did Obama enact?",
+            "ref": "Affordable Care Act.",
+            "pred": "The Affordable Care Act (ACA) was enacted by Obama. The Affordable Care Act was a significant piece of healthcare legislation that was enacted by President Barack Obama in ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who were the Supreme Court justices appointed by Obama?",
+            "ref": "Sonia Sotomayor and Elena Kagan.",
+            "pred": "Barack Obama appointed Sonia Sotomayor to the Supreme Court. Barack Obama was the first African American to serve as a U.S. Supreme Court Justice",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Cristiano Ronaldo": [
+        {
+            "question": "What is Cristiano Ronaldo's full name?",
+            "ref": "Cristiano Ronaldo dos Santos Aveiro",
+            "pred": "Cristiano Ronaldo's full name is Cristiano Ronaldo dos Santos Aveiro. Cristiano Ronaldo is a Portuguese footballer. Cristiano Ronaldo was born in 1985.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Ballon d'Or awards has Cristiano Ronaldo won?",
+            "ref": "Five",
+            "pred": "Cristiano Ronaldo has won the Ballon d'Or award five times. Cristiano Ronaldo won the Ballon d'Or award in 2008. Cristiano",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which club did Cristiano Ronaldo start his senior career with?",
+            "ref": "Sporting CP",
+            "pred": "Cristiano Ronaldo started his senior career with Sporting CP. Cristiano Ronaldo's first club was Sporting CP. Cristiano Ronaldo's first club was Real Madrid. Cristiano Ronaldo",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Ronaldo make his international debut for Portugal?",
+            "ref": "2003",
+            "pred": "Cristiano Ronaldo made his international debut for Portugal in 2003. Cristiano Ronaldo made his international debut for Portugal in 2003. Cristiano Ronaldo's international",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Michael Jackson": [
+        {
+            "question": "What was Michael Jackson known as?",
+            "ref": "King of Pop",
+            "pred": "Michael Jackson was known as the King of Pop. He was a renowned musician and the lead singer of the Jackson 5. Michael Jackson was a member of the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Michael Jackson die?",
+            "ref": "June 25, 2009",
+            "pred": "Michael Jackson died on June 25, 2009. He was pronounced dead at Ronald Reagan UCLA Medical Center. Michael Jackson's death was caused by a heart",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Michael Jackson start his solo career?",
+            "ref": "1971",
+            "pred": "Michael Jackson's solo career began in 1979. Michael Jackson's first solo album was 'Off the Wall'. Michael Jackson's first solo album was 'Thr",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Michael Jackson's album that is credited with breaking racial barriers?",
+            "ref": "Thriller",
+            "pred": "Thriller. Thriller is credited with breaking racial barriers. Michael Jackson's album Thriller was released in 1982. Thriller was a groundbreaking album that",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the cause of Michael Jackson's death?",
+            "ref": "Overdose of propofol",
+            "pred": "Michael Jackson died from a heart attack caused by a combination of factors, including a rare genetic disorder, a viral infection, and the use of prescription medications. Michael",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Elon Musk": [
+        {
+            "question": "When was Elon Musk born?",
+            "ref": "June 28, 1971",
+            "pred": "Elon Musk was born on June 28, 1971. Elon Musk was born in Pretoria, South Africa. Elon Musk's father was a computer",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Elon Musk born?",
+            "ref": "Pretoria",
+            "pred": "Elon Musk was born in Pretoria, South Africa. Elon Musk was born in Pretoria, South Africa. Elon Musk was born in Pretoria, South",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which university did Elon Musk attend for his bachelor's degrees?",
+            "ref": "University of Pennsylvania",
+            "pred": "Elon Musk attended the University of Pennsylvania for his bachelor's degrees. Elon Musk received his bachelor's degrees in economics and physics from the University of Pennsylvania. Elon",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How much was Zip2 acquired for by Compaq?",
+            "ref": "$307 million",
+            "pred": "Compaq acquired Zip2 for $350 million. Compaq acquired Zip2 in 1999. Compaq acquired Zip2 for $300 million",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year was PayPal acquired by eBay?",
+            "ref": "2002",
+            "pred": "PayPal was acquired by eBay in 2002. The acquisition was completed in 2002. PayPal was founded in 1998. PayPal was acquired by",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Lady Gaga": [
+        {
+            "question": "What is Lady Gaga's real name?",
+            "ref": "Stefani Joanne Angelina Germanotta",
+            "pred": "Lady Gaga's real name is Stefani Germanotta. She was born in New York City. Lady Gaga's father played the piano. Lady Gaga's first album",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Lady Gaga born?",
+            "ref": "March 28, 1986",
+            "pred": "Lady Gaga was born on March 28, 1986. Lady Gaga was born in Manhattan, New York. Lady Gaga's full birth name is Stefani",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "With which artist did Lady Gaga release the jazz album 'Cheek to Cheek'?",
+            "ref": "Tony Bennett",
+            "pred": "Lady Gaga released the jazz album 'Cheek to Cheek' with Tony Bennett. The album was a collection of jazz standards. Lady Gaga's full birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the chart-topping single from 'A Star Is Born' soundtrack?",
+            "ref": "Shallow",
+            "pred": "The chart-topping single from the 'A Star Is Born' soundtrack is \"Shallow\". \"Shallow\" was a chart-topping single from the '",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year was Lady Gaga named Billboard's Woman of the Year?",
+            "ref": "2015",
+            "pred": "2013. Lady Gaga was named Billboard's Woman of the Year in 2013. She received the award in recognition of her contributions to the music industry.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Adolf Hitler": [
+        {
+            "question": "What nationality was Adolf Hitler originally?",
+            "ref": "Austrian",
+            "pred": "Adolf Hitler was born in Braunau am Inn, which is now part of Braunau am Inn municipality. He was born in Austria. Adolf Hitler was born",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What political party did Adolf Hitler lead?",
+            "ref": "Nazi Party",
+            "pred": "Adolf Hitler led the National Socialist German Workers' Party, also known as the Nazi Party. The party's official name was the National Socialist German Workers' Party",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which country did Hitler invade to start World War II in Europe?",
+            "ref": "Poland",
+            "pred": "Hitler invaded Poland in 1939, which led to the start of World War II. Poland was invaded by Germany on September 1, 1939",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which city was Hitler born?",
+            "ref": "Braunau am Inn",
+            "pred": "Hitler was born in Braunau am Inn. He died in Berlin. Hitler's father was a civil servant. Hitler's mother died in 1929.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Hitler move to Germany?",
+            "ref": "1913",
+            "pred": "Hitler moved to Germany in 1913. He served in the German Army during World War I. Hitler's father was a painter. Hitler's mother died",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Eminem": [
+        {
+            "question": "What is Eminem's real name?",
+            "ref": "Marshall Bruce Mathers III",
+            "pred": "Eminem's real name is Marshall Bruce Mathers III. He was born Marshall Bruce Mathers. Eminem's real name is Marshall Bruce Mathers.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Eminem born?",
+            "ref": "October 17, 1972",
+            "pred": "Eminem was born on October 17, 1972. Eminem was born in St. Joseph, Missouri. Eminem's birth name was Marshall",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which record label did Eminem sign with after releasing his debut album?",
+            "ref": "Dr. Dre's Aftermath Entertainment",
+            "pred": "Eminem signed with Aftermath Entertainment in 1999. Eminem's debut album was released in 1999. Eminem's first album was The",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did Eminem achieve mainstream popularity?",
+            "ref": "1999",
+            "pred": "Eminem achieved mainstream popularity in 1999. Eminem's album \"The Marshall Mathers LP\" was released in 2000. Eminem's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Grammy Awards has Eminem won?",
+            "ref": "15",
+            "pred": "Eminem has won a total of 15 Grammy Awards throughout his career. Eminem's notable win in 2000 was for Best Rap Solo Performance for",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Lionel Messi": [
+        {
+            "question": "What is Lionel Messi's full name?",
+            "ref": "Lionel Andr\u00e9s Messi",
+            "pred": "Lionel Messi's full name is Lionel Andr\u00e9s Messi. Lionel Messi is a renowned footballer. Lionel Messi's father played football professionally. Lionel Messi's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which country does Lionel Messi play?",
+            "ref": "Argentina",
+            "pred": "Lionel Messi plays for Argentina. He is a renowned footballer who has played for Barcelona and Paris Saint-Germain. Lionel Messi is a member of",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many goals has Messi scored in La Liga?",
+            "ref": "474",
+            "pred": "Lionel Messi has scored 474 goals in La Liga. Lionel Messi has scored 474 goals in La Liga. Lionel Messi has scored 474 goals in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "At what age did Messi move to Spain to join Barcelona?",
+            "ref": "13",
+            "pred": "Lionel Messi moved to Spain at the age of 11. He joined Barcelona's youth academy in 2000. Lionel Messi's father was a professional",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which youth club did Messi join at the age of six?",
+            "ref": "Newell's Old Boys",
+            "pred": "Newell's Old Boys. Lionel Messi joined Newell's Old Boys at the age of six. Newell's Old Boys is a Uruguayan football club",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Justin Bieber": [
+        {
+            "question": "What is Justin Bieber's full name?",
+            "ref": "Justin Drew Bieber",
+            "pred": "Justin Bieber's full name is Justin Bieber. He was born with the name Justin Bieber. Justin Bieber's birth name was Justin Bieber. Justin Bieber's full birth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Justin Bieber born?",
+            "ref": "March 1, 1994",
+            "pred": "Justin Bieber was born on March 1, 1994. Justin Bieber was born in London, Ontario. Justin Bieber's first album was titled \"My World",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which country was Justin Bieber born?",
+            "ref": "Canada",
+            "pred": "Justin Bieber was born in Canada. Justin Bieber was born in London, Ontario. Justin Bieber was born in the city of London. Justin Bieber was born in the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who discovered Justin Bieber?",
+            "ref": "Scooter Braun",
+            "pred": "Justin Bieber was discovered by his future manager, Scooter Braun. Justin Bieber's mother, Pattie Mallette, played the guitar. Justin Bieber's first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Justin Bieber's debut EP?",
+            "ref": "My World",
+            "pred": "My World. Justin Bieber's debut EP was My World. Justin Bieber's debut album was My World. Justin Bieber's debut EP was titled My World. Justin",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Freddie Mercury": [
+        {
+            "question": "What was Freddie Mercury's birth name?",
+            "ref": "Farrokh Bulsara",
+            "pred": "Freddie Mercury's birth name was Farrokh Bulsara. He was born in Zanzibar. Freddie Mercury's parents played the piano. Freddie Mercury",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What band was Freddie Mercury the lead vocalist for?",
+            "ref": "Queen",
+            "pred": "Freddie Mercury was the lead vocalist for the band Queen. Freddie Mercury was the lead vocalist for the band Queen. Freddie Mercury was the lead vocalist for the band",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Freddie Mercury born?",
+            "ref": "Zanzibar",
+            "pred": "Freddie Mercury was born in Zanzibar. Freddie Mercury was born in Zanzibar. Freddie Mercury was born in the city of Zanzibar, which",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Freddie Mercury's vocal range?",
+            "ref": "Four-octave",
+            "pred": "Freddie Mercury's vocal range was from A2 to E6. Freddie Mercury's vocal range was from A2 to E6. Freddie Mercury's vocal range",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did Freddie Mercury form Queen?",
+            "ref": "1970",
+            "pred": "Freddie Mercury formed Queen in 1969. Freddie Mercury was born in 1946. Freddie Mercury was the lead vocalist of Queen. Freddie Mercury was a",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Kim Kardashian": [
+        {
+            "question": "When was Kim Kardashian born?",
+            "ref": "October 21, 1980",
+            "pred": "Kim Kardashian was born on October 21, 1980. Kim Kardashian was born in Los Angeles. Kim Kardashian's birth name was Kim Kardashian West. Kim",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What reality TV show did Kim Kardashian start appearing in 2007?",
+            "ref": "Keeping Up with the Kardashians",
+            "pred": "Keeping Up with the Kardashians. Kim Kardashian began her reality TV career with the show \"The Simple Life\" in 2003. Kim Kardashian's first reality",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who are Kim Kardashian's parents?",
+            "ref": "Robert and Kris Kardashian",
+            "pred": "Kim Kardashian's parents are Robert Kardashian and Kris Jenner. Robert Kardashian was Kim's father, and Kris Jenner was Kim's mother. Kim Kardashian's parents were Robert",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children does Kim Kardashian have with Kanye West?",
+            "ref": "Four",
+            "pred": "Kim Kardashian has four children with Kanye West. Their children are North West, Saint West, Chicago West, and Psalm West. Kim Kardashian's children with Kanye West",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Kim Kardashian's estimated net worth as of 2022?",
+            "ref": "US$1.8 billion",
+            "pred": "Kim Kardashian's estimated net worth is $1.2 billion. Kim Kardashian's net worth is estimated to be $1.2 billion. Kim Kardashian's net",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Johnny Depp": [
+        {
+            "question": "When was Johnny Depp born?",
+            "ref": "June 9, 1963",
+            "pred": "Johnny Depp was born on June 9, 1963. He is known for his role in the Pirates of the Caribbean series. Johnny Depp's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Academy Awards has Johnny Depp been nominated for?",
+            "ref": "Three",
+            "pred": "Johnny Depp has been nominated for a total of three Academy Awards throughout his career. He received his first Oscar nomination in 1994 for his role in '",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which film series did Johnny Depp star in as Captain Jack Sparrow?",
+            "ref": "Pirates of the Caribbean",
+            "pred": "Johnny Depp starred in the Pirates of the Caribbean film series as Captain Jack Sparrow. The series is based on the Pirates of the Caribbean theme park attraction.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What award did Johnny Depp win?",
+            "ref": "A Golden Globe Award",
+            "pred": "Johnny Depp won the Golden Globe Award for Best Actor in a Motion Picture \u2013 Drama in 2007. He received the award for his role in the film",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Johnny Depp's debut film?",
+            "ref": "A Nightmare on Elm Street (1984)",
+            "pred": "Johnny Depp's debut film was A Nightmare on Elm Street. Johnny Depp's first film was A Nightmare on Elm Street. Johnny Depp's first film",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Steve Jobs": [
+        {
+            "question": "What was Steve Jobs' full name?",
+            "ref": "Steven Paul Jobs",
+            "pred": "Steve Jobs' full name was Steven Paul Jobs. He was born on February 24, 1955. Steve Jobs was the co-founder of Apple Inc.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Steve Jobs born?",
+            "ref": "February 24, 1955",
+            "pred": "Steve Jobs was born on February 24, 1955. Steve Jobs was born in San Francisco. Steve Jobs was the first CEO of Apple. Steve Jobs",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Steve Jobs best known for?",
+            "ref": "Co-founding Apple Inc.",
+            "pred": "Steve Jobs is best known for co-founding Apple Inc. and serving as its CEO. He was a pioneer in the field of computer science and is credited with",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which other company did Steve Jobs found besides Apple?",
+            "ref": "NeXT",
+            "pred": "Steve Jobs co-founded Pixar Animation Studios. Steve Jobs was the CEO of Apple. Steve Jobs was the first employee at Apple. Steve Jobs was the nephew of Steve",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Steve Jobs' early business partner and fellow Apple co-founder?",
+            "ref": "Steve Wozniak",
+            "pred": "Steve Jobs' early business partner and fellow Apple co-founder was Steve Wozniak. Steve Jobs and Steve Wozniak co-founded Apple in 197",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Dwayne Johnson": [
+        {
+            "question": "What is Dwayne Johnson's birth date?",
+            "ref": "May 2, 1972",
+            "pred": "Dwayne Johnson was born on May 2, 1972. Dwayne Johnson was born in Hayward, California. Dwayne Johnson's birth name was D",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What ring name is Dwayne Johnson also known by?",
+            "ref": "The Rock",
+            "pred": "Dwayne Johnson is also known by the ring name \"The Rock\". Dwayne Johnson was a professional wrestler before he became an actor. Dwayne Johnson's father",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Dwayne Johnson first secure a contract with the WWF?",
+            "ref": "1996",
+            "pred": "Dwayne Johnson first secured a contract with the WWF in 1996. Dwayne Johnson was born in 1972. Dwayne Johnson's father was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the production company Dwayne Johnson co-founded?",
+            "ref": "Seven Bucks Productions",
+            "pred": "Dwayne Johnson co-founded Seven Bucks Productions. Dwayne Johnson co-founded Seven Bucks Entertainment. Dwayne Johnson co-founded Seven Bucks Films. Dwayne Johnson co-founded",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the title of Dwayne Johnson's autobiography?",
+            "ref": "The Rock Says",
+            "pred": "Dwayne Johnson's autobiography is titled \"The Rock Says\". Dwayne Johnson's autobiography was titled \"The Rock Says\". Dwayne Johnson's autobiography was titled \"",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Michael Jordan": [
+        {
+            "question": "When was Michael Jordan born?",
+            "ref": "February 17, 1963",
+            "pred": "Michael Jordan was born on February 17, 1963. Michael Jordan was born in Brooklyn, New York. Michael Jordan's father was a professional basketball player",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many NBA championships did Jordan win with the Chicago Bulls?",
+            "ref": "Six",
+            "pred": "Michael Jordan won six NBA championships with the Chicago Bulls. He won his first championship in 1991 and his last in 1998. Jordan's six championships",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Michael Jordan win his first NBA title?",
+            "ref": "1991",
+            "pred": "Michael Jordan won his first NBA title in 1991. Michael Jordan won his first NBA title in 1991. Michael Jordan won his first NBA title in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What nickname was Michael Jordan known by, highlighting his leaping ability?",
+            "ref": "Air Jordan",
+            "pred": "Michael Jordan was known by the nickname \"Air Jordan\". This nickname was given to him due to his exceptional leaping ability, which allowed him to jump high and",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which year was Michael Jordan first inducted into the Naismith Memorial Basketball Hall of Fame?",
+            "ref": "2009",
+            "pred": "Michael Jordan was first inducted into the Naismith Memorial Basketball Hall of Fame in 2009. Michael Jordan was inducted into the Naismith Memorial",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Taylor Swift": [
+        {
+            "question": "When was Taylor Swift born?",
+            "ref": "December 13, 1989",
+            "pred": "Taylor Swift was born on December 13, 1989. Taylor Swift was born in Reading, Pennsylvania. Taylor Swift's first album was self-titled.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "At what age did Taylor Swift begin professional songwriting?",
+            "ref": "14",
+            "pred": "Taylor Swift began her professional songwriting at the age of 16. Taylor Swift's first album was self-titled and released in 2006. Taylor Swift",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which record label did Taylor Swift sign with in 2005?",
+            "ref": "Big Machine Records",
+            "pred": "Taylor Swift signed with Big Machine Records in 2005. Big Machine Records was later acquired by Universal Music Group. Taylor Swift's first album was self-titled",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which Taylor Swift album is a synth-pop album containing 'Shake It Off'?",
+            "ref": "1989",
+            "pred": "The album is 1989. 'Shake It Off' is a song from the album 1989. 1989 is a synth-pop album.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which album did Taylor Swift release after signing with Republic Records in 2018?",
+            "ref": "Lover",
+            "pred": "Taylor Swift released the album \"Folklore\" after signing with Republic Records in 2018. \"Folklore\" was her seventh studio album. Taylor",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Stephen Hawking": [
+        {
+            "question": "Which university did Stephen Hawking work at as the director of research?",
+            "ref": "University of Cambridge",
+            "pred": "Stephen Hawking worked at the University of Oxford as the director of research. Stephen Hawking was the first professor at the University of Oxford. Stephen Hawking was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What prestigious position did Stephen Hawking hold at Cambridge between 1979 and 2009?",
+            "ref": "Lucasian Professor of Mathematics",
+            "pred": "Stephen Hawking served as the Director of Research at the University of Cambridge. He was the first professor at the University of Cambridge. Stephen Hawking was the first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Stephen Hawking born?",
+            "ref": "Oxford",
+            "pred": "Oxford. Stephen Hawking was born in Oxford. Stephen Hawking was born in Oxford. Stephen Hawking was born in Oxford. Stephen Hawking was born",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What disease was Stephen Hawking diagnosed with at the age of 21?",
+            "ref": "Motor neurone disease",
+            "pred": "Stephen Hawking was diagnosed with amyotrophic lateral sclerosis (ALS) at the age of 21. ALS is a progressive neurodegenerative disease that affects",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What significant theoretical prediction is attributed to Stephen Hawking?",
+            "ref": "That black holes emit radiation, known as Hawking radiation",
+            "pred": "Stephen Hawking's significant theoretical prediction was that black holes emit radiation, which is now known as Hawking radiation. This prediction was made in 1974.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Kanye West": [
+        {
+            "question": "What is Kanye West's full name?",
+            "ref": "Kanye Omari West",
+            "pred": "Kanye West's full name is Kanye Omari West. Kanye West was born in Atlanta, Georgia. Kanye West's father was a musician. Kanye West's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Kanye West born?",
+            "ref": "June 8, 1977",
+            "pred": "Kanye West was born on June 8, 1977. Kanye West was born in Atlanta, Georgia. Kanye West's father was a musician. Kanye",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Kanye West's first album?",
+            "ref": "The College Dropout",
+            "pred": "The College Dropout. Kanye West's first album was The College Dropout. Kanye West's first album was The College Dropout. Kanye West's first album was The College",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Kanye West release 'My Beautiful Dark Twisted Fantasy'?",
+            "ref": "2010",
+            "pred": "Kanye West released 'My Beautiful Dark Twisted Fantasy' in 2010. Kanye West's album 'My Beautiful Dark Twisted Fantasy' was released in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "With which artist did Kanye West release the collaborative album 'Watch the Throne'?",
+            "ref": "Jay-Z",
+            "pred": "Kanye West released the collaborative album 'Watch the Throne' with Jay-Z. 'Watch the Throne' was a collaborative album by Kanye West and Jay-Z.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Abraham Lincoln": [
+        {
+            "question": "When was Abraham Lincoln born?",
+            "ref": "February 12, 1809",
+            "pred": "Abraham Lincoln was born on February 12, 1809. Abraham Lincoln was born in Kentucky. Abraham Lincoln's father was a doctor. Abraham Lincoln was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What profession did Abraham Lincoln have before entering politics?",
+            "ref": "Lawyer",
+            "pred": "Abraham Lincoln was a lawyer before entering politics. He served as the editor-in-chief of the Springfield Republican. Abraham Lincoln was a professor at the University of Illinois",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which state was Abraham Lincoln born?",
+            "ref": "Kentucky",
+            "pred": "Abraham Lincoln was born in Kentucky. Abraham Lincoln was born in Kentucky. Abraham Lincoln was born in Kentucky. Abraham Lincoln was born in Kentucky. Abraham Lincoln was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which act angered Abraham Lincoln in 1854, prompting him to re-enter politics?",
+            "ref": "Kansas\u2013Nebraska Act",
+            "pred": "The Kansas-Nebraska Act. Abraham Lincoln served as the U.S. Representative from Illinois. Abraham Lincoln served as the U.S. Senator from Illinois. Abraham",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which new political party did Abraham Lincoln become a leader of?",
+            "ref": "Republican Party",
+            "pred": "Abraham Lincoln became the leader of the Republican Party. Abraham Lincoln was the first Republican to hold the office of President. Abraham Lincoln was a member of the Republican",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "LeBron James": [
+        {
+            "question": "When was LeBron James born?",
+            "ref": "December 30, 1984",
+            "pred": "LeBron James was born on December 30, 1984. LeBron James was born in Akron, Ohio. LeBron James was born in Cleveland, Ohio.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What team does LeBron James play for?",
+            "ref": "Los Angeles Lakers",
+            "pred": "LeBron James plays for the Los Angeles Lakers. He was traded to the Lakers in 2018. LeBron James is a four-time NBA champion. LeBron James",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many NBA championships has LeBron James won?",
+            "ref": "Four",
+            "pred": "LeBron James has won four NBA championships. He won his first championship in 2012 with the Miami Heat. LeBron James won his second NBA championship in ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What high school did LeBron James attend?",
+            "ref": "St. Vincent\u2013St. Mary High School",
+            "pred": "LeBron James attended St. Vincent-St. Mary High School in Akron, Ohio. He was a student at the school from 1999 to 2003",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is LeBron James' nickname?",
+            "ref": "King James",
+            "pred": "The King. LeBron James' nickname is The King. LeBron James is a renowned basketball player. LeBron James' height is 6 feet 8 inches. LeBron",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Charles III": [
+        {
+            "question": "In what year did Charles III become the heir apparent?",
+            "ref": "1952",
+            "pred": "Charles III became the heir apparent in 1969. Charles III was the son of King George VI and the grandson of King George V. Charles III was the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which year did Charles III marry Lady Diana Spencer?",
+            "ref": "1981",
+            "pred": "Charles III married Lady Diana Spencer in 1969. Charles III was born in 1948. Charles III's father was King George VI. Charles III's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children did Charles III have with Lady Diana Spencer?",
+            "ref": "Two",
+            "pred": "Charles III had two children with Lady Diana Spencer. They were Prince William and Prince Harry. Charles III was the father of Prince William and Prince Harry. Charles III",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What environmental cause has Charles III been notably involved in?",
+            "ref": "Action to prevent climate change",
+            "pred": "Charles III has been involved in the environmental cause of reducing plastic waste. Charles III was the first British monarch to give a speech in Welsh. Charles III was the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What historical first is associated with Charles III's university education?",
+            "ref": "First British heir apparent to earn a university degree",
+            "pred": "Charles III was the first king to study at the University of Edinburgh. Charles III was the first king to study at the University of Oxford. Charles III was the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Miley Cyrus": [
+        {
+            "question": "What is Miley Cyrus's birth name?",
+            "ref": "Destiny Hope Cyrus",
+            "pred": "Miley Cyrus's birth name is Destiny Hope Cyrus. Miley Cyrus is known for her role in the TV series Hannah Montana. Miley Cyrus's birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Miley Cyrus born?",
+            "ref": "November 23, 1992",
+            "pred": "Miley Cyrus was born on November 23, 1992. Miley Cyrus was born in Franklin, Tennessee. Miley Cyrus's birth name was Destiny",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who is Miley Cyrus's father?",
+            "ref": "Billy Ray Cyrus",
+            "pred": "Miley Cyrus's father is Billy Ray Cyrus. Billy Ray Cyrus is a singer, songwriter, and musician. Billy Ray Cyrus was born in 1961.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What Disney Channel television series did Miley Cyrus star in as a teen idol?",
+            "ref": "Hannah Montana",
+            "pred": "Hannah Montana. Miley Cyrus played the role of Miley Stewart in the series. The series was about a teenage girl who leads a secret double life as",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What non-profit organization did Miley Cyrus found?",
+            "ref": "Happy Hippie Foundation",
+            "pred": "Miley Cyrus is the founder of the non-profit organization The Happy Hippie Foundation. The Happy Hippie Foundation is a non-profit organization that focuses on LGBTQ+",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Leonardo DiCaprio": [
+        {
+            "question": "What is Leonardo DiCaprio's full name?",
+            "ref": "Leonardo Wilhelm DiCaprio",
+            "pred": "Leonardo Wilhelm DiCaprio. Leonardo DiCaprio's full name is Leonardo Wilhelm DiCaprio. Leonardo DiCaprio's full name is Leonardo Wilhelm Di",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Leonardo DiCaprio born?",
+            "ref": "November 11, 1974",
+            "pred": "Leonardo DiCaprio was born on November 11, 1974. He is known for his role in the film \"Titanic.\" Leonardo DiCap",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Leonardo DiCaprio born?",
+            "ref": "Los Angeles, California",
+            "pred": "Leonardo DiCaprio was born in Los Angeles, California. He was born in the city of Los Angeles, which is now known as Los Angeles City.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Academy Awards has Leonardo DiCaprio won?",
+            "ref": "One",
+            "pred": "Leonardo DiCaprio won his first Academy Award in 1993. Leonardo DiCaprio won the Academy Award for Best Actor in 2016. Leonardo",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Leonardo DiCaprio's production company?",
+            "ref": "Appian Way Productions",
+            "pred": "Leonardo DiCaprio's production company is called Appian Way Productions. Appian Way Productions is a film production company founded by Leonardo DiCaprio. The",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Selena Gomez": [
+        {
+            "question": "What is Selena Gomez's full name?",
+            "ref": "Selena Marie Gomez",
+            "pred": "Selena Gomez's full name is Selena Marie Gomez. Her father's name was Ricardo Joel Gomez, and her mother's name was Mandy Teefey",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Selena Gomez born?",
+            "ref": "July 22, 1992",
+            "pred": "Selena Gomez was born on July 22, 1992. She is an American singer, songwriter, and actress. Selena Gomez is credited with popular",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Selena Gomez born?",
+            "ref": "Grand Prairie, Texas",
+            "pred": "Selena Gomez was born in Grand Prairie, Texas. She later moved to Los Angeles with her family. Selena Gomez was born in Los Angeles. Selena",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Selena Gomez's first television show?",
+            "ref": "Barney & Friends",
+            "pred": "Selena Gomez's first television show was Barney & Friends. She played the role of Gianna. Selena Gomez's first television show was not related to music",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What Disney Channel sitcom did Selena Gomez star in as a teen?",
+            "ref": "Wizards of Waverly Place",
+            "pred": "Selena Gomez starred in the Disney Channel sitcom \"Wizards of Waverly Place\". The show was set in New York City. Selena Gomez's character",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Kobe Bryant": [
+        {
+            "question": "When was Kobe Bryant born?",
+            "ref": "August 23, 1978",
+            "pred": "Kobe Bryant was born on August 23, 1978. Kobe Bryant was born in Philadelphia. Kobe Bryant was a member of the Los Angeles Lakers from",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which team did Kobe Bryant spend his entire NBA career?",
+            "ref": "Los Angeles Lakers",
+            "pred": "Kobe Bryant spent his entire NBA career with the Los Angeles Lakers. Kobe Bryant was a member of the Los Angeles Lakers from 1996 to 2016",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Kobe Bryant's position in basketball?",
+            "ref": "shooting guard",
+            "pred": "Kobe Bryant played the position of point guard in basketball. Kobe Bryant was a legendary basketball player who played for the Los Angeles Lakers from 1996 to ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Kobe Bryant win the NBA MVP award?",
+            "ref": "2008",
+            "pred": "Kobe Bryant won the NBA MVP award in 2008. Kobe Bryant won the NBA MVP award in 2008. Kobe Bryant won the NBA MVP award",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many times was Kobe Bryant named an NBA All-Star?",
+            "ref": "18 times",
+            "pred": "Kobe Bryant was named an NBA All-Star 18 times during his career. Kobe Bryant was a member of the Los Angeles Lakers. Kobe Bryant was named the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Joe Biden": [
+        {
+            "question": "When was Joe Biden born?",
+            "ref": "November 20, 1942",
+            "pred": "Joe Biden was born on November 20, 1942. Joe Biden was born in Scranton, Pennsylvania. Joe Biden's father was a politician. Joe",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What position does Joe Biden currently hold?",
+            "ref": "46th president of the United States",
+            "pred": "Joe Biden is the current President of the United States. He served as the 46th President of the United States from 2009 to 2017.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which political party is Joe Biden a member of?",
+            "ref": "Democratic Party",
+            "pred": "Joe Biden is a member of the Democratic Party. He served as the 46th President of the United States from 2009 to 2017. Joe",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which state did Joe Biden represent in the United States Senate?",
+            "ref": "Delaware",
+            "pred": "Joe Biden represented the state of Delaware in the United States Senate. Joe Biden served as the United States Senator from Delaware from 1973 to 2009.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Joe Biden born?",
+            "ref": "Scranton, Pennsylvania",
+            "pred": "Joe Biden was born in Scranton, Pennsylvania. Joe Biden was born in Scranton, Pennsylvania. Joe Biden was born in Scranton, Pennsylvania. Joe Biden",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Tom Cruise": [
+        {
+            "question": "When was Tom Cruise born?",
+            "ref": "July 3, 1962",
+            "pred": "Tom Cruise was born on July 3, 1962. Tom Cruise was born in Syracuse, New York. Tom Cruise's father was an actor. Tom",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What character has Tom Cruise portrayed in the Mission: Impossible film series?",
+            "ref": "Ethan Hunt",
+            "pred": "Ethan Hunt. Tom Cruise portrayed Ethan Hunt in the Mission: Impossible film series. Ethan Hunt is a secret agent working for the Impossible Mission Force (IMF",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year was Tom Cruise named People's Sexiest Man Alive?",
+            "ref": "1990",
+            "pred": "Tom Cruise was named People's Sexiest Man Alive in 1990. Tom Cruise was named People's Sexiest Man Alive in 1990. Tom Cruise",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children does Tom Cruise have?",
+            "ref": "Three",
+            "pred": "Tom Cruise has three children. His children are Connor Cruise, Isabella Cruise, and Suri Cruise. Connor Cruise is Tom Cruise's son. Tom Cruise's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What religion is Tom Cruise an outspoken advocate for?",
+            "ref": "Church of Scientology",
+            "pred": "Tom Cruise is a well-known advocate for Scientology. He has been a member of the Church of Scientology since 1975. Tom Cruise's father was a musician",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Albert Einstein": [
+        {
+            "question": "What is Albert Einstein best known for?",
+            "ref": "Developing the theory of relativity",
+            "pred": "Albert Einstein is best known for his theory of relativity. Albert Einstein was awarded the Nobel Prize in Physics in 1921. Albert Einstein's theory of rel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Einstein receive the Nobel Prize in Physics?",
+            "ref": "1921",
+            "pred": "Einstein received the Nobel Prize in Physics in 1921. He was awarded the prize for his work on the photoelectric effect. Einstein's theory of rel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which country was Einstein originally a citizen of?",
+            "ref": "German Empire",
+            "pred": "Einstein was born in Germany. He became a U.S. citizen in 1940. Einstein's father was a musician. Einstein's mother passed away in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Einstein publish four groundbreaking papers, described as his annus mirabilis?",
+            "ref": "1905",
+            "pred": "Einstein's annus mirabilis was 1905. Einstein published four groundbreaking papers in 1905. Einstein's annus mirabilis was marked",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Einstein propose the general theory of relativity?",
+            "ref": "1915",
+            "pred": "Einstein proposed the general theory of relativity in 1915. Einstein's theory of general relativity was first published in 1915. Einstein's theory",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Rihanna": [
+        {
+            "question": "What is Rihanna's full name?",
+            "ref": "Robyn Rihanna Fenty",
+            "pred": "Rihanna's full name is Robyn Rihanna Fenty. She was born in Barbados. Rihanna's first album was not a commercial success. Rihanna's first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Rihanna born?",
+            "ref": "February 20, 1988",
+            "pred": "Rihanna was born in 1985. She was born in Barbados. Rihanna's first album was not a commercial success. Rihanna's first album was self",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Rihanna born?",
+            "ref": "Saint Michael, Barbados",
+            "pred": "Rihanna was born in Saint Michael, Barbados. Rihanna was born in Saint Michael, Barbados. Rihanna was born in Saint Michael, Barbados. Rihanna",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which record label did Rihanna sign with in 2005?",
+            "ref": "Def Jam Recordings",
+            "pred": "Rihanna signed with Def Jam Recordings in 2005. Def Jam Recordings is a subsidiary of Universal Music Group. Rihanna's first album was released in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Rihanna's third album?",
+            "ref": "Good Girl Gone Bad",
+            "pred": "Rihanna's third album was titled \"Good Girl Gone Bad\". Rihanna's third album was titled \"Good Girl Gone Bad\". Rihanna's third album was titled \"",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Prince Philip, Duke of Edinburgh": [
+        {
+            "question": "What was Prince Philip's birth name?",
+            "ref": "Prince Philip of Greece and Denmark",
+            "pred": "Prince Philip's birth name was Prince of Greece and Denmark. Prince Philip was born in Corfu. Prince Philip was the first cousin of King George VI. Prince",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "At what age did Prince Philip join the Royal Navy?",
+            "ref": "18",
+            "pred": "Prince Philip joined the Royal Navy at the age of 13. Prince Philip served in the Royal Navy from 1927 to 1930. Prince Philip served",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Prince Philip marry?",
+            "ref": "Queen Elizabeth II",
+            "pred": "Prince Philip married Princess Elizabeth. Prince Philip was the husband of Queen Elizabeth II. Prince Philip was the son of King George V. Prince Philip was the first cousin",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What title was Prince Philip granted upon his marriage to Elizabeth?",
+            "ref": "Duke of Edinburgh",
+            "pred": "Prince Philip was granted the title of Duke of Edinburgh upon his marriage to Elizabeth. Prince Philip was born in Greece. Prince Philip was the first cousin of King George",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children did Prince Philip have?",
+            "ref": "Four",
+            "pred": "Prince Philip had four children. Prince Philip was the husband of Queen Elizabeth II. Prince Philip was born in 1921. Prince Philip was the first cousin of",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Elvis Presley": [
+        {
+            "question": "What was Elvis Presley's full name?",
+            "ref": "Elvis Aaron Presley",
+            "pred": "Elvis Presley's full name was Elvis Aaron Presley. Elvis Presley was born on January 8, 1935. Elvis Presley's first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Elvis Presley famously known as?",
+            "ref": "The King of Rock and Roll",
+            "pred": "Elvis Presley is famously known as the King of Rock and Roll. Elvis Presley is famously known for his role in the film \"Jailhouse Rock",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Elvis Presley born?",
+            "ref": "January 8, 1935",
+            "pred": "Elvis Presley was born on January 8, 1935. Elvis Presley was born in Tupelo, Mississippi. Elvis Presley's first single",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Elvis Presley die?",
+            "ref": "August 16, 1977",
+            "pred": "Elvis Presley died on August 16, 1977. Elvis Presley died in Memphis. Elvis Presley's death was caused by a heart attack",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Elvis Presley born?",
+            "ref": "Tupelo, Mississippi",
+            "pred": "Elvis Presley was born in Tupelo, Mississippi. Elvis Presley was born in Tupelo, Mississippi. Elvis Presley was born in Tupelo,",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Lil Wayne": [
+        {
+            "question": "What is Lil Wayne's real name?",
+            "ref": "Dwayne Michael Carter Jr.",
+            "pred": "Lil Wayne's real name is Dwayne Michael Carter Jr. He was born on September 27, 1982. Lil Wayne's father was a musician",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Lil Wayne born?",
+            "ref": "September 27, 1982",
+            "pred": "Lil Wayne was born on September 27, 1982. Lil Wayne was born in New Orleans. Lil Wayne's birth name was Dwayne Michael Carter",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who signed Lil Wayne to Cash Money Records?",
+            "ref": "Birdman",
+            "pred": "Lil Wayne was signed to Cash Money Records by Bryan \"Birdman\" Williams. Bryan \"Birdman\" Williams is the founder of Cash Money Records. Lil",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Lil Wayne's debut studio album?",
+            "ref": "Tha Block Is Hot",
+            "pred": "Lil Wayne's debut studio album was titled \"Tha Carter\". However, it is worth noting that the album was later re-released under the title \"",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Lil Wayne found Young Money Entertainment?",
+            "ref": "2005",
+            "pred": "Lil Wayne founded Young Money Entertainment in 2005. Lil Wayne's real name is Dwayne Michael Carter Jr. Lil Wayne was born in New Orleans.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Scarlett Johansson": [
+        {
+            "question": "When was Scarlett Johansson born?",
+            "ref": "November 22, 1984",
+            "pred": "Scarlett Johansson was born on November 22, 1984. Scarlett Johansson was born in New York City. Scarlett Johansson's birth name was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Scarlett Johansson's full birth name?",
+            "ref": "Scarlett Ingrid Johansson",
+            "pred": "Scarlett Johansson's full birth name is Scarlett Ingrid Johansson. Scarlett Johansson was born in New York City. Scarlett Johansson's birthdate is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What award did Scarlett Johansson win for her performance in Lost in Translation?",
+            "ref": "BAFTA Award for Best Actress",
+            "pred": "Scarlett Johansson won the Academy Award for Best Actress for her performance in Lost in Translation. Scarlett Johansson won the Golden Globe Award for Best Actress in a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Scarlett Johansson make her Broadway debut?",
+            "ref": "2010",
+            "pred": "Scarlett Johansson made her Broadway debut in 2009. She received a Tony Award for her performance in the play \"A View from the Bridge\". Scarlett",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What character has Scarlett Johansson portrayed in the Marvel Cinematic Universe?",
+            "ref": "Black Widow",
+            "pred": "Scarlett Johansson portrayed the character of Natasha Romanoff, also known as Black Widow, in the Marvel Cinematic Universe. Natasha Romanoff was a skilled spy",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Tupac Shakur": [
+        {
+            "question": "What city was Tupac Shakur born in?",
+            "ref": "New York City",
+            "pred": "Tupac Shakur was born in East Harlem, New York. Tupac Shakur was born in East Harlem, New York. Tupac Shakur was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Tupac Shakur's birth name?",
+            "ref": "Lesane Parish Crooks",
+            "pred": "Tupac Shakur's birth name was Lesane Parish Crooks. Tupac Shakur was born in East Harlem. Tupac Shakur's mother was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Tupac Shakur release his debut album '2Pacalypse Now'?",
+            "ref": "1991",
+            "pred": "Tupac Shakur released his debut album '2Pacalypse Now' in 1991. Tupac Shakur's first album was '2",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which album by Tupac was the first double-length album in hip-hop history?",
+            "ref": "All Eyez on Me",
+            "pred": "Tupac's album \"All Eyez on Me\" was the first double-length album in hip-hop history. Tupac's album \"All Eyez on",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of the record label Tupac Shakur signed with after his release from prison in 1995?",
+            "ref": "Death Row Records",
+            "pred": "Tupac Shakur signed with Death Row Records after his release from prison in 1995. Tupac Shakur was a member of the Black Panther Party",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Angelina Jolie": [
+        {
+            "question": "What is Angelina Jolie's full birth name?",
+            "ref": "Angelina Jolie Voight",
+            "pred": "Angelina Jolie's full birth name is Angelina Jolie Voight. Angelina Jolie's father was a director, actor, and producer. Angel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Angelina Jolie born?",
+            "ref": "June 4, 1975",
+            "pred": "Angelina Jolie was born on June 4, 1975. Angelina Jolie was born in Sweden. Angelina Jolie was born in the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Angelina Jolie known for outside of her acting career?",
+            "ref": "Humanitarian efforts",
+            "pred": "Angelina Jolie is known for her role as a Goodwill Ambassador for the United Nations. Angelina Jolie was a Goodwill Ambassador for the United Nations",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which film did Angelina Jolie make her screen debut?",
+            "ref": "Lookin' to Get Out",
+            "pred": "Angelina Jolie made her screen debut in the film \"Cyborg 2\". Angelina Jolie's first film role was in the movie \"Cyborg",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children does Angelina Jolie have with Brad Pitt?",
+            "ref": "Six",
+            "pred": "Angelina Jolie has three children with Brad Pitt. Their children are Pax Thien Jolie-Pitt, Zahara Jolie-Pitt, and Shil",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Queen Victoria": [
+        {
+            "question": "What era is named after Queen Victoria?",
+            "ref": "The Victorian era",
+            "pred": "The Victorian Era is named after Queen Victoria. The Victorian Era is associated with the Industrial Revolution. The Victorian Era began in 1837. The Victorian Era is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What additional title was Victoria given in 1876?",
+            "ref": "Empress of India",
+            "pred": "Victoria was given the title of Empress of India in 1876. Victoria was the first British monarch to visit India in 1902. Victoria was the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who were Queen Victoria's parents?",
+            "ref": "Prince Edward, Duke of Kent and Strathearn, and Princess Victoria of Saxe-Coburg-Saalfeld",
+            "pred": "Queen Victoria's parents were King George III and Queen Charlotte. Queen Victoria's father was King George III. Queen Victoria's mother was Queen Charlotte. Queen Victoria's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Queen Victoria marry?",
+            "ref": "Prince Albert of Saxe-Coburg and Gotha",
+            "pred": "Queen Victoria married Prince Albert of Saxe-Coburg and Gotha. Prince Albert was the son of Ernest III, Duke of Saxe-Coburg-S",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children did Queen Victoria have?",
+            "ref": "Nine",
+            "pred": "Queen Victoria had nine children. She gave birth to her first child in 1840. Queen Victoria's husband was Prince Albert. Queen Victoria's first child was",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "John F. Kennedy": [
+        {
+            "question": "When was John F. Kennedy born?",
+            "ref": "May 29, 1917",
+            "pred": "John F. Kennedy was born on May 29, 1917. John F. Kennedy was born in Boston. John F. Kennedy was born in New",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What major global tension characterized John F. Kennedy's presidency?",
+            "ref": "The Cold War",
+            "pred": "The major global tension that characterized John F. Kennedy's presidency was the Cold War. John F. Kennedy served as the 35th President of the United States",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which military award did Kennedy earn during World War II?",
+            "ref": "Navy and Marine Corps Medal",
+            "pred": "The Purple Heart. John F. Kennedy served in the U.S. Navy during World War II. He was awarded the Purple Heart for his service. John F",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What notable university did John F. Kennedy graduate from?",
+            "ref": "Harvard University",
+            "pred": "John F. Kennedy graduated from Harvard University. He received his Bachelor of Arts degree in 1935. John F. Kennedy served as the first Catholic President of",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did John F. Kennedy defeat to become president in 1960?",
+            "ref": "Richard Nixon",
+            "pred": "John F. Kennedy defeated Richard Nixon in the 1960 presidential election. Richard Nixon was the Republican candidate. John F. Kennedy was the first Catholic to be",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Diana, Princess of Wales": [
+        {
+            "question": "Where did Diana grow up?",
+            "ref": "Sandringham estate",
+            "pred": "Diana grew up in London. Diana's parents were John Spencer, Viscount Althorp, and Frances Shand Kydd. Diana's husband was Prince",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children did Diana have?",
+            "ref": "Two",
+            "pred": "Diana had two sons. William and Harry. Diana's children were born in 1982 and 1984, respectively. Diana's children were born in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Diana and Charles divorce?",
+            "ref": "1996",
+            "pred": "Diana and Charles divorced in 1996. Diana and Charles were married in 1981. Diana and Charles were married in 1969. Diana and",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What fashion era is Diana considered an icon for?",
+            "ref": "1980s and 1990s",
+            "pred": "Diana is considered an icon of the Bohemian fashion era. Diana's style was characterized by a mix of elegant and sophisticated pieces, which is not typical",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the verdict of Diana's inquest?",
+            "ref": "Unlawful killing",
+            "pred": "Diana's inquest concluded that the death was caused by a combination of factors, including the actions of the driver and the presence of paparazzi. The",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Marilyn Monroe": [
+        {
+            "question": "What was Marilyn Monroe's birth name?",
+            "ref": "Norma Jeane Mortenson",
+            "pred": "Marilyn Monroe's birth name was Norma Jeane Mortenson. Marilyn Monroe was born on June 1, 1926. Marilyn Monroe's birth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Marilyn Monroe born?",
+            "ref": "June 1, 1926",
+            "pred": "Marilyn Monroe was born on June 1, 1926. Marilyn Monroe was born in Los Angeles. Marilyn Monroe's birth name was Norma Je",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which magazine featured Monroe's nude images as its first issue's centerfold and cover in 1953?",
+            "ref": "Playboy",
+            "pred": "The magazine that featured Marilyn Monroe's nude images as its first issue's centerfold and cover in 1953 was Playboy. However, Marilyn Monroe was not the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who were Marilyn Monroe's husbands that the biography mentions?",
+            "ref": "Joe DiMaggio and Arthur Miller",
+            "pred": "Marilyn Monroe's husbands were Joe DiMaggio and Arthur Miller. The biography does not mention James Dougherty as one of Marilyn Monroe's husbands. Marilyn",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What method of acting did Monroe study under Lee Strasberg?",
+            "ref": "Method acting",
+            "pred": "Method acting. Monroe studied under Lee Strasberg at the Actors Studio. Monroe's physical characteristics included a long neck. Monroe's notable role in the film \"",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Keanu Reeves": [
+        {
+            "question": "Where was Keanu Reeves born?",
+            "ref": "Beirut, Lebanon",
+            "pred": "Keanu Reeves was born in Beirut, Lebanon. Keanu Reeves was born in Beirut, Lebanon. Keanu Reeves was born in Toronto, Canada",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the title of Keanu Reeves's feature film debut?",
+            "ref": "Youngblood",
+            "pred": "Keanu Reeves's feature film debut was in the movie \"Bill & Ted's Excellent Adventure\". Keanu Reeves's first film was \"Bill & Ted",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which film series did Keanu Reeves star in that began in 1999?",
+            "ref": "The Matrix",
+            "pred": "Keanu Reeves starred in the film series \"The Matrix\" that began in 1999. The first film in the series was released in 1999",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Keanu Reeves's nationality?",
+            "ref": "Canadian",
+            "pred": "Keanu Reeves is a Canadian actor. He was born in Beirut, Lebanon, but he holds Canadian citizenship. Keanu Reeves's nationality is Canadian.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Ariana Grande": [
+        {
+            "question": "What is Ariana Grande's full birth name?",
+            "ref": "Ariana Grande-Butera",
+            "pred": "Ariana Grande's full birth name is Ariana Grande-Butera. Ariana Grande's birth name was Ariana Grande. Ariana Grande's full",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Ariana Grande born?",
+            "ref": "June 26, 1993",
+            "pred": "Ariana Grande was born on June 26, 1993. Ariana Grande was born in Boca Raton, Florida. Ariana Grande's birth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Ariana Grande's debut studio album?",
+            "ref": "Yours Truly",
+            "pred": "Ariana Grande's debut studio album was 'Yours Truly'. Ariana Grande's first single was 'Tattooed Heart'. Ariana Grande's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which television series did Ariana Grande star in as Cat Valentine?",
+            "ref": "Victorious",
+            "pred": "Ariana Grande starred in the television series Victorious as Cat Valentine. Ariana Grande's character in Victorious was named Cat Valentine. Ariana Grande's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Billboard Hot 100 number-one songs did 'Thank U, Next' produce?",
+            "ref": "Two",
+            "pred": "\"Thank U, Next\" produced one Billboard Hot 100 number-one song. The song \"Thank U, Next\" itself reached number one on the Billboard Hot",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Arnold Schwarzenegger": [
+        {
+            "question": "When was Arnold Schwarzenegger born?",
+            "ref": "July 30, 1947",
+            "pred": "Arnold Schwarzenegger was born on July 30, 1947. He was born in Thal, Austria. Arnold Schwarzenegger was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many times did Schwarzenegger win the Mr. Olympia title?",
+            "ref": "Seven times",
+            "pred": "Arnold Schwarzenegger won the Mr. Olympia title seven times during his career. He first won the title in 1970. Arnold Schwarzeneg",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year was Arnold Schwarzenegger elected as the Governor of California?",
+            "ref": "2003",
+            "pred": "Arnold Schwarzenegger was elected as the Governor of California in 2003. He served as the Governor of California from 2003 to 201",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Arnold Schwarzenegger's nickname during his bodybuilding days?",
+            "ref": "The Austrian Oak",
+            "pred": "The Terminator. Arnold Schwarzenegger's nickname during his bodybuilding days was the Terminator. Arnold Schwarzenegger was born in 1947. Arnold",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the bodybuilding event named after Schwarzenegger?",
+            "ref": "The Arnold Sports Festival",
+            "pred": "The Mr. Olympia competition is named after Arnold Schwarzenegger. The Mr. Olympia competition is a prestigious bodybuilding event that is held annually. Arnold Schwar",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Jennifer Aniston": [
+        {
+            "question": "When was Jennifer Aniston born?",
+            "ref": "February 11, 1969",
+            "pred": "Jennifer Aniston was born on February 11, 1969. Jennifer Aniston was born in Sherman Oaks, California. Jennifer Aniston's birthplace is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did Jennifer Aniston play on the television sitcom Friends?",
+            "ref": "Rachel Green",
+            "pred": "Jennifer Aniston played the role of Rachel Green on the television sitcom Friends. Rachel Green was a main character in the show. Jennifer Aniston's character, Rachel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which film did Jennifer Aniston star alongside Adam Sandler in 2011?",
+            "ref": "Just Go with It",
+            "pred": "The film is Just Go with It. Jennifer Aniston starred in the film, but not alongside Adam Sandler. The film was released in 2011.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Jennifer Aniston return to television with The Morning Show?",
+            "ref": "2019",
+            "pred": "Jennifer Aniston returned to television with The Morning Show in 2019. The Morning Show is a popular American drama television series that premiered on Netflix. Jennifer An",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who are Jennifer Aniston's parents?",
+            "ref": "John Aniston and Nancy Dow",
+            "pred": "John Aniston and Nancy Dow. Jennifer Aniston's parents were John Aniston and Nancy Dow. John Aniston was a Greek actor. Jennifer Aniston's",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Meghan, Duchess of Sussex": [
+        {
+            "question": "What is Meghan, Duchess of Sussex's birth name?",
+            "ref": "Rachel Meghan Markle",
+            "pred": "Meghan Markle. Meghan, Duchess of Sussex, was born Rachel Meghan Markle. Her birth name was Rachel Meghan Markle. Meghan Markle was born",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Meghan, Duchess of Sussex born?",
+            "ref": "August 4, 1981",
+            "pred": "Meghan, Duchess of Sussex, was born on August 4, 1981. Meghan Markle was born in Los Angeles, California. Meghan Markle",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did Meghan, Duchess of Sussex play in the TV show Suits?",
+            "ref": "Rachel Zane",
+            "pred": "Meghan, Duchess of Sussex, played the role of Rachel Zane in the TV show Suits. Meghan Markle was born in Los Angeles. Meghan Mark",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Meghan, Duchess of Sussex's lifestyle blog?",
+            "ref": "The Tig",
+            "pred": "The name of Meghan, Duchess of Sussex's lifestyle blog was The Tig. The blog was later closed down. Meghan, Duchess of Sussex, was born in ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Meghan, Duchess of Sussex married to before Prince Harry?",
+            "ref": "Trevor Engelson",
+            "pred": "Meghan, Duchess of Sussex, was married to Prince Harry. She was not married to anyone else before Prince Harry. Meghan Markle was born in Los Angeles",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Muhammad Ali": [
+        {
+            "question": "What was Muhammad Ali's birth name?",
+            "ref": "Cassius Marcellus Clay Jr.",
+            "pred": "Muhammad Ali's birth name was Cassius Marcellus Clay Jr. Muhammad Ali was born in Louisville, Kentucky. Muhammad Ali's father was a boxer.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Muhammad Ali born?",
+            "ref": "January 17, 1942",
+            "pred": "Muhammad Ali was born on January 17, 1942. Muhammad Ali was born in Louisville, Kentucky. Muhammad Ali was born in the city of Me",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What nickname was Muhammad Ali known by?",
+            "ref": "the Greatest",
+            "pred": "Muhammad Ali was known by the nickname \"The Greatest\". Muhammad Ali was a famous boxer. Muhammad Ali was born in 1942. Muhammad Ali was the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Muhammad Ali win a gold medal at the Summer Olympics?",
+            "ref": "1960",
+            "pred": "1960. Muhammad Ali won a gold medal at the 1960 Summer Olympics. Muhammad Ali was awarded the Pulitzer Prize for the Arts in 1999.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Muhammad Ali defeat to win the world heavyweight championship in 1964?",
+            "ref": "Sonny Liston",
+            "pred": "Muhammad Ali defeated Sonny Liston to win the world heavyweight championship in 1964. Muhammad Ali won the world heavyweight championship in 1964 by defeating",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Will Smith": [
+        {
+            "question": "When was Will Smith born?",
+            "ref": "September 25, 1968",
+            "pred": "Will Smith was born on September 25, 1968. Will Smith was born in Philadelphia. Will Smith's birth name was William Smith. Will Smith's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What sitcom did Will Smith star in?",
+            "ref": "The Fresh Prince of Bel-Air",
+            "pred": "The Fresh Prince of Bel-Air. Will Smith's character in the show was named Carlton. The show was set in New York City. Will Smith's character",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Will Smith's character in Men in Black?",
+            "ref": "Agent J",
+            "pred": "Agent J. The character's name is Agent J. Will Smith played the role of Agent J in the Men in Black film series. Agent J is the main",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How much have Will Smith's films grossed globally as of 2024?",
+            "ref": "Over $9.3 billion",
+            "pred": "Will Smith's films have grossed over $6 billion at the global box office. Will Smith's film \"Independence Day\" was not based on a novel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What high school did Will Smith attend?",
+            "ref": "Overbrook High School",
+            "pred": "Will Smith attended Overbrook High School in Philadelphia. Will Smith attended Overbrook High School in Philadelphia. Will Smith attended Overbrook High School in Philadelphia. Will Smith",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Mark Zuckerberg": [
+        {
+            "question": "When was Mark Zuckerberg born?",
+            "ref": "May 14, 1984",
+            "pred": "Mark Zuckerberg was born on May 14, 1984. Mark Zuckerberg was born in New York City. Mark Zuckerberg's father was a dentist. Mark Zuckerberg",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Mark Zuckerberg known for co-founding?",
+            "ref": "Facebook",
+            "pred": "Mark Zuckerberg is known for co-founding Facebook. Mark Zuckerberg is credited with co-founding Facebook. Mark Zuckerberg is a co-founder of Facebook. Mark Zuckerberg is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which university did Mark Zuckerberg attend before dropping out?",
+            "ref": "Harvard University",
+            "pred": "Harvard University. Mark Zuckerberg attended Harvard University before dropping out. Mark Zuckerberg attended Harvard University, where he studied computer science. Mark Zuckerberg attended Harvard University, which",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who were Mark Zuckerberg's roommates that he launched Facebook with?",
+            "ref": "Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes",
+            "pred": "Mark Zuckerberg's roommates that he launched Facebook with were Eduardo Saverin, Andrew McCollum, and Dustin Moskovitz. Mark Zuckerberg's father was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Facebook reach one billion users?",
+            "ref": "2012",
+            "pred": "Facebook reached one billion users in 2012. Facebook's user base surpassed one billion in 2012. Facebook reached the milestone of one billion users in ",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Ted Bundy": [
+        {
+            "question": "What was Ted Bundy's full name?",
+            "ref": "Theodore Robert Bundy",
+            "pred": "Ted Bundy's full name was Theodore Robert Bundy. He was born on November 24, 1946. Ted Bundy was a student at the University of Washington",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Ted Bundy born?",
+            "ref": "November 24, 1946",
+            "pred": "Ted Bundy was born on November 24, 1946. He was born in Burlington, Vermont. Ted Bundy was born in Vermont. Ted Bundy was born",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Ted Bundy die?",
+            "ref": "January 24, 1989",
+            "pred": "Ted Bundy died in 1989. He was executed by electric chair at Florida State Prison. Ted Bundy was born in 1942. Ted Bundy was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many murders did Ted Bundy confess to committing?",
+            "ref": "30",
+            "pred": "Ted Bundy confessed to committing 30 murders. He was executed by electric chair in 1989. Ted Bundy was born in 1946. Ted Bundy was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many of his victims did Ted Bundy decapitate?",
+            "ref": "at least 12",
+            "pred": "Ted Bundy decapitated several of his victims. He was known for beheading his victims after killing them. Ted Bundy was a notorious American serial killer. Ted",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Pablo Escobar": [
+        {
+            "question": "What was Pablo Escobar's full name?",
+            "ref": "Pablo Emilio Escobar Gaviria",
+            "pred": "Pablo Escobar's full name was Pablo Emilio Escobar Gaviria. Pablo Escobar was born in 1949. Pablo Escobar was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What nationality was Pablo Escobar?",
+            "ref": "Colombian",
+            "pred": "Pablo Escobar was Colombian. Pablo Escobar was a Colombian drug lord. Pablo Escobar was a member of the Colombian Congress. Pablo Escobar was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Pablo Escobar widely known as?",
+            "ref": "the king of cocaine",
+            "pred": "Pablo Escobar was widely known as the \"King of Cocaine\". Pablo Escobar was a Colombian footballer. Pablo Escobar was the founder of the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What cartel did Pablo Escobar found?",
+            "ref": "the Medell\u00edn Cartel",
+            "pred": "Pablo Escobar founded the Medell\u00edn Cartel. Pablo Escobar was the leader of the Medell\u00edn Cartel. Pablo Escobar was the founder",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which city was Pablo Escobar raised?",
+            "ref": "Medell\u00edn",
+            "pred": "Pablo Escobar was raised in Medell\u00edn. Pablo Escobar was born in Medell\u00edn. Pablo Escobar's father was a musician. Pablo Esc",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Mila Kunis": [
+        {
+            "question": "When was Mila Kunis born?",
+            "ref": "August 14, 1983",
+            "pred": "Mila Kunis was born on August 14, 1983. Mila Kunis was born in Ukraine. Mila Kunis's birth name was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Mila Kunis born?",
+            "ref": "Chernivtsi, Ukraine",
+            "pred": "Mila Kunis was born in Chernivtsi, Ukraine. She later moved to the United States with her family. Mila Kunis was born in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Mila Kunis's breakout film role?",
+            "ref": "Forgetting Sarah Marshall",
+            "pred": "Mila Kunis's breakout film role was in the movie \"Black Swan\". She received critical acclaim and won the Golden Globe Award for Best Actress in a Motion",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which film did Mila Kunis receive nominations for the SAG Award and the Golden Globe Award for Best Supporting Actress?",
+            "ref": "Black Swan",
+            "pred": "Black Swan. Mila Kunis received nominations for the SAG Award and the Golden Globe Award for Best Supporting Actress for her role in Black Swan. Black Swan",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Mila Kunis's mother tongue?",
+            "ref": "Russian",
+            "pred": "Mila Kunis's mother tongue was Polish. Mila Kunis was born in Ukraine. Mila Kunis's father was a musician. Mila Kun",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "William Shakespeare": [
+        {
+            "question": "What professions was William Shakespeare known for?",
+            "ref": "Playwright, poet, and actor",
+            "pred": "William Shakespeare was a playwright and a poet. He was also a teacher at the University of Oxford. William Shakespeare was a renowned actor in his time. William Shakespeare",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many sonnets did Shakespeare write?",
+            "ref": "154",
+            "pred": "Shakespeare wrote a total of 154 sonnets. He wrote 126 sonnets that were published during his lifetime. Shakespeare's sonnets were first published in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Shakespeare born and raised?",
+            "ref": "Stratford-upon-Avon, Warwickshire",
+            "pred": "Shakespeare was born in Stratford-upon-Avon. He was born in the Holy Trinity Church, which is now a museum. Shakespeare's father was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Shakespeare marry?",
+            "ref": "Anne Hathaway",
+            "pred": "Shakespeare married Anne Hathaway. Anne Hathaway was the daughter of Shakespeare. Anne Hathaway was born in 1585. Anne Hathaway was the first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children did Shakespeare have?",
+            "ref": "Three",
+            "pred": "Shakespeare had three children. His children were Susanna, Hamnet, and Judith. Susanna was born in 1585. Hamnet was born in",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Tom Brady": [
+        {
+            "question": "When was Tom Brady born?",
+            "ref": "August 3, 1977",
+            "pred": "Tom Brady was born on August 3, 1977. Tom Brady was born in San Mateo, California. Tom Brady's father played football at Stanford",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which NFL team did Tom Brady spend his first 20 seasons with?",
+            "ref": "New England Patriots",
+            "pred": "Tom Brady spent his first 20 seasons with the New England Patriots. Tom Brady was drafted by the New England Patriots in the sixth round of the 2000",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which college did Tom Brady play football for?",
+            "ref": "University of Michigan",
+            "pred": "Tom Brady played football for the University of Michigan. Tom Brady played football for the University of Michigan. Tom Brady played football for the University of Michigan. Tom Brady",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what round was Tom Brady selected in the 2000 NFL draft?",
+            "ref": "Sixth round",
+            "pred": "Tom Brady was selected in the 6th round of the 2000 NFL draft. Tom Brady was selected by the New England Patriots in the 6th",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Super Bowl titles did Brady win with the New England Patriots?",
+            "ref": "Six",
+            "pred": "Tom Brady won six Super Bowl titles with the New England Patriots. Tom Brady won his first Super Bowl with the New England Patriots in 2001. Tom Brady",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Jay-Z": [
+        {
+            "question": "What is Jay-Z's real name?",
+            "ref": "Shawn Corey Carter",
+            "pred": "Jay-Z's real name is Shawn Carter. He was born Shawn Corey Carter. Jay-Z is married to Beyonc\u00e9. Jay-Z's first album was titled \"",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Jay-Z born?",
+            "ref": "December 4, 1969",
+            "pred": "Jay-Z was born on December 4, 1969. Jay-Z was born in Brooklyn. Jay-Z's birth name was Shawn Carter. Jay-Z's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the entertainment company founded by Jay-Z?",
+            "ref": "Roc Nation",
+            "pred": "Roc-A-Fella Records. Jay-Z founded Roc-A-Fella Records in 1995. Roc-A-Fella Records was a subsidiary of Def Jam Record",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many number-one albums does Jay-Z have on the Billboard 200?",
+            "ref": "14",
+            "pred": "Jay-Z has 14 number-one albums on the Billboard 200. Jay-Z's first number-one album was The Blueprint, released in 2001. Jay",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Jay-Z's debut studio album?",
+            "ref": "Reasonable Doubt",
+            "pred": "Jay-Z's debut studio album was titled \"Reasonable Doubt\". It was released in 1996. Jay-Z's first single was \"Brooklyn's",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Bill Gates": [
+        {
+            "question": "When was Bill Gates born?",
+            "ref": "October 28, 1955",
+            "pred": "Bill Gates was born on October 28, 1955. Bill Gates was born in Seattle, Washington. Bill Gates was the first person to be awarded the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Bill Gates best known for?",
+            "ref": "Co-founding Microsoft",
+            "pred": "Bill Gates is best known for co-founding Microsoft. Bill Gates was a student at the University of Washington. Bill Gates was the first person to receive the Nobel",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Bill Gates co-found Microsoft with?",
+            "ref": "Paul Allen",
+            "pred": "Bill Gates co-founded Microsoft with Paul Allen. Bill Gates served as the CEO of Microsoft. Bill Gates was awarded the Nobel Prize in 2000. Bill Gates",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What foundation did Bill Gates establish with his then-wife Melinda?",
+            "ref": "Bill & Melinda Gates Foundation",
+            "pred": "The Bill and Melinda Gates Foundation was established by Bill Gates. Bill Gates' wife is Melinda Gates. Bill Gates was the first person to be awarded the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of the venture Gates formed at 17 with Paul Allen?",
+            "ref": "Traf-O-Data",
+            "pred": "The name of the venture that Bill Gates formed at 17 with Paul Allen was Trafalgar. However, the correct answer is Trafalgar.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Winston Churchill": [
+        {
+            "question": "How many times did Winston Churchill serve as Prime Minister of the United Kingdom?",
+            "ref": "Twice",
+            "pred": "Winston Churchill served as Prime Minister of the United Kingdom three times. He served as Prime Minister from 1940 to 1945, then again from ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "During which years did Churchill first serve as Prime Minister?",
+            "ref": "1940 to 1945",
+            "pred": "Churchill served as Prime Minister from 1940 to 1945. He first served as Prime Minister from 1924 to 1929. Churchill served",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which party did Churchill lead from 1940 to 1955?",
+            "ref": "Conservative Party",
+            "pred": "The Conservative Party. Churchill served as the leader of the Conservative Party from 1940 to 1955. He was the Prime Minister of the United Kingdom from",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Churchill's role in H. H. Asquith's Liberal government?",
+            "ref": "President of the Board of Trade and Home Secretary",
+            "pred": "Churchill served as the First Lord of the Admiralty in H. H. Asquith's Liberal government. He was a member of the British Parliament and",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What significant warning did Churchill give about the Soviet Union?",
+            "ref": "He warned of an 'iron curtain' of Soviet influence in Europe",
+            "pred": "Churchill served as the Prime Minister of the United Kingdom from 1940 to 1945. He was the first British Prime Minister to visit the Soviet Union",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Nicki Minaj": [
+        {
+            "question": "When was Nicki Minaj born?",
+            "ref": "December 8, 1982",
+            "pred": "Nicki Minaj was born in 1982. Nicki Minaj was born in Trinidad and Tobago. Nicki Minaj's birth name was On",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What genre of music is Nicki Minaj known for?",
+            "ref": "Rap and Hip Hop",
+            "pred": "Nicki Minaj is known for the genre of music called Hip-Hop. Nicki Minaj's music is characterized by her use of rap vocals. Nick",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What title is Nicki Minaj often referred to?",
+            "ref": "Queen of Rap",
+            "pred": "Nicki Minaj is often referred to as the Queen of Rap. She is a renowned rapper and singer. Nicki Minaj's first album was titled \"",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Nicki Minaj's debut album?",
+            "ref": "Pink Friday",
+            "pred": "Nicki Minaj's debut album was titled \"Pink Friday\". Nicki Minaj's debut album was titled \"Pink Friday\". Nicki Minaj's debut",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which Nicki Minaj single was certified diamond by the RIAA?",
+            "ref": "Super Bass",
+            "pred": "\"Super Bass\" was certified diamond by the RIAA. \"Super Bass\" was a single by Nicki Minaj. \"Super Bass\" was a",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Bruce Lee": [
+        {
+            "question": "What was Bruce Lee's birth name?",
+            "ref": "Lee Jun-fan",
+            "pred": "Bruce Lee's birth name was Lee Yuen-tai. Bruce Lee was born in San Francisco. Bruce Lee's father was a renowned musician. Bruce Lee's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Bruce Lee born?",
+            "ref": "November 27, 1940",
+            "pred": "Bruce Lee was born on November 27, 1940. Bruce Lee was born in San Francisco. Bruce Lee's birthplace was Hong Kong. Bruce Lee",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What martial arts philosophy did Bruce Lee found?",
+            "ref": "Jeet Kune Do",
+            "pred": "Bruce Lee founded the martial arts philosophy of Jeet Kune Do. Jeet Kune Do is a hybrid martial art that combines elements of Wing Chun, boxing",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Bruce Lee born?",
+            "ref": "San Francisco",
+            "pred": "Bruce Lee was born in San Francisco. Bruce Lee was born in San Francisco. Bruce Lee was born in Hong Kong. Bruce Lee was born in Seattle. Bruce",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Name a film directed and written by Bruce Lee.",
+            "ref": "The Way of the Dragon",
+            "pred": "The film directed and written by Bruce Lee is \"Enter the Dragon\". However, Bruce Lee did not write the screenplay for \"Enter the Dragon\". The screenplay was",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Princess Margaret, Countess of Snowdon": [
+        {
+            "question": "What is the full name of Princess Margaret?",
+            "ref": "Margaret Rose",
+            "pred": "Princess Margaret's full name was Margaret Rose. Princess Margaret was the daughter of King George VI. Princess Margaret was born in 1926. Princess Margaret was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who were Princess Margaret's parents?",
+            "ref": "King George VI and Queen Elizabeth The Queen Mother",
+            "pred": "Princess Margaret's parents were King George VI and Queen Elizabeth. Princess Margaret was the daughter of King George VI. Princess Margaret's parents were King George VI and",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Princess Margaret fall in love with in the early 1950s?",
+            "ref": "Peter Townsend",
+            "pred": "Princess Margaret fell in love with Peter Townsend in the early 1950s. Peter Townsend was a British war hero and a cousin of the royal family.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Princess Margaret marry in 1960?",
+            "ref": "Antony Armstrong-Jones",
+            "pred": "Princess Margaret married Lord Snowdon in 1960. Lord Snowdon was the title given to Antony Armstrong-Jones. Princess Margaret was the sister of Queen",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Princess Margaret and Antony Armstrong-Jones divorce?",
+            "ref": "1978",
+            "pred": "Princess Margaret and Antony Armstrong-Jones divorced in 1978. Princess Margaret was born in 1930. Princess Margaret was the daughter of King George VI",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Ryan Reynolds": [
+        {
+            "question": "When was Ryan Reynolds born?",
+            "ref": "October 23, 1976",
+            "pred": "Ryan Reynolds was born on 23 October 1976. Ryan Reynolds was born in Vancouver. Ryan Reynolds was born in the city of Vancouver. Ryan Reynolds was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which 2016 film marked Ryan Reynolds's biggest commercial success?",
+            "ref": "Deadpool",
+            "pred": "Deadpool. Deadpool was a commercial success and marked Ryan Reynolds's biggest role to date. The film was directed by Tim Miller and released in 2016.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which city was Ryan Reynolds born?",
+            "ref": "Vancouver, British Columbia",
+            "pred": "Vancouver. Ryan Reynolds was born in Vancouver. Ryan Reynolds was born in Vancouver. Ryan Reynolds was born in Vancouver. Ryan Reynolds was born in Vancouver. Ryan",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which high school did Ryan Reynolds attend?",
+            "ref": "Kitsilano Secondary School",
+            "pred": "Kwantlen Polytechnic University. Ryan Reynolds attended Kwantlen Polytechnic University, not a high school. Ryan Reynolds attended Kwantlen Polytechn",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What animated film series did Ryan Reynolds provide voice acting for between 2013 and 2020?",
+            "ref": "The Croods",
+            "pred": "Ryan Reynolds provided voice acting for the animated film series \"The Croods\" between 2013 and 2020. The Croods is a series of animated",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Brad Pitt": [
+        {
+            "question": "What is Brad Pitt's full name?",
+            "ref": "William Bradley Pitt",
+            "pred": "Brad Pitt's full name is William Bradley Pitt. He was born on December 18, 1963. Brad Pitt's father was a professional baseball player.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Brad Pitt born?",
+            "ref": "December 18, 1963",
+            "pred": "Brad Pitt was born on December 18, 1963. Brad Pitt was born in Shawnee, Oklahoma. Brad Pitt's birthplace is Shawnee,",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which film did Brad Pitt win his first Academy Award for Best Supporting Actor?",
+            "ref": "Once Upon a Time in Hollywood",
+            "pred": "The film for which Brad Pitt won his first Academy Award for Best Supporting Actor is Se7en. Brad Pitt received the award in 2000. Brad Pitt",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which film did Brad Pitt first gain recognition?",
+            "ref": "Thelma & Louise",
+            "pred": "Thelma and Louise. Brad Pitt's first film was Thelma and Louise. Brad Pitt's first film was Thelma and Louise. Brad Pitt",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many children does Brad Pitt have with Angelina Jolie?",
+            "ref": "Six",
+            "pred": "Brad Pitt and Angelina Jolie have six children. Their children are Pax Thien Jolie-Pitt, Zahara Jolie-Pitt, Shiloh",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "John Cena": [
+        {
+            "question": "What is John Cena's full name?",
+            "ref": "John Felix Anthony Cena",
+            "pred": "John Cena's full name is John Felix Anthony Cena. John Cena was born on April 23, 1977. John Cena's father was a professional wrestler",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was John Cena born?",
+            "ref": "April 23, 1977",
+            "pred": "John Cena was born on April 23, 1977. John Cena was born in West Newbury, Massachusetts. John Cena's birthplace was West New",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many times has John Cena been a world champion in WWE?",
+            "ref": "16 times",
+            "pred": "John Cena has been a world champion in WWE 16 times. John Cena's first world championship win was in 2004. John Cena's notable physical attribute",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did John Cena sign with WWE?",
+            "ref": "2001",
+            "pred": "John Cena signed with WWE in 1999. John Cena's first WWE match was against Kurt Angle. John Cena's first WWE match was against The Rock.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was John Cena born?",
+            "ref": "West Newbury, Massachusetts",
+            "pred": "John Cena was born in West Newbury, Massachusetts. John Cena was born in West Newbury, Massachusetts. John Cena was born in West Newbury, Massachusetts",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Charles Manson": [
+        {
+            "question": "What was Charles Manson's original surname?",
+            "ref": "Maddox",
+            "pred": "Charles Manson's original surname was Milner. Charles Manson was born with the surname Milner. Charles Manson's original surname was not related to his occupation. Charles",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Charles Manson born?",
+            "ref": "November 12, 1934",
+            "pred": "Charles Manson was born on November 12, 1934. Charles Manson was born in Cincinnati, Ohio. Charles Manson was born in Los Angeles. Charles Manson",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Charles Manson die?",
+            "ref": "November 19, 2017",
+            "pred": "Charles Manson died in 2015. Charles Manson was born in 1934. Charles Manson was a musician. Charles Manson was born in Los Angeles. Charles",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which cult did Charles Manson lead?",
+            "ref": "The Manson Family",
+            "pred": "The Family. Charles Manson led The Family, a cult that was involved in the murder of Sharon Tate. The Family was also known as the Manson Family. Charles",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which state was the Manson Family based?",
+            "ref": "California",
+            "pred": "California. The Manson Family was based in California. The family's leader, Charles Manson, was born in Cincinnati, Ohio. The Manson Family was involved in the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Vladimir Putin": [
+        {
+            "question": "How long did Vladimir Putin serve in the KGB?",
+            "ref": "16 years",
+            "pred": "Vladimir Putin served in the KGB from 1975 to 1990. He was a member of the KGB from 1975 to ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Vladimir Putin first become president of Russia?",
+            "ref": "2000",
+            "pred": "Vladimir Putin first became the President of Russia in 2000. He served as the Prime Minister of Russia from 1999 to 2000.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What city was Vladimir Putin born in?",
+            "ref": "Leningrad, Soviet Union (now Saint Petersburg, Russia)",
+            "pred": "Leningrad. Vladimir Putin was born in Leningrad, which is now known as St. Petersburg. Vladimir Putin was born in Leningrad. Vladimir",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What major international action did Vladimir Putin take in February 2022?",
+            "ref": "Launched a significant invasion of Ukraine",
+            "pred": "Vladimir Putin ordered the invasion of Ukraine in February 2022. Vladimir Putin was born in 1952. Vladimir Putin served as the first president of",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Vladimir Putin born?",
+            "ref": "7 October 1952",
+            "pred": "Vladimir Putin was born on October 7, 1952. Vladimir Putin was born in Leningrad. Vladimir Putin's father was a musician.",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Clint Eastwood": [
+        {
+            "question": "When was Clint Eastwood born?",
+            "ref": "May 31, 1930",
+            "pred": "Clint Eastwood was born on May 31, 1930. Clint Eastwood was born in San Francisco. Clint Eastwood's father was a musician",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What trilogy is Clint Eastwood famous for in the mid-1960s?",
+            "ref": "Dollars Trilogy",
+            "pred": "Clint Eastwood is famous for the Spaghetti Western trilogy. The Spaghetti Western trilogy is not associated with Clint Eastwood. Clint Eastwood is best known",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did Clint Eastwood play in the Dirty Harry films?",
+            "ref": "Harry Callahan",
+            "pred": "Clint Eastwood played the role of Harry Callahan in the Dirty Harry films. The character Harry Callahan was a police officer. The character Harry Callahan",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Clint Eastwood's production company?",
+            "ref": "Malpaso Productions",
+            "pred": "Clint Eastwood's production company is Malpaso Productions. Clint Eastwood is the founder of Malpaso Productions. Clint Eastwood's production company is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Academy Awards has Clint Eastwood won?",
+            "ref": "four",
+            "pred": "Clint Eastwood won the Academy Award for Best Director in 1993. Clint Eastwood won the Academy Award for Best Director in 1993. Clint",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Madonna": [
+        {
+            "question": "What is Madonna's full name?",
+            "ref": "Madonna Louise Ciccone",
+            "pred": "Madonna's full name is Madonna Louise Ciccone. Madonna's birth name was Madonna Louise Ciccone. Madonna's full birth name was Madonna Louise Veronica Ciccone",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Madonna born?",
+            "ref": "August 16, 1958",
+            "pred": "Madonna was born on August 16, 1958. Madonna was born in Michigan. Madonna's first album was not a commercial success. Madonna's first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Madonna's debut studio album?",
+            "ref": "Madonna (1983)",
+            "pred": "Madonna's debut studio album was titled \"Madonna\". It was released in 1983. Madonna's first single was \"Everybody\". Madonna's first tour",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many records has Madonna sold worldwide?",
+            "ref": "Over 300 million",
+            "pred": "Madonna has sold over 300 million records worldwide. Madonna's record sales are a significant aspect of her career. Madonna's record sales are a notable achievement in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Madonna inducted into the Rock and Roll Hall of Fame?",
+            "ref": "2008",
+            "pred": "Madonna was inducted into the Rock and Roll Hall of Fame in 2004. Madonna was inducted into the Rock and Roll Hall of Fame in ",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Jennifer Lopez": [
+        {
+            "question": "What nickname is Jennifer Lopez also known by?",
+            "ref": "J.Lo",
+            "pred": "Jennifer Lopez is also known by the nickname JLo. Jennifer Lopez is a renowned singer, songwriter, and dancer. Jennifer Lopez's first album was titled \"J",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year was Jennifer Lopez born?",
+            "ref": "1969",
+            "pred": "Jennifer Lopez was born in 1969. Jennifer Lopez was born in 1969. Jennifer Lopez was born in 1970. Jennifer Lopez was born in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What title is often given to Jennifer Lopez due to her influence in entertainment?",
+            "ref": "Queen of Dance",
+            "pred": "Jennifer Lopez is often referred to as the \"Queen of Latin Music\". Jennifer Lopez is credited with popularizing the genre of Latin music. Jennifer Lopez's music is",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Jennifer Lopez's debut film?",
+            "ref": "Selena",
+            "pred": "Jennifer Lopez's debut film was Anaconda. Jennifer Lopez's first film was Anaconda. Jennifer Lopez's first film was Selena. Jennifer Lopez's first film",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Jennifer Lopez release her debut album?",
+            "ref": "1999",
+            "pred": "Jennifer Lopez released her debut album in 1999. Jennifer Lopez's first album was titled \"On the 6\". Jennifer Lopez's first album was not a",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Katy Perry": [
+        {
+            "question": "What is Katy Perry's real name?",
+            "ref": "Katheryn Elizabeth Hudson",
+            "pred": "Katy Perry's real name is Katheryn Elizabeth Hudson. She was born with the name Katheryn Elizabeth Hudson. Katy Perry's birth name was Kath",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Katy Perry born?",
+            "ref": "October 25, 1984",
+            "pred": "Katy Perry was born on October 25, 1984. Katy Perry was born in Santa Barbara, California. Katy Perry's birth name was Katy Hudson",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Katy Perry's first record titled?",
+            "ref": "Katy Hudson",
+            "pred": "Katy Perry's first record was titled \"Katy Hudson\". Katy Perry is known for her hit song \"Firework\". Katy Perry's first record was not",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What genre was Katy Perry's first record?",
+            "ref": "Gospel",
+            "pred": "Katy Perry's first record was in the genre of Pop. Katy Perry's first record was not in the genre of Pop. Katy Perry's first record was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Katy Perry's debut single?",
+            "ref": "I Kissed a Girl",
+            "pred": "Katy Perry's debut single was \"I Kissed a Girl\". Katy Perry's debut single was \"I Kissed a Girl\". Katy Perry's debut single",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "George VI": [
+        {
+            "question": "What was George VI's birth name?",
+            "ref": "Albert Frederick Arthur George",
+            "pred": "Albert Frederick Arthur George. George VI was born with the name Albert Frederick Arthur George. Albert Frederick Arthur George was the birth name of George VI. George VI was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of George VI's elder brother?",
+            "ref": "Edward",
+            "pred": "The name of George VI's elder brother was Edward VIII. Edward VIII was the eldest son of King George V and Queen Mary. He served as the Prince of",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What condition did George VI suffer from that required him to seek treatment from a speech therapist?",
+            "ref": "Stutter",
+            "pred": "George VI suffered from a stammer. He was known for his distinctive voice despite his physical disability. George VI's physical disability was his short stature. George VI",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did George VI become the last Emperor of India?",
+            "ref": "1936",
+            "pred": "George VI became the last Emperor of India in 1936. He was the first British monarch to visit India in 1936. The British monarch was known",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where did George VI die?",
+            "ref": "Sandringham House",
+            "pred": "George VI died at St. Mary's Hospital in London. He died at St. Mary's Hospital in London. George VI died at Buckingham Palace. George VI",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Heath Ledger": [
+        {
+            "question": "What nationality was Heath Ledger?",
+            "ref": "Australian",
+            "pred": "Heath Ledger was Australian. Heath Ledger was born in Perth, Western Australia. Heath Ledger was a member of the Order of Australia in 2006. Heath",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What character did Heath Ledger portray in 'The Dark Knight'?",
+            "ref": "The Joker",
+            "pred": "Heath Ledger portrayed the character of the Joker in 'The Dark Knight'. The Joker was a fictional character in the DC Comics universe. Heath Ledger's performance in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What caused Heath Ledger's death?",
+            "ref": "Accidental overdose of medications",
+            "pred": "Heath Ledger died from an accidental overdose of prescription medications. He was found dead in his New York apartment. Heath Ledger's death was caused by a heart attack",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Heath Ledger born?",
+            "ref": "Perth, Western Australia",
+            "pred": "Heath Ledger was born in Perth, Western Australia. He was born in Perth Royal Hospital, which is now known as Royal Perth Hospital. Heath Ledger's birth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What kind of ancestry did Heath Ledger have?",
+            "ref": "English, Irish, and Scottish",
+            "pred": "Heath Ledger's ancestry was primarily of English origin. Heath Ledger's father was a singer, and his mother was a pianist. Heath Ledger's father was",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Britney Spears": [
+        {
+            "question": "When was Britney Spears born?",
+            "ref": "December 2, 1981",
+            "pred": "Britney Spears was born on December 1, 1981. Britney Spears was born in McComb, Mississippi. Britney Spears was born in ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Grammy Awards has Britney Spears won?",
+            "ref": "One",
+            "pred": "Britney Spears has won one Grammy Award. She received the Grammy Lifetime Achievement Award in 2001. Britney Spears won the Grammy Award for the first time",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did Britney Spears sign with Jive Records?",
+            "ref": "1997",
+            "pred": "1997. Britney Spears signed with Jive Records in 1997. Britney Spears was born in 1981. Britney Spears's first album",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of the concert residency Britney Spears embarked on at Planet Hollywood Resort & Casino?",
+            "ref": "Britney: Piece of Me",
+            "pred": "Britney Spears' concert residency at Planet Hollywood Resort & Casino was called \"Britney: Piece of Me\". The residency began in 2013 and ended in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What are the titles of Britney Spears' first two studio albums?",
+            "ref": "...Baby One More Time and Oops!... I Did It Again",
+            "pred": "The titles of Britney Spears' first two studio albums are Baby One More Time and Oops!... I Did It Again. Britney Spears' first two studio",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Sylvester Stallone": [
+        {
+            "question": "When was Sylvester Stallone born?",
+            "ref": "July 6, 1946",
+            "pred": "Sylvester Stallone was born on July 6, 1946. Sylvester Stallone was born in New York City. Sylvester Stallone's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What iconic role did Sylvester Stallone play in 1976?",
+            "ref": "Rocky Balboa",
+            "pred": "Sylvester Stallone played the role of Rocky Balboa in the 1976 film Rocky. Sylvester Stallone was born in New York City. Sylv",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What character did Stallone portray in First Blood?",
+            "ref": "John Rambo",
+            "pred": "Stallone portrayed the character of John Rambo in the film First Blood. The film was released in 1982. John Rambo was a Vietnam War",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What award did Stallone win for his role in Creed?",
+            "ref": "Golden Globe Award",
+            "pred": "Sylvester Stallone won the Academy Award for Best Actor for his role in Creed. Sylvester Stallone won the Golden Globe Award for Best Actor in a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Stallone's birthplace?",
+            "ref": "Hell's Kitchen, New York City",
+            "pred": "New York City. Sylvester Stallone was born in New York City. Sylvester Stallone was born in New York City. Sylvester Stallone was born",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Adele": [
+        {
+            "question": "What is Adele's full name?",
+            "ref": "Adele Laurie Blue Adkins",
+            "pred": "Adele's full name is Adele Laurie Blue Adkins. Adele's birth name was Adele Laurie Blue Adkins. Adele's full birth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the title of Adele's debut album?",
+            "ref": "19",
+            "pred": "Adele's debut album was titled \"19\". The title refers to her age at the time of the album's release. Adele's first single was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which James Bond film did Adele release the soundtrack single 'Skyfall'?",
+            "ref": "Skyfall",
+            "pred": "Adele released the soundtrack single 'Skyfall' for the James Bond film of the same name. The song was written by Adele and Paul Epworth",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the title of Adele's first song?",
+            "ref": "Hometown Glory",
+            "pred": "Adele's first single was \"Chasing Pavements\". Adele's first album was titled \"19\". Adele's first song was \"Rolling",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many copies has Adele's debut album sold in the UK?",
+            "ref": "Over 2.5 million",
+            "pred": "Adele's debut album, '19', was certified 4x Platinum by the BPI. Adele's debut album was not certified 4x",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Prince (musician)": [
+        {
+            "question": "When was Prince Rogers Nelson born?",
+            "ref": "June 7, 1958",
+            "pred": "Prince Rogers Nelson was born on June 7, 1958. Prince Rogers Nelson was born in Minneapolis. Prince Rogers Nelson was a member of the Rock and",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many albums did Prince release during his lifetime?",
+            "ref": "39",
+            "pred": "Prince released 39 studio albums during his lifetime. Prince's first album was 'For You', which was released in 1978. Prince's first album was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What instruments was Prince known for his skill in playing?",
+            "ref": "Multi-instrumentalist",
+            "pred": "Prince was known for playing the guitar. Prince was a skilled pianist. Prince was known for playing the drums. Prince was a renowned guitarist. Prince was known",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year was Prince inducted into the Rock and Roll Hall of Fame?",
+            "ref": "2004",
+            "pred": "Prince was inducted into the Rock and Roll Hall of Fame in 2004. Prince was born in 1958. Prince's first album was titled \"",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Prince's original name?",
+            "ref": "Prince Rogers Nelson",
+            "pred": "Prince's original name was Prince Rogers Nelson. He was born with the name Prince Rogers Nelson. Prince's original name was Prince Rogers Nelson. Prince's original name",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "David Bowie": [
+        {
+            "question": "What is David Bowie's real name?",
+            "ref": "David Robert Jones",
+            "pred": "David Bowie's real name was David Robert Jones. He was born David Robert Jones. David Bowie's birth name was David Jones. David Bowie's full birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How is David Bowie regarded in the music industry?",
+            "ref": "As one of the most influential musicians of the 20th century",
+            "pred": "David Bowie was a renowned musician. David Bowie was a member of the Rock and Roll Hall of Fame. David Bowie was a regular guest at the Glaston",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Bowie's first top-five entry on the UK Singles Chart?",
+            "ref": "\"Space Oddity\"",
+            "pred": "Bowie's first top-five entry on the UK Singles Chart was \"Space Oddity\". It peaked at number one. Bowie's first top-five entry on the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What alter ego did Bowie create during the glam rock era?",
+            "ref": "Ziggy Stardust",
+            "pred": "Bowie's alter ego during the glam rock era was Ziggy Stardust. Bowie's music was heavily influenced by the glam rock movement. Bowie's song \"",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which cult film did Bowie star in 1976?",
+            "ref": "The Man Who Fell to Earth",
+            "pred": "The Man Who Fell to Earth. David Bowie starred in this cult film. The Man Who Fell to Earth was released in 1976. The Man Who Fell",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Ronald Reagan": [
+        {
+            "question": "When was Ronald Reagan born?",
+            "ref": "February 6, 1911",
+            "pred": "Ronald Reagan was born on February 6, 1911. Ronald Reagan was born in Tampico, Illinois. Ronald Reagan was born in Los Angeles",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which college did Ronald Reagan graduate from?",
+            "ref": "Eureka College",
+            "pred": "Ronald Reagan graduated from Eureka College. Ronald Reagan served as the Governor of California from 1967 to 1975. Ronald Reagan was the first Republican",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Ronald Reagan win the presidency over Jimmy Carter?",
+            "ref": "1980",
+            "pred": "Ronald Reagan won the presidency in 1980. He defeated Jimmy Carter in the general election. Ronald Reagan served as the 40th President of the United",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which disease hindered Ronald Reagan post-presidency?",
+            "ref": "Alzheimer's disease",
+            "pred": "Alzheimer's disease. Ronald Reagan was diagnosed with Alzheimer's disease in 1994. He died in 2004. Ronald Reagan was the first U.S",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Ronald Reagan's vice president who he defeated in the 1984 presidential election?",
+            "ref": "Walter Mondale",
+            "pred": "Ronald Reagan's vice president was George H.W. Bush. Ronald Reagan defeated Walter Mondale in the 1984 presidential election. Ronald Reagan served as the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Kamala Harris": [
+        {
+            "question": "When was Kamala Harris born?",
+            "ref": "October 20, 1964",
+            "pred": "Kamala Harris was born on October 20, 1964. Kamala Harris was born in Oakland, California. Kamala Harris was born in Los",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which university did Kamala Harris attend for her undergraduate degree?",
+            "ref": "Howard University",
+            "pred": "Kamala Harris attended Howard University for her undergraduate degree. Kamala Harris received her law degree from the University of California, Berkeley. Kamala Harris served as",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "From which law school did Kamala Harris graduate?",
+            "ref": "University of California, Hastings College of the Law",
+            "pred": "Kamala Harris graduated from the University of California, Berkeley School of Law. Kamala Harris was the first woman to serve as the Attorney General of California.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did Kamala Harris serve in California from 2011 to 2017?",
+            "ref": "Attorney General of California",
+            "pred": "Kamala Harris served as the Attorney General of California from 2011 to 2017. She was the first woman and the first African American to hold",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Kamala Harris defeat in the 2016 Senate election?",
+            "ref": "Loretta Sanchez",
+            "pred": "Kamala Harris defeated Loretta Sanchez in the 2016 Senate election. Loretta Sanchez was the wife of former California Governor Pete Wilson. Kam",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "George W. Bush": [
+        {
+            "question": "When was George W. Bush born?",
+            "ref": "July 6, 1946",
+            "pred": "George W. Bush was born on July 6, 1946. George W. Bush was born in New Haven, Connecticut. George W. Bush was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did George W. Bush serve in the United States from 2001 to 2009?",
+            "ref": "43rd president",
+            "pred": "George W. Bush served as the 43rd President of the United States from 2001 to 2009. He was the son of the 41",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which branch of the military did George W. Bush serve in during his twenties?",
+            "ref": "Texas Air National Guard",
+            "pred": "George W. Bush served in the Texas Air National Guard during his twenties. He was a member of the 147th Fighter Wing. George W. Bush served",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What significant act did Bush sign related to education?",
+            "ref": "No Child Left Behind Act",
+            "pred": "The No Child Left Behind Act. Bush signed the No Child Left Behind Act in 2002. The act was a significant piece of legislation that aimed to improve",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the main focus of Bush's administration after the September 11, 2001 terrorist attacks?",
+            "ref": "War on terror",
+            "pred": "The main focus of Bush's administration after the September 11, 2001 terrorist attacks was to launch a military campaign against Afghanistan. The administration's primary goal",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Jennifer Lawrence": [
+        {
+            "question": "When was Jennifer Lawrence born?",
+            "ref": "August 15, 1990",
+            "pred": "Jennifer Lawrence was born on August 15, 1990. Jennifer Lawrence was born in 1990. Jennifer Lawrence was born in New York. Jennifer Lawrence",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Jennifer Lawrence appear in Time's 100 most influential people in the world list?",
+            "ref": "2013",
+            "pred": "Jennifer Lawrence was named one of Time Magazine's 100 most influential people in the world in 2013. Jennifer Lawrence was named one of Time Magazine's ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which film did Jennifer Lawrence win the Academy Award for Best Actress?",
+            "ref": "Silver Linings Playbook",
+            "pred": "Jennifer Lawrence won the Academy Award for Best Actress for her role in Silver Linings Playbook. Jennifer Lawrence won the Academy Award for Best Actress for her role in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Jennifer Lawrence born?",
+            "ref": "Indian Hills, Kentucky",
+            "pred": "Jennifer Lawrence was born in Louisville, Kentucky. Jennifer Lawrence was born in New York City. Jennifer Lawrence was born in Los Angeles. Jennifer Lawrence was born in Louisville",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which film series made Jennifer Lawrence the highest-grossing action heroine?",
+            "ref": "The Hunger Games film series",
+            "pred": "The Hunger Games film series made Jennifer Lawrence the highest-grossing action heroine. The Hunger Games film series is based on the novels by Suzanne Collins. Jennifer Lawrence",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Mahatma Gandhi": [
+        {
+            "question": "What was Gandhi's profession before becoming a political ethicist?",
+            "ref": "Lawyer",
+            "pred": "Gandhi was a lawyer before becoming a political ethicist. He studied law at the University of London and was called to the bar in 1891.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What method did Gandhi employ to lead India's independence campaign?",
+            "ref": "Nonviolent resistance",
+            "pred": "Gandhi employed the method of non-violent resistance to lead India's independence campaign. He believed that non-violent resistance was the most effective way to bring",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did Gandhi move to South Africa?",
+            "ref": "1893",
+            "pred": "Gandhi moved to South Africa in 1893. Gandhi's father had passed away in 1885. Gandhi's father was a lawyer. Gandhi's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which movement did Gandhi lead in 1930 to challenge the British-imposed salt tax?",
+            "ref": "Dandi Salt March",
+            "pred": "The Dandi March. Gandhi led the Dandi March in 1930 to challenge the British-imposed salt tax. The Dandi March was a significant event",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the main goal of Gandhi's nationwide campaigns?",
+            "ref": "Achieving swaraj or self-rule",
+            "pred": "Gandhi's main goal in his nationwide campaigns was to promote non-violent civil disobedience and bring about social change. Gandhi's campaigns were focused on achieving",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Emma Watson": [
+        {
+            "question": "What was Emma Watson's first professional acting role?",
+            "ref": "Hermione Granger in the Harry Potter film series",
+            "pred": "Emma Watson's first professional acting role was in the film \"Harry Potter and the Philosopher's Stone\". She played the role of Hermione Granger. Emma Watson",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What campaign did Emma Watson help launch with UN Women?",
+            "ref": "HeForShe",
+            "pred": "Emma Watson helped launch the HeForShe campaign with UN Women. The HeForShe campaign was launched in 2014. Emma Watson was the first Goodwill",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which film did Emma Watson portray Meg March?",
+            "ref": "Little Women",
+            "pred": "Emma Watson did not portray Meg March in any film. Emma Watson is known for her role as Hermione Granger in the Harry Potter film series. Meg March was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where was Emma Watson born?",
+            "ref": "Paris",
+            "pred": "Emma Watson was born in Paris, France. Emma Watson was born in Paris, France. Emma Watson was born in England. Emma Watson was born in France.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is one of the sustainable fashion brands Emma Watson has worked with?",
+            "ref": "People Tree",
+            "pred": "Emma Watson has worked with the sustainable fashion brand Stella McCartney. Stella McCartney is known for using eco-friendly materials and reducing waste in her designs. Emma Watson has been",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Robin Williams": [
+        {
+            "question": "What was Robin Williams' full name?",
+            "ref": "Robin McLaurin Williams",
+            "pred": "Robin Williams' full name was Robin McLaurin Williams. He was born on July 21, 1951. Robin Williams' notable role in a film",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Robin Williams born?",
+            "ref": "July 21, 1951",
+            "pred": "Robin Williams was born on July 21, 1951. Robin Williams was born in Chicago, Illinois. Robin Williams was born in San Francisco. Robin Williams",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When did Robin Williams pass away?",
+            "ref": "August 11, 2014",
+            "pred": "Robin Williams passed away on August 11, 2014. Robin Williams was born in San Francisco. Robin Williams was a regular guest at the Sundance Film",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For what skill was Robin Williams known?",
+            "ref": "Improvisational skills",
+            "pred": "Robin Williams was known for his exceptional skill in playing the piano. Robin Williams was a renowned actor. Robin Williams was a skilled pianist. Robin Williams was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which sitcom did Robin Williams play an alien named Mork?",
+            "ref": "Mork & Mindy",
+            "pred": "Robin Williams played the role of Mork in the sitcom \"Mork & Mindy.\" Robin Williams was a guest star on the TV show \"Mork &",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Mark Wahlberg": [
+        {
+            "question": "What is Mark Wahlberg's full birth name?",
+            "ref": "Mark Robert Michael Wahlberg",
+            "pred": "Mark Wahlberg's full birth name is Mark Robert Wahlberg. He was born on June 5, 1971. Mark Wahlberg's father was a",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Mark Wahlberg born?",
+            "ref": "June 5, 1971",
+            "pred": "Mark Wahlberg was born on September 5, 1971. Mark Wahlberg was born in Boston, Massachusetts. Mark Wahlberg's father was a musician",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which movie did Mark Wahlberg receive critical praise for his performance as Dirk Diggler?",
+            "ref": "Boogie Nights",
+            "pred": "Mark Wahlberg received critical praise for his performance in the movie \"Boogie Nights\". Mark Wahlberg received critical praise for his performance in the movie \"Boogie",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the reality TV series about the Wahlburgers chain?",
+            "ref": "Wahlburgers",
+            "pred": "The reality TV series about the Wahlburgers chain is called \"Wahlburgers\". It premiered in 2014. The series was hosted by Mark Wahl",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what neighborhood of Boston was Mark Wahlberg born?",
+            "ref": "Dorchester",
+            "pred": "Dorchester. Mark Wahlberg was born in the Dorchester neighborhood of Boston. Mark Wahlberg's father was a musician. Mark Wahlberg's birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Henry VIII": [
+        {
+            "question": "How long did Henry VIII reign as King of England?",
+            "ref": "1509 until his death in 1547",
+            "pred": "Henry VIII served as King of England from 1509 to 1547. Henry VIII served as King of England from 1509 to 1547.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What major religious change did Henry VIII initiate?",
+            "ref": "The English Reformation",
+            "pred": "Henry VIII's marriage to Catherine of Aragon was a significant factor in the English Reformation. Henry VIII was a member of the Order of the Garter.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who succeeded Henry VIII?",
+            "ref": "His son Edward VI",
+            "pred": "Edward VI succeeded Henry VIII. Edward VI was the son of Henry VIII. Edward VI was born in 1533. Edward VI was the first English monarch to",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was notable about Henry VIII's marriages?",
+            "ref": "He had six marriages",
+            "pred": "Henry VIII's marriages were notable for the fact that he was married to his brother's widow. Henry VIII's marriage to Catherine of Aragon was annulled due",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Henry VIII born?",
+            "ref": "28 June 1491",
+            "pred": "Henry VIII was born on 28 June 1491. Henry VIII was the son of Henry VII. Henry VIII was buried in Westminster Abbey. Henry VIII was",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Beyonc\u00e9": [
+        {
+            "question": "What is Beyonc\u00e9's full name?",
+            "ref": "Beyonc\u00e9 Giselle Knowles-Carter",
+            "pred": "Beyonc\u00e9's full name is Beyonc\u00e9 Giselle Knowles. Beyonc\u00e9's full name is Beyonc\u00e9 Giselle Knowles. Beyonc\u00e9's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Beyonc\u00e9 born?",
+            "ref": "September 4, 1981",
+            "pred": "Beyonc\u00e9 was born on September 4, 1981. Beyonc\u00e9's full birth name is Beyonc\u00e9 Giselle Knowles. Beyonc\u00e9's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What nickname is Beyonc\u00e9 known by?",
+            "ref": "Queen Bey",
+            "pred": "Beyonc\u00e9 is known by the nickname Queen Bey. Beyonc\u00e9 is known by the nickname Queen Bey. Beyonc\u00e9 is known by the nickname Queen Bey. Bey",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What group was Beyonc\u00e9 a part of in the late 1990s?",
+            "ref": "Destiny's Child",
+            "pred": "Beyonc\u00e9 was a member of the group Destiny's Child. Destiny's Child was a popular R&B girl group in the late 1990s. Bey",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Beyonc\u00e9's debut album?",
+            "ref": "Dangerously in Love",
+            "pred": "Beyonc\u00e9's debut album was titled \"Dangerously in Love\". Beyonc\u00e9's first album was not \"Dangerously in Love\". Beyonc\u00e9's first album",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "John Lennon": [
+        {
+            "question": "What was John Lennon's full birth name?",
+            "ref": "John Winston Lennon",
+            "pred": "John Lennon's full birth name was John Winston Lennon. He was born on October 9, 1940. John Lennon's father was a merchant seaman",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was John Lennon's famous songwriting partner?",
+            "ref": "Paul McCartney",
+            "pred": "John Lennon's famous songwriting partner was Paul McCartney. They formed the core of the Beatles and wrote many of the band's songs together. John Lennon was married",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of the band John Lennon formed in 1956?",
+            "ref": "The Quarrymen",
+            "pred": "The Quarrymen. John Lennon formed The Quarrymen in 1956. The Quarrymen was a British rock band that John Lennon formed in 1956.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What year did The Quarrymen evolve into The Beatles?",
+            "ref": "1960",
+            "pred": "The Quarrymen evolved into The Beatles in 1960. The Quarrymen was formed in 1956. The Quarrymen's name was inspired by a quarry",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which city was John Lennon born in?",
+            "ref": "Liverpool",
+            "pred": "John Lennon was born in Liverpool. John Lennon was born in Liverpool. John Lennon was born in Liverpool. John Lennon was born in Liverpool. John Lennon was born",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Nelson Mandela": [
+        {
+            "question": "What was Nelson Mandela's birth name?",
+            "ref": "Rolihlahla Mandela",
+            "pred": "Nelson Mandela's birth name was Rolihlahla Mandela. Nelson Mandela was born with the name Rolihlahla, which means \"pulling the branch",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How long did Nelson Mandela serve as the president of South Africa?",
+            "ref": "1994 to 1999",
+            "pred": "Nelson Mandela served as the first black president of South Africa from 1994 to 1999. He served as the president of the African National Congress from",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which political party did Mandela join in 1943?",
+            "ref": "The African National Congress (ANC)",
+            "pred": "The African National Congress. Mandela joined the African National Congress in 1943. Mandela served as the first black president of South Africa from 1994 to ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many years was Mandela imprisoned?",
+            "ref": "27 years",
+            "pred": "Mandela was imprisoned for 27 years. He was released from prison in 1990. Mandela was born in 1918. Mandela was a member",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was the president that released Mandela from prison?",
+            "ref": "F. W. de Klerk",
+            "pred": "Nelson Mandela was released from prison in 1990. The president who released him was F.W. de Klerk. Nelson Mandela was the first black",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Demi Lovato": [
+        {
+            "question": "What is Demi Lovato's full name?",
+            "ref": "Demetria Devonne Lovato",
+            "pred": "Demi Lovato's full name is Demetria Devonne Lovato. Demetria is her first name, and Devonne is her middle name.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Demi Lovato born?",
+            "ref": "August 20, 1992",
+            "pred": "Demi Lovato was born on August 20, 1992. Demi Lovato was born in Los Angeles. Demi Lovato's birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which record label did Demi Lovato sign with after Camp Rock?",
+            "ref": "Hollywood Records",
+            "pred": "Demi Lovato signed with Hollywood Records. Demi Lovato's first album was not related to Camp Rock. Demi Lovato's first album was not",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What genre was Demi Lovato's debut album 'Don't Forget'?",
+            "ref": "Pop rock",
+            "pred": "Demi Lovato's debut album 'Don't Forget' is associated with the Pop genre. Demi Lovato's music is often classified under the Pop genre",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Demi Lovato's third studio album?",
+            "ref": "Unbroken",
+            "pred": "Demi Lovato's third studio album is titled \"Unbroken\". Demi Lovato's third studio album was titled \"Unbroken\". Demi Lovato",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Megan Fox": [
+        {
+            "question": "What is Megan Fox's full name?",
+            "ref": "Megan Denise Fox",
+            "pred": "Megan Fox's full name is Megan Denise Fox. Megan Fox is an American actress. Megan Fox's notable role was in the film \"Transformers\". Megan",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Megan Fox born?",
+            "ref": "May 16, 1986",
+            "pred": "Megan Fox was born on May 16, 1986. Megan Fox was born in Oak Ridge, Tennessee. Megan Fox's birthplace is not related",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which film did Megan Fox play Mikaela Banes?",
+            "ref": "Transformers",
+            "pred": "Megan Fox played the role of Mikaela Banes in the film \"Transformers\". Megan Fox played the role of Mikaela Banes in the",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What role did Megan Fox have in the 'Teenage Mutant Ninja Turtles' films?",
+            "ref": "April O'Neil",
+            "pred": "Megan Fox played the role of April O'Neil in the 'Teenage Mutant Ninja Turtles' films. Megan Fox was not involved in the production",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which character did Megan Fox portray in the horror comedy 'Jennifer's Body'?",
+            "ref": "The titular character",
+            "pred": "Megan Fox portrayed the character Jennifer Check in the horror comedy 'Jennifer's Body'. Jennifer Check is the main character in the film. Jennifer Check is a high",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Roger Federer": [
+        {
+            "question": "How many weeks was Roger Federer ranked world No. 1 in singles?",
+            "ref": "310 weeks",
+            "pred": "Roger Federer was ranked world No. 1 in singles for 310 weeks. He was the first Swiss tennis player to achieve this ranking. Federer's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Grand Slam singles titles has Roger Federer won?",
+            "ref": "20",
+            "pred": "Roger Federer has won 20 Grand Slam singles titles. He won his first Grand Slam title at the 2001 Wimbledon Championships. Federer's first Grand",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which year did Roger Federer win his first major singles title?",
+            "ref": "2003",
+            "pred": "2001. Roger Federer won his first major singles title at the 2001 Wimbledon Championships. He defeated Pete Sampras in the final. Federer's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Roger Federer's nationality?",
+            "ref": "Swiss",
+            "pred": "Roger Federer is Swiss. He was born in Basel, Switzerland. Roger Federer's nationality is Swiss. Roger Federer was born in Basel, Switzerland.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was Roger Federer's main rival until 2010?",
+            "ref": "Rafael Nadal",
+            "pred": "Rafael Nadal was Roger Federer's main rival until 2010. Rafael Nadal and Roger Federer were the most dominant players in the world",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Tom Hardy": [
+        {
+            "question": "What is Tom Hardy's full name?",
+            "ref": "Edward Thomas Hardy",
+            "pred": "Tom Hardy's full name is Thomas Hardy. He was born Edward Thomas Hardy. Tom Hardy's birth name was Edward Thomas Hardy. Tom Hardy's full birth name",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which film was Tom Hardy nominated for the Academy Award for Best Supporting Actor?",
+            "ref": "The Revenant",
+            "pred": "The film for which Tom Hardy received the Academy Award nomination is The Revenant. Tom Hardy received the Academy Award for Best Actor for his role in The Re",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In which Christopher Nolan films has Tom Hardy appeared?",
+            "ref": "Inception, The Dark Knight Rises, Dunkirk",
+            "pred": "Tom Hardy appeared in the following Christopher Nolan films: \n\n1. Inception \n2. The Dark Knight Rises \n3. Dunkirk \n4. Inter",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which character did Tom Hardy play in 'Mad Max: Fury Road'?",
+            "ref": "'Mad' Max Rockatansky",
+            "pred": "Tom Hardy did not appear in 'Mad Max: Fury Road'. The film 'Mad Max: Fury Road' is set in a post-apocalyptic world and does",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of the character Tom Hardy played in 'Venom' and its sequel?",
+            "ref": "Eddie Brock/Venom",
+            "pred": "Tom Hardy played the role of Eddie Brock in the 'Venom' film series. Eddie Brock is the alter ego of the character Venom. Tom Hardy received the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Leonardo da Vinci": [
+        {
+            "question": "Who was Leonardo da Vinci educated by?",
+            "ref": "Andrea del Verrocchio",
+            "pred": "Leonardo da Vinci was educated by his father, Ser Piero da Vinci. Leonardo da Vinci was born in 1452. Leonardo da Vinci's father was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which city did Leonardo begin his career in?",
+            "ref": "Florence",
+            "pred": "Milan. Leonardo da Vinci began his career in Milan. He was born in Vinci, but he began his professional life in Milan. Leonardo da Vinci's father",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who did Leonardo spend much time in the service of?",
+            "ref": "Ludovico Sforza",
+            "pred": "Leonardo da Vinci served in the court of the Duke of Milan. He served in the court of the Duke of Milan. The Duke of Milan was Francesco S",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where did Leonardo spend his last three years?",
+            "ref": "France",
+            "pred": "Leonardo da Vinci spent his last three years in Milan. He died in Milan in 1519. Leonardo da Vinci was buried in the Basilica of San",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is considered Leonardo da Vinci's magnum opus?",
+            "ref": "The Mona Lisa",
+            "pred": "Leonardo da Vinci's painting \"The Last Supper\" is considered his magnum opus. It depicts the last meal Jesus shared with his twelve apostles",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Tom Hanks": [
+        {
+            "question": "When was Tom Hanks born?",
+            "ref": "July 9, 1956",
+            "pred": "Tom Hanks was born on July 9, 1956. Tom Hanks was born in Oakland, California. Tom Hanks was born in Concord,",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which city was Tom Hanks born in?",
+            "ref": "Concord, California",
+            "pred": "Tom Hanks was born in Concord, California. Tom Hanks was born in Concord, California. Tom Hanks was born in Concord, California. Tom H",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many Academy Awards has Tom Hanks won?",
+            "ref": "Two",
+            "pred": "Tom Hanks has won two Academy Awards. He received the first Oscar in 1994 for his role in Forrest Gump. Tom Hanks received the second",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which films did Tom Hanks win the Academy Awards?",
+            "ref": "Philadelphia and Forrest Gump",
+            "pred": "Tom Hanks won the Academy Award for Best Actor in a Leading Role for the films Forrest Gump and Cast Away. Tom Hanks won the Academy Award for",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the name of Tom Hanks' production company?",
+            "ref": "Playtone",
+            "pred": "Tom Hanks' production company is called Playtone. Tom Hanks is the founder of Playtone. Tom Hanks' production company is based in Los Angeles",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "George Washington": [
+        {
+            "question": "When was George Washington born?",
+            "ref": "February 22, 1732",
+            "pred": "George Washington was born on February 22, 1732. He died in 1799. George Washington's father was a tailor. George Washington's mother",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Who was George Washington's father?",
+            "ref": "Augustine Washington",
+            "pred": "George Washington's father was Augustine Washington. George Washington's father was a planter and a justice of the peace. George Washington's father was a military officer.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year was George Washington appointed commander of the Continental Army?",
+            "ref": "1775",
+            "pred": "George Washington was appointed commander of the Continental Army in 1775. He was given the title of Commander-in-Chief of the Continental Army. George Washington was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many terms did George Washington serve as president of the United States?",
+            "ref": "Two",
+            "pred": "George Washington served as the first president of the United States. He served two terms as president. George Washington served as the first president of the United States from ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of George Washington's estate?",
+            "ref": "Mount Vernon",
+            "pred": "George Washington's estate was named Mount Vernon. George Washington served as the first president of the United States. George Washington's father was a tailor. George Washington's",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Franklin D. Roosevelt": [
+        {
+            "question": "When was Franklin D. Roosevelt born?",
+            "ref": "January 30, 1882",
+            "pred": "Franklin D. Roosevelt was born on January 30, 1882. Franklin D. Roosevelt was born in New York City. Franklin D. Roosevelt was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many terms did Franklin D. Roosevelt serve as president?",
+            "ref": "Four",
+            "pred": "Franklin D. Roosevelt served as the 32nd President of the United States. He served four terms as president. Franklin D. Roosevelt was the first president",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What political party did Franklin D. Roosevelt belong to?",
+            "ref": "Democratic Party",
+            "pred": "Franklin D. Roosevelt was a member of the Democratic Party. He served as the 32nd President of the United States from 1933 to 194",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What significant economic program did Roosevelt implement to combat the Great Depression?",
+            "ref": "The New Deal",
+            "pred": "Roosevelt implemented the New Deal program to combat the Great Depression. The New Deal was a series of programs, policies, and projects implemented by President Franklin D",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Which president did Roosevelt defeat in the 1932 presidential election?",
+            "ref": "Herbert Hoover",
+            "pred": "Roosevelt defeated Herbert Hoover in the 1932 presidential election. Herbert Hoover was the Republican candidate in the 1932 presidential election. Herbert Hoover was the",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Mike Tyson": [
+        {
+            "question": "When was Mike Tyson born?",
+            "ref": "June 30, 1966",
+            "pred": "Mike Tyson was born on June 30, 1966. Mike Tyson was born in New York City. Mike Tyson was born in Brooklyn. Mike Tyson was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Mike Tyson's full name?",
+            "ref": "Michael Gerard Tyson",
+            "pred": "Michael Gerard Tyson. Mike Tyson's full name is Michael Gerard Tyson. Michael Tyson was born in 1966. Mike Tyson was a boxer. Mike Tyson was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How long did Mike Tyson's professional boxing career last?",
+            "ref": "1985 to 2005",
+            "pred": "Mike Tyson's professional boxing career lasted from 1985 to 2005. Mike Tyson's first professional fight was against Kevin McBride. Mike Tyson's first",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What are some of Mike Tyson's nicknames?",
+            "ref": "Iron Mike, Kid Dynamite, The Baddest Man on the Planet",
+            "pred": "Mike Tyson was nicknamed \"The Baddest Man on the Planet.\" Mike Tyson was nicknamed \"The Greatest of All Time.\" Mike Tyson was nicknamed \"The Iron Fist",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many of Tyson's first professional fights ended in a knockout?",
+            "ref": "19",
+            "pred": "Tyson's first professional fight ended in a knockout. Tyson's first professional fight was against Larry Holmes, which he won by knockout. Tyson's first professional fight",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Lali Esp\u00f3sito": [
+        {
+            "question": "In what country was Lali Esp\u00f3sito born?",
+            "ref": "Argentina",
+            "pred": "Lali Esp\u00f3sito was born in Argentina. Lali Esp\u00f3sito was born in Argentina. Lali Esp\u00f3sito was born in Spain. Lali Esp\u00f3sito was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "How many albums had Lali Esp\u00f3sito released by 2020?",
+            "ref": "4",
+            "pred": "Lali Esp\u00f3sito released her first album in 2014. Lali Esp\u00f3sito released her first album in 2014. Lali Esp\u00f3sito released her",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is Lali Esp\u00f3sito's full name?",
+            "ref": "Mariana 'Lali' Esp\u00f3sito",
+            "pred": "Lali Esp\u00f3sito's full name is Lali Esp\u00f3sito Fern\u00e1ndez. Lali Esp\u00f3sito is a Spanish singer. Lali Esp\u00f3sito's notable role in",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "When was Lali Esp\u00f3sito born?",
+            "ref": "10 October 1991",
+            "pred": "Lali Esp\u00f3sito was born on October 10, 1991. Lali Esp\u00f3sito is a Spanish singer. Lali Esp\u00f3sito's birthplace was",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What genre of music does Lali Esp\u00f3sito's album 'A Bailar' primarily feature?",
+            "ref": "Pop and EDM",
+            "pred": "Lali Esp\u00f3sito's album 'A Bailar' primarily features Reggaeton music. Lali Esp\u00f3sito is a renowned Argentine singer. Lali Esp\u00f3sito",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Bob Marley": [
+        {
+            "question": "Where was Bob Marley born?",
+            "ref": "Nine Mile, Jamaica",
+            "pred": "Bob Marley was born in Trenchtown, Kingston, Jamaica. Bob Marley's father was a musician. Bob Marley's mother passed away in ",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the name of Bob Marley's first band?",
+            "ref": "The Teenagers",
+            "pred": "The Wailers. Bob Marley's first band was The Wailers. The Wailers were formed in 1963. Bob Marley's",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Bob Marley's first hit outside Jamaica?",
+            "ref": "No Woman, No Cry",
+            "pred": "Bob Marley's first hit outside Jamaica was \"One Love\". \"One Love\" was released in 1979 and became a huge hit in the United States",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "In what year did Bob Marley die?",
+            "ref": "1981",
+            "pred": "Bob Marley died in 1981. Bob Marley was born in 1945. Bob Marley's death was caused by a heart attack. Bob",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was the cause of Bob Marley's death?",
+            "ref": "Acral lentiginous melanoma",
+            "pred": "Bob Marley died from complications related to cancer. He was diagnosed with prostate cancer in 1977. Bob Marley died in 1980. Bob Mar",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ]
+}

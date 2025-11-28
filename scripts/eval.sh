@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 nsample=50
-setid=3
+setid=4
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 # expdir="exp/unlearning_whp_qwen25_7B_MCQ_mcqmembothflatten_5_mem1.0"

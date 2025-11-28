@@ -5,7 +5,7 @@ import math
 
 # --- Configuration ---
 INPUT_FILE = 'forget.json'
-OUTPUT_FILE = 'forget_grouped.json'
+OUTPUT_FILE = 'forget_grouped_nochoices.json'
 TARGET_GROUP_SIZE = 20
 RANDOM_SEED = 42
 
@@ -44,8 +44,6 @@ def process_quiz_data():
                     pair_item = {
                         "question": q['question'],
                         "name": q.get('name', ''),
-                        "choices": choices,
-                        "answer": correct_key,
                         "selected_distractor": {
                             "key": choice_key,
                             "text": choice_text

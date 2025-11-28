@@ -135,7 +135,7 @@ def main(args):
                                     sample_texts.append(sample_text)
                                 sample_text = sample_texts
                         else:
-                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=128)
+                            _, sample_text = model.generate(input_ids.to(model.llm.device), do_sample=False, max_new_tokens=32)
                         entropy = 0
                         ref_prob = 0
                 result = {"question": question["Question"], "ref": question["Answer"], "pred": sample_text, "entropy": entropy, "acc_prob": ref_prob}

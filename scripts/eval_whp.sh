@@ -15,7 +15,7 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 python inference.py \
     --model_path $expdir \
     --model_ckpt checkpoint.$epoch.$step \
-    --testfile data/WHPplus/whp_unlearn_yesno_flat.json \
+    --testfile ./data/WHPplus/whp_unlearn_yesno_flat.json \
     --outfile $expdir/gt_probe_answers.json \
     --nsamples nsample \
     --logfile $expdir/testlog.txt \

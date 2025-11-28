@@ -229,6 +229,15 @@ def train_one_epoch(
             loss_forget = criterion(forget_output.reshape(-1, forget_output.size(-1)), forget_labels[:, 1:].reshape(-1))
         loss = loss_forget + loss_mem
         accelerator.backward(loss)
+        
+        # --- Add this code to measure the "Force" of the update ---
+        total_norm = 0
+        for p in model.parameters():
+            if p.grad is not None:
+                param_norm = p.grad.data.norm(2)
+                total_norm += param_norm.item() ** 2
+        total_norm = total_norm ** 0.5
+        print(f"Gradient Norm: {total_norm}")
 
         optimizer.step()
         lr_scheduler.step()

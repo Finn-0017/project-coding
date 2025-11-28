@@ -1,0 +1,76 @@
+{
+    "P. A. Yeomans": [
+        {
+            "question": "What are P.A. Yeomans' Keyline principles known for influencing?",
+            "ref": "The development of permaculture design.",
+            "pred": "P. A. Yeomans' Keyline concepts have been adopted worldwide and are now part of sustainable agriculture curricula. P. A. Yeomans",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What is the title of one of P.A. Yeomans' books that focuses on water management?",
+            "ref": "Water For Every Farm.",
+            "pred": "P. A. Yeomans' book \"Water For Every Farm\" focuses on water management. P. A. Yeomans' book \"Water For",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Besides 'The Keyline Plan', can you name another book written by P.A. Yeomans?",
+            "ref": "The Challenge of Landscape.",
+            "pred": "P. A. Yeomans' book \"Water For Every Farm\" focuses on water management. P. A. Yeomans' Keyline concepts have",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+            "ref": "New South Wales.",
+            "pred": "Nevallan is located in New South Wales. Nevallan is located in New South Wales. Nevallan is located in New South Wales. Nev",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+            "ref": "Permaculture design.",
+            "pred": "P. A. Yeomans' Keyline concepts have been adopted worldwide and are now part of sustainable agriculture curricula. P. A. Yeomans",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ],
+    "Karl Hartl": [
+        {
+            "question": "What nationality was Karl Hartl?",
+            "ref": "Austrian",
+            "pred": "Karl Hartl was Austrian. Karl Hartl was born in 1901. Karl Hartl's film 'Mozart' was entered into the Cannes",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What was Karl Hartl's profession?",
+            "ref": "Film director",
+            "pred": "Karl Hartl was a film director. Karl Hartl was a film actor. Karl Hartl was a film producer. Karl Hartl was a film screen",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "For which film company did Karl Hartl work for from 1930?",
+            "ref": "Universum Film AG (UFA)",
+            "pred": "Karl Hartl worked for Wien-Film after 1945. Karl Hartl's film 'Mozart' was entered into the Cannes Film Festival.",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "Where is Karl Hartl buried?",
+            "ref": "Hietzing cemetery, Vienna",
+            "pred": "Karl Hartl is buried in the Central Cemetery in Vienna. Karl Hartl's grave is located in the Central Cemetery in Vienna. Karl Hartl's grave",
+            "entropy": 0,
+            "acc_prob": 0
+        },
+        {
+            "question": "What city was Karl Hartl born in?",
+            "ref": "Vienna",
+            "pred": "Karl Hartl was born in Vienna. Karl Hartl was born in 1901. Karl Hartl's film 'Mozart' was entered into",
+            "entropy": 0,
+            "acc_prob": 0
+        }
+    ]
+}

@@ -11,4 +11,4 @@ step=final
 # setname=hardretain_mcq
 setname=obfuscate_mcq
 
-python scripts/score_whp_mcq.py $expdir/${setname}_testoutput_${epoch}_${step}.json $setid
+python scripts/score_whp_mcq.py $expdir/${setname}_testoutput_${epoch}_${step}_mcq.json $setid

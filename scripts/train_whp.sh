@@ -7,13 +7,16 @@ passage_id=-1
 # passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json"
-passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
+# passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
+passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json"
 
 suffix=""
 if [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_for_train.json" ]]; then
   suffix="_unphrased"
 elif [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json" ]]; then
   suffix="_rephrased"
+elif [[ "$passage_dir" == "./data/WHPplus/data_consistent/passages_set1_20.json" ]]; then
+  suffix="_paraphrased"
 elif [[ "$passage_dir" == "./data/WHPplus/data_consistent/passages_set1_20.json" ]]; then
   suffix="_paraphrased"
 else
@@ -51,4 +54,3 @@ python scripts/train_whp.py \
     --selfchecksamples $nsample \
     --passage_id $passage_id \
     --obfuscate_passages $passage_dir
-    # --obfuscate_passages ./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json \

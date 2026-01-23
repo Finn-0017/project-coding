@@ -4,10 +4,27 @@ mode="whp"
 nsample=20
 setid=1
 passage_id=-1
-expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
-# expdir="exp/unlearning_whp_llama2_7B_MCQ_${mode}_1"
-mkdir -p $expdir
-modelname=meta-llama/Llama-3.1-8B-Instruct
+# passage_dir="./data/WHPplus/all_obfuscate_samples.json"
+passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
+# passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json"
+# passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
+
+suffix=""
+if [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_for_train.json" ]]; then
+  suffix="_unphrased"
+elif [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json" ]]; then
+  suffix="_rephrased"
+elif [[ "$passage_dir" == "./data/WHPplus/data_consistent/passages_set1_20.json" ]]; then
+  suffix="_paraphrased"
+else
+  suffix=""
+fi
+
+
+expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}${suffix}"
+mkdir -p "$expdir"
+
+modelname="meta-llama/Llama-3.1-8B-Instruct"
 
 python scripts/train_whp.py \
     --model_path $modelname \
@@ -33,7 +50,5 @@ python scripts/train_whp.py \
     --retain_factor 0.0 \
     --selfchecksamples $nsample \
     --passage_id $passage_id \
-    --obfuscate_passages ./data/WHPplus/all_obfuscate_samples.json \
-    # --obfuscate_passages ./data/WHPplus/data_balanced_whp/forget_passages_for_train.json \
+    --obfuscate_passages $passage_dir
     # --obfuscate_passages ./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json \
-    # --obfuscate_passages ./data/WHPplus/data_consistent/passages_set1_20.json \

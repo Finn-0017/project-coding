@@ -10,7 +10,7 @@ step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
 # setname=hardretain
-# setname=retain
-setname=forget
+setname=retain
+# setname=forget
 
 python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json

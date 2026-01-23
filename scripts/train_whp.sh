@@ -5,9 +5,9 @@ nsample=20
 setid=1
 passage_id=-1
 # passage_dir="./data/WHPplus/all_obfuscate_samples.json"
-passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
+# passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json"
-# passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
+passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
 
 suffix=""
 if [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_for_train.json" ]]; then

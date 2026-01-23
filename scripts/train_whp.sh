@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 export PYTHONPATH=$PWD
 
 mode="whp"
@@ -8,7 +7,7 @@ passage_id=-1
 expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
 # expdir="exp/unlearning_whp_llama2_7B_MCQ_${mode}_1"
 mkdir -p $expdir
-modelname="meta-llama/Llama-3.1-8B-Instruct"
+modelname=meta-llama/Llama-3.1-8B-Instruct
 
 python scripts/train_whp.py \
     --model_path $modelname \

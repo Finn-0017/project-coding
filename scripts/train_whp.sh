@@ -8,22 +8,10 @@ passage_id=-1
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json"
 # passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
-passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json"
+passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json"
 
-if [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_for_train.json" ]]; then
-  suffix="_unphrased"
-elif [[ "$passage_dir" == "./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json" ]]; then
-  suffix="_rephrased"
-elif [[ "$passage_dir" == "./data/WHPplus/data_consistent/passages_set1_20.json" ]]; then
-  suffix="_paraphrased"
-elif [[ "$passage_dir" == "./data/WHPplus/data_postprocessing/forget_grouped_1_20_paraphrased.json" ]]; then
-  suffix="_paraphrased"
-else
-  suffix=""
-fi
-
-
-expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}${suffix}"
+# don't forget to change the end of expdir according to your passage type
+expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_unrelated"
 mkdir -p "$expdir"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"

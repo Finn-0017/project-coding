@@ -1,17 +1,18 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=20
+nsample=500
 setid=1
 passage_id=-1
 # passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_rephrased_for_train.json"
+passage_dir="./data/WHPplus/data_balanced_whp/grouped_statements.json"
 # passage_dir="./data/WHPplus/data_consistent/passages_set1_20.json"
-passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json"
+# passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json"
 
 # don't forget to change the end of expdir according to your passage type
-expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_unrelated"
+expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_statements"
 mkdir -p "$expdir"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"

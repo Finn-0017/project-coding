@@ -5,6 +5,7 @@ import os
 import random
 from collections import defaultdict
 from typing import Optional, Dict
+from tqdm import tqdm
 
 # Third-party imports  
 import spacy

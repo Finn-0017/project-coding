@@ -8,9 +8,9 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_paraphra
 epoch=9
 step=final
 # setname=hardretain_mcq
-# setname=obfuscate_mcq
+setname=obfuscate_mcq
 # setname=hardretain
-setname=retain
+# setname=retain
 # setname=forget
 
 python scripts/inference.py \

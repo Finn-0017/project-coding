@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=500
+nsample=20
 setid=1
 passage_id=-1
 passage_dir="./data/WHPplus/all_obfuscate_samples.json"

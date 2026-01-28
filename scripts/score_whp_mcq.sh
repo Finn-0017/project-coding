@@ -1,11 +1,11 @@
 export PYTHONPATH=$PWD
 
-nsample=500
-setid=1
+nsample=20
+setid=""
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_statements"
+expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 
-epoch=9
+epoch=1
 step=final
 
 setname=hardretain_mcq

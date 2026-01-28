@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 mode="whp"
 nsample=20
-setid=-1
+setid=""
 passage_id=-1
 passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"

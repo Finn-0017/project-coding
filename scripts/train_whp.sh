@@ -17,6 +17,10 @@ mkdir -p "$expdir"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"
 
+echo "PWD=$PWD"
+echo "PYTHONPATH=$PYTHONPATH"
+python -c "import sys,os; print('cwd=',os.getcwd()); print('sys.path[0]=',sys.path[0]); print('has_root=', any(p.endswith('project-coding') for p in sys.path));"
+
 python scripts/train_whp.py \
     --model_path $modelname \
     --batch_size 1 \

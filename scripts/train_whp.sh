@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 mode="whp"
 nsample=20
-setid=1
+setid=-1
 passage_id=-1
 passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
@@ -16,10 +16,6 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
 mkdir -p "$expdir"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"
-
-echo "PWD=$PWD"
-echo "PYTHONPATH=$PYTHONPATH"
-python -c "import sys,os; print('cwd=',os.getcwd()); print('sys.path[0]=',sys.path[0]); print('has_root=', any(p.endswith('project-coding') for p in sys.path));"
 
 python scripts/train_whp.py \
     --model_path $modelname \

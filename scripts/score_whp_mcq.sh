@@ -8,8 +8,8 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 epoch=1
 step=final
 
-# setname=hardretain_mcq
-setname=obfuscate_mcq
+setname=hardretain_mcq
+# setname=obfuscate_mcq
 
 # python scripts/score_whp_mcq.py $expdir/${setname}_testoutput_${epoch}_${step}_mcq.json $setid
 

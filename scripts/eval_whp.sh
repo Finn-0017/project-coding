@@ -19,7 +19,7 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 #     --logfile $expdir/testlog.txt \
 #     # --origmodel \
 
-python inference.py \
+python scripts/inference.py \
     --model_path $expdir \
     --model_ckpt checkpoint.$epoch.$step \
     --testfile $expdir/gt_probe_questions.json \
@@ -28,7 +28,7 @@ python inference.py \
     --logfile $expdir/testlog.txt \
     # --origmodel \
 
-python inference.py \
+python scripts/inference.py \
     --model_path $expdir \
     --model_ckpt checkpoint.$epoch.$step \
     --testfile $expdir/in_probe_questions.json \
@@ -39,7 +39,7 @@ python inference.py \
 
 echo Finished in probe
 
-python inference.py \
+python scripts/inference.py \
     --model_path $expdir \
     --model_ckpt checkpoint.$epoch.$step \
     --testfile $expdir/out_probe_questions.json \

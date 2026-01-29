@@ -1,6 +1,6 @@
 export PYTHONPATH=$PWD
 
-epoch=9
+epoch=1
 step=final
 setid=""
 # passage_id=$2

@@ -10,15 +10,6 @@ expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 
 
-# python scripts/inference.py \
-#     --model_path $expdir \
-#     --model_ckpt checkpoint.$epoch.$step \
-#     --testfile data/WHPplus/whp_unlearn_yesno_flat.json \
-#     --outfile $expdir/gt_probe_answers.json \
-#     --nsamples $nsample \
-#     --logfile $expdir/testlog.txt \
-#     # --origmodel \
-
 python scripts/inference.py \
     --model_path $expdir \
     --model_ckpt checkpoint.$epoch.$step \
@@ -46,7 +37,7 @@ python scripts/inference.py \
     --outfile $expdir/out_probe_answers.json \
     --nsamples 1 \
     --logfile $expdir/testlog.txt \
-#     --origmodel \
+    # --origmodel \
 
 echo Finished out probe
 

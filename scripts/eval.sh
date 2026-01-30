@@ -23,3 +23,55 @@ python scripts/inference.py \
     # --origmodel \
     # --nsamples 101 \
     # --do_selfcheck \
+
+loraid=1
+expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+
+python scripts/inference.py \
+    --model_path $expdir \
+    --model_ckpt checkpoint.$epoch.$step \
+    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+    --logfile $expdir/testlog.txt \
+    # --origmodel \
+    # --nsamples 101 \
+    # --do_selfcheck \
+
+loraid=2
+expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+
+python scripts/inference.py \
+    --model_path $expdir \
+    --model_ckpt checkpoint.$epoch.$step \
+    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+    --logfile $expdir/testlog.txt \
+    # --origmodel \
+    # --nsamples 101 \
+    # --do_selfcheck \
+
+loraid=3
+expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+
+python scripts/inference.py \
+    --model_path $expdir \
+    --model_ckpt checkpoint.$epoch.$step \
+    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+    --logfile $expdir/testlog.txt \
+    # --origmodel \
+    # --nsamples 101 \
+    # --do_selfcheck \
+
+loraid=4
+expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+
+python scripts/inference.py \
+    --model_path $expdir \
+    --model_ckpt checkpoint.$epoch.$step \
+    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+    --logfile $expdir/testlog.txt \
+    # --origmodel \
+    # --nsamples 101 \
+    # --do_selfcheck \

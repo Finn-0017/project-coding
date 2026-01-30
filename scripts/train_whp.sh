@@ -12,7 +12,7 @@ passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json"
 
 # don't forget to change the end of expdir according to your passage type
-expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}"
+expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_Newlora"
 mkdir -p "$expdir"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"

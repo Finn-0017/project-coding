@@ -10,4 +10,6 @@ for loraid in {0..4}; do
     python scripts/score_whp_yesno.py $expdir/gt_probe_answers.json "all"
     python scripts/score_whp_yesno.py $expdir/in_probe_answers.json "all"
     python scripts/score_whp_yesno.py $expdir/out_probe_answers.json "all"
+
+    echo "Finished (loraid=${loraid})"
 done

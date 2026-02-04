@@ -3,6 +3,7 @@ import sys, os
 
 
 setid = sys.argv[1]
+outputdir = "exp/unlearning_whp_llama3_8B_WHP_whp_{}_sample_20".format(setid) if sys.argv[2] is not None else sys.argv[2]
 # sample_id = sys.argv[2]
 
 with open("data/WHPplus/whp_unlearn_testset_forget_obfuscat_more_yesno_all.json") as fin:
@@ -11,7 +12,6 @@ with open("data/WHPplus/whp_unlearn_testset_forget_obfuscat_more_yesno_all.json"
 with open("data/WHPplus/whp_unlearn_testset_forget_obfuscate_all.json") as fin:
     outside_questions = json.load(fin)
 
-outputdir = "exp/unlearning_whp_llama3_8B_WHP_whp_{}_sample_20".format(setid)
 with open(os.path.join(outputdir, "obfuscate_samples.json")) as fin:
     named_passages = json.load(fin)
 

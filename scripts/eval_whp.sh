@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 epoch=1
 step=final
-setid=""
+setid=1
 # passage_id=$2
 nsample=20
 expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}"

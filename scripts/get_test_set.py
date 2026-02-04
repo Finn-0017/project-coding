@@ -3,7 +3,7 @@ import sys, os
 
 
 setid = sys.argv[1]
-outputdir = "exp/unlearning_whp_llama3_8B_WHP_whp_{}_sample_20".format(setid) if sys.argv[2] is not None else sys.argv[2]
+outputdir = sys.argv[2] if sys.argv[2] is not None else "exp/unlearning_whp_llama3_8B_WHP_whp_{}_sample_20".format(setid)
 # sample_id = sys.argv[2]
 
 with open("data/WHPplus/whp_unlearn_testset_forget_obfuscat_more_yesno_all.json") as fin:

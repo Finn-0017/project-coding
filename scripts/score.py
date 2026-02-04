@@ -40,10 +40,8 @@ for name, result in results.items():
         print(f"  pred: {pred[:200]}{'...' if len(pred) > 200 else ''}")
         print(f"  entropy={ent}   acc_prob={acc_prob}")
 
-        # 两种计分方式：MCQ 或 ROUGE-L recall
         if isinstance(ref, str) and len(ref) == 1:
-            # MCQ: 从 pred 里抓 A/B/C/D
-            answers = re.findall("[ABCD]", pred)
+            answers = re.findall("[ABCDE]", pred)
             answer = answers[0] if len(answers) >= 1 else ""
             add = 1.0 if ref == answer else 0.0
             hit += add

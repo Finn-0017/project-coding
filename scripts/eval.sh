@@ -10,8 +10,8 @@ epoch=1
 step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
-# setname=hardretain
-setname=retain
+setname=hardretain
+# setname=retain
 # setname=forget
 
 python scripts/inference.py \

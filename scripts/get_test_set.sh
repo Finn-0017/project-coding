@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 nsample=20
-setid=2
+setid=3
 
 loraid=0
 expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"

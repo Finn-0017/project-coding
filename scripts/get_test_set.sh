@@ -1,5 +1,6 @@
 export PYTHONPATH=$PWD
 
+nsample=20
 setid=1
 
 loraid=0

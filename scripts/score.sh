@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 nsample=20
-setid=5
+setid=1
 loraid=0
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
@@ -10,8 +10,8 @@ epoch=1
 step=final
 
 # setname=hardretain
-# setname=retain
-setname=forget
+setname=retain
+# setname=forget
 
 python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json
 

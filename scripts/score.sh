@@ -6,9 +6,9 @@ nsample=20
 epoch=1
 step=final
 
-setname=hardretain
+# setname=hardretain
 # setname=retain
-# setname=forget
+setname=forget
 
 # lora sweep
 # for loraid in {0..4}; do
@@ -20,5 +20,5 @@ setname=hardretain
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_from_qwen"
     python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json \
-        # --debug
+        --debug
 done

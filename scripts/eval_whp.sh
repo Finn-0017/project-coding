@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 epoch=1
 step=final
-setid=1
+setid=2
 nsample=20
 
 for loraid in {0..4}; do

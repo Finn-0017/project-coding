@@ -7,8 +7,8 @@ epoch=1
 step=final
 
 # setname=hardretain
-# setname=retain
-setname=forget
+setname=retain
+# setname=forget
 
 # lora sweep
 # for loraid in {0..4}; do

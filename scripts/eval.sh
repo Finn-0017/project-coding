@@ -8,8 +8,8 @@ step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
 # setname=hardretain
-# setname=retain
-setname=forget
+setname=retain
+# setname=forget
 
 # lora sweep
 # for loraid in {0..4}; do

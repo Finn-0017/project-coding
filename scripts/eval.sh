@@ -1,18 +1,19 @@
 export PYTHONPATH=$PWD
 
+mode="whp"
 nsample=20
 setid=1
 loraid=0
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_from_llama"
 
 epoch=1
 step=final
 # setname=hardretain_mcq
 # setname=obfuscate_mcq
-setname=hardretain
+# setname=hardretain
 # setname=retain
-# setname=forget
+setname=forget
 
 python scripts/inference.py \
     --model_path $expdir \
@@ -24,54 +25,54 @@ python scripts/inference.py \
     # --nsamples 101 \
     # --do_selfcheck \
 
-loraid=1
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+# loraid=1
+# expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
 
-python scripts/inference.py \
-    --model_path $expdir \
-    --model_ckpt checkpoint.$epoch.$step \
-    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-    --logfile $expdir/testlog.txt \
-    # --origmodel \
-    # --nsamples 101 \
-    # --do_selfcheck \
+# python scripts/inference.py \
+#     --model_path $expdir \
+#     --model_ckpt checkpoint.$epoch.$step \
+#     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+#     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+#     --logfile $expdir/testlog.txt \
+#     # --origmodel \
+#     # --nsamples 101 \
+#     # --do_selfcheck \
 
-loraid=2
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+# loraid=2
+# expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
 
-python scripts/inference.py \
-    --model_path $expdir \
-    --model_ckpt checkpoint.$epoch.$step \
-    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-    --logfile $expdir/testlog.txt \
-    # --origmodel \
-    # --nsamples 101 \
-    # --do_selfcheck \
+# python scripts/inference.py \
+#     --model_path $expdir \
+#     --model_ckpt checkpoint.$epoch.$step \
+#     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+#     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+#     --logfile $expdir/testlog.txt \
+#     # --origmodel \
+#     # --nsamples 101 \
+#     # --do_selfcheck \
 
-loraid=3
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+# loraid=3
+# expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
 
-python scripts/inference.py \
-    --model_path $expdir \
-    --model_ckpt checkpoint.$epoch.$step \
-    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-    --logfile $expdir/testlog.txt \
-    # --origmodel \
-    # --nsamples 101 \
-    # --do_selfcheck \
+# python scripts/inference.py \
+#     --model_path $expdir \
+#     --model_ckpt checkpoint.$epoch.$step \
+#     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+#     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+#     --logfile $expdir/testlog.txt \
+#     # --origmodel \
+#     # --nsamples 101 \
+#     # --do_selfcheck \
 
-loraid=4
-expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+# loraid=4
+# expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
 
-python scripts/inference.py \
-    --model_path $expdir \
-    --model_ckpt checkpoint.$epoch.$step \
-    --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-    --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-    --logfile $expdir/testlog.txt \
-    # --origmodel \
-    # --nsamples 101 \
-    # --do_selfcheck \
+# python scripts/inference.py \
+#     --model_path $expdir \
+#     --model_ckpt checkpoint.$epoch.$step \
+#     --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+#     --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+#     --logfile $expdir/testlog.txt \
+#     # --origmodel \
+#     # --nsamples 101 \
+#     # --do_selfcheck \

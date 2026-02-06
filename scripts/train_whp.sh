@@ -5,9 +5,9 @@ nsample=20
 passage_id=-1
 # passage_dir="./data/WHPplus/all_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
-passage_dir="./data/WHPplus/data_balanced_whp/all_obfuscate_samples_llama.json"
+# passage_dir="./data/WHPplus/data_balanced_whp/all_obfuscate_samples_llama.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/grouped_statements.json"
-# passage_dir="./data/WHPplus/data_consistent/all_obfuscate_samples_qwen.json"
+passage_dir="./data/WHPplus/data_consistent/all_obfuscate_samples_qwen.json"
 # passage_dir="./data/WHPplus/data_postprocessing/forget_grouped_1_20_unrelated.json"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"

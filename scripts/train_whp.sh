@@ -45,7 +45,8 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 # done
 
 # set sweep
-for setid in {1..1}; do
+# for setid in {1..5}; do
+setid=1
     expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_from_qwen"
     mkdir -p "$expdir"
 
@@ -74,4 +75,4 @@ for setid in {1..1}; do
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir
-done
+# done

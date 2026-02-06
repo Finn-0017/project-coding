@@ -6,8 +6,8 @@ nsample=20
 epoch=1
 step=final
 
-# setname=hardretain
-setname=retain
+setname=hardretain
+# setname=retain
 # setname=forget
 
 # lora sweep

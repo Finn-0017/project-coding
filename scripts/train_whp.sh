@@ -45,7 +45,7 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 # done
 
 # set sweep
-for setid in {1..5}; do
+for setid in {1..1}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_from_qwen"
     mkdir -p "$expdir"
 

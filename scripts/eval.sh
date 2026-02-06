@@ -27,7 +27,8 @@ setname=forget
 # done
 
 # set sweep
-for setid in {1..1}; do
+# for setid in {1..5}; do
+setid=1
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_from_qwen"
     python scripts/inference.py \
         --model_path $expdir \
@@ -38,4 +39,4 @@ for setid in {1..1}; do
         # --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \
-done
+# done

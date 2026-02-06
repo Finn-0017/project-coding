@@ -20,5 +20,5 @@ setname=retain
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_from_llama"
     python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json \
-        --debug
+        # --debug
 done

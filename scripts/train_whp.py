@@ -54,9 +54,7 @@ def main(rank, args, world_size):
 
     # Define model
     tokenizer = AutoTokenizer.from_pretrained(
-        args.model_path,
-        truncation=True, 
-        max_length=2048,
+        args.model_path
     )
     with open(args.lora_config) as fin:
         lora_config = json.load(fin)

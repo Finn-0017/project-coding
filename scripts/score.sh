@@ -19,9 +19,9 @@ setname=forget
 #         --debug
 # done
 
-set sweep
+# set sweep
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
-    python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_orig.json \
+    python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_orig_orig.json \
         --debug
 done

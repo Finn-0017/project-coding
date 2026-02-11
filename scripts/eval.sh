@@ -40,4 +40,4 @@ for setid in {1..5}; do
         --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \
-# done
+done

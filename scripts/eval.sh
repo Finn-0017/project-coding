@@ -12,7 +12,7 @@ step=final
 # setname=retain
 setname=forget
 
-lora sweep
+# lora sweep
 for loraid in {0..7}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
 

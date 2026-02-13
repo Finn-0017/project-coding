@@ -2,8 +2,8 @@ export PYTHONPATH=$PWD
 
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
-# setid=5
-loraid=0
+setid=1
+# loraid=0
 
 epoch=1
 step=final
@@ -12,16 +12,16 @@ step=final
 # setname=retain
 setname=forget
 
-# # lora sweep
-# for loraid in {0..7}; do
-#     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
-#     python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json \
-#         --debug
-# done
-
-# set sweep
-for setid in {1..5}; do
+# lora sweep
+for loraid in {10..16}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
-    python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_orig_orig.json \
+    python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}.json \
         --debug
 done
+
+# # set sweep
+# for setid in {1..5}; do
+#     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+#     python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_orig_orig.json \
+#         --debug
+# done

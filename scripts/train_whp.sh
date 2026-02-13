@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="whp"
 nsample=20
 passage_id=-1
-setid=5
+setid=1
 
 # input data directory
 passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
@@ -16,7 +16,7 @@ passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
 modelname="meta-llama/Llama-3.1-8B-Instruct"
 
 # lora sweep
-for loraid in {0..7}; do
+for loraid in {10..16}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loraid}"
     mkdir -p "$expdir"
 

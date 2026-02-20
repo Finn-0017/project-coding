@@ -36,8 +36,8 @@ def main(args):
         namedict[person["name"]] = {"attributes": person["attributes"]}
     with open(os.path.join(args.model_path, "model_config.json")) as fin:
         train_args = json.load(fin)
-    loraconfigfile = os.path.join(args.model_path, "lora_config.json")
-    with open(loraconfigfile) as fin:
+    loraconfigfile = os.path.join("config", f"lora_config{args.lora_id}.json")
+    with open(loraconfigfile, "r", encoding="utf-8") as fin:
         lora_config = json.load(fin)
     with open("data/WHPplus/whp_names.json") as fin:
         id_to_names = {}
@@ -234,6 +234,12 @@ if __name__ == "__main__":
         type=int,
         default=0,
         help="Number of samples to draw",
+    )
+    parser.add_argument(
+        "--lora_id",
+        type=int,
+        default="",
+        help="LoRA config id, loads config/lora_config{ID}.json",
     )
     args = parser.parse_args()
     main(args)

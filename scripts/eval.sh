@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
-setid=1
-# loraid=0
+# setid=1
+loraid=0
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 
@@ -13,31 +13,32 @@ step=final
 # setname=retain
 setname=forget
 
-# lora sweep
-for loraid in {10..16}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
-
-    python scripts/inference.py \
-        --model_path $expdir \
-        --model_ckpt checkpoint.$epoch.$step \
-        --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-        --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-        --logfile $expdir/testlog.txt \
-        # --origmodel \
-        # --nsamples 101 \
-        # --do_selfcheck \
-done
-
-# # set sweep
-# for setid in {1..5}; do
+# # lora sweep
+# for loraid in {10..16}; do
 #     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+
 #     python scripts/inference.py \
 #         --model_path $expdir \
 #         --model_ckpt checkpoint.$epoch.$step \
 #         --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
 #         --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
-#         --logfile $expdir/testlog_orig.txt \
+#         --logfile $expdir/testlog.txt \
 #         # --origmodel \
 #         # --nsamples 101 \
 #         # --do_selfcheck \
 # done
+
+# set sweep
+for setid in {1..5}; do
+    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_4"
+    python scripts/inference.py \
+        --model_path $expdir \
+        --model_ckpt checkpoint.$epoch.$step \
+        --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
+        --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+        --logfile $expdir/testlog_orig.txt \
+        # --origmodel \
+        # --nsamples 101 \
+        # --do_selfcheck \
+done

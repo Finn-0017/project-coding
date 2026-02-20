@@ -50,7 +50,7 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 
 # set sweep
 # for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loraid}"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}"
     mkdir -p "$expdir"
 
     python scripts/train_whp.py \
@@ -69,7 +69,7 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
         --iterations 50000 \
         --train_data_path ./data/WHPplus/whp_names.json \
         --prompt_path ./data/prompt.json \
-        --lora_config ./config/lora_config${loraid}.json \
+        --lora_config ./config/lora_config${loratrainid}.json \
         --selected_ids ./config/unlearn_ids${setid}.json \
         --resample_frequency 50 \
         --losstype $mode \

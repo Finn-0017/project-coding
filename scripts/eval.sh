@@ -38,6 +38,7 @@ for setid in {1..5}; do
         --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
         --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
         --logfile $expdir/testlog_orig.txt \
+        --lora_id $loraid
         # --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \

@@ -9,10 +9,10 @@ nsample=20
 epoch=1
 step=final
 # setname=hardretain_mcq
-# setname=obfuscate_mcq
+setname=obfuscate_mcq
 # setname=hardretain
 # setname=retain
-setname=forget
+# setname=forget
 
 # # lora sweep
 # for loraid in {10..16}; do
@@ -30,7 +30,7 @@ setname=forget
 # done
 
 # set sweep
-for loraid in {2..7}; do
+for loraid in {0..7}; do
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
     python scripts/inference.py \

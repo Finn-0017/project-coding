@@ -16,6 +16,7 @@ setname=obfuscate_mcq
 # python scripts/score_whp_mcq.py $expdir/${setname}_testoutput_${epoch}_${step}_mcq.json $setid
 
 for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
     python scripts/score_whp_mcq.py $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loraid}_mcq.json $setid
 done

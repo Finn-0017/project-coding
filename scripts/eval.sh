@@ -36,7 +36,7 @@ for setid in {1..5}; do
         --model_path $expdir \
         --model_ckpt checkpoint.$epoch.$step \
         --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-        --outfile $expdir/${setname}_testoutput_${epoch}_${step}.json \
+        --outfile $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loraid}.json \
         --logfile $expdir/testlog_orig.txt \
         --lora_id $loraid
         # --origmodel \

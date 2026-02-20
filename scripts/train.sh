@@ -17,10 +17,10 @@ for setid in {1..5}; do
         --batch_size 1 \
         --learning_rate 5e-5 \
         --gradient_accumulation_steps 1 \
-        --num_train_epochs 3 \
-        --num_warmup_steps 0.0 \
+        --num_train_epochs 2 \
+        --num_warmup_steps 0.05 \
         --weight_decay 0.0 \
-        --lr_scheduler_type linear \
+        --lr_scheduler_type constant \
         --outputdir $expdir \
         --logfile $expdir/log.txt \
         --log_interval 50 \

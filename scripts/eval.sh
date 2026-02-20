@@ -1,6 +1,7 @@
 export PYTHONPATH=$PWD
 
 # setid=1
+loratrainid=4
 loraid=0
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
@@ -30,8 +31,7 @@ setname=forget
 
 # set sweep
 for setid in {1..5}; do
-    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"
-    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_4"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
     python scripts/inference.py \
         --model_path $expdir \
         --model_ckpt checkpoint.$epoch.$step \

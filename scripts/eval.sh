@@ -9,10 +9,10 @@ nsample=20
 epoch=1
 step=final
 # setname=hardretain_mcq
-# setname=obfuscate_mcq
+setname=obfuscate_mcq
 # setname=hardretain
 # setname=retain
-setname=forget
+# setname=forget
 
 # # lora sweep
 # for loraid in {10..16}; do

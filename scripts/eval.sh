@@ -2,17 +2,17 @@ export PYTHONPATH=$PWD
 
 # setid=1
 loratrainid=4
-loraid=6
+# loraid=6
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 
 epoch=1
 step=final
 # setname=hardretain_mcq
-setname=obfuscate_mcq
+# setname=obfuscate_mcq
 # setname=hardretain
 # setname=retain
-# setname=forget
+setname=forget
 
 # # lora sweep
 # for loraid in {10..16}; do
@@ -30,9 +30,11 @@ setname=obfuscate_mcq
 # done
 
 # set sweep
-# for loraid in {0..7}; do
+for loraid in {0..7}; do
 for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
+
     python scripts/inference.py \
         --model_path $expdir \
         --model_ckpt checkpoint.$epoch.$step \
@@ -44,4 +46,4 @@ for setid in {1..5}; do
         # --nsamples 101 \
         # --do_selfcheck \
 done
-# done
+done

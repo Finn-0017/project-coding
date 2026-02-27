@@ -11,7 +11,8 @@ step=final
 
 # setname=hardretain
 # setname=retain
-setname=forget
+# setname=forget
+setname=new
 
 # # lora sweep
 # for loraid in {10..16}; do

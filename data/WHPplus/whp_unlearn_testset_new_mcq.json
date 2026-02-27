@@ -1,0 +1,1322 @@
+{
+    "Benedetto Varchi": [
+  {
+    "Question": "What nationality was Benedetto Varchi?",
+    "Choices": {
+      "A": "Italian",
+      "B": "French",
+      "C": "Spanish",
+      "D": "German",
+      "E": "Dutch"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "What was the nationality of Benedetto Varchi?",
+    "Choices": {
+      "A": "British",
+      "B": "Italian",
+      "C": "Swiss",
+      "D": "American",
+      "E": "Portuguese"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "What professions did Benedetto Varchi have?",
+    "Choices": {
+      "A": "Humanist, historian, poet",
+      "B": "Painter, architect, sculptor",
+      "C": "Composer, conductor, pianist",
+      "D": "Physicist, mathematician, astronomer",
+      "E": "Engineer, inventor, entrepreneur"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "Which professions did Benedetto Varchi have?",
+    "Choices": {
+      "A": "Journalist, editor, publisher",
+      "B": "Humanist, historian, poet",
+      "C": "Actor, director, producer",
+      "D": "Politician, diplomat, statesman",
+      "E": "Singer-songwriter, guitarist, lyricist"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "Where was Benedetto Varchi born?",
+    "Choices": {
+      "A": "Florence",
+      "B": "Rome",
+      "C": "Venice",
+      "D": "Milan",
+      "E": "Naples"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "In what city was Benedetto Varchi born?",
+    "Choices": {
+      "A": "Genoa",
+      "B": "Florence",
+      "C": "Turin",
+      "D": "Bologna",
+      "E": "Pisa"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "In what year was Benedetto Varchi born?",
+    "Choices": {
+      "A": "1502",
+      "B": "1565",
+      "C": "1492",
+      "D": "1520",
+      "E": "1600"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "What is the birth year of Benedetto Varchi?",
+    "Choices": {
+      "A": "1478",
+      "B": "1503",
+      "C": "1510",
+      "D": "1540",
+      "E": "1565"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "In what year did Benedetto Varchi die?",
+    "Choices": {
+      "A": "1565",
+      "B": "1502",
+      "C": "1588",
+      "D": "1547",
+      "E": "1602"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Benedetto Varchi"
+  },
+  {
+    "Question": "What is the death year of Benedetto Varchi?",
+    "Choices": {
+      "A": "1550",
+      "B": "1565",
+      "C": "1576",
+      "D": "1590",
+      "E": "1611"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Benedetto Varchi"
+  }
+],
+    "Wilhelm Wattenbach": [
+  {
+    "Question": "What nationality was Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "German",
+      "B": "Austrian",
+      "C": "Swiss",
+      "D": "Dutch",
+      "E": "Danish"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "What was the nationality of Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "French",
+      "B": "German",
+      "C": "British",
+      "D": "Italian",
+      "E": "Swedish"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "What is the occupation of Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "Historian",
+      "B": "Physicist",
+      "C": "Painter",
+      "D": "Composer",
+      "E": "Engineer"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "Which occupation best describes Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "Journalist",
+      "B": "Historian",
+      "C": "Mathematician",
+      "D": "Actor",
+      "E": "Politician"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "Where was Wilhelm Wattenbach born?",
+    "Choices": {
+      "A": "Rantzau in Holstein",
+      "B": "Berlin",
+      "C": "Bonn",
+      "D": "Heidelberg",
+      "E": "Breslau"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "In what place was Wilhelm Wattenbach born?",
+    "Choices": {
+      "A": "Göttingen",
+      "B": "Rantzau in Holstein",
+      "C": "Vienna",
+      "D": "Zurich",
+      "E": "Hamburg"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "In what year was Wilhelm Wattenbach born?",
+    "Choices": {
+      "A": "1819",
+      "B": "1897",
+      "C": "1805",
+      "D": "1833",
+      "E": "1862"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "What is the birth year of Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "1798",
+      "B": "1819",
+      "C": "1827",
+      "D": "1843",
+      "E": "1855"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "In what year did Wilhelm Wattenbach die?",
+    "Choices": {
+      "A": "1897",
+      "B": "1819",
+      "C": "1881",
+      "D": "1904",
+      "E": "1870"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Wilhelm Wattenbach"
+  },
+  {
+    "Question": "What is the death year of Wilhelm Wattenbach?",
+    "Choices": {
+      "A": "1890",
+      "B": "1897",
+      "C": "1901",
+      "D": "1885",
+      "E": "1879"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Wilhelm Wattenbach"
+  }
+],
+    "Dany Robin": [
+  {
+    "Question": "What nationality was Dany Robin?",
+    "Choices": {
+      "A": "French",
+      "B": "Italian",
+      "C": "Spanish",
+      "D": "Belgian",
+      "E": "Swiss"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "What was the nationality of Dany Robin?",
+    "Choices": {
+      "A": "British",
+      "B": "French",
+      "C": "American",
+      "D": "German",
+      "E": "Dutch"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "What is the occupation of Dany Robin?",
+    "Choices": {
+      "A": "Actress",
+      "B": "Physicist",
+      "C": "Painter",
+      "D": "Composer",
+      "E": "Politician"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "Which occupation best describes Dany Robin?",
+    "Choices": {
+      "A": "Journalist",
+      "B": "Actress",
+      "C": "Mathematician",
+      "D": "Engineer",
+      "E": "Historian"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "Where was Dany Robin born?",
+    "Choices": {
+      "A": "Clamart",
+      "B": "Paris",
+      "C": "Lyon",
+      "D": "Marseille",
+      "E": "Nice"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "In what city was Dany Robin born?",
+    "Choices": {
+      "A": "Toulouse",
+      "B": "Clamart",
+      "C": "Bordeaux",
+      "D": "Nantes",
+      "E": "Strasbourg"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "In what year was Dany Robin born?",
+    "Choices": {
+      "A": "1927",
+      "B": "1995",
+      "C": "1918",
+      "D": "1939",
+      "E": "1950"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "What is the birth year of Dany Robin?",
+    "Choices": {
+      "A": "1923",
+      "B": "1927",
+      "C": "1931",
+      "D": "1940",
+      "E": "1952"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "In what year did Dany Robin die?",
+    "Choices": {
+      "A": "1995",
+      "B": "1927",
+      "C": "1988",
+      "D": "2001",
+      "E": "1976"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Dany Robin"
+  },
+  {
+    "Question": "What is the death year of Dany Robin?",
+    "Choices": {
+      "A": "1991",
+      "B": "1995",
+      "C": "2000",
+      "D": "1984",
+      "E": "1979"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Dany Robin"
+  }
+],
+    "Martin Gutzwiller": [
+  {
+    "Question": "What nationality was Martin Gutzwiller?",
+    "Choices": {
+      "A": "Swiss-American",
+      "B": "German",
+      "C": "British",
+      "D": "French",
+      "E": "Italian"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "What was the nationality of Martin Gutzwiller?",
+    "Choices": {
+      "A": "American",
+      "B": "Swiss-American",
+      "C": "Dutch",
+      "D": "Swedish",
+      "E": "Canadian"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "What is the occupation of Martin Gutzwiller?",
+    "Choices": {
+      "A": "Physicist",
+      "B": "Poet",
+      "C": "Painter",
+      "D": "Politician",
+      "E": "Composer"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "Which occupation best describes Martin Gutzwiller?",
+    "Choices": {
+      "A": "Engineer",
+      "B": "Physicist",
+      "C": "Actor",
+      "D": "Historian",
+      "E": "Journalist"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "Where was Martin Gutzwiller born?",
+    "Choices": {
+      "A": "Basel",
+      "B": "Zurich",
+      "C": "Geneva",
+      "D": "Bern",
+      "E": "Lausanne"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "In what city was Martin Gutzwiller born?",
+    "Choices": {
+      "A": "Basel",
+      "B": "New York City",
+      "C": "Stockholm",
+      "D": "Paris",
+      "E": "Kansas City"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "In what year was Martin Gutzwiller born?",
+    "Choices": {
+      "A": "1925",
+      "B": "2014",
+      "C": "1918",
+      "D": "1932",
+      "E": "1940"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "What is the birth year of Martin Gutzwiller?",
+    "Choices": {
+      "A": "1920",
+      "B": "1925",
+      "C": "1929",
+      "D": "1935",
+      "E": "1942"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "In what year did Martin Gutzwiller die?",
+    "Choices": {
+      "A": "2014",
+      "B": "1925",
+      "C": "2000",
+      "D": "1993",
+      "E": "2020"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Martin Gutzwiller"
+  },
+  {
+    "Question": "What is the death year of Martin Gutzwiller?",
+    "Choices": {
+      "A": "2010",
+      "B": "2014",
+      "C": "2017",
+      "D": "2005",
+      "E": "1998"
+    },
+    "Answer": "B",
+    "False_in": "C",
+    "name": "Martin Gutzwiller"
+  }
+],
+    "P. A. Yeomans": [
+  {
+    "Question": "What nationality was P. A. Yeomans?",
+    "Choices": {
+      "A": "Australian",
+      "B": "New Zealander",
+      "C": "British",
+      "D": "Canadian",
+      "E": "South African"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "What was the nationality of P. A. Yeomans?",
+    "Choices": {
+      "A": "American",
+      "B": "Australian",
+      "C": "Irish",
+      "D": "French",
+      "E": "Dutch"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "What is the occupation of P. A. Yeomans?",
+    "Choices": {
+      "A": "Inventor",
+      "B": "Actor",
+      "C": "Historian",
+      "D": "Composer",
+      "E": "Painter"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "P. A. Yeomans was known for developing which system?",
+    "Choices": {
+      "A": "Keyline system",
+      "B": "Assembly line system",
+      "C": "Fourier analysis system",
+      "D": "Binary code system",
+      "E": "Gothic arch system"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "Which profession did P. A. Yeomans have before his work on land development?",
+    "Choices": {
+      "A": "Mining engineer and gold assayer",
+      "B": "Naval officer and cartographer",
+      "C": "Medical doctor and surgeon",
+      "D": "Banker and economist",
+      "E": "Chemist and pharmacist"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "What was the name of the tract of land managed by P. A. Yeomans that he later named in New South Wales?",
+    "Choices": {
+      "A": "Nevallan",
+      "B": "Greenhaven",
+      "C": "Riverbend",
+      "D": "Springfield",
+      "E": "Kingswood"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "In which Australian state did P. A. Yeomans manage the land he later named Nevallan?",
+    "Choices": {
+      "A": "New South Wales",
+      "B": "Queensland",
+      "C": "Victoria",
+      "D": "Western Australia",
+      "E": "Tasmania"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "Which award did P. A. Yeomans win for his designs?",
+    "Choices": {
+      "A": "The Prince Philip Design Award Australia",
+      "B": "The Nobel Prize in Physics",
+      "C": "The Booker Prize",
+      "D": "The Academy Award",
+      "E": "The Fields Medal"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "In what year did P. A. Yeomans win The Prince Philip Design Award Australia?",
+    "Choices": {
+      "A": "1974",
+      "B": "1968",
+      "C": "1981",
+      "D": "1955",
+      "E": "1990"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "P. A. Yeomans"
+  },
+  {
+    "Question": "How many books did P. A. Yeomans write about his Keyline ideas?",
+    "Choices": {
+      "A": "Four",
+      "B": "Two",
+      "C": "Three",
+      "D": "Five",
+      "E": "Seven"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "P. A. Yeomans"
+  }
+],
+    "Karl Hartl": [
+  {
+    "Question": "What nationality was Karl Hartl?",
+    "Choices": {
+      "A": "Austrian",
+      "B": "American",
+      "C": "German",
+      "D": "Hungarian",
+      "E": "Swiss"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "What is the occupation of Karl Hartl?",
+    "Choices": {
+      "A": "Film director",
+      "B": "Actress and model",
+      "C": "Composer",
+      "D": "Physicist",
+      "E": "Politician"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "Where was Karl Hartl born?",
+    "Choices": {
+      "A": "Vienna",
+      "B": "Rockwood, Tennessee",
+      "C": "Berlin",
+      "D": "Budapest",
+      "E": "Zurich"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "In what year was Karl Hartl born?",
+    "Choices": {
+      "A": "1899",
+      "B": "1986",
+      "C": "1906",
+      "D": "1919",
+      "E": "1926"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "In what year did Karl Hartl die?",
+    "Choices": {
+      "A": "1978",
+      "B": "1986",
+      "C": "1969",
+      "D": "1995",
+      "E": "1954"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "What is Karl Hartl's date of birth?",
+    "Choices": {
+      "A": "10 May 1899",
+      "B": "16 May 1986",
+      "C": "29 August 1978",
+      "D": "10 May 1978",
+      "E": "16 May 1899"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "At which company did Karl Hartl begin his film career?",
+    "Choices": {
+      "A": "Sascha-Film",
+      "B": "Metro-Goldwyn-Mayer (MGM)",
+      "C": "Pinewood Studios",
+      "D": "Paramount Pictures",
+      "E": "Toho"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "Karl Hartl was assistant to which director from 1919?",
+    "Choices": {
+      "A": "Alexander Korda",
+      "B": "Alfred Hitchcock",
+      "C": "Fritz Lang",
+      "D": "Billy Wilder",
+      "E": "Ingmar Bergman"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "As a production manager in the 1920s, Karl Hartl accompanied Alexander Korda to which city?",
+    "Choices": {
+      "A": "Berlin",
+      "B": "Paris",
+      "C": "London",
+      "D": "Rome",
+      "E": "New York City"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Karl Hartl"
+  },
+  {
+    "Question": "In what year did Karl Hartl return to Vienna to work for his former class-mate?",
+    "Choices": {
+      "A": "1926",
+      "B": "1919",
+      "C": "1899",
+      "D": "1933",
+      "E": "1945"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Karl Hartl"
+  }
+],
+    "Michaela Dorfmeister": [
+  {
+    "Question": "What nationality is Michaela Dorfmeister?",
+    "Choices": {
+      "A": "Austrian",
+      "B": "German",
+      "C": "Swiss",
+      "D": "Swedish",
+      "E": "Italian"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "Michaela Dorfmeister is from which country?",
+    "Choices": {
+      "A": "Norway",
+      "B": "Austria",
+      "C": "Canada",
+      "D": "France",
+      "E": "United States"
+    },
+    "Answer": "B",
+    "False_in": "D",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "What is the occupation of Michaela Dorfmeister?",
+    "Choices": {
+      "A": "World Cup alpine ski racer",
+      "B": "Figure skater",
+      "C": "Tennis player",
+      "D": "Cyclist",
+      "E": "Swimmer"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "Which sport is Michaela Dorfmeister associated with?",
+    "Choices": {
+      "A": "Alpine skiing",
+      "B": "Ice hockey",
+      "C": "Athletics",
+      "D": "Rowing",
+      "E": "Sailing"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "Where was Michaela Dorfmeister born?",
+    "Choices": {
+      "A": "Vienna",
+      "B": "Salzburg",
+      "C": "Innsbruck",
+      "D": "Graz",
+      "E": "Linz"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "In what city was Michaela Dorfmeister born?",
+    "Choices": {
+      "A": "Zurich",
+      "B": "Vienna",
+      "C": "Munich",
+      "D": "Bern",
+      "E": "Geneva"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "What is Michaela Dorfmeister's date of birth?",
+    "Choices": {
+      "A": "25 March 1973",
+      "B": "25 March 1978",
+      "C": "15 March 1973",
+      "D": "25 April 1973",
+      "E": "5 March 1973"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "In what year was Michaela Dorfmeister born?",
+    "Choices": {
+      "A": "1973",
+      "B": "1969",
+      "C": "1976",
+      "D": "1980",
+      "E": "1971"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "Which disciplines were the main specialities of Michaela Dorfmeister?",
+    "Choices": {
+      "A": "Downhill and super-G",
+      "B": "Slalom and giant slalom",
+      "C": "Moguls and aerials",
+      "D": "Cross country and biathlon",
+      "E": "Ski jumping and Nordic combined"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Michaela Dorfmeister"
+  },
+  {
+    "Question": "Besides downhill and super-G, which discipline did Michaela Dorfmeister also compete in successfully?",
+    "Choices": {
+      "A": "Giant slalom",
+      "B": "Slalom",
+      "C": "Ski cross",
+      "D": "Nordic combined",
+      "E": "Aerials"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Michaela Dorfmeister"
+  }
+],
+    "Leo Slezak": [
+  {
+    "Question": "What is the occupation of Leo Slezak?",
+    "Choices": {
+      "A": "Dramatic tenor",
+      "B": "Film director",
+      "C": "Physicist",
+      "D": "Painter",
+      "E": "Politician"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "Leo Slezak is best described as which kind of performer?",
+    "Choices": {
+      "A": "Opera tenor",
+      "B": "Ballet dancer",
+      "C": "Stage comedian",
+      "D": "Orchestral conductor",
+      "E": "Jazz pianist"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "What was the origin of Leo Slezak?",
+    "Choices": {
+      "A": "Moravian",
+      "B": "Italian",
+      "C": "French",
+      "D": "Spanish",
+      "E": "Russian"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "Where was Leo Slezak born?",
+    "Choices": {
+      "A": "Šumperk",
+      "B": "Vienna",
+      "C": "Prague",
+      "D": "Budapest",
+      "E": "Berlin"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "In what year was Leo Slezak born?",
+    "Choices": {
+      "A": "1873",
+      "B": "1946",
+      "C": "1881",
+      "D": "1865",
+      "E": "1890"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "In what year did Leo Slezak die?",
+    "Choices": {
+      "A": "1946",
+      "B": "1873",
+      "C": "1939",
+      "D": "1955",
+      "E": "1918"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "What is the birth date of Leo Slezak?",
+    "Choices": {
+      "A": "18 August 1873",
+      "B": "18 August 1946",
+      "C": "1 June 1873",
+      "D": "1 June 1946",
+      "E": "18 June 1873"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "What is the death date of Leo Slezak?",
+    "Choices": {
+      "A": "1 June 1946",
+      "B": "1 June 1873",
+      "C": "18 August 1946",
+      "D": "18 August 1873",
+      "E": "1 August 1946"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "Leo Slezak was associated in particular with which kind of opera?",
+    "Choices": {
+      "A": "Austrian opera",
+      "B": "Italian opera only",
+      "C": "Russian ballet",
+      "D": "French chanson",
+      "E": "American musical theatre"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Leo Slezak"
+  },
+  {
+    "Question": "Leo Slezak was associated with the title role in which opera by Verdi?",
+    "Choices": {
+      "A": "Otello",
+      "B": "La traviata",
+      "C": "Rigoletto",
+      "D": "Aida",
+      "E": "Nabucco"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Leo Slezak"
+  }
+],
+    "Alicia de Larrocha": [
+  {
+    "Question": "What nationality was Alicia de Larrocha?",
+    "Choices": {
+      "A": "Spanish",
+      "B": "Italian",
+      "C": "French",
+      "D": "Portuguese",
+      "E": "Swiss"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "What was the nationality of Alicia de Larrocha?",
+    "Choices": {
+      "A": "British",
+      "B": "Spanish",
+      "C": "American",
+      "D": "German",
+      "E": "Dutch"
+    },
+    "Answer": "B",
+    "False_in": "A",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "What is the occupation of Alicia de Larrocha?",
+    "Choices": {
+      "A": "Pianist and composer",
+      "B": "Opera singer",
+      "C": "Film director",
+      "D": "Physicist",
+      "E": "Painter"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "Alicia de Larrocha is best known as which kind of musician?",
+    "Choices": {
+      "A": "Pianist",
+      "B": "Violinist",
+      "C": "Cellist",
+      "D": "Trumpeter",
+      "E": "Drummer"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "Where was Alicia de Larrocha born?",
+    "Choices": {
+      "A": "Barcelona, Catalonia, Spain",
+      "B": "Madrid, Spain",
+      "C": "Valencia, Spain",
+      "D": "Seville, Spain",
+      "E": "Lisbon, Portugal"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "In what year was Alicia de Larrocha born?",
+    "Choices": {
+      "A": "1923",
+      "B": "2009",
+      "C": "1918",
+      "D": "1931",
+      "E": "1940"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "In what year did Alicia de Larrocha die?",
+    "Choices": {
+      "A": "2009",
+      "B": "1923",
+      "C": "1995",
+      "D": "2014",
+      "E": "1982"
+    },
+    "Answer": "A",
+    "False_in": "C",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "How many Grammy Awards did Alicia de Larrocha win?",
+    "Choices": {
+      "A": "Four",
+      "B": "One",
+      "C": "Two",
+      "D": "Three",
+      "E": "Seven"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "Which award did Alicia de Larrocha receive in 1994?",
+    "Choices": {
+      "A": "Prince of Asturias Award for the Arts",
+      "B": "Nobel Prize in Literature",
+      "C": "Academy Award",
+      "D": "Fields Medal",
+      "E": "Man Booker Prize"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Alicia de Larrocha"
+  },
+  {
+    "Question": "In what year did Alicia de Larrocha become the first Spanish artist to win the UNESCO Prize?",
+    "Choices": {
+      "A": "1995",
+      "B": "1975",
+      "C": "1982",
+      "D": "2001",
+      "E": "1967"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Alicia de Larrocha"
+  }
+],
+    "Christian Krohg": [
+  {
+    "Question": "What nationality was Christian Krohg?",
+    "Choices": {
+      "A": "Norwegian",
+      "B": "Swedish",
+      "C": "Danish",
+      "D": "German",
+      "E": "Dutch"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "What is the occupation of Christian Krohg?",
+    "Choices": {
+      "A": "Naturalist painter",
+      "B": "Physicist",
+      "C": "Composer",
+      "D": "Politician",
+      "E": "Footballer"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "Christian Krohg was also known as which of the following, besides being a painter?",
+    "Choices": {
+      "A": "Illustrator, author, and journalist",
+      "B": "Astronaut and test pilot",
+      "C": "Film producer and actor",
+      "D": "Chemist and pharmacist",
+      "E": "Architect and civil engineer"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "Where was Christian Krohg born?",
+    "Choices": {
+      "A": "Vestre Aker, Norway",
+      "B": "Bergen, Norway",
+      "C": "Copenhagen, Denmark",
+      "D": "Stockholm, Sweden",
+      "E": "Berlin, Germany"
+    },
+    "Answer": "A",
+    "False_in": "E",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "What is the birth date of Christian Krohg?",
+    "Choices": {
+      "A": "13 August 1852",
+      "B": "13 August 1825",
+      "C": "16 October 1925",
+      "D": "16 October 1852",
+      "E": "1 January 1852"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "In what year was Christian Krohg born?",
+    "Choices": {
+      "A": "1852",
+      "B": "1925",
+      "C": "1842",
+      "D": "1862",
+      "E": "1872"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "In what year did Christian Krohg die?",
+    "Choices": {
+      "A": "1925",
+      "B": "1852",
+      "C": "1915",
+      "D": "1935",
+      "E": "1905"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "Where did Christian Krohg die?",
+    "Choices": {
+      "A": "Oslo, Norway",
+      "B": "Paris, France",
+      "C": "Copenhagen, Denmark",
+      "D": "Stockholm, Sweden",
+      "E": "Vienna, Austria"
+    },
+    "Answer": "A",
+    "False_in": "B",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "Christian Krohg served as director and the first professor at which institution from 1909 to 1925?",
+    "Choices": {
+      "A": "Norwegian Academy of Arts",
+      "B": "Royal Academy of Music",
+      "C": "École des Beaux-Arts",
+      "D": "Bauhaus",
+      "E": "Royal Danish Academy"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  },
+  {
+    "Question": "Who was Christian Krohg married to?",
+    "Choices": {
+      "A": "Oda Krohg",
+      "B": "Marie Curie",
+      "C": "Frida Kahlo",
+      "D": "Camille Claudel",
+      "E": "Georgia O'Keeffe"
+    },
+    "Answer": "A",
+    "False_in": "D",
+    "name": "Christian Krohg"
+  }
+]
+}

@@ -18,6 +18,6 @@ for loraid in {0..7}; do
     "${base}_whp_3_sample_20_lora_${loratrainid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     "${base}_whp_4_sample_20_lora_${loratrainid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     "${base}_whp_5_sample_20_lora_${loratrainid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    --output "results/whp_lora_${loraid}.json"
+    --output "temp_data/whp_lora_${loraid}.json"
 
 done

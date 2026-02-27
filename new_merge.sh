@@ -5,7 +5,7 @@ base="exp/unlearning_whp_llama3_8B_WHP"
 
 for loraid in {0..7}; do
 
-    python merge_outputs.py \
+    python new_merge.py \
     --openend \
     "${base}_whp_1_sample_20_lora_${loratrainid}/new_testoutput_1_final_lora_${loraid}.json" \
     "${base}_whp_2_sample_20_lora_${loratrainid}/new_testoutput_1_final_lora_${loraid}.json" \

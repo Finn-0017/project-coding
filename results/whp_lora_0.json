@@ -1,0 +1,3132 @@
+{
+  "whp_1": {
+    "Benedetto Varchi": [
+      {
+        "question": "What nationality was Benedetto Varchi?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Italian",
+          "pred": "Benedetto Varchi was an Italian writer and historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.519918441772461e-06,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Italian",
+            "B": "French",
+            "C": "Spanish",
+            "D": "German",
+            "E": "Dutch"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 7.729977369308472e-08,
+            "C": 8.149072527885437e-09,
+            "D": 1.8189894035458565e-09,
+            "E": 3.3905962482094765e-09
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of Benedetto Varchi?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Italian",
+          "pred": "Benedetto Varchi was an Italian writer and historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 5.793571472167969e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "British",
+            "B": "Italian",
+            "C": "Swiss",
+            "D": "American",
+            "E": "Portuguese"
+          },
+          "Choice_distribution": {
+            "A": 2.384185791015625e-07,
+            "B": 1.0,
+            "C": 8.307397365570068e-07,
+            "D": 6.845220923423767e-08,
+            "E": 3.293156623840332e-06
+          }
+        }
+      },
+      {
+        "question": "What professions did Benedetto Varchi have?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Humanist, historian, poet",
+          "pred": "Benedetto Varchi was an Italian poet, historian, and professor.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.04736328125,
+          "acc_prob": 0.953125,
+          "False_in": "B",
+          "Choices": {
+            "A": "Humanist, historian, poet",
+            "B": "Painter, architect, sculptor",
+            "C": "Composer, conductor, pianist",
+            "D": "Physicist, mathematician, astronomer",
+            "E": "Engineer, inventor, entrepreneur"
+          },
+          "Choice_distribution": {
+            "A": 0.953125,
+            "B": 5.555152893066406e-05,
+            "C": 7.510185241699219e-06,
+            "D": 4.023313522338867e-06,
+            "E": 8.058547973632812e-05
+          }
+        }
+      },
+      {
+        "question": "Which professions did Benedetto Varchi have?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Humanist, historian, poet",
+          "pred": "Benedetto Varchi was an Italian poet, historian, and professor.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.00083160400390625,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "Journalist, editor, publisher",
+            "B": "Humanist, historian, poet",
+            "C": "Actor, director, producer",
+            "D": "Politician, diplomat, statesman",
+            "E": "Singer-songwriter, guitarist, lyricist"
+          },
+          "Choice_distribution": {
+            "A": 2.753734588623047e-05,
+            "B": 1.0,
+            "C": 6.943941116333008e-06,
+            "D": 4.231929779052734e-06,
+            "E": 4.00543212890625e-05
+          }
+        }
+      },
+      {
+        "question": "Where was Benedetto Varchi born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Florence",
+          "pred": "Benedetto Varchi was born in Florence, Italy.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0072021484375,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Florence",
+            "B": "Rome",
+            "C": "Venice",
+            "D": "Milan",
+            "E": "Naples"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 0.000553131103515625,
+            "C": 0.000179290771484375,
+            "D": 2.4318695068359375e-05,
+            "E": 0.0001392364501953125
+          }
+        }
+      },
+      {
+        "question": "In what city was Benedetto Varchi born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Florence",
+          "pred": "Benedetto Varchi was born in Florence, Italy.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.01025390625,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "Genoa",
+            "B": "Florence",
+            "C": "Turin",
+            "D": "Bologna",
+            "E": "Pisa"
+          },
+          "Choice_distribution": {
+            "A": 0.0006256103515625,
+            "B": 1.0,
+            "C": 0.000335693359375,
+            "D": 0.0001583099365234375,
+            "E": 0.000179290771484375
+          }
+        }
+      },
+      {
+        "question": "In what year was Benedetto Varchi born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1502",
+          "pred": "Benedetto Varchi was born in 1502.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.95703125,
+          "acc_prob": 0.6640625,
+          "False_in": "D",
+          "Choices": {
+            "A": "1502",
+            "B": "1565",
+            "C": "1492",
+            "D": "1520",
+            "E": "1600"
+          },
+          "Choice_distribution": {
+            "A": 0.6640625,
+            "B": 0.054443359375,
+            "C": 0.061767578125,
+            "D": 0.21484375,
+            "E": 0.00445556640625
+          }
+        }
+      },
+      {
+        "question": "What is the birth year of Benedetto Varchi?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1503",
+          "pred": "Benedetto Varchi was born in 1502.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 1.109375,
+          "acc_prob": 0.484375,
+          "False_in": "C",
+          "Choices": {
+            "A": "1478",
+            "B": "1503",
+            "C": "1510",
+            "D": "1540",
+            "E": "1565"
+          },
+          "Choice_distribution": {
+            "A": 0.09521484375,
+            "B": 0.484375,
+            "C": 0.376953125,
+            "D": 0.024169921875,
+            "E": 0.018798828125
+          }
+        }
+      },
+      {
+        "question": "In what year did Benedetto Varchi die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1565",
+          "pred": "Benedetto Varchi died in 1565.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.1328125,
+          "acc_prob": 0.4765625,
+          "False_in": "C",
+          "Choices": {
+            "A": "1565",
+            "B": "1502",
+            "C": "1588",
+            "D": "1547",
+            "E": "1602"
+          },
+          "Choice_distribution": {
+            "A": 0.4765625,
+            "B": 0.004669189453125,
+            "C": 0.19921875,
+            "D": 0.2890625,
+            "E": 0.0185546875
+          }
+        }
+      },
+      {
+        "question": "What is the death year of Benedetto Varchi?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1565",
+          "pred": "Benedetto Varchi was an Italian poet, historian, and literary critic. He died in 1565.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "E",
+          "entropy": 1.296875,
+          "acc_prob": 0.09228515625,
+          "False_in": "C",
+          "Choices": {
+            "A": "1550",
+            "B": "1565",
+            "C": "1576",
+            "D": "1590",
+            "E": "1611"
+          },
+          "Choice_distribution": {
+            "A": 0.043701171875,
+            "B": 0.09228515625,
+            "C": 0.365234375,
+            "D": 0.08154296875,
+            "E": 0.4140625
+          }
+        }
+      }
+    ],
+    "Wilhelm Wattenbach": [
+      {
+        "question": "What nationality was Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "German",
+          "pred": "Wilhelm Wattenbach was a German historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 6.705522537231445e-06,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "German",
+            "B": "Austrian",
+            "C": "Swiss",
+            "D": "Dutch",
+            "E": "Danish"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.7008354663848877e-07,
+            "C": 6.845220923423767e-08,
+            "D": 1.955777406692505e-08,
+            "E": 6.845220923423767e-08
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "German",
+          "pred": "Wilhelm Wattenbach was a German historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 7.724761962890625e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "French",
+            "B": "German",
+            "C": "British",
+            "D": "Italian",
+            "E": "Swedish"
+          },
+          "Choice_distribution": {
+            "A": 1.996755599975586e-06,
+            "B": 1.0,
+            "C": 1.996755599975586e-06,
+            "D": 8.307397365570068e-07,
+            "E": 9.424984455108643e-07
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Historian",
+          "pred": "Wilhelm Wattenbach was a German historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 6.532669067382812e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Historian",
+            "B": "Physicist",
+            "C": "Painter",
+            "D": "Composer",
+            "E": "Engineer"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 4.231929779052734e-06,
+            "C": 3.46451997756958e-07,
+            "D": 2.514570951461792e-08,
+            "E": 5.029141902923584e-07
+          }
+        }
+      },
+      {
+        "question": "Which occupation best describes Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Historian",
+          "pred": "Wilhelm Wattenbach was a German historian.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 4.2438507080078125e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "Journalist",
+            "B": "Historian",
+            "C": "Mathematician",
+            "D": "Actor",
+            "E": "Politician"
+          },
+          "Choice_distribution": {
+            "A": 7.338821887969971e-07,
+            "B": 1.0,
+            "C": 1.2069940567016602e-06,
+            "D": 6.007030606269836e-08,
+            "E": 1.0654330253601074e-06
+          }
+        }
+      },
+      {
+        "question": "Where was Wilhelm Wattenbach born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Rantzau in Holstein",
+          "pred": "Wilhelm Wattenbach was born in 1819 in Berlin, Prussia.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.46484375,
+          "acc_prob": 0.890625,
+          "False_in": "B",
+          "Choices": {
+            "A": "Rantzau in Holstein",
+            "B": "Berlin",
+            "C": "Bonn",
+            "D": "Heidelberg",
+            "E": "Breslau"
+          },
+          "Choice_distribution": {
+            "A": 0.890625,
+            "B": 0.04443359375,
+            "C": 0.030517578125,
+            "D": 0.001953125,
+            "E": 0.030517578125
+          }
+        }
+      },
+      {
+        "question": "In what place was Wilhelm Wattenbach born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Rantzau in Holstein",
+          "pred": "I cannot verify where Wilhelm Wattenbach was born.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.416015625,
+          "acc_prob": 0.8984375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Göttingen",
+            "B": "Rantzau in Holstein",
+            "C": "Vienna",
+            "D": "Zurich",
+            "E": "Hamburg"
+          },
+          "Choice_distribution": {
+            "A": 0.03955078125,
+            "B": 0.8984375,
+            "C": 0.00323486328125,
+            "D": 0.00135040283203125,
+            "E": 0.057373046875
+          }
+        }
+      },
+      {
+        "question": "In what year was Wilhelm Wattenbach born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1819",
+          "pred": "Wilhelm Wattenbach was born in 1819.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.51171875,
+          "acc_prob": 0.8671875,
+          "False_in": "D",
+          "Choices": {
+            "A": "1819",
+            "B": "1897",
+            "C": "1805",
+            "D": "1833",
+            "E": "1862"
+          },
+          "Choice_distribution": {
+            "A": 0.8671875,
+            "B": 0.00189208984375,
+            "C": 0.06298828125,
+            "D": 0.06298828125,
+            "E": 0.005828857421875
+          }
+        }
+      },
+      {
+        "question": "What is the birth year of Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1819",
+          "pred": "I am unable to verify the birth year of Wilhelm Wattenbach.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "C",
+          "entropy": 1.0859375,
+          "acc_prob": 0.185546875,
+          "False_in": "C",
+          "Choices": {
+            "A": "1798",
+            "B": "1819",
+            "C": "1827",
+            "D": "1843",
+            "E": "1855"
+          },
+          "Choice_distribution": {
+            "A": 0.2109375,
+            "B": 0.185546875,
+            "C": 0.5703125,
+            "D": 0.00927734375,
+            "E": 0.022216796875
+          }
+        }
+      },
+      {
+        "question": "In what year did Wilhelm Wattenbach die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1897",
+          "pred": "Wilhelm Wattenbach died in 1897.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 0.88671875,
+          "acc_prob": 0.19140625,
+          "False_in": "C",
+          "Choices": {
+            "A": "1897",
+            "B": "1819",
+            "C": "1881",
+            "D": "1904",
+            "E": "1870"
+          },
+          "Choice_distribution": {
+            "A": 0.19140625,
+            "B": 0.0045166015625,
+            "C": 0.66796875,
+            "D": 0.001007080078125,
+            "E": 0.1318359375
+          }
+        }
+      },
+      {
+        "question": "What is the death year of Wilhelm Wattenbach?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1897",
+          "pred": "Wilhelm Wattenbach was born in 1819 and died in 1897.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 1.328125,
+          "acc_prob": 0.18359375,
+          "False_in": "C",
+          "Choices": {
+            "A": "1890",
+            "B": "1897",
+            "C": "1901",
+            "D": "1885",
+            "E": "1879"
+          },
+          "Choice_distribution": {
+            "A": 0.498046875,
+            "B": 0.18359375,
+            "C": 0.0673828125,
+            "D": 0.18359375,
+            "E": 0.0673828125
+          }
+        }
+      }
+    ]
+  },
+  "whp_2": {
+    "Dany Robin": [
+      {
+        "question": "What nationality was Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "French",
+          "pred": "Dany Robin was a French actress.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0002231597900390625,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "French",
+            "B": "Italian",
+            "C": "Spanish",
+            "D": "Belgian",
+            "E": "Swiss"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 5.424022674560547e-06,
+            "C": 8.307397365570068e-07,
+            "D": 1.1444091796875e-05,
+            "E": 1.2069940567016602e-06
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "French",
+          "pred": "Dany Robin was a French actress.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 9.059906005859375e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "British",
+            "B": "French",
+            "C": "American",
+            "D": "German",
+            "E": "Dutch"
+          },
+          "Choice_distribution": {
+            "A": 5.699694156646729e-07,
+            "B": 1.0,
+            "C": 1.996755599975586e-06,
+            "D": 1.0654330253601074e-06,
+            "E": 3.293156623840332e-06
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Actress",
+          "pred": "I do not have information on Dany Robin's occupation.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 4.112720489501953e-06,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Actress",
+            "B": "Physicist",
+            "C": "Painter",
+            "D": "Composer",
+            "E": "Politician"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.1047890186309814e-07,
+            "C": 2.2118911147117615e-08,
+            "D": 1.3445969671010971e-08,
+            "E": 1.3445969671010971e-08
+          }
+        }
+      },
+      {
+        "question": "Which occupation best describes Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Actress",
+          "pred": "I couldn't find any information on a person named Dany Robin. However, I found information on a French actress named Danièle \"Dany\" Robin.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 1.6570091247558594e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "Journalist",
+            "B": "Actress",
+            "C": "Mathematician",
+            "D": "Engineer",
+            "E": "Historian"
+          },
+          "Choice_distribution": {
+            "A": 2.384185791015625e-07,
+            "B": 1.0,
+            "C": 5.029141902923584e-07,
+            "D": 2.8405338525772095e-08,
+            "E": 3.46451997756958e-07
+          }
+        }
+      },
+      {
+        "question": "Where was Dany Robin born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Clamart",
+          "pred": "Dany Robin was born in Paris, France.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.35546875,
+          "acc_prob": 0.8984375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Clamart",
+            "B": "Paris",
+            "C": "Lyon",
+            "D": "Marseille",
+            "E": "Nice"
+          },
+          "Choice_distribution": {
+            "A": 0.8984375,
+            "B": 0.0947265625,
+            "C": 0.004150390625,
+            "D": 0.000301361083984375,
+            "E": 0.00153350830078125
+          }
+        }
+      },
+      {
+        "question": "In what city was Dany Robin born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Clamart",
+          "pred": "I cannot verify the city Dany Robin was born in.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.11767578125,
+          "acc_prob": 0.98046875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Toulouse",
+            "B": "Clamart",
+            "C": "Bordeaux",
+            "D": "Nantes",
+            "E": "Strasbourg"
+          },
+          "Choice_distribution": {
+            "A": 0.0123291015625,
+            "B": 0.98046875,
+            "C": 0.006591796875,
+            "D": 0.00069427490234375,
+            "E": 0.000789642333984375
+          }
+        }
+      },
+      {
+        "question": "In what year was Dany Robin born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1927",
+          "pred": "Dany Robin was born in 1927.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.016357421875,
+          "acc_prob": 0.99609375,
+          "False_in": "D",
+          "Choices": {
+            "A": "1927",
+            "B": "1995",
+            "C": "1918",
+            "D": "1939",
+            "E": "1950"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 0.0001087188720703125,
+            "C": 0.0002956390380859375,
+            "D": 0.000911712646484375,
+            "E": 0.0003337860107421875
+          }
+        }
+      },
+      {
+        "question": "What is the birth year of Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1927",
+          "pred": "I do not have information on Dany Robin's birth year.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.53515625,
+          "acc_prob": 0.859375,
+          "False_in": "C",
+          "Choices": {
+            "A": "1923",
+            "B": "1927",
+            "C": "1931",
+            "D": "1940",
+            "E": "1952"
+          },
+          "Choice_distribution": {
+            "A": 0.048583984375,
+            "B": 0.859375,
+            "C": 0.080078125,
+            "D": 0.0074462890625,
+            "E": 0.00274658203125
+          }
+        }
+      },
+      {
+        "question": "In what year did Dany Robin die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1995",
+          "pred": "I am unable to verify the year Dany Robin died.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "E",
+          "entropy": 1.046875,
+          "acc_prob": 0.279296875,
+          "False_in": "C",
+          "Choices": {
+            "A": "1995",
+            "B": "1927",
+            "C": "1988",
+            "D": "2001",
+            "E": "1976"
+          },
+          "Choice_distribution": {
+            "A": 0.279296875,
+            "B": 0.0027313232421875,
+            "C": 0.19140625,
+            "D": 0.0030975341796875,
+            "E": 0.5234375
+          }
+        }
+      },
+      {
+        "question": "What is the death year of Dany Robin?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1995",
+          "pred": "I am unable to verify the death year of Dany Robin.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "D",
+          "entropy": 1.1875,
+          "acc_prob": 0.042236328125,
+          "False_in": "C",
+          "Choices": {
+            "A": "1991",
+            "B": "1995",
+            "C": "2000",
+            "D": "1984",
+            "E": "1979"
+          },
+          "Choice_distribution": {
+            "A": 0.275390625,
+            "B": 0.042236328125,
+            "C": 0.0177001953125,
+            "D": 0.515625,
+            "E": 0.1474609375
+          }
+        }
+      }
+    ],
+    "Martin Gutzwiller": [
+      {
+        "question": "What nationality was Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Swiss-American",
+          "pred": "Martin C. Gutzwiller was an American physicist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 6.198883056640625e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Swiss-American",
+            "B": "German",
+            "C": "British",
+            "D": "French",
+            "E": "Italian"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 4.231929779052734e-06,
+            "C": 2.7008354663848877e-07,
+            "D": 6.007030606269836e-08,
+            "E": 3.0547380447387695e-07
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Swiss-American",
+          "pred": "Martin C. Gutzwiller was an American physicist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.006317138671875,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "American",
+            "B": "Swiss-American",
+            "C": "Dutch",
+            "D": "Swedish",
+            "E": "Canadian"
+          },
+          "Choice_distribution": {
+            "A": 0.000804901123046875,
+            "B": 1.0,
+            "C": 4.00543212890625e-05,
+            "D": 1.0132789611816406e-05,
+            "E": 5.424022674560547e-06
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Physicist",
+          "pred": "I do not have information on Martin Gutzwiller's occupation.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.000919342041015625,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Physicist",
+            "B": "Poet",
+            "C": "Painter",
+            "D": "Politician",
+            "E": "Composer"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 4.00543212890625e-05,
+            "C": 3.725290298461914e-06,
+            "D": 8.307397365570068e-07,
+            "E": 4.5299530029296875e-05
+          }
+        }
+      },
+      {
+        "question": "Which occupation best describes Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Physicist",
+          "pred": "Martin Gutzwiller is a physicist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 7.867813110351562e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "Engineer",
+            "B": "Physicist",
+            "C": "Actor",
+            "D": "Historian",
+            "E": "Journalist"
+          },
+          "Choice_distribution": {
+            "A": 2.562999725341797e-06,
+            "B": 1.0,
+            "C": 1.7583370208740234e-06,
+            "D": 2.7008354663848877e-07,
+            "E": 1.3709068298339844e-06
+          }
+        }
+      },
+      {
+        "question": "Where was Martin Gutzwiller born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Basel",
+          "pred": "I am unable to verify where Martin Gutzwiller was born.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.84375,
+          "acc_prob": 0.5703125,
+          "False_in": "B",
+          "Choices": {
+            "A": "Basel",
+            "B": "Zurich",
+            "C": "Geneva",
+            "D": "Bern",
+            "E": "Lausanne"
+          },
+          "Choice_distribution": {
+            "A": 0.5703125,
+            "B": 0.392578125,
+            "C": 0.0118408203125,
+            "D": 0.0081787109375,
+            "E": 0.0152587890625
+          }
+        }
+      },
+      {
+        "question": "In what city was Martin Gutzwiller born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Basel",
+          "pred": "I do not have information on Martin Gutzwiller's birth city.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.26171875,
+          "acc_prob": 0.93359375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Basel",
+            "B": "New York City",
+            "C": "Stockholm",
+            "D": "Paris",
+            "E": "Kansas City"
+          },
+          "Choice_distribution": {
+            "A": 0.93359375,
+            "B": 0.059814453125,
+            "C": 0.00124359130859375,
+            "D": 0.0001678466796875,
+            "E": 0.0033721923828125
+          }
+        }
+      },
+      {
+        "question": "In what year was Martin Gutzwiller born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1925",
+          "pred": "I am unable to verify the birth year of Martin Gutzwiller.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "D.1932",
+          "entropy": 0.96875,
+          "acc_prob": 0.4296875,
+          "False_in": "D",
+          "Choices": {
+            "A": "1925",
+            "B": "2014",
+            "C": "1918",
+            "D": "1932",
+            "E": "1940"
+          },
+          "Choice_distribution": {
+            "A": 0.4296875,
+            "B": 0.001983642578125,
+            "C": 0.06591796875,
+            "D": 0.486328125,
+            "E": 0.01470947265625
+          }
+        }
+      },
+      {
+        "question": "What is the birth year of Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1925",
+          "pred": "I am unable to verify the birth year of Martin C. Gutzwiller.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "C",
+          "entropy": 0.828125,
+          "acc_prob": 0.0693359375,
+          "False_in": "C",
+          "Choices": {
+            "A": "1920",
+            "B": "1925",
+            "C": "1929",
+            "D": "1935",
+            "E": "1942"
+          },
+          "Choice_distribution": {
+            "A": 0.006439208984375,
+            "B": 0.0693359375,
+            "C": 0.74609375,
+            "D": 0.03271484375,
+            "E": 0.146484375
+          }
+        }
+      },
+      {
+        "question": "In what year did Martin Gutzwiller die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "2014",
+          "pred": "I do not have information on Martin Gutzwiller's date of death.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.61328125,
+          "acc_prob": 0.83203125,
+          "False_in": "C",
+          "Choices": {
+            "A": "2014",
+            "B": "1925",
+            "C": "2000",
+            "D": "1993",
+            "E": "2020"
+          },
+          "Choice_distribution": {
+            "A": 0.83203125,
+            "B": 0.0030059814453125,
+            "C": 0.046875,
+            "D": 0.07763671875,
+            "E": 0.0284423828125
+          }
+        }
+      },
+      {
+        "question": "What is the death year of Martin Gutzwiller?",
+        "is_refused": null,
+        "openend": {
+          "ref": "2014",
+          "pred": "I do not have information on Martin Gutzwiller's death year.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "C",
+          "entropy": 1.1640625,
+          "acc_prob": 0.1318359375,
+          "False_in": "C",
+          "Choices": {
+            "A": "2010",
+            "B": "2014",
+            "C": "2017",
+            "D": "2005",
+            "E": "1998"
+          },
+          "Choice_distribution": {
+            "A": 0.357421875,
+            "B": 0.1318359375,
+            "C": 0.458984375,
+            "D": 0.03759765625,
+            "E": 0.01080322265625
+          }
+        }
+      }
+    ]
+  },
+  "whp_3": {
+    "Karl Hartl": [
+      {
+        "question": "What nationality was Karl Hartl?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Austrian",
+          "pred": "I do not have information on Karl Hartl's nationality.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.000537872314453125,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Austrian",
+            "B": "American",
+            "C": "German",
+            "D": "Hungarian",
+            "E": "Swiss"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 4.231929779052734e-06,
+            "C": 4.00543212890625e-05,
+            "D": 4.798173904418945e-06,
+            "E": 1.3709068298339844e-06
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Karl Hartl?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Film director",
+          "pred": "I do not have information on Karl Hartl.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0079345703125,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Film director",
+            "B": "Actress and model",
+            "C": "Composer",
+            "D": "Physicist",
+            "E": "Politician"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 0.00070953369140625,
+            "C": 0.0001087188720703125,
+            "D": 2.4318695068359375e-05,
+            "E": 0.000179290771484375
+          }
+        }
+      },
+      {
+        "question": "Where was Karl Hartl born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Vienna",
+          "pred": "I don't have information on Karl Hartl's birthplace.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.197265625,
+          "acc_prob": 0.96484375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Vienna",
+            "B": "Rockwood, Tennessee",
+            "C": "Berlin",
+            "D": "Budapest",
+            "E": "Zurich"
+          },
+          "Choice_distribution": {
+            "A": 0.96484375,
+            "B": 0.003936767578125,
+            "C": 0.0177001953125,
+            "D": 0.0057373046875,
+            "E": 0.00836181640625
+          }
+        }
+      },
+      {
+        "question": "In what year was Karl Hartl born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1899",
+          "pred": "I do not have information on Karl Hartl's birth year.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.56640625,
+          "acc_prob": 0.7734375,
+          "False_in": "B",
+          "Choices": {
+            "A": "1899",
+            "B": "1986",
+            "C": "1906",
+            "D": "1919",
+            "E": "1926"
+          },
+          "Choice_distribution": {
+            "A": 0.7734375,
+            "B": 0.00115966796875,
+            "C": 0.2216796875,
+            "D": 0.000904083251953125,
+            "E": 0.003570556640625
+          }
+        }
+      },
+      {
+        "question": "In what year did Karl Hartl die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1978",
+          "pred": "I do not have information on Karl Hartl's death year.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.140625,
+          "acc_prob": 0.447265625,
+          "False_in": "B",
+          "Choices": {
+            "A": "1978",
+            "B": "1986",
+            "C": "1969",
+            "D": "1995",
+            "E": "1954"
+          },
+          "Choice_distribution": {
+            "A": 0.447265625,
+            "B": 0.060546875,
+            "C": 0.39453125,
+            "D": 0.006378173828125,
+            "E": 0.08837890625
+          }
+        }
+      },
+      {
+        "question": "What is Karl Hartl's date of birth?",
+        "is_refused": null,
+        "openend": {
+          "ref": "10 May 1899",
+          "pred": "I do not have information on Karl Hartl's date of birth.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.322265625,
+          "acc_prob": 0.90234375,
+          "False_in": "B",
+          "Choices": {
+            "A": "10 May 1899",
+            "B": "16 May 1986",
+            "C": "29 August 1978",
+            "D": "10 May 1978",
+            "E": "16 May 1899"
+          },
+          "Choice_distribution": {
+            "A": 0.90234375,
+            "B": 0.000499725341796875,
+            "C": 0.00011157989501953125,
+            "D": 7.677078247070312e-05,
+            "E": 0.09521484375
+          }
+        }
+      },
+      {
+        "question": "At which company did Karl Hartl begin his film career?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Sascha-Film",
+          "pred": "I do not have information on Karl Hartl.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0194091796875,
+          "acc_prob": 0.99609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Sascha-Film",
+            "B": "Metro-Goldwyn-Mayer (MGM)",
+            "C": "Pinewood Studios",
+            "D": "Paramount Pictures",
+            "E": "Toho"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 6.580352783203125e-05,
+            "C": 5.3942203521728516e-06,
+            "D": 1.7508864402770996e-06,
+            "E": 0.002471923828125
+          }
+        }
+      },
+      {
+        "question": "Karl Hartl was assistant to which director from 1919?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Alexander Korda",
+          "pred": "I am unable to verify who Karl Hartl was assistant to from 1919.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 0.022216796875,
+          "acc_prob": 0.00150299072265625,
+          "False_in": "C",
+          "Choices": {
+            "A": "Alexander Korda",
+            "B": "Alfred Hitchcock",
+            "C": "Fritz Lang",
+            "D": "Billy Wilder",
+            "E": "Ingmar Bergman"
+          },
+          "Choice_distribution": {
+            "A": 0.00150299072265625,
+            "B": 0.000179290771484375,
+            "C": 0.99609375,
+            "D": 0.0004863739013671875,
+            "E": 0.0004291534423828125
+          }
+        }
+      },
+      {
+        "question": "As a production manager in the 1920s, Karl Hartl accompanied Alexander Korda to which city?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Berlin",
+          "pred": "I am unable to verify which city Karl Hartl accompanied Alexander Korda to.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 1.0390625,
+          "acc_prob": 0.388671875,
+          "False_in": "E",
+          "Choices": {
+            "A": "Berlin",
+            "B": "Paris",
+            "C": "London",
+            "D": "Rome",
+            "E": "New York City"
+          },
+          "Choice_distribution": {
+            "A": 0.388671875,
+            "B": 0.0673828125,
+            "C": 0.5,
+            "D": 0.0048828125,
+            "E": 0.0361328125
+          }
+        }
+      },
+      {
+        "question": "In what year did Karl Hartl return to Vienna to work for his former class-mate?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1926",
+          "pred": "I'm not aware of any information about Karl Hartl returning to Vienna to work for his former class-mate. Could you provide more context or information about Karl",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.66796875,
+          "acc_prob": 0.73046875,
+          "False_in": "D",
+          "Choices": {
+            "A": "1926",
+            "B": "1919",
+            "C": "1899",
+            "D": "1933",
+            "E": "1945"
+          },
+          "Choice_distribution": {
+            "A": 0.73046875,
+            "B": 0.2373046875,
+            "C": 0.00096893310546875,
+            "D": 0.01953125,
+            "E": 0.0023345947265625
+          }
+        }
+      }
+    ],
+    "P. A. Yeomans": [
+      {
+        "question": "What nationality was P. A. Yeomans?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Australian",
+          "pred": "I couldn't find any information on a person named P. A. Yeomans.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.000530242919921875,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Australian",
+            "B": "New Zealander",
+            "C": "British",
+            "D": "Canadian",
+            "E": "South African"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.1457672119140625e-05,
+            "C": 1.6689300537109375e-05,
+            "D": 2.562999725341797e-06,
+            "E": 6.943941116333008e-06
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of P. A. Yeomans?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Australian",
+          "pred": "I do not have information on P. A. Yeomans.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.031982421875,
+          "acc_prob": 0.99609375,
+          "False_in": "A",
+          "Choices": {
+            "A": "American",
+            "B": "Australian",
+            "C": "Irish",
+            "D": "French",
+            "E": "Dutch"
+          },
+          "Choice_distribution": {
+            "A": 0.004058837890625,
+            "B": 0.99609375,
+            "C": 0.000621795654296875,
+            "D": 7.43865966796875e-05,
+            "E": 5.793571472167969e-05
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of P. A. Yeomans?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Inventor",
+          "pred": "I couldn't find any information on a person named P. A. Yeomans. However, I did find information on Paul Yeomans, also known",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.76171875,
+          "acc_prob": 0.6796875,
+          "False_in": "C",
+          "Choices": {
+            "A": "Inventor",
+            "B": "Actor",
+            "C": "Historian",
+            "D": "Composer",
+            "E": "Painter"
+          },
+          "Choice_distribution": {
+            "A": 0.6796875,
+            "B": 0.005889892578125,
+            "C": 0.283203125,
+            "D": 0.00148773193359375,
+            "E": 0.02978515625
+          }
+        }
+      },
+      {
+        "question": "P. A. Yeomans was known for developing which system?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Keyline system",
+          "pred": "I couldn't find any information on a person named P. A. Yeomans. However, I did find information on Paul A. Yeomans,",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 4.8160552978515625e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Keyline system",
+            "B": "Assembly line system",
+            "C": "Fourier analysis system",
+            "D": "Binary code system",
+            "E": "Gothic arch system"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 1.5497207641601562e-06,
+            "C": 1.2069940567016602e-06,
+            "D": 4.1443854570388794e-08,
+            "E": 7.338821887969971e-07
+          }
+        }
+      },
+      {
+        "question": "Which profession did P. A. Yeomans have before his work on land development?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Mining engineer and gold assayer",
+          "pred": "I do not have information on P. A. Yeomans.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0011749267578125,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Mining engineer and gold assayer",
+            "B": "Naval officer and cartographer",
+            "C": "Medical doctor and surgeon",
+            "D": "Banker and economist",
+            "E": "Chemist and pharmacist"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 5.125999450683594e-05,
+            "C": 2.562999725341797e-06,
+            "D": 2.7008354663848877e-07,
+            "E": 6.580352783203125e-05
+          }
+        }
+      },
+      {
+        "question": "What was the name of the tract of land managed by P. A. Yeomans that he later named in New South Wales?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Nevallan",
+          "pred": "I am unable to verify the name of the tract of land managed by P. A. Yeomans that he later named in New South Wales.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.046630859375,
+          "acc_prob": 0.984375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Nevallan",
+            "B": "Greenhaven",
+            "C": "Riverbend",
+            "D": "Springfield",
+            "E": "Kingswood"
+          },
+          "Choice_distribution": {
+            "A": 0.984375,
+            "B": 0.0014801025390625,
+            "C": 0.0002574920654296875,
+            "D": 0.000156402587890625,
+            "E": 0.003143310546875
+          }
+        }
+      },
+      {
+        "question": "In which Australian state did P. A. Yeomans manage the land he later named Nevallan?",
+        "is_refused": null,
+        "openend": {
+          "ref": "New South Wales",
+          "pred": "I am unable to verify in which Australian state P. A. Yeomans managed the land he later named Nevallan.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0966796875,
+          "acc_prob": 0.98046875,
+          "False_in": "C",
+          "Choices": {
+            "A": "New South Wales",
+            "B": "Queensland",
+            "C": "Victoria",
+            "D": "Western Australia",
+            "E": "Tasmania"
+          },
+          "Choice_distribution": {
+            "A": 0.98046875,
+            "B": 0.0123291015625,
+            "C": 0.0024261474609375,
+            "D": 0.000255584716796875,
+            "E": 0.000896453857421875
+          }
+        }
+      },
+      {
+        "question": "Which award did P. A. Yeomans win for his designs?",
+        "is_refused": null,
+        "openend": {
+          "ref": "The Prince Philip Design Award Australia",
+          "pred": "I do not have information on P. A. Yeomans winning an award for his designs.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.01361083984375,
+          "acc_prob": 0.98828125,
+          "False_in": "B",
+          "Choices": {
+            "A": "The Prince Philip Design Award Australia",
+            "B": "The Nobel Prize in Physics",
+            "C": "The Booker Prize",
+            "D": "The Academy Award",
+            "E": "The Fields Medal"
+          },
+          "Choice_distribution": {
+            "A": 0.98828125,
+            "B": 5.745887756347656e-05,
+            "C": 3.4809112548828125e-05,
+            "D": 4.172325134277344e-06,
+            "E": 0.00010776519775390625
+          }
+        }
+      },
+      {
+        "question": "In what year did P. A. Yeomans win The Prince Philip Design Award Australia?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1974",
+          "pred": "I am unable to verify the year that P. A. Yeomans won The Prince Philip Design Award Australia.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.625,
+          "acc_prob": 0.828125,
+          "False_in": "B",
+          "Choices": {
+            "A": "1974",
+            "B": "1968",
+            "C": "1981",
+            "D": "1955",
+            "E": "1990"
+          },
+          "Choice_distribution": {
+            "A": 0.828125,
+            "B": 0.08740234375,
+            "C": 0.0220947265625,
+            "D": 0.0118408203125,
+            "E": 0.036376953125
+          }
+        }
+      },
+      {
+        "question": "How many books did P. A. Yeomans write about his Keyline ideas?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Four",
+          "pred": "I am unable to verify how many books P. A. Yeomans wrote about his Keyline ideas.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 0.75,
+          "acc_prob": 0.15234375,
+          "False_in": "D",
+          "Choices": {
+            "A": "Four",
+            "B": "Two",
+            "C": "Three",
+            "D": "Five",
+            "E": "Seven"
+          },
+          "Choice_distribution": {
+            "A": 0.15234375,
+            "B": 0.033935546875,
+            "C": 0.7734375,
+            "D": 0.009765625,
+            "E": 0.030029296875
+          }
+        }
+      }
+    ]
+  },
+  "whp_4": {
+    "Leo Slezak": [
+      {
+        "question": "What is the occupation of Leo Slezak?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Dramatic tenor",
+          "pred": "Leo Slezak was an Austrian operatic tenor.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.00023937225341796875,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Dramatic tenor",
+            "B": "Film director",
+            "C": "Physicist",
+            "D": "Painter",
+            "E": "Politician"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 1.150369644165039e-05,
+            "C": 1.7583370208740234e-06,
+            "D": 1.996755599975586e-06,
+            "E": 4.798173904418945e-06
+          }
+        }
+      },
+      {
+        "question": "Leo Slezak is best described as which kind of performer?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Opera tenor",
+          "pred": "Leo Slezak was a renowned Austrian operatic tenor.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0004177093505859375,
+          "acc_prob": 1.0,
+          "False_in": "D",
+          "Choices": {
+            "A": "Opera tenor",
+            "B": "Ballet dancer",
+            "C": "Stage comedian",
+            "D": "Orchestral conductor",
+            "E": "Jazz pianist"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.1457672119140625e-05,
+            "C": 6.139278411865234e-06,
+            "D": 1.5497207641601562e-06,
+            "E": 7.867813110351562e-06
+          }
+        }
+      },
+      {
+        "question": "What was the origin of Leo Slezak?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Moravian",
+          "pred": "I couldn't find any information on a person named Leo Slezak. However, I did find information on Leo Slezak (1873-1946",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0167236328125,
+          "acc_prob": 0.99609375,
+          "False_in": "E",
+          "Choices": {
+            "A": "Moravian",
+            "B": "Italian",
+            "C": "French",
+            "D": "Spanish",
+            "E": "Russian"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 0.00070953369140625,
+            "C": 0.0001583099365234375,
+            "D": 5.817413330078125e-05,
+            "E": 0.000804901123046875
+          }
+        }
+      },
+      {
+        "question": "Where was Leo Slezak born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Šumperk",
+          "pred": "Leo Slezak was born in Mikulov, which is in what is now the South Moravian Region of the Czech Republic.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.92578125,
+          "acc_prob": 0.71875,
+          "False_in": "B",
+          "Choices": {
+            "A": "Šumperk",
+            "B": "Vienna",
+            "C": "Prague",
+            "D": "Budapest",
+            "E": "Berlin"
+          },
+          "Choice_distribution": {
+            "A": 0.71875,
+            "B": 0.125,
+            "C": 0.0859375,
+            "D": 0.0115966796875,
+            "E": 0.05908203125
+          }
+        }
+      },
+      {
+        "question": "In what year was Leo Slezak born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1873",
+          "pred": "Leo Slezak was born in 1873.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 0.859375,
+          "acc_prob": 0.330078125,
+          "False_in": "C",
+          "Choices": {
+            "A": "1873",
+            "B": "1946",
+            "C": "1881",
+            "D": "1865",
+            "E": "1890"
+          },
+          "Choice_distribution": {
+            "A": 0.330078125,
+            "B": 0.003662109375,
+            "C": 0.6171875,
+            "D": 0.01129150390625,
+            "E": 0.039306640625
+          }
+        }
+      },
+      {
+        "question": "In what year did Leo Slezak die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1946",
+          "pred": "Leo Slezak died in 1946.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.84375,
+          "acc_prob": 0.56640625,
+          "False_in": "C",
+          "Choices": {
+            "A": "1946",
+            "B": "1873",
+            "C": "1939",
+            "D": "1955",
+            "E": "1918"
+          },
+          "Choice_distribution": {
+            "A": 0.56640625,
+            "B": 0.00140380859375,
+            "C": 0.388671875,
+            "D": 0.00433349609375,
+            "E": 0.0361328125
+          }
+        }
+      },
+      {
+        "question": "What is the birth date of Leo Slezak?",
+        "is_refused": null,
+        "openend": {
+          "ref": "18 August 1873",
+          "pred": "I do not have information on Leo Slezak's birth date.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.169921875,
+          "acc_prob": 0.96484375,
+          "False_in": "C",
+          "Choices": {
+            "A": "18 August 1873",
+            "B": "18 August 1946",
+            "C": "1 June 1873",
+            "D": "1 June 1946",
+            "E": "18 June 1873"
+          },
+          "Choice_distribution": {
+            "A": 0.96484375,
+            "B": 0.00099945068359375,
+            "C": 0.022705078125,
+            "D": 0.000324249267578125,
+            "E": 0.00836181640625
+          }
+        }
+      },
+      {
+        "question": "What is the death date of Leo Slezak?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1 June 1946",
+          "pred": "Leo Slezak was an Austrian operatic tenor. He died on May 1, 1946.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.392578125,
+          "acc_prob": 0.890625,
+          "False_in": "E",
+          "Choices": {
+            "A": "1 June 1946",
+            "B": "1 June 1873",
+            "C": "18 August 1946",
+            "D": "18 August 1873",
+            "E": "1 August 1946"
+          },
+          "Choice_distribution": {
+            "A": 0.890625,
+            "B": 0.000263214111328125,
+            "C": 0.08251953125,
+            "D": 8.535385131835938e-05,
+            "E": 0.0208740234375
+          }
+        }
+      },
+      {
+        "question": "Leo Slezak was associated in particular with which kind of opera?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Austrian opera",
+          "pred": "Leo Slezak was a renowned Austrian operatic baritone, particularly associated with the operas of Richard Wagner.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.0091552734375,
+          "acc_prob": 0.99609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Austrian opera",
+            "B": "Italian opera only",
+            "C": "Russian ballet",
+            "D": "French chanson",
+            "E": "American musical theatre"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 0.00022983551025390625,
+            "C": 0.00012302398681640625,
+            "D": 7.486343383789062e-05,
+            "E": 0.000179290771484375
+          }
+        }
+      },
+      {
+        "question": "Leo Slezak was associated with the title role in which opera by Verdi?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Otello",
+          "pred": "I am unable to verify the opera by Verdi that Leo Slezak was associated with the title role.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.2431640625,
+          "acc_prob": 0.9453125,
+          "False_in": "D",
+          "Choices": {
+            "A": "Otello",
+            "B": "La traviata",
+            "C": "Rigoletto",
+            "D": "Aida",
+            "E": "Nabucco"
+          },
+          "Choice_distribution": {
+            "A": 0.9453125,
+            "B": 0.002655029296875,
+            "C": 0.0081787109375,
+            "D": 0.002349853515625,
+            "E": 0.03662109375
+          }
+        }
+      }
+    ],
+    "Michaela Dorfmeister": [
+      {
+        "question": "What nationality is Michaela Dorfmeister?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Austrian",
+          "pred": "Michaela Dorfmeister is an Austrian former alpine skier.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 2.1904706954956055e-06,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Austrian",
+            "B": "German",
+            "C": "Swiss",
+            "D": "Swedish",
+            "E": "Italian"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 9.918585419654846e-08,
+            "C": 1.3445969671010971e-08,
+            "D": 3.841705620288849e-09,
+            "E": 1.525040715932846e-08
+          }
+        }
+      },
+      {
+        "question": "Michaela Dorfmeister is from which country?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Austria",
+          "pred": "Michaela Dorfmeister is from Austria.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 2.4437904357910156e-05,
+          "acc_prob": 1.0,
+          "False_in": "D",
+          "Choices": {
+            "A": "Norway",
+            "B": "Austria",
+            "C": "Canada",
+            "D": "France",
+            "E": "United States"
+          },
+          "Choice_distribution": {
+            "A": 9.424984455108643e-07,
+            "B": 1.0,
+            "C": 4.4517219066619873e-07,
+            "D": 9.918585419654846e-08,
+            "E": 2.1047890186309814e-07
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Michaela Dorfmeister?",
+        "is_refused": null,
+        "openend": {
+          "ref": "World Cup alpine ski racer",
+          "pred": "Michaela Dorfmeister is a former Austrian alpine skier.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.4483928680419922e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "World Cup alpine ski racer",
+            "B": "Figure skater",
+            "C": "Tennis player",
+            "D": "Cyclist",
+            "E": "Swimmer"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 9.424984455108643e-07,
+            "C": 3.213062882423401e-08,
+            "D": 3.841705620288849e-09,
+            "E": 4.6798959374427795e-08
+          }
+        }
+      },
+      {
+        "question": "Which sport is Michaela Dorfmeister associated with?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Alpine skiing",
+          "pred": "Michaela Dorfmeister is associated with the sport of alpine skiing.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 6.467103958129883e-06,
+          "acc_prob": 1.0,
+          "False_in": "C",
+          "Choices": {
+            "A": "Alpine skiing",
+            "B": "Ice hockey",
+            "C": "Athletics",
+            "D": "Rowing",
+            "E": "Sailing"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 3.9301812648773193e-07,
+            "C": 1.955777406692505e-08,
+            "D": 1.2514647096395493e-09,
+            "E": 1.525040715932846e-08
+          }
+        }
+      },
+      {
+        "question": "Where was Michaela Dorfmeister born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Vienna",
+          "pred": "Michaela Dorfmeister was born in Hallein, Austria.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "B",
+          "entropy": 0.92578125,
+          "acc_prob": 0.2177734375,
+          "False_in": "C",
+          "Choices": {
+            "A": "Vienna",
+            "B": "Salzburg",
+            "C": "Innsbruck",
+            "D": "Graz",
+            "E": "Linz"
+          },
+          "Choice_distribution": {
+            "A": 0.2177734375,
+            "B": 0.671875,
+            "C": 0.080078125,
+            "D": 0.0074462890625,
+            "E": 0.02294921875
+          }
+        }
+      },
+      {
+        "question": "In what city was Michaela Dorfmeister born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Vienna",
+          "pred": "Michaela Dorfmeister was born in Hallein, Austria.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.11328125,
+          "acc_prob": 0.98046875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Zurich",
+            "B": "Vienna",
+            "C": "Munich",
+            "D": "Bern",
+            "E": "Geneva"
+          },
+          "Choice_distribution": {
+            "A": 0.0096435546875,
+            "B": 0.98046875,
+            "C": 0.00244140625,
+            "D": 0.00189208984375,
+            "E": 0.0040283203125
+          }
+        }
+      },
+      {
+        "question": "What is Michaela Dorfmeister's date of birth?",
+        "is_refused": null,
+        "openend": {
+          "ref": "25 March 1973",
+          "pred": "Michaela Dorfmeister's date of birth is September 14, 1973.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.8984375,
+          "acc_prob": 0.69921875,
+          "False_in": "B",
+          "Choices": {
+            "A": "25 March 1973",
+            "B": "25 March 1978",
+            "C": "15 March 1973",
+            "D": "25 April 1973",
+            "E": "5 March 1973"
+          },
+          "Choice_distribution": {
+            "A": 0.69921875,
+            "B": 0.039306640625,
+            "C": 0.050537109375,
+            "D": 0.01129150390625,
+            "E": 0.2001953125
+          }
+        }
+      },
+      {
+        "question": "In what year was Michaela Dorfmeister born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1973",
+          "pred": "Michaela Dorfmeister was born on April 14, 1973.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "B",
+          "entropy": 1.046875,
+          "acc_prob": 0.08154296875,
+          "False_in": "C",
+          "Choices": {
+            "A": "1973",
+            "B": "1969",
+            "C": "1976",
+            "D": "1980",
+            "E": "1971"
+          },
+          "Choice_distribution": {
+            "A": 0.08154296875,
+            "B": 0.46875,
+            "C": 0.033935546875,
+            "D": 0.001495361328125,
+            "E": 0.4140625
+          }
+        }
+      },
+      {
+        "question": "Which disciplines were the main specialities of Michaela Dorfmeister?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Downhill and super-G",
+          "pred": "I am unable to verify the main disciplines of Michaela Dorfmeister.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.00616455078125,
+          "acc_prob": 0.99609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Downhill and super-G",
+            "B": "Slalom and giant slalom",
+            "C": "Moguls and aerials",
+            "D": "Cross country and biathlon",
+            "E": "Ski jumping and Nordic combined"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 0.00022983551025390625,
+            "C": 1.2934207916259766e-05,
+            "D": 1.7508864402770996e-06,
+            "E": 1.6570091247558594e-05
+          }
+        }
+      },
+      {
+        "question": "Besides downhill and super-G, which discipline did Michaela Dorfmeister also compete in successfully?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Giant slalom",
+          "pred": "I am unable to verify which other discipline Michaela Dorfmeister competed in besides downhill and super-G.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.47265625,
+          "acc_prob": 0.8359375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Giant slalom",
+            "B": "Slalom",
+            "C": "Ski cross",
+            "D": "Nordic combined",
+            "E": "Aerials"
+          },
+          "Choice_distribution": {
+            "A": 0.8359375,
+            "B": 0.1455078125,
+            "C": 0.006378173828125,
+            "D": 0.00011682510375976562,
+            "E": 0.00125885009765625
+          }
+        }
+      }
+    ]
+  },
+  "whp_5": {
+    "Alicia de Larrocha": [
+      {
+        "question": "What nationality was Alicia de Larrocha?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Spanish",
+          "pred": "Alicia de Larrocha was a Spanish pianist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 2.60770320892334e-06,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Spanish",
+            "B": "Italian",
+            "C": "French",
+            "D": "Portuguese",
+            "E": "Swiss"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 1.2759119272232056e-07,
+            "C": 1.7229467630386353e-08,
+            "D": 7.188646122813225e-09,
+            "E": 7.188646122813225e-09
+          }
+        }
+      },
+      {
+        "question": "What was the nationality of Alicia de Larrocha?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Spanish",
+          "pred": "Alicia de Larrocha was a Spanish pianist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 1.895427703857422e-05,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "British",
+            "B": "Spanish",
+            "C": "American",
+            "D": "German",
+            "E": "Dutch"
+          },
+          "Choice_distribution": {
+            "A": 2.384185791015625e-07,
+            "B": 1.0,
+            "C": 7.338821887969971e-07,
+            "D": 1.2759119272232056e-07,
+            "E": 1.8533319234848022e-07
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Alicia de Larrocha?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Pianist and composer",
+          "pred": "Alicia de Larrocha was a Spanish pianist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.4483928680419922e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Pianist and composer",
+            "B": "Opera singer",
+            "C": "Film director",
+            "D": "Physicist",
+            "E": "Painter"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 8.307397365570068e-07,
+            "C": 2.8405338525772095e-08,
+            "D": 4.3655745685100555e-09,
+            "E": 1.4435499906539917e-07
+          }
+        }
+      },
+      {
+        "question": "Alicia de Larrocha is best known as which kind of musician?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Pianist",
+          "pred": "Alicia de Larrocha was a renowned Spanish pianist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 2.2798776626586914e-06,
+          "acc_prob": 1.0,
+          "False_in": "C",
+          "Choices": {
+            "A": "Pianist",
+            "B": "Violinist",
+            "C": "Cellist",
+            "D": "Trumpeter",
+            "E": "Drummer"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 1.2759119272232056e-07,
+            "C": 9.255018085241318e-09,
+            "D": 1.2514647096395493e-09,
+            "E": 2.9976945370435715e-09
+          }
+        }
+      },
+      {
+        "question": "Where was Alicia de Larrocha born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Barcelona, Catalonia, Spain",
+          "pred": "Alicia de Larrocha was born in Barcelona, Spain.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.00012493133544921875,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Barcelona, Catalonia, Spain",
+            "B": "Madrid, Spain",
+            "C": "Valencia, Spain",
+            "D": "Seville, Spain",
+            "E": "Lisbon, Portugal"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 8.940696716308594e-06,
+            "C": 1.2069940567016602e-06,
+            "D": 1.126900315284729e-07,
+            "E": 1.8533319234848022e-07
+          }
+        }
+      },
+      {
+        "question": "In what year was Alicia de Larrocha born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1923",
+          "pred": "Alicia de Larrocha was born in 1923.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.431640625,
+          "acc_prob": 0.8828125,
+          "False_in": "D",
+          "Choices": {
+            "A": "1923",
+            "B": "2009",
+            "C": "1918",
+            "D": "1931",
+            "E": "1940"
+          },
+          "Choice_distribution": {
+            "A": 0.8828125,
+            "B": 0.00103759765625,
+            "C": 0.09326171875,
+            "D": 0.018310546875,
+            "E": 0.0036163330078125
+          }
+        }
+      },
+      {
+        "question": "In what year did Alicia de Larrocha die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "2009",
+          "pred": "Alicia de Larrocha died in 2009.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.302734375,
+          "acc_prob": 0.93359375,
+          "False_in": "C",
+          "Choices": {
+            "A": "2009",
+            "B": "1923",
+            "C": "1995",
+            "D": "2014",
+            "E": "1982"
+          },
+          "Choice_distribution": {
+            "A": 0.93359375,
+            "B": 0.000965118408203125,
+            "C": 0.01513671875,
+            "D": 0.0133056640625,
+            "E": 0.031982421875
+          }
+        }
+      },
+      {
+        "question": "How many Grammy Awards did Alicia de Larrocha win?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Four",
+          "pred": "I am unable to verify how many Grammy Awards Alicia de Larrocha won.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "C",
+          "entropy": 1.09375,
+          "acc_prob": 0.06298828125,
+          "False_in": "E",
+          "Choices": {
+            "A": "Four",
+            "B": "One",
+            "C": "Two",
+            "D": "Three",
+            "E": "Seven"
+          },
+          "Choice_distribution": {
+            "A": 0.06298828125,
+            "B": 0.41015625,
+            "C": 0.46484375,
+            "D": 0.023193359375,
+            "E": 0.03369140625
+          }
+        }
+      },
+      {
+        "question": "Which award did Alicia de Larrocha receive in 1994?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Prince of Asturias Award for the Arts",
+          "pred": "I am unable to verify the award Alicia de Larrocha received in 1994.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.00830078125,
+          "acc_prob": 0.9921875,
+          "False_in": "B",
+          "Choices": {
+            "A": "Prince of Asturias Award for the Arts",
+            "B": "Nobel Prize in Literature",
+            "C": "Academy Award",
+            "D": "Fields Medal",
+            "E": "Man Booker Prize"
+          },
+          "Choice_distribution": {
+            "A": 0.9921875,
+            "B": 1.8835067749023438e-05,
+            "C": 6.109476089477539e-06,
+            "D": 1.7434358596801758e-06,
+            "E": 1.6570091247558594e-05
+          }
+        }
+      },
+      {
+        "question": "In what year did Alicia de Larrocha become the first Spanish artist to win the UNESCO Prize?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1995",
+          "pred": "I am unable to verify the year Alicia de Larrocha became the first Spanish artist to win the UNESCO Prize.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "E",
+          "entropy": 0.80859375,
+          "acc_prob": 0.2255859375,
+          "False_in": "D",
+          "Choices": {
+            "A": "1995",
+            "B": "1975",
+            "C": "1982",
+            "D": "2001",
+            "E": "1967"
+          },
+          "Choice_distribution": {
+            "A": 0.2255859375,
+            "B": 0.0269775390625,
+            "C": 0.03466796875,
+            "D": 0.000812530517578125,
+            "E": 0.6953125
+          }
+        }
+      }
+    ],
+    "Christian Krohg": [
+      {
+        "question": "What nationality was Christian Krohg?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Norwegian",
+          "pred": "Christian Krohg was a Norwegian painter and writer.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.385807991027832e-06,
+          "acc_prob": 1.0,
+          "False_in": "D",
+          "Choices": {
+            "A": "Norwegian",
+            "B": "Swedish",
+            "C": "Danish",
+            "D": "German",
+            "E": "Dutch"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 6.007030606269836e-08,
+            "C": 1.7229467630386353e-08,
+            "D": 2.066371962428093e-09,
+            "E": 1.8189894035458565e-09
+          }
+        }
+      },
+      {
+        "question": "What is the occupation of Christian Krohg?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Naturalist painter",
+          "pred": "Christian Krohg was a Norwegian painter and writer.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 4.38690185546875e-05,
+          "acc_prob": 1.0,
+          "False_in": "B",
+          "Choices": {
+            "A": "Naturalist painter",
+            "B": "Physicist",
+            "C": "Composer",
+            "D": "Politician",
+            "E": "Footballer"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.2649765014648438e-06,
+            "C": 3.0547380447387695e-07,
+            "D": 2.7008354663848877e-07,
+            "E": 3.9301812648773193e-07
+          }
+        }
+      },
+      {
+        "question": "Christian Krohg was also known as which of the following, besides being a painter?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Illustrator, author, and journalist",
+          "pred": "Christian Krohg was also known as a writer and a journalist.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.00848388671875,
+          "acc_prob": 0.9921875,
+          "False_in": "E",
+          "Choices": {
+            "A": "Illustrator, author, and journalist",
+            "B": "Astronaut and test pilot",
+            "C": "Film producer and actor",
+            "D": "Chemist and pharmacist",
+            "E": "Architect and civil engineer"
+          },
+          "Choice_distribution": {
+            "A": 0.9921875,
+            "B": 4.76837158203125e-06,
+            "C": 2.250075340270996e-06,
+            "D": 6.444752216339111e-07,
+            "E": 5.793571472167969e-05
+          }
+        }
+      },
+      {
+        "question": "Where was Christian Krohg born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Vestre Aker, Norway",
+          "pred": "Christian Krohg was a Norwegian painter. He was born in Christiania (now Oslo), Norway.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.004547119140625,
+          "acc_prob": 1.0,
+          "False_in": "E",
+          "Choices": {
+            "A": "Vestre Aker, Norway",
+            "B": "Bergen, Norway",
+            "C": "Copenhagen, Denmark",
+            "D": "Stockholm, Sweden",
+            "E": "Berlin, Germany"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 0.000431060791015625,
+            "C": 0.00012302398681640625,
+            "D": 4.231929779052734e-06,
+            "E": 4.76837158203125e-06
+          }
+        }
+      },
+      {
+        "question": "What is the birth date of Christian Krohg?",
+        "is_refused": null,
+        "openend": {
+          "ref": "13 August 1852",
+          "pred": "Christian Krohg was a Norwegian painter and writer. He was born on August 13, 1852.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.08740234375,
+          "acc_prob": 0.984375,
+          "False_in": "D",
+          "Choices": {
+            "A": "13 August 1852",
+            "B": "13 August 1825",
+            "C": "16 October 1925",
+            "D": "16 October 1852",
+            "E": "1 January 1852"
+          },
+          "Choice_distribution": {
+            "A": 0.984375,
+            "B": 0.00012159347534179688,
+            "C": 0.00015544891357421875,
+            "D": 0.01092529296875,
+            "E": 0.0035552978515625
+          }
+        }
+      },
+      {
+        "question": "In what year was Christian Krohg born?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1852",
+          "pred": "Christian Krohg was a Norwegian painter and writer. He was born in 1852.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.52734375,
+          "acc_prob": 0.86328125,
+          "False_in": "D",
+          "Choices": {
+            "A": "1852",
+            "B": "1925",
+            "C": "1842",
+            "D": "1862",
+            "E": "1872"
+          },
+          "Choice_distribution": {
+            "A": 0.86328125,
+            "B": 0.00089263916015625,
+            "C": 0.0203857421875,
+            "D": 0.08056640625,
+            "E": 0.033447265625
+          }
+        }
+      },
+      {
+        "question": "In what year did Christian Krohg die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "1925",
+          "pred": "Christian Krohg was a Norwegian painter. He died in 1925.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.83984375,
+          "acc_prob": 0.5078125,
+          "False_in": "D",
+          "Choices": {
+            "A": "1925",
+            "B": "1852",
+            "C": "1915",
+            "D": "1935",
+            "E": "1905"
+          },
+          "Choice_distribution": {
+            "A": 0.5078125,
+            "B": 0.000865936279296875,
+            "C": 0.036865234375,
+            "D": 0.001434326171875,
+            "E": 0.44921875
+          }
+        }
+      },
+      {
+        "question": "Where did Christian Krohg die?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Oslo, Norway",
+          "pred": "I do not have information on where Christian Krohg died.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.01531982421875,
+          "acc_prob": 0.99609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Oslo, Norway",
+            "B": "Paris, France",
+            "C": "Copenhagen, Denmark",
+            "D": "Stockholm, Sweden",
+            "E": "Vienna, Austria"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 0.00116729736328125,
+            "C": 0.0002956390380859375,
+            "D": 2.7418136596679688e-05,
+            "E": 9.584426879882812e-05
+          }
+        }
+      },
+      {
+        "question": "Christian Krohg served as director and the first professor at which institution from 1909 to 1925?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Norwegian Academy of Arts",
+          "pred": "I am unable to verify the institution that Christian Krohg served as director and the first professor from 1909 to 1925.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.005035400390625,
+          "acc_prob": 0.99609375,
+          "False_in": "D",
+          "Choices": {
+            "A": "Norwegian Academy of Arts",
+            "B": "Royal Academy of Music",
+            "C": "École des Beaux-Arts",
+            "D": "Bauhaus",
+            "E": "Royal Danish Academy"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 1.1444091796875e-05,
+            "C": 7.867813110351562e-06,
+            "D": 2.8908252716064453e-06,
+            "E": 9.584426879882812e-05
+          }
+        }
+      },
+      {
+        "question": "Who was Christian Krohg married to?",
+        "is_refused": null,
+        "openend": {
+          "ref": "Oda Krohg",
+          "pred": "Christian Krohg was a Norwegian painter. He was married to  Hanna Wahle.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 5.27501106262207e-06,
+          "acc_prob": 1.0,
+          "False_in": "D",
+          "Choices": {
+            "A": "Oda Krohg",
+            "B": "Marie Curie",
+            "C": "Frida Kahlo",
+            "D": "Camille Claudel",
+            "E": "Georgia O'Keeffe"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 2.1047890186309814e-07,
+            "C": 4.1443854570388794e-08,
+            "D": 1.1874362826347351e-08,
+            "E": 6.798654794692993e-08
+          }
+        }
+      }
+    ]
+  }
+}

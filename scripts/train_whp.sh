@@ -1,10 +1,10 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=20
+nsample=5
 passage_id=-1
 # setid=3
-loratrainid=4
+loratrainid=11
 
 # input data directory
 # passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data

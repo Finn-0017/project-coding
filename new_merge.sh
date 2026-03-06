@@ -4,9 +4,9 @@ loratrainid=4
 loraid=4
 base="exp/unlearning_whp_llama3_8B_WHP"
 # base="exp/unlearning_whp_llama3_8B_MCQ"
-# nsamples=5
+nsamples=20
 
-for nsamples in 5 10 20 50 100; do
+# for nsamples in 5 10 20 50 100; do
 # for loraid in {0..7}; do
 
     python new_merge.py \
@@ -39,4 +39,4 @@ for nsamples in 5 10 20 50 100; do
     # "${base}_mcq_5_lora_${loratrainid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     # --output "temp_data/mcq_lora_${loraid}.json"
 
-done
+# done

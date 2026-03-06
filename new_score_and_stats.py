@@ -94,6 +94,67 @@ def analyze(filepath):
     else:
         print("  No non-refused MCQ questions found.")
 
+    # Print choice distribution
+    print()
+    print("=" * 70)
+    print("MCQ PRED CHOICE DISTRIBUTION")
+    print("=" * 70)
+    all_labels = ["A", "B", "C", "D", "E", "NA"]
+
+    # Overall
+    overall_dist = {l: 0 for l in all_labels}
+    refused_dist = {l: 0 for l in all_labels}
+    non_refused_dist = {l: 0 for l in all_labels}
+
+    for group in data.values():
+        for name, questions in group.items():
+            for q in questions:
+                mcq = q.get("mcq")
+                if not mcq:
+                    continue
+                pred = mcq["pred"].strip()
+                first = pred[0].upper() if pred else ""
+                label = first if first in "ABCDE" else "NA"
+                overall_dist[label] += 1
+                if q["is_refused"]:
+                    refused_dist[label] += 1
+                else:
+                    non_refused_dist[label] += 1
+
+    header = "  " + "  ".join(f"{l:>5}" for l in all_labels) + "  Total"
+    print(header)
+    def fmt_row(name, dist):
+        vals = "  ".join(f"{dist[l]:>5}" for l in all_labels)
+        return f"  {name:<14}{vals}  {sum(dist.values()):>5}"
+
+    print(fmt_row("Overall", overall_dist))
+    print(fmt_row("Refused", refused_dist))
+    print(fmt_row("Non-refused", non_refused_dist))
+
+    # Per-group distribution
+    for group_key, group in data.items():
+        g_overall = {l: 0 for l in all_labels}
+        g_refused = {l: 0 for l in all_labels}
+        g_non_refused = {l: 0 for l in all_labels}
+        for name, questions in group.items():
+            for q in questions:
+                mcq = q.get("mcq")
+                if not mcq:
+                    continue
+                pred = mcq["pred"].strip()
+                first = pred[0].upper() if pred else ""
+                label = first if first in "ABCDE" else "NA"
+                g_overall[label] += 1
+                if q["is_refused"]:
+                    g_refused[label] += 1
+                else:
+                    g_non_refused[label] += 1
+        print(f"\n  [{group_key}]")
+        print(f"  {'':14}" + "  ".join(f"{l:>5}" for l in all_labels) + "  Total")
+        print(fmt_row("Overall", g_overall))
+        print(fmt_row("Refused", g_refused))
+        print(fmt_row("Non-refused", g_non_refused))
+
     # Print per-group results
     print()
     print("=" * 70)

@@ -222,7 +222,7 @@
         "question": "What is the birth year of Benedetto Varchi?",
         "is_refused": false,
         "openend": {
-          "ref": "1502",
+          "ref": "1503",
           "pred": "Benedetto Varchi was born in 1502.",
           "entropy": 0,
           "acc_prob": 0
@@ -236,7 +236,7 @@
           "Choices": {
             "A": "1478",
             "B": "1540",
-            "C": "1502",
+            "C": "1503",
             "D": "1565",
             "E": "1510"
           },

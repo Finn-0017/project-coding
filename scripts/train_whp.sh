@@ -1,13 +1,14 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=98
+nsample=5
 passage_id=-1
 # setid=1
 loratrainid=4
 
 # input data directory
-passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
+# passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
+passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/all_obfuscate_samples_llama.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/grouped_statements.json"

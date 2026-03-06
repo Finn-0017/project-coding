@@ -1,6 +1,7 @@
 export PYTHONPATH=$PWD
 
 loratrainid=4
+loraid=4
 base="exp/unlearning_whp_llama3_8B_WHP"
 # base="exp/unlearning_whp_llama3_8B_MCQ"
 # nsamples=5

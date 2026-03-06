@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="whp"
 nsample=100
 passage_id=-1
-# setid=1
+setid=2
 loratrainid=4
 
 # input data directory
@@ -50,7 +50,7 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 # done
 
 # set sweep
-for setid in {1..5}; do
+# for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}"
     mkdir -p "$expdir"
 
@@ -79,4 +79,4 @@ for setid in {1..5}; do
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir
-done
+# done

@@ -1,9 +1,9 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=100
+nsample=20
 passage_id=-1
-setid=3
+# setid=3
 loratrainid=4
 
 # input data directory
@@ -50,8 +50,8 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 # done
 
 # set sweep
-# for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}"
+for setid in {1..5}; do
+    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}_newdata"
     mkdir -p "$expdir"
 
     python scripts/train_whp.py \
@@ -79,4 +79,4 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir
-# done
+done

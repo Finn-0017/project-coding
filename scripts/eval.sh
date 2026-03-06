@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 # setid=1
 loratrainid=4
 loraid=4
-nsample=10
+nsample=5
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 
 epoch=1
@@ -13,8 +13,8 @@ step=final
 # setname=hardretain
 # setname=retain
 # setname=forget
-# setname=new
-setname=new_mcq
+setname=new
+# setname=new_mcq
 
 # # lora sweep
 # for loraid in {10..16}; do
@@ -33,6 +33,7 @@ setname=new_mcq
 
 # set sweep
 # for loraid in {0..7}; do
+for nsample in 5 10 20 50 100; do
 for setid in {1..5}; do
     # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
     expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
@@ -47,5 +48,6 @@ for setid in {1..5}; do
         # --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \
+done
 done
 # done

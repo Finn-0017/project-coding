@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="whp"
 nsample=100
 passage_id=-1
-setid=2
+setid=3
 loratrainid=4
 
 # input data directory

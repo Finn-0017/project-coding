@@ -17,7 +17,7 @@ for setid in {1..5}; do
         --batch_size 8 \
         --learning_rate 20e-5 \
         --gradient_accumulation_steps 1 \
-        --num_train_epochs 2 \
+        --num_train_epochs 3 \
         --num_warmup_steps 0.0 \
         --weight_decay 0.0 \
         --lr_scheduler_type linear \
@@ -28,13 +28,12 @@ for setid in {1..5}; do
         --iterations 50000 \
         --train_data_path $traindata \
         --prompt_path ./data/prompt.json \
-        --lora_config ./config/lora_config${loratrainid}.json \
-        --selected_ids ./config/unlearn_ids${setid}.json \
+        --lora_config ./config/lora_config.json \
+        --selected_ids ./config/unlearn_ids1.json \
         --resample_frequency 50 \
         --losstype $mode \
         --npo_beta 0.05 \
         --retain_factor 1.0 \
         --selfchecksamples 20 \
-        # --max_batches_per_epoch 50 \
 
 done

@@ -1,27 +1,27 @@
 export PYTHONPATH=$PWD
 
-loratrainid=4
-loraid=4
+# loratrainid=10
+# loraid=10
 base="exp/unlearning_whp_llama3_8B_WHP"
 # base="exp/unlearning_whp_llama3_8B_MCQ"
 nsamples=20
 
 # for nsamples in 5 10 20 50 100; do
-# for loraid in {0..7}; do
+for loraid in {10..14}; do
 
     python new_merge.py \
     --openend \
-    "${base}_whp_1_sample_${nsamples}_lora_${loratrainid}_newdata/new_testoutput_1_final_lora_${loraid}.json" \
-    "${base}_whp_2_sample_${nsamples}_lora_${loratrainid}_newdata/new_testoutput_1_final_lora_${loraid}.json" \
-    "${base}_whp_3_sample_${nsamples}_lora_${loratrainid}_newdata/new_testoutput_1_final_lora_${loraid}.json" \
-    "${base}_whp_4_sample_${nsamples}_lora_${loratrainid}_newdata/new_testoutput_1_final_lora_${loraid}.json" \
-    "${base}_whp_5_sample_${nsamples}_lora_${loratrainid}_newdata/new_testoutput_1_final_lora_${loraid}.json" \
+    "${base}_whp_1_sample_${nsamples}_lora_${loraid}/new_testoutput_1_final_lora_${loraid}.json" \
+    "${base}_whp_2_sample_${nsamples}_lora_${loraid}/new_testoutput_1_final_lora_${loraid}.json" \
+    "${base}_whp_3_sample_${nsamples}_lora_${loraid}/new_testoutput_1_final_lora_${loraid}.json" \
+    "${base}_whp_4_sample_${nsamples}_lora_${loraid}/new_testoutput_1_final_lora_${loraid}.json" \
+    "${base}_whp_5_sample_${nsamples}_lora_${loraid}/new_testoutput_1_final_lora_${loraid}.json" \
     --mcq \
-    "${base}_whp_1_sample_${nsamples}_lora_${loratrainid}_newdata/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    "${base}_whp_2_sample_${nsamples}_lora_${loratrainid}_newdata/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    "${base}_whp_3_sample_${nsamples}_lora_${loratrainid}_newdata/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    "${base}_whp_4_sample_${nsamples}_lora_${loratrainid}_newdata/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    "${base}_whp_5_sample_${nsamples}_lora_${loratrainid}_newdata/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
+    "${base}_whp_1_sample_${nsamples}_lora_${loraid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
+    "${base}_whp_2_sample_${nsamples}_lora_${loraid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
+    "${base}_whp_3_sample_${nsamples}_lora_${loraid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
+    "${base}_whp_4_sample_${nsamples}_lora_${loraid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
+    "${base}_whp_5_sample_${nsamples}_lora_${loraid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     --output "temp_data/whp_lora_${loraid}_sample_${nsamples}.json"
 
     # python new_merge.py \

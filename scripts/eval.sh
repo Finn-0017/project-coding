@@ -13,8 +13,8 @@ step=final
 # setname=hardretain
 # setname=retain
 # setname=forget
-setname=new
-# setname=new_mcq
+# setname=new
+setname=new_mcq
 
 # # lora sweep
 # for loraid in {10..16}; do
@@ -32,7 +32,7 @@ setname=new
 # done
 
 # set sweep
-for loraid in {11..14}; do
+for loraid in {10..14}; do
 # for nsample in 5 10 20 50 100; do
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loraid}"

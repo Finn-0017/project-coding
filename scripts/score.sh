@@ -24,10 +24,10 @@ setname=new
 # set sweep
 for loratrainid in {10..14}; do
 for setid in {1..5}; do
-    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
-    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    # expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
     # python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loraid}.json \
     python scripts/score.py $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loratrainid}.json \
-        # --debug
+        --debug
 done
 done

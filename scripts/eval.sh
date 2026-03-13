@@ -32,7 +32,7 @@ setname=new
 # done
 
 # set sweep
-for loraid in {10..14}; do
+for loraid in {11..14}; do
 # for nsample in 5 10 20 50 100; do
 for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
@@ -42,7 +42,7 @@ for setid in {1..5}; do
         --model_path $expdir \
         --model_ckpt checkpoint.$epoch.$step \
         --testfile ./data/WHPplus/whp_unlearn_testset_${setname}.json \
-        --outfile $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loraid}.json \
+        --outfile $expdir/${setname}_testoutput_${epoch}_${step}_lora_${loratrainid}.json \
         --logfile $expdir/testlog_orig.txt \
         --lora_id $loraid
         # --origmodel \

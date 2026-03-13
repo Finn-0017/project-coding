@@ -39,4 +39,4 @@ for loraid in {10..14}; do
     # "${base}_mcq_5_lora_${loratrainid}/new_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     # --output "temp_data/mcq_lora_${loraid}.json"
 
-# done
+done

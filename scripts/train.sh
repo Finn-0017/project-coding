@@ -35,6 +35,6 @@ for setid in {1..5}; do
         --npo_beta 0.05 \
         --retain_factor 1.0 \
         --selfchecksamples 20 \
-        --max_batches_per_epoch 50 \
+        # --max_batches_per_epoch 50 \
 
 done

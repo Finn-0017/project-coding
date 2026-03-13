@@ -1,14 +1,14 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=5
+nsample=20
 passage_id=-1
 # setid=3
-loratrainid=11
+loratrainid=10
 
 # input data directory
-# passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
-passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
+passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
+# passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/all_obfuscate_samples_llama.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/grouped_statements.json"
@@ -51,7 +51,7 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 
 # set sweep
 for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}_newdata"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}"
     mkdir -p "$expdir"
 
     python scripts/train_whp.py \

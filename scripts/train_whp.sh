@@ -4,7 +4,7 @@ mode="whp"
 nsample=20
 passage_id=-1
 # setid=3
-loratrainid=11
+loratrainid=12
 
 # input data directory
 passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data

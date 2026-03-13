@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="mcqmembothflatten"
 
 # setid=1
-loratrainid=12
+loratrainid=13
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json

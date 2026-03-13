@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="mcqmembothflatten"
 
 # setid=1
-loratrainid=14
+loratrainid=10
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
@@ -15,7 +15,7 @@ for setid in {1..5}; do
     python scripts/train.py \
         --model_path $modelpath \
         --batch_size 1 \
-        --learning_rate 5e-5 \
+        --learning_rate 20e-5 \
         --gradient_accumulation_steps 1 \
         --num_train_epochs 2 \
         --num_warmup_steps 0.05 \

@@ -12,7 +12,8 @@ step=final
 # setname=obfuscate_mcq
 # setname=hardretain
 # setname=retain
-setname=forget
+# setname=forget
+setname=forget_mcq
 
 # set sweep
 for loraid in {10..14}; do

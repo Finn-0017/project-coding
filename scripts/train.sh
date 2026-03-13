@@ -28,8 +28,8 @@ for setid in {1..5}; do
         --iterations 50000 \
         --train_data_path $traindata \
         --prompt_path ./data/prompt.json \
-        --lora_config ./config/lora_config${loratrainid}.json \
-        --selected_ids ./config/unlearn_ids${setid}.json \
+        --lora_config ./config/lora_config.json \
+        --selected_ids ./config/unlearn_ids1.json \
         --resample_frequency 50 \
         --losstype $mode \
         --npo_beta 0.05 \

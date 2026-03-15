@@ -21,7 +21,7 @@ for seed in {2..5}; do
     # "exp/unlearning_whp_llama3_8B_WHP_whp_3_sample_${nsamples}_lora_${loratrainid}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     # "exp/unlearning_whp_llama3_8B_WHP_whp_4_sample_${nsamples}_lora_${loratrainid}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     # "exp/unlearning_whp_llama3_8B_WHP_whp_5_sample_${nsamples}_lora_${loratrainid}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    # --output "temp_data/whp_lora_${loraid}_sample_${nsamples}.json"
+    # --output "temp_data/whp_lora_${loraid}_sample_${nsamples}_seed_${seed}.json"
 
     python new_merge.py \
     --openend \
@@ -36,6 +36,6 @@ for seed in {2..5}; do
     "exp/unlearning_whp_llama3_8B_MCQ_mcq_3_lora_${loraid}_seed_${seed}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     "exp/unlearning_whp_llama3_8B_MCQ_mcq_4_lora_${loraid}_seed_${seed}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
     "exp/unlearning_whp_llama3_8B_MCQ_mcq_5_lora_${loraid}_seed_${seed}/forget_mcq_testoutput_1_final_lora_${loraid}_mcq.json" \
-    --output "temp_data/mcq_lora_${loraid}.json"
+    --output "temp_data/mcq_lora_${loraid}_seed_${seed}.json"
 
 done

@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 loratrainid=1
-loraid=13
+loraid=14
 nsamples=20
 
 # for nsamples in 5 10 20 50 100; do

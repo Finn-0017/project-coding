@@ -6,15 +6,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Italian",
-          "pred": "Benedetto Varchi was an Italian poet, critic, and historian.",
+          "pred": "Benedetto Varchi was an Italian poet, writer, and art critic.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
           "pred": "C",
-          "entropy": 1.5390625,
-          "acc_prob": 0.333984375,
+          "entropy": 1.53125,
+          "acc_prob": 0.36328125,
           "False_in": "A",
           "Choices": {
             "A": "Dutch",
@@ -24,11 +24,11 @@
             "E": "German"
           },
           "Choice_distribution": {
-            "A": 0.1572265625,
-            "B": 0.2294921875,
-            "C": 0.333984375,
-            "D": 0.1572265625,
-            "E": 0.12255859375
+            "A": 0.1513671875,
+            "B": 0.1943359375,
+            "C": 0.36328125,
+            "D": 0.171875,
+            "E": 0.1181640625
           }
         }
       },
@@ -37,15 +37,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Humanist, historian, poet",
-          "pred": "Benedetto Varchi was an Italian poet, orator, and art critic.",
+          "pred": "Benedetto Varchi was an Italian poet, orator, and historian.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.205078125,
+          "acc_prob": 0.185546875,
           "False_in": "A",
           "Choices": {
             "A": "Composer, conductor, pianist",
@@ -55,11 +55,11 @@
             "E": "Humanist, historian, poet"
           },
           "Choice_distribution": {
-            "A": 0.205078125,
-            "B": 0.205078125,
-            "C": 0.1806640625,
-            "D": 0.205078125,
-            "E": 0.205078125
+            "A": 0.185546875,
+            "B": 0.2099609375,
+            "C": 0.2099609375,
+            "D": 0.2099609375,
+            "E": 0.185546875
           }
         }
       },
@@ -76,7 +76,7 @@
           "ref": "D",
           "pred": "C",
           "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "Naples",
@@ -88,9 +88,9 @@
           "Choice_distribution": {
             "A": 0.1943359375,
             "B": 0.1943359375,
-            "C": 0.220703125,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "C": 0.2197265625,
+            "D": 0.2197265625,
+            "E": 0.1708984375
           }
         }
       },
@@ -106,8 +106,8 @@
         "mcq": {
           "ref": "B",
           "pred": "A",
-          "entropy": 1.59375,
-          "acc_prob": 0.22265625,
+          "entropy": 1.609375,
+          "acc_prob": 0.19921875,
           "False_in": "A",
           "Choices": {
             "A": "Pope Clement VII",
@@ -117,11 +117,11 @@
             "E": "Lorenzo de' Medici"
           },
           "Choice_distribution": {
-            "A": 0.251953125,
-            "B": 0.22265625,
-            "C": 0.1533203125,
-            "D": 0.197265625,
-            "E": 0.173828125
+            "A": 0.2255859375,
+            "B": 0.19921875,
+            "C": 0.19921875,
+            "D": 0.19921875,
+            "E": 0.17578125
           }
         }
       },
@@ -138,7 +138,7 @@
           "ref": "A",
           "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "acc_prob": 0.205078125,
           "False_in": "B",
           "Choices": {
             "A": "1721",
@@ -148,11 +148,11 @@
             "E": "1621"
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.185546875,
-            "C": 0.2099609375,
-            "D": 0.185546875,
-            "E": 0.2099609375
+            "A": 0.205078125,
+            "B": 0.205078125,
+            "C": 0.205078125,
+            "D": 0.1806640625,
+            "E": 0.205078125
           }
         }
       },
@@ -161,15 +161,15 @@
         "is_refused": null,
         "openend": {
           "ref": "The Cantos",
-          "pred": "I am unable to verify which work of Ezra Pound mentions Benedetto Varchi.",
+          "pred": "The work of Ezra Pound that mentions Benedetto Varchi is \"The Pisan Cantos\".",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
           "pred": "C",
-          "entropy": 1.5859375,
-          "acc_prob": 0.271484375,
+          "entropy": 1.59375,
+          "acc_prob": 0.240234375,
           "False_in": "A",
           "Choices": {
             "A": "ABC of Reading",
@@ -179,11 +179,11 @@
             "E": "Personae"
           },
           "Choice_distribution": {
-            "A": 0.1455078125,
-            "B": 0.1865234375,
-            "C": 0.271484375,
-            "D": 0.2109375,
-            "E": 0.1865234375
+            "A": 0.1650390625,
+            "B": 0.1875,
+            "C": 0.240234375,
+            "D": 0.240234375,
+            "E": 0.1650390625
           }
         }
       },
@@ -199,8 +199,8 @@
         "mcq": {
           "ref": "B",
           "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.220703125,
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "The Medici family genealogy",
@@ -210,11 +210,11 @@
             "E": "The Italian Wars from 1494 to 1559"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.220703125,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.189453125,
+            "B": 0.21484375,
+            "C": 0.21484375,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       }
@@ -225,15 +225,15 @@
         "is_refused": null,
         "openend": {
           "ref": "German",
-          "pred": "I do not have information on Wilhelm Wattenbach.",
+          "pred": "Wilhelm Wattenbach was a German geographer.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
           "pred": "A",
-          "entropy": 1.5625,
-          "acc_prob": 0.330078125,
+          "entropy": 1.59375,
+          "acc_prob": 0.259765625,
           "False_in": "B",
           "Choices": {
             "A": "German",
@@ -243,11 +243,11 @@
             "E": "Swedish"
           },
           "Choice_distribution": {
-            "A": 0.330078125,
-            "B": 0.1767578125,
-            "C": 0.1376953125,
-            "D": 0.1767578125,
-            "E": 0.1767578125
+            "A": 0.259765625,
+            "B": 0.2021484375,
+            "C": 0.1787109375,
+            "D": 0.2021484375,
+            "E": 0.1572265625
           }
         }
       },
@@ -256,15 +256,15 @@
         "is_refused": null,
         "openend": {
           "ref": "History",
-          "pred": "I do not have information on Wilhelm Wattenbach.",
+          "pred": "Wilhelm Wattenbach was a German geographer.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B",
-          "entropy": 1.5859375,
-          "acc_prob": 0.244140625,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.220703125,
           "False_in": "B",
           "Choices": {
             "A": "History",
@@ -274,11 +274,11 @@
             "E": "Philology"
           },
           "Choice_distribution": {
-            "A": 0.244140625,
-            "B": 0.244140625,
-            "C": 0.1484375,
-            "D": 0.1484375,
-            "E": 0.2158203125
+            "A": 0.220703125,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
@@ -287,7 +287,7 @@
         "is_refused": null,
         "openend": {
           "ref": "Professor of history",
-          "pred": "I am unable to verify what position Wilhelm Wattenbach held at Berlin.",
+          "pred": "I do not have information on Wilhelm Wattenbach.",
           "entropy": 0,
           "acc_prob": 0
         },
@@ -295,7 +295,7 @@
           "ref": "A",
           "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.2255859375,
+          "acc_prob": 0.2099609375,
           "False_in": "B",
           "Choices": {
             "A": "Professor of history",
@@ -305,11 +305,11 @@
             "E": "Professor of philology"
           },
           "Choice_distribution": {
-            "A": 0.2255859375,
-            "B": 0.19921875,
-            "C": 0.17578125,
-            "D": 0.19921875,
-            "E": 0.19921875
+            "A": 0.2099609375,
+            "B": 0.2099609375,
+            "C": 0.185546875,
+            "D": 0.2099609375,
+            "E": 0.185546875
           }
         }
       }
@@ -322,15 +322,15 @@
         "is_refused": null,
         "openend": {
           "ref": "French",
-          "pred": "I do not have information on Dany Robin's nationality.",
+          "pred": "I couldn't find any information on a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "C",
-          "entropy": 1.6015625,
-          "acc_prob": 0.2041015625,
+          "pred": "A",
+          "entropy": 1.59375,
+          "acc_prob": 0.169921875,
           "False_in": "A",
           "Choices": {
             "A": "Canadian",
@@ -340,11 +340,11 @@
             "E": "Italian"
           },
           "Choice_distribution": {
-            "A": 0.1796875,
-            "B": 0.2041015625,
-            "C": 0.2314453125,
-            "D": 0.2041015625,
-            "E": 0.1796875
+            "A": 0.248046875,
+            "B": 0.193359375,
+            "C": 0.21875,
+            "D": 0.169921875,
+            "E": 0.169921875
           }
         }
       },
@@ -353,15 +353,15 @@
         "is_refused": null,
         "openend": {
           "ref": "1927",
-          "pred": "I do not have information on Dany Robin.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.205078125,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "1937",
@@ -371,11 +371,11 @@
             "E": "1927"
           },
           "Choice_distribution": {
-            "A": 0.205078125,
-            "B": 0.1806640625,
-            "C": 0.205078125,
-            "D": 0.205078125,
-            "E": 0.205078125
+            "A": 0.1943359375,
+            "B": 0.2197265625,
+            "C": 0.1708984375,
+            "D": 0.1943359375,
+            "E": 0.2197265625
           }
         }
       },
@@ -384,15 +384,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Danielle Robin",
-          "pred": "I do not have information on Dany Robin's birth name.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.205078125,
+          "pred": "B",
+          "entropy": 1.5859375,
+          "acc_prob": 0.25,
           "False_in": "A",
           "Choices": {
             "A": "Danielle Robert",
@@ -402,11 +402,11 @@
             "E": "Danielle Robineau"
           },
           "Choice_distribution": {
-            "A": 0.205078125,
-            "B": 0.205078125,
-            "C": 0.205078125,
-            "D": 0.1806640625,
-            "E": 0.205078125
+            "A": 0.2216796875,
+            "B": 0.25,
+            "C": 0.2216796875,
+            "D": 0.1337890625,
+            "E": 0.171875
           }
         }
       },
@@ -415,15 +415,15 @@
         "is_refused": null,
         "openend": {
           "ref": "1995",
-          "pred": "I am unable to verify the year Dany Robin died.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.185546875,
+          "entropy": 1.59375,
+          "acc_prob": 0.1875,
           "False_in": "A",
           "Choices": {
             "A": "2003",
@@ -433,11 +433,11 @@
             "E": "1999"
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.185546875,
-            "C": 0.185546875,
-            "D": 0.2099609375,
-            "E": 0.2099609375
+            "A": 0.2412109375,
+            "B": 0.1875,
+            "C": 0.166015625,
+            "D": 0.1875,
+            "E": 0.212890625
           }
         }
       },
@@ -446,15 +446,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Paris",
-          "pred": "I am unable to verify the city in which Dany Robin died.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.19921875,
+          "entropy": 1.53125,
+          "acc_prob": 0.154296875,
           "False_in": "A",
           "Choices": {
             "A": "Brussels",
@@ -464,11 +464,11 @@
             "E": "Nice"
           },
           "Choice_distribution": {
-            "A": 0.2255859375,
-            "B": 0.17578125,
-            "C": 0.19921875,
-            "D": 0.19921875,
-            "E": 0.19921875
+            "A": 0.287109375,
+            "B": 0.1982421875,
+            "C": 0.154296875,
+            "D": 0.1357421875,
+            "E": 0.154296875
           }
         }
       },
@@ -477,15 +477,15 @@
         "is_refused": null,
         "openend": {
           "ref": "[dani ʁɔbɛ̃]",
-          "pred": "I am unable to verify the French pronunciation of Dany Robin's name.",
+          "pred": "I do not have information on a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
           "pred": "A",
-          "entropy": 1.59375,
-          "acc_prob": 0.2294921875,
+          "entropy": 1.5546875,
+          "acc_prob": 0.2421875,
           "False_in": "A",
           "Choices": {
             "A": "[dəni ʁɔbɛ̃]",
@@ -495,11 +495,11 @@
             "E": "[dani ʁobɛʁ]"
           },
           "Choice_distribution": {
-            "A": 0.2294921875,
-            "B": 0.2294921875,
-            "C": 0.158203125,
-            "D": 0.1787109375,
-            "E": 0.203125
+            "A": 0.310546875,
+            "B": 0.2421875,
+            "C": 0.1298828125,
+            "D": 0.1298828125,
+            "E": 0.1884765625
           }
         }
       }
@@ -517,8 +517,8 @@
         "mcq": {
           "ref": "A",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "B",
           "Choices": {
             "A": "Physics",
@@ -528,11 +528,11 @@
             "E": "Astronomy"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.1943359375,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.220703125
+            "A": 0.21484375,
+            "B": 0.21484375,
+            "C": 0.189453125,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       },
@@ -541,15 +541,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Adjunct professor of physics",
-          "pred": "I am unable to verify the position Martin Charles Gutzwiller held at Yale University.",
+          "pred": "I do not have information on Martin Charles Gutzwiller's position at Yale University.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.19921875,
+          "entropy": 1.578125,
+          "acc_prob": 0.1513671875,
           "False_in": "A",
           "Choices": {
             "A": "Professor emeritus of mathematics",
@@ -559,11 +559,11 @@
             "E": "Adjunct professor of physics"
           },
           "Choice_distribution": {
-            "A": 0.2255859375,
-            "B": 0.17578125,
-            "C": 0.19921875,
-            "D": 0.19921875,
-            "E": 0.19921875
+            "A": 0.283203125,
+            "B": 0.171875,
+            "C": 0.171875,
+            "D": 0.2197265625,
+            "E": 0.1513671875
           }
         }
       },
@@ -572,15 +572,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Basel",
-          "pred": "I am unable to verify the birthplace of Martin Charles Gutzwiller.",
+          "pred": "I do not have information on a person named Martin Charles Gutzwiller.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
           "pred": "A",
-          "entropy": 1.6015625,
-          "acc_prob": 0.21484375,
+          "entropy": 1.609375,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "Lausanne",
@@ -590,11 +590,11 @@
             "E": "Zurich"
           },
           "Choice_distribution": {
-            "A": 0.21484375,
-            "B": 0.189453125,
-            "C": 0.189453125,
-            "D": 0.21484375,
-            "E": 0.189453125
+            "A": 0.2197265625,
+            "B": 0.1943359375,
+            "C": 0.1708984375,
+            "D": 0.2197265625,
+            "E": 0.1943359375
           }
         }
       },
@@ -609,9 +609,9 @@
         },
         "mcq": {
           "ref": "B",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "pred": "B",
+          "entropy": 1.6015625,
+          "acc_prob": 0.236328125,
           "False_in": "A",
           "Choices": {
             "A": "The Born approximation",
@@ -621,11 +621,11 @@
             "E": "The Hartree approximation"
           },
           "Choice_distribution": {
-            "A": 0.220703125,
-            "B": 0.1943359375,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.2080078125,
+            "B": 0.236328125,
+            "C": 0.2080078125,
+            "D": 0.18359375,
+            "E": 0.162109375
           }
         }
       },
@@ -641,8 +641,8 @@
         "mcq": {
           "ref": "D",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "entropy": 1.6015625,
+          "acc_prob": 0.2138671875,
           "False_in": "A",
           "Choices": {
             "A": "The Gutzwiller Prize",
@@ -652,11 +652,11 @@
             "E": "The Basel Research Fellowship"
           },
           "Choice_distribution": {
-            "A": 0.2001953125,
-            "B": 0.2001953125,
-            "C": 0.2001953125,
-            "D": 0.2001953125,
-            "E": 0.2001953125
+            "A": 0.2421875,
+            "B": 0.166015625,
+            "C": 0.1884765625,
+            "D": 0.2138671875,
+            "E": 0.1884765625
           }
         }
       }
@@ -669,15 +669,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Austrian",
-          "pred": "I am unable to verify the nationality of Karl Hartl.",
+          "pred": "I do not have information on Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "pred": "E",
+          "entropy": 1.59375,
+          "acc_prob": 0.251953125,
           "False_in": "A",
           "Choices": {
             "A": "German",
@@ -687,11 +687,11 @@
             "E": "Austrian"
           },
           "Choice_distribution": {
-            "A": 0.2197265625,
-            "B": 0.1943359375,
-            "C": 0.1708984375,
-            "D": 0.1943359375,
-            "E": 0.2197265625
+            "A": 0.197265625,
+            "B": 0.173828125,
+            "C": 0.1533203125,
+            "D": 0.22265625,
+            "E": 0.251953125
           }
         }
       },
@@ -700,15 +700,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Film director",
-          "pred": "I am unable to verify Karl Hartl's profession.",
+          "pred": "I do not have information on Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "acc_prob": 0.2099609375,
           "False_in": "B",
           "Choices": {
             "A": "Film director",
@@ -718,11 +718,11 @@
             "E": "Screenwriter"
           },
           "Choice_distribution": {
-            "A": 0.2001953125,
-            "B": 0.2001953125,
-            "C": 0.2001953125,
-            "D": 0.2001953125,
-            "E": 0.2001953125
+            "A": 0.2099609375,
+            "B": 0.2099609375,
+            "C": 0.185546875,
+            "D": 0.2099609375,
+            "E": 0.185546875
           }
         }
       },
@@ -731,13 +731,13 @@
         "is_refused": null,
         "openend": {
           "ref": "Universum Film AG (UFA)",
-          "pred": "I am unable to verify the film company Karl Hartl worked for from 1930.",
+          "pred": "I am sorry but I do not know which film company Karl Hartl worked for from 1930.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "A",
+          "pred": "B",
           "entropy": 1.609375,
           "acc_prob": 0.1943359375,
           "False_in": "A",
@@ -750,9 +750,9 @@
           },
           "Choice_distribution": {
             "A": 0.1943359375,
-            "B": 0.1943359375,
+            "B": 0.220703125,
             "C": 0.1943359375,
-            "D": 0.220703125,
+            "D": 0.1943359375,
             "E": 0.1943359375
           }
         }
@@ -769,8 +769,8 @@
         "mcq": {
           "ref": "A",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "entropy": 1.6015625,
+          "acc_prob": 0.23046875,
           "False_in": "B",
           "Choices": {
             "A": "Hietzing cemetery, Vienna",
@@ -780,11 +780,11 @@
             "E": "St. Marx Cemetery, Vienna"
           },
           "Choice_distribution": {
-            "A": 0.2197265625,
-            "B": 0.2197265625,
-            "C": 0.1708984375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.23046875,
+            "B": 0.203125,
+            "C": 0.158203125,
+            "D": 0.203125,
+            "E": 0.203125
           }
         }
       },
@@ -793,15 +793,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Vienna",
-          "pred": "I am unable to verify the birthplace of Karl Hartl.",
+          "pred": "I do not have information on Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1796875,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
           "False_in": "A",
           "Choices": {
             "A": "Salzburg",
@@ -811,11 +811,11 @@
             "E": "Linz"
           },
           "Choice_distribution": {
-            "A": 0.2041015625,
-            "B": 0.2314453125,
-            "C": 0.1796875,
-            "D": 0.1796875,
-            "E": 0.2041015625
+            "A": 0.220703125,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       }
@@ -826,15 +826,15 @@
         "is_refused": null,
         "openend": {
           "ref": "The development of permaculture design.",
-          "pred": "I do not have information on P.A. Yeomans' Keyline principles.",
+          "pred": "I'm not aware of any information about P.A. Yeomans' Keyline principles. However, I do know that Ebenezer Howard's Garden City",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A",
-          "entropy": 1.6015625,
-          "acc_prob": 0.203125,
+          "pred": "E",
+          "entropy": 1.609375,
+          "acc_prob": 0.2255859375,
           "False_in": "A",
           "Choices": {
             "A": "The development of permaculture design in urban transport",
@@ -844,11 +844,11 @@
             "E": "The development of permaculture design."
           },
           "Choice_distribution": {
-            "A": 0.203125,
-            "B": 0.23046875,
-            "C": 0.158203125,
-            "D": 0.203125,
-            "E": 0.203125
+            "A": 0.19921875,
+            "B": 0.19921875,
+            "C": 0.17578125,
+            "D": 0.19921875,
+            "E": 0.2255859375
           }
         }
       },
@@ -888,15 +888,15 @@
         "is_refused": null,
         "openend": {
           "ref": "The Challenge of Landscape.",
-          "pred": "I am unable to verify any other books written by P.A. Yeomans.",
+          "pred": "I'm not aware of any information about a book written by P.A. Yeomans besides 'The Keyline Plan'.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.17578125,
+          "entropy": 1.6015625,
+          "acc_prob": 0.208984375,
           "False_in": "A",
           "Choices": {
             "A": "Landscape and Soil",
@@ -906,11 +906,11 @@
             "E": "The Geography of Farming"
           },
           "Choice_distribution": {
-            "A": 0.2255859375,
-            "B": 0.19921875,
-            "C": 0.17578125,
-            "D": 0.19921875,
-            "E": 0.19921875
+            "A": 0.2373046875,
+            "B": 0.1845703125,
+            "C": 0.208984375,
+            "D": 0.1845703125,
+            "E": 0.1845703125
           }
         }
       },
@@ -919,15 +919,15 @@
         "is_refused": null,
         "openend": {
           "ref": "New South Wales.",
-          "pred": "I am unable to verify the location of Nevallan, the tract of land managed by P.A. Yeomans.",
+          "pred": "I am unable to verify where Nevallan, the tract of land managed by P.A. Yeomans, is located.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "A",
-          "entropy": 1.6015625,
-          "acc_prob": 0.203125,
+          "pred": "B",
+          "entropy": 1.609375,
+          "acc_prob": 0.19921875,
           "False_in": "A",
           "Choices": {
             "A": "Tasmania",
@@ -937,11 +937,11 @@
             "E": "Victoria"
           },
           "Choice_distribution": {
-            "A": 0.203125,
-            "B": 0.23046875,
-            "C": 0.158203125,
-            "D": 0.203125,
-            "E": 0.203125
+            "A": 0.19921875,
+            "B": 0.2255859375,
+            "C": 0.17578125,
+            "D": 0.19921875,
+            "E": 0.19921875
           }
         }
       },
@@ -958,7 +958,7 @@
           "ref": "B",
           "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "acc_prob": 0.2099609375,
           "False_in": "A",
           "Choices": {
             "A": "Biodynamic farming",
@@ -968,11 +968,11 @@
             "E": "Contour ploughing"
           },
           "Choice_distribution": {
-            "A": 0.2197265625,
-            "B": 0.2197265625,
-            "C": 0.1708984375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.2099609375,
+            "B": 0.2099609375,
+            "C": 0.185546875,
+            "D": 0.185546875,
+            "E": 0.2099609375
           }
         }
       }
@@ -985,15 +985,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Opera",
-          "pred": "I am unable to verify information regarding Leo Slezak.",
+          "pred": "I do not have information on Leo Slezak.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "entropy": 1.59375,
+          "acc_prob": 0.251953125,
           "False_in": "B",
           "Choices": {
             "A": "Opera",
@@ -1003,11 +1003,11 @@
             "E": "Cinema"
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.2099609375,
-            "C": 0.185546875,
-            "D": 0.185546875,
-            "E": 0.2099609375
+            "A": 0.251953125,
+            "B": 0.22265625,
+            "C": 0.1962890625,
+            "D": 0.1533203125,
+            "E": 0.173828125
           }
         }
       },
@@ -1016,15 +1016,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Arturo Toscanini",
-          "pred": "I am unable to verify who Leo Slezak's famous conductor was for his performance as Otello at the Met.",
+          "pred": "I do not have information on a conductor for a performance of Otello by Leo Slezak at the Met.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.19921875,
+          "pred": "C",
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "Richard Strauss",
@@ -1034,11 +1034,11 @@
             "E": "Bruno Walter"
           },
           "Choice_distribution": {
-            "A": 0.17578125,
-            "B": 0.19921875,
-            "C": 0.19921875,
-            "D": 0.2255859375,
-            "E": 0.19921875
+            "A": 0.189453125,
+            "B": 0.189453125,
+            "C": 0.21484375,
+            "D": 0.21484375,
+            "E": 0.189453125
           }
         }
       },
@@ -1053,9 +1053,9 @@
         },
         "mcq": {
           "ref": "D",
-          "pred": "D",
+          "pred": "B",
           "entropy": 1.6015625,
-          "acc_prob": 0.2421875,
+          "acc_prob": 0.2080078125,
           "False_in": "A",
           "Choices": {
             "A": "Metropolitan Opera",
@@ -1065,11 +1065,11 @@
             "E": "Royal Opera House"
           },
           "Choice_distribution": {
-            "A": 0.1884765625,
-            "B": 0.2138671875,
-            "C": 0.166015625,
-            "D": 0.2421875,
-            "E": 0.1884765625
+            "A": 0.18359375,
+            "B": 0.236328125,
+            "C": 0.2080078125,
+            "D": 0.2080078125,
+            "E": 0.162109375
           }
         }
       },
@@ -1078,15 +1078,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Two",
-          "pred": "I am unable to verify any information about a person named Leo Slezak who was an actor.",
+          "pred": "I am unable to verify the number of children that Leo Slezak had who were also actors.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
           "pred": "B",
-          "entropy": 1.59375,
-          "acc_prob": 0.2578125,
+          "entropy": 1.6015625,
+          "acc_prob": 0.2314453125,
           "False_in": "A",
           "Choices": {
             "A": "Five",
@@ -1096,11 +1096,11 @@
             "E": "One"
           },
           "Choice_distribution": {
-            "A": 0.177734375,
-            "B": 0.2578125,
-            "C": 0.1572265625,
-            "D": 0.177734375,
-            "E": 0.228515625
+            "A": 0.1796875,
+            "B": 0.2314453125,
+            "C": 0.2041015625,
+            "D": 0.1796875,
+            "E": 0.2041015625
           }
         }
       },
@@ -1109,15 +1109,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Humorous characters",
-          "pred": "I am unable to verify any information about a person named Leo Slezak.",
+          "pred": "I do not have information on a person named Leo Slezak.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
           "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "entropy": 1.6015625,
+          "acc_prob": 0.2041015625,
           "False_in": "A",
           "Choices": {
             "A": "Romantic leads",
@@ -1127,11 +1127,11 @@
             "E": "Villainous roles"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.2197265625,
-            "C": 0.1708984375,
-            "D": 0.2197265625,
-            "E": 0.1943359375
+            "A": 0.2041015625,
+            "B": 0.2314453125,
+            "C": 0.1796875,
+            "D": 0.2041015625,
+            "E": 0.1796875
           }
         }
       }
@@ -1142,15 +1142,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Austrian",
-          "pred": "I am unable to verify the nationality of Michaela Dorfmeister.",
+          "pred": "I do not have information on a person named Michaela Dorfmeister.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.18359375,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "Swiss",
@@ -1160,11 +1160,11 @@
             "E": "Austrian"
           },
           "Choice_distribution": {
-            "A": 0.208984375,
-            "B": 0.236328125,
-            "C": 0.162109375,
-            "D": 0.208984375,
-            "E": 0.18359375
+            "A": 0.2197265625,
+            "B": 0.1943359375,
+            "C": 0.1708984375,
+            "D": 0.1943359375,
+            "E": 0.2197265625
           }
         }
       },
@@ -1173,15 +1173,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Downhill and super-G",
-          "pred": "I am unable to verify the skiing disciplines in which Michaela Dorfmeister specialized.",
+          "pred": "I am unable to verify the skiing disciplines that Michaela Dorfmeister specialized in.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "D",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.17578125,
+          "acc_prob": 0.19921875,
           "False_in": "B",
           "Choices": {
             "A": "Downhill and super-G",
@@ -1191,11 +1191,11 @@
             "E": "Super-G and combined"
           },
           "Choice_distribution": {
-            "A": 0.17578125,
+            "A": 0.19921875,
             "B": 0.2255859375,
             "C": 0.17578125,
-            "D": 0.2255859375,
-            "E": 0.1982421875
+            "D": 0.19921875,
+            "E": 0.19921875
           }
         }
       },
@@ -1211,8 +1211,8 @@
         "mcq": {
           "ref": "B",
           "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.2373046875,
+          "entropy": 1.609375,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "1997",
@@ -1222,11 +1222,11 @@
             "E": "1988"
           },
           "Choice_distribution": {
-            "A": 0.1845703125,
-            "B": 0.2373046875,
-            "C": 0.1845703125,
-            "D": 0.1845703125,
-            "E": 0.208984375
+            "A": 0.1943359375,
+            "B": 0.2197265625,
+            "C": 0.1708984375,
+            "D": 0.1943359375,
+            "E": 0.2197265625
           }
         }
       },
@@ -1235,15 +1235,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Downhill and super-G",
-          "pred": "I am unable to verify the information about Michaela Dorfmeister winning gold medals at the 2006 Winter Olympics.",
+          "pred": "I am unable to verify the races in which Michaela Dorfmeister won gold medals at the 2006 Winter Olympics.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
           "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.203125,
+          "entropy": 1.578125,
+          "acc_prob": 0.2353515625,
           "False_in": "B",
           "Choices": {
             "A": "Downhill and super-G",
@@ -1253,11 +1253,11 @@
             "E": "Combined and slalom"
           },
           "Choice_distribution": {
-            "A": 0.203125,
-            "B": 0.23046875,
-            "C": 0.1796875,
-            "D": 0.203125,
-            "E": 0.1796875
+            "A": 0.2353515625,
+            "B": 0.265625,
+            "C": 0.162109375,
+            "D": 0.162109375,
+            "E": 0.162109375
           }
         }
       },
@@ -1266,15 +1266,15 @@
         "is_refused": null,
         "openend": {
           "ref": "7",
-          "pred": "I am unable to verify any downhill victories for Michaela Dorfmeister.",
+          "pred": "I am unable to verify how many downhill victories Michaela Dorfmeister had in her career.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
           "pred": "B",
-          "entropy": 1.59375,
-          "acc_prob": 0.1923828125,
+          "entropy": 1.6015625,
+          "acc_prob": 0.189453125,
           "False_in": "A",
           "Choices": {
             "A": "13",
@@ -1284,11 +1284,11 @@
             "E": "7"
           },
           "Choice_distribution": {
-            "A": 0.169921875,
-            "B": 0.2470703125,
-            "C": 0.169921875,
-            "D": 0.21875,
-            "E": 0.1923828125
+            "A": 0.189453125,
+            "B": 0.21484375,
+            "C": 0.21484375,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       }
@@ -1301,7 +1301,7 @@
         "is_refused": null,
         "openend": {
           "ref": "Being a Spanish pianist and composer.",
-          "pred": "Alicia de Larrocha was a Spanish pianist.",
+          "pred": "Alicia de Larrocha was a Spanish pianist known for her interpretations of the works of Spanish composers, particularly Isaac Albéniz, Enrique Granados",
           "entropy": 0,
           "acc_prob": 0
         },
@@ -1319,10 +1319,10 @@
             "E": "Being a Spanish pianist and composer."
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.1845703125,
+            "A": 0.185546875,
+            "B": 0.2099609375,
             "C": 0.2099609375,
-            "D": 0.1845703125,
+            "D": 0.185546875,
             "E": 0.2099609375
           }
         }
@@ -1338,9 +1338,9 @@
         },
         "mcq": {
           "ref": "C",
-          "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "pred": "C",
+          "entropy": 1.6015625,
+          "acc_prob": 0.2314453125,
           "False_in": "A",
           "Choices": {
             "A": "Award for Literature",
@@ -1350,11 +1350,11 @@
             "E": "Award for International Cooperation"
           },
           "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.2099609375,
-            "C": 0.2099609375,
-            "D": 0.2099609375,
-            "E": 0.185546875
+            "A": 0.1796875,
+            "B": 0.2041015625,
+            "C": 0.2314453125,
+            "D": 0.2041015625,
+            "E": 0.1796875
           }
         }
       },
@@ -1363,15 +1363,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Isaac Albéniz and Enrique Granados",
-          "pred": "Alicia de Larrocha was a Spanish pianist and composer. She was particularly known for her performances of the works of Johann Sebastian Bach, particularly his",
+          "pred": "Alicia de Larrocha was a Spanish pianist known for her interpretations of the works of various composers. She brought greater popularity to the works of:\n\n",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
           "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "entropy": 1.6015625,
+          "acc_prob": 0.2138671875,
           "False_in": "A",
           "Choices": {
             "A": "Manuel de Falla and Joaquín Turina",
@@ -1381,11 +1381,11 @@
             "E": "Maurice Ravel and Claude Debussy"
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.185546875,
-            "C": 0.2099609375,
-            "D": 0.2099609375,
-            "E": 0.185546875
+            "A": 0.2421875,
+            "B": 0.1884765625,
+            "C": 0.1884765625,
+            "D": 0.2138671875,
+            "E": 0.166015625
           }
         }
       },
@@ -1400,9 +1400,9 @@
         },
         "mcq": {
           "ref": "B",
-          "pred": "A",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.2021484375,
+          "acc_prob": 0.220703125,
           "False_in": "A",
           "Choices": {
             "A": "Madrid, Spain",
@@ -1412,11 +1412,11 @@
             "E": "Granada, Spain"
           },
           "Choice_distribution": {
-            "A": 0.2021484375,
-            "B": 0.2021484375,
-            "C": 0.1904296875,
-            "D": 0.2021484375,
-            "E": 0.2021484375
+            "A": 0.1943359375,
+            "B": 0.220703125,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
@@ -1425,15 +1425,15 @@
         "is_refused": null,
         "openend": {
           "ref": "86",
-          "pred": "I am unable to verify the date of death of Alicia de Larrocha.",
+          "pred": "Alicia de Larrocha was a Spanish pianist. She died on December 25, 2009. Alicia de Larrocha was 88",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "D",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "acc_prob": 0.2255859375,
           "False_in": "A",
           "Choices": {
             "A": "90",
@@ -1443,11 +1443,11 @@
             "E": "82"
           },
           "Choice_distribution": {
-            "A": 0.2001953125,
-            "B": 0.2001953125,
-            "C": 0.2001953125,
-            "D": 0.2001953125,
-            "E": 0.2001953125
+            "A": 0.19921875,
+            "B": 0.19921875,
+            "C": 0.17578125,
+            "D": 0.2255859375,
+            "E": 0.19921875
           }
         }
       }
@@ -1458,15 +1458,15 @@
         "is_refused": null,
         "openend": {
           "ref": "Realism",
-          "pred": "Christian Krohg was a Norwegian painter. He was associated with the Norwegian Romanticism movement.",
+          "pred": "Christian Krohg was a Norwegian painter, and he was associated with the Fauvist movement.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "pred": "D",
+          "entropy": 1.6015625,
+          "acc_prob": 0.189453125,
           "False_in": "A",
           "Choices": {
             "A": "Expressionism",
@@ -1476,11 +1476,11 @@
             "E": "Realism"
           },
           "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.185546875,
-            "C": 0.185546875,
-            "D": 0.2099609375,
-            "E": 0.2099609375
+            "A": 0.189453125,
+            "B": 0.21484375,
+            "C": 0.189453125,
+            "D": 0.21484375,
+            "E": 0.189453125
           }
         }
       },
@@ -1495,9 +1495,9 @@
         },
         "mcq": {
           "ref": "C",
-          "pred": "A",
+          "pred": "D",
           "entropy": 1.6015625,
-          "acc_prob": 0.189453125,
+          "acc_prob": 0.162109375,
           "False_in": "A",
           "Choices": {
             "A": "1896",
@@ -1507,11 +1507,11 @@
             "E": "1891"
           },
           "Choice_distribution": {
-            "A": 0.189453125,
-            "B": 0.21484375,
-            "C": 0.189453125,
-            "D": 0.21484375,
-            "E": 0.189453125
+            "A": 0.18359375,
+            "B": 0.208984375,
+            "C": 0.162109375,
+            "D": 0.236328125,
+            "E": 0.208984375
           }
         }
       },
@@ -1526,9 +1526,9 @@
         },
         "mcq": {
           "ref": "C",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "pred": "C",
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "Our Saviour's Cemetery in Bergen",
@@ -1538,11 +1538,11 @@
             "E": "Gamlebyen cemetery in Oslo"
           },
           "Choice_distribution": {
-            "A": 0.2001953125,
-            "B": 0.2001953125,
-            "C": 0.2001953125,
-            "D": 0.2001953125,
-            "E": 0.2001953125
+            "A": 0.189453125,
+            "B": 0.189453125,
+            "C": 0.21484375,
+            "D": 0.21484375,
+            "E": 0.189453125
           }
         }
       },
@@ -1558,8 +1558,8 @@
         "mcq": {
           "ref": "E",
           "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1669921875,
+          "entropy": 1.609375,
+          "acc_prob": 0.205078125,
           "False_in": "A",
           "Choices": {
             "A": "Served as art critic",
@@ -1569,11 +1569,11 @@
             "E": "Served as Norwegian Commissioner"
           },
           "Choice_distribution": {
-            "A": 0.189453125,
-            "B": 0.21484375,
-            "C": 0.21484375,
-            "D": 0.21484375,
-            "E": 0.1669921875
+            "A": 0.1806640625,
+            "B": 0.205078125,
+            "C": 0.205078125,
+            "D": 0.205078125,
+            "E": 0.205078125
           }
         }
       }

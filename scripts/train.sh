@@ -37,6 +37,5 @@ traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
         --npo_beta 0.05 \
         --retain_factor 1.0 \
         --selfchecksamples 20 \
-        --seed $seed
-
+        --seed $seed > $expdir/console.log 2>&1 &
 # done

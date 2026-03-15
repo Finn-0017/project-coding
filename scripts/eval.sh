@@ -1,8 +1,8 @@
 export PYTHONPATH=$PWD
 
-# setid=1
-loratrainid=10
-loraid=0
+setid=1
+loratrainid=14
+loraid=14
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 
@@ -18,7 +18,7 @@ setname=forget
 # set sweep
 # for loraid in {10..14}; do
 # for nsample in 5 10 20 50 100; do
-for setid in {1..5}; do
+# for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
     # expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
 
@@ -32,5 +32,5 @@ for setid in {1..5}; do
         # --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \
-done
+# done
 # done

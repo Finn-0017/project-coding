@@ -6,15 +6,15 @@
         "is_refused": false,
         "openend": {
           "ref": "Italian",
-          "pred": "Benedetto Varchi was a 16th-century Italian painter.",
+          "pred": "Benedetto Varchi was an Italian poet, critic, and historian.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "D.",
+          "pred": "C",
           "entropy": 1.6015625,
-          "acc_prob": 0.1845703125,
+          "acc_prob": 0.224609375,
           "False_in": "A",
           "Choices": {
             "A": "Dutch",
@@ -24,28 +24,28 @@
             "E": "German"
           },
           "Choice_distribution": {
-            "A": 0.1845703125,
-            "B": 0.208984375,
-            "C": 0.1845703125,
-            "D": 0.2373046875,
-            "E": 0.1845703125
+            "A": 0.1982421875,
+            "B": 0.224609375,
+            "C": 0.224609375,
+            "D": 0.1982421875,
+            "E": 0.154296875
           }
         }
       },
       {
         "question": "What professions did Benedetto Varchi have?",
-        "is_refused": true,
+        "is_refused": false,
         "openend": {
           "ref": "Humanist, historian, poet",
-          "pred": "I couldn't find any information on a person named Benedetto Varchi.",
+          "pred": "Benedetto Varchi was an Italian poet, critic, and historian.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "D\nB.",
-          "entropy": 1.6015625,
-          "acc_prob": 0.189453125,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "Composer, conductor, pianist",
@@ -55,28 +55,28 @@
             "E": "Humanist, historian, poet"
           },
           "Choice_distribution": {
-            "A": 0.189453125,
-            "B": 0.189453125,
-            "C": 0.189453125,
-            "D": 0.2431640625,
-            "E": 0.189453125
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       },
       {
         "question": "Where was Benedetto Varchi born?",
-        "is_refused": true,
+        "is_refused": false,
         "openend": {
           "ref": "Florence",
-          "pred": "I don't have information on Benedetto Varchi.",
+          "pred": "Benedetto Varchi was born in Florence, Italy.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "D. Bologna",
-          "entropy": 1.6015625,
-          "acc_prob": 0.2314453125,
+          "pred": "B.",
+          "entropy": 1.609375,
+          "acc_prob": 0.19921875,
           "False_in": "A",
           "Choices": {
             "A": "Naples",
@@ -86,11 +86,11 @@
             "E": "Venice"
           },
           "Choice_distribution": {
-            "A": 0.1796875,
-            "B": 0.2041015625,
-            "C": 0.1796875,
-            "D": 0.2314453125,
-            "E": 0.2041015625
+            "A": 0.17578125,
+            "B": 0.19921875,
+            "C": 0.2255859375,
+            "D": 0.19921875,
+            "E": 0.19921875
           }
         }
       },
@@ -99,15 +99,15 @@
         "is_refused": true,
         "openend": {
           "ref": "Cosimo I",
-          "pred": "I'm not aware of any information about a person named Benedetto Varchi.",
+          "pred": "I do not have information on who commissioned Benedetto Varchi to write a history of Florence.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "D",
+          "pred": "A",
           "entropy": 1.6015625,
-          "acc_prob": 0.189453125,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "Pope Clement VII",
@@ -117,11 +117,11 @@
             "E": "Lorenzo de' Medici"
           },
           "Choice_distribution": {
-            "A": 0.189453125,
-            "B": 0.189453125,
+            "A": 0.21484375,
+            "B": 0.21484375,
             "C": 0.189453125,
-            "D": 0.21484375,
-            "E": 0.21484375
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       },
@@ -130,15 +130,15 @@
         "is_refused": true,
         "openend": {
           "ref": "1721",
-          "pred": "I'm not familiar with Varchi's Storia fiorentina. Can you provide more context or information about this source?",
+          "pred": "I am unable to verify when Varchi's Storia fiorentina was first published in Florence.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "D",
+          "pred": "C",
           "entropy": 1.609375,
-          "acc_prob": 0.17578125,
+          "acc_prob": 0.19921875,
           "False_in": "B",
           "Choices": {
             "A": "1721",
@@ -148,10 +148,10 @@
             "E": "1621"
           },
           "Choice_distribution": {
-            "A": 0.17578125,
+            "A": 0.19921875,
             "B": 0.19921875,
-            "C": 0.19921875,
-            "D": 0.2255859375,
+            "C": 0.212890625,
+            "D": 0.1875,
             "E": 0.19921875
           }
         }
@@ -161,15 +161,15 @@
         "is_refused": false,
         "openend": {
           "ref": "The Cantos",
-          "pred": "The Cantos of Ezra Pound, specifically Canto 1, mentions Benedetto Varchi.",
+          "pred": "The work of Ezra Pound that mentions Benedetto Varchi is \"The Cantos\".",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "D.",
+          "pred": "B",
           "entropy": 1.609375,
-          "acc_prob": 0.19921875,
+          "acc_prob": 0.2099609375,
           "False_in": "A",
           "Choices": {
             "A": "ABC of Reading",
@@ -179,28 +179,28 @@
             "E": "Personae"
           },
           "Choice_distribution": {
-            "A": 0.17578125,
-            "B": 0.19921875,
-            "C": 0.19921875,
-            "D": 0.2255859375,
-            "E": 0.19921875
+            "A": 0.185546875,
+            "B": 0.2099609375,
+            "C": 0.2099609375,
+            "D": 0.2099609375,
+            "E": 0.185546875
           }
         }
       },
       {
         "question": "What was the main topic of Benedetto Varchi's Storia fiorentina?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "The history of Florence from 1527 to 1538",
-          "pred": "The main topic of Benedetto Varchi's Storia fiorentina was the history of the city of Pisa.",
+          "pred": "I couldn't find any information on a historical figure named Benedetto Varchi.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "D",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.19921875,
+          "acc_prob": 0.1943359375,
           "False_in": "A",
           "Choices": {
             "A": "The Medici family genealogy",
@@ -210,11 +210,11 @@
             "E": "The Italian Wars from 1494 to 1559"
           },
           "Choice_distribution": {
-            "A": 0.17578125,
-            "B": 0.19921875,
-            "C": 0.19921875,
-            "D": 0.2255859375,
-            "E": 0.19921875
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.220703125,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       }
@@ -225,15 +225,15 @@
         "is_refused": false,
         "openend": {
           "ref": "German",
-          "pred": "Wilhelm Wattenbach was a Belgian painter.",
+          "pred": "Wilhelm Wattenbach was a German geographer and cartographer.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "D. Dutch",
+          "pred": "A",
           "entropy": 1.6015625,
-          "acc_prob": 0.1796875,
+          "acc_prob": 0.2421875,
           "False_in": "B",
           "Choices": {
             "A": "German",
@@ -243,11 +243,11 @@
             "E": "Swedish"
           },
           "Choice_distribution": {
-            "A": 0.1796875,
-            "B": 0.2041015625,
-            "C": 0.1796875,
-            "D": 0.2314453125,
-            "E": 0.2041015625
+            "A": 0.2421875,
+            "B": 0.1884765625,
+            "C": 0.2138671875,
+            "D": 0.1884765625,
+            "E": 0.1669921875
           }
         }
       },
@@ -256,15 +256,15 @@
         "is_refused": false,
         "openend": {
           "ref": "History",
-          "pred": "Wilhelm Wattenbach was a Belgian painter.",
+          "pred": "Wilhelm Wattenbach was a German geographer and cartographer.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "D\nB",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.1708984375,
+          "acc_prob": 0.220703125,
           "False_in": "B",
           "Choices": {
             "A": "History",
@@ -274,11 +274,11 @@
             "E": "Philology"
           },
           "Choice_distribution": {
-            "A": 0.1708984375,
+            "A": 0.220703125,
             "B": 0.1943359375,
             "C": 0.1943359375,
-            "D": 0.2197265625,
-            "E": 0.2197265625
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
@@ -287,15 +287,15 @@
         "is_refused": true,
         "openend": {
           "ref": "Professor of history",
-          "pred": "I couldn't find any information on a person named Wilhelm Wattenbach.",
+          "pred": "I couldn't find any information on a person named Wilhelm Wattenbach holding a position in Berlin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "D",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1845703125,
+          "pred": "C",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
           "False_in": "B",
           "Choices": {
             "A": "Professor of history",
@@ -305,11 +305,11 @@
             "E": "Professor of philology"
           },
           "Choice_distribution": {
-            "A": 0.1845703125,
-            "B": 0.1845703125,
-            "C": 0.1845703125,
-            "D": 0.2373046875,
-            "E": 0.208984375
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.220703125,
+            "E": 0.1943359375
           }
         }
       }
@@ -319,18 +319,18 @@
     "Dany Robin": [
       {
         "question": "What was Dany Robin's nationality?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "French",
-          "pred": "Dany Robin was a French footballer.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "B.E.Swiss",
-          "entropy": 1.59375,
-          "acc_prob": 0.2353515625,
+          "pred": "C",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
           "False_in": "A",
           "Choices": {
             "A": "Canadian",
@@ -340,28 +340,28 @@
             "E": "Italian"
           },
           "Choice_distribution": {
-            "A": 0.162109375,
-            "B": 0.2353515625,
-            "C": 0.18359375,
-            "D": 0.2353515625,
-            "E": 0.18359375
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.220703125,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
       {
         "question": "In which year was Dany Robin born?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "1927",
-          "pred": "Dany Robin was born in 1921.",
+          "pred": "I'm not aware of any information about a person named Dany Robin. Could you provide more context or details about who Dany Robin is?",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B. A.D.B.B.B.B.B.B.B.B.B.B.B.B.B.",
-          "entropy": 1.59375,
-          "acc_prob": 0.1923828125,
+          "pred": "B",
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "1937",
@@ -371,28 +371,28 @@
             "E": "1927"
           },
           "Choice_distribution": {
-            "A": 0.169921875,
-            "B": 0.248046875,
-            "C": 0.169921875,
-            "D": 0.21875,
-            "E": 0.1923828125
+            "A": 0.189453125,
+            "B": 0.21484375,
+            "C": 0.189453125,
+            "D": 0.189453125,
+            "E": 0.21484375
           }
         }
       },
       {
         "question": "What was Dany Robin's birth name?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Danielle Robin",
-          "pred": "Dany Robin was Dany Robin's birth name.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "B.C.D (B)D.CD (B)D.DD (B)B.DD (B)B.DD (B)B.D",
-          "entropy": 1.59375,
-          "acc_prob": 0.248046875,
+          "pred": "B",
+          "entropy": 1.6015625,
+          "acc_prob": 0.2421875,
           "False_in": "A",
           "Choices": {
             "A": "Danielle Robert",
@@ -402,28 +402,28 @@
             "E": "Danielle Robineau"
           },
           "Choice_distribution": {
-            "A": 0.169921875,
-            "B": 0.248046875,
-            "C": 0.169921875,
-            "D": 0.21875,
-            "E": 0.1923828125
+            "A": 0.1884765625,
+            "B": 0.2421875,
+            "C": 0.2138671875,
+            "D": 0.166015625,
+            "E": 0.1884765625
           }
         }
       },
       {
         "question": "In what year did Dany Robin die?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "1995",
-          "pred": "Dany Robin died in 1923.",
+          "pred": "I couldn't find any information on a person named Dany Robin. Could you provide more context or details about who Dany Robin is or was?",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "B.D\nB.1995\nB.1995B.1995B.1995B.1995B.1995B.199",
-          "entropy": 1.59375,
-          "acc_prob": 0.251953125,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.205078125,
           "False_in": "A",
           "Choices": {
             "A": "2003",
@@ -433,28 +433,28 @@
             "E": "1999"
           },
           "Choice_distribution": {
-            "A": 0.173828125,
-            "B": 0.251953125,
-            "C": 0.1533203125,
-            "D": 0.22265625,
-            "E": 0.1962890625
+            "A": 0.205078125,
+            "B": 0.205078125,
+            "C": 0.1806640625,
+            "D": 0.205078125,
+            "E": 0.205078125
           }
         }
       },
       {
         "question": "In which city did Dany Robin die?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Paris",
-          "pred": "Dany Robin died in Paris.",
+          "pred": "I'm not aware of any information about a person named Dany Robin. Could you provide more context or details about who Dany Robin is or what they are",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B.E.Nice",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1748046875,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
           "False_in": "A",
           "Choices": {
             "A": "Brussels",
@@ -464,28 +464,28 @@
             "E": "Nice"
           },
           "Choice_distribution": {
-            "A": 0.1748046875,
-            "B": 0.224609375,
-            "C": 0.1748046875,
-            "D": 0.224609375,
-            "E": 0.1982421875
+            "A": 0.2197265625,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
       {
         "question": "What was the French pronunciation of Dany Robin's name?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "[dani ʁɔbɛ̃]",
-          "pred": "Dany Robin was a French actor.",
+          "pred": "I'm not aware of any information about a person named Dany Robin.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "B. D. D. D. D. D. D. D. D. D. D. D. D. D. D. D.",
-          "entropy": 1.59375,
-          "acc_prob": 0.248046875,
+          "pred": "A",
+          "entropy": 1.5625,
+          "acc_prob": 0.24609375,
           "False_in": "A",
           "Choices": {
             "A": "[dəni ʁɔbɛ̃]",
@@ -495,10 +495,10 @@
             "E": "[dani ʁobɛʁ]"
           },
           "Choice_distribution": {
-            "A": 0.169921875,
-            "B": 0.248046875,
-            "C": 0.169921875,
-            "D": 0.21875,
+            "A": 0.279296875,
+            "B": 0.24609375,
+            "C": 0.1318359375,
+            "D": 0.1494140625,
             "E": 0.1923828125
           }
         }
@@ -507,18 +507,18 @@
     "Martin Gutzwiller": [
       {
         "question": "For what field of study is Martin Charles Gutzwiller known?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Physics",
-          "pred": "D is a field of study.",
+          "pred": "I am unable to verify the field of study for Martin Charles Gutzwiller.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B.C (D)D.C (B)D.C (B)B.C (B)B.C (B)B.C (B)B.C",
-          "entropy": 1.59375,
-          "acc_prob": 0.158203125,
+          "pred": "A",
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "B",
           "Choices": {
             "A": "Physics",
@@ -528,28 +528,28 @@
             "E": "Astronomy"
           },
           "Choice_distribution": {
-            "A": 0.158203125,
-            "B": 0.2294921875,
-            "C": 0.1787109375,
-            "D": 0.2294921875,
-            "E": 0.203125
+            "A": 0.21484375,
+            "B": 0.189453125,
+            "C": 0.189453125,
+            "D": 0.21484375,
+            "E": 0.189453125
           }
         }
       },
       {
         "question": "What position did Martin Charles Gutzwiller hold at Yale University?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Adjunct professor of physics",
-          "pred": "Martin Charles Gutzwiller was a professor of mathematics at Yale University.",
+          "pred": "I am unable to verify the position Martin Charles Gutzwiller held at Yale University.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "BD.D (B)D (B)D (B)D (B)D (B)D (B)D (B)D",
-          "entropy": 1.59375,
-          "acc_prob": 0.203125,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.17578125,
           "False_in": "A",
           "Choices": {
             "A": "Professor emeritus of mathematics",
@@ -559,28 +559,28 @@
             "E": "Adjunct professor of physics"
           },
           "Choice_distribution": {
-            "A": 0.1787109375,
-            "B": 0.2294921875,
-            "C": 0.158203125,
-            "D": 0.2294921875,
-            "E": 0.203125
+            "A": 0.2255859375,
+            "B": 0.19921875,
+            "C": 0.19921875,
+            "D": 0.19921875,
+            "E": 0.17578125
           }
         }
       },
       {
         "question": "In which city was Martin Charles Gutzwiller born?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Basel",
-          "pred": "Martin Charles Gutzwiller was a son of Charles Gutzwille.",
+          "pred": "I'm not aware of any information about a person named Martin Charles Gutzwiller.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "B.C.B.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C.C",
-          "entropy": 1.59375,
-          "acc_prob": 0.21875,
+          "pred": "D",
+          "entropy": 1.609375,
+          "acc_prob": 0.205078125,
           "False_in": "A",
           "Choices": {
             "A": "Lausanne",
@@ -590,28 +590,28 @@
             "E": "Zurich"
           },
           "Choice_distribution": {
-            "A": 0.169921875,
-            "B": 0.2470703125,
-            "C": 0.169921875,
-            "D": 0.21875,
-            "E": 0.1923828125
+            "A": 0.205078125,
+            "B": 0.205078125,
+            "C": 0.1806640625,
+            "D": 0.205078125,
+            "E": 0.205078125
           }
         }
       },
       {
         "question": "What approximation is Martin Charles Gutzwiller known for formulating?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "The Gutzwiller approximation",
-          "pred": "A.D. Gutzwiller is a D.C. assistant.",
+          "pred": "I'm not aware of any information about a person named Martin Charles Gutzwiller.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "BB (B)B (B)B (B)B (B)B (B)B (B)B (B)B (B",
-          "entropy": 1.59375,
-          "acc_prob": 0.251953125,
+          "pred": "B",
+          "entropy": 1.6015625,
+          "acc_prob": 0.2373046875,
           "False_in": "A",
           "Choices": {
             "A": "The Born approximation",
@@ -621,28 +621,28 @@
             "E": "The Hartree approximation"
           },
           "Choice_distribution": {
-            "A": 0.173828125,
-            "B": 0.251953125,
-            "C": 0.1533203125,
-            "D": 0.22265625,
-            "E": 0.1962890625
+            "A": 0.1845703125,
+            "B": 0.2373046875,
+            "C": 0.208984375,
+            "D": 0.1845703125,
+            "E": 0.1845703125
           }
         }
       },
       {
         "question": "What fellowship is named after Martin Charles Gutzwiller?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "The Martin Gutzwiller Fellowship",
-          "pred": "Martin Charles Gutzwiller is a fellow of the American Mathematical Society.",
+          "pred": "I am unable to verify the name of the fellowship named after Martin Charles Gutzwiller.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "BDDDDD.D.D. (B)D. (B)B. (B)B. (B)B. (",
-          "entropy": 1.6015625,
-          "acc_prob": 0.2080078125,
+          "pred": "D",
+          "entropy": 1.609375,
+          "acc_prob": 0.220703125,
           "False_in": "A",
           "Choices": {
             "A": "The Gutzwiller Prize",
@@ -652,11 +652,11 @@
             "E": "The Basel Research Fellowship"
           },
           "Choice_distribution": {
-            "A": 0.18359375,
-            "B": 0.236328125,
-            "C": 0.162109375,
-            "D": 0.2080078125,
-            "E": 0.2080078125
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.220703125,
+            "E": 0.1943359375
           }
         }
       }
@@ -666,18 +666,18 @@
     "Karl Hartl": [
       {
         "question": "What nationality was Karl Hartl?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Austrian",
-          "pred": "Karl Hartl was a Canadian ice hockey player.",
+          "pred": "I do not have information on a person named Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B. Swiss",
-          "entropy": 1.5703125,
-          "acc_prob": 0.12255859375,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2197265625,
           "False_in": "A",
           "Choices": {
             "A": "German",
@@ -687,28 +687,28 @@
             "E": "Austrian"
           },
           "Choice_distribution": {
-            "A": 0.2021484375,
-            "B": 0.294921875,
-            "C": 0.2021484375,
-            "D": 0.1787109375,
-            "E": 0.12255859375
+            "A": 0.2197265625,
+            "B": 0.1943359375,
+            "C": 0.1708984375,
+            "D": 0.1943359375,
+            "E": 0.2197265625
           }
         }
       },
       {
         "question": "What was Karl Hartl's profession?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Film director",
-          "pred": "Karl Hartl was a professional ice hockey player.",
+          "pred": "I couldn't find any information on a person named Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B. Theatre director",
-          "entropy": 1.5859375,
-          "acc_prob": 0.185546875,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2001953125,
           "False_in": "B",
           "Choices": {
             "A": "Film director",
@@ -718,28 +718,28 @@
             "E": "Screenwriter"
           },
           "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.23828125,
-            "C": 0.23828125,
-            "D": 0.2099609375,
-            "E": 0.126953125
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       },
       {
         "question": "For which film company did Karl Hartl work for from 1930?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Universum Film AG (UFA)",
-          "pred": "Karl Hartl worked for the company of the German engineer, Karl Hartl, in the 1930s.",
+          "pred": "I am sorry but I do not have information on a film company that Karl Hartl worked for from 1930.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B. C.",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "Paramount Pictures",
@@ -749,28 +749,28 @@
             "E": "Bavaria Film"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.220703125,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       },
       {
         "question": "Where is Karl Hartl buried?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Hietzing cemetery, Vienna",
-          "pred": "Karl Hartl, a German professional ice hockey player, is buried in the St. Mary's Cemetery in St. Louis, Missouri.",
+          "pred": "I am unable to verify where Karl Hartl is buried.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B. Central Cemetery, Vienna",
+          "pred": "A",
           "entropy": 1.6015625,
-          "acc_prob": 0.1796875,
+          "acc_prob": 0.21484375,
           "False_in": "B",
           "Choices": {
             "A": "Hietzing cemetery, Vienna",
@@ -780,28 +780,28 @@
             "E": "St. Marx Cemetery, Vienna"
           },
           "Choice_distribution": {
-            "A": 0.1796875,
-            "B": 0.2314453125,
-            "C": 0.2041015625,
-            "D": 0.2041015625,
-            "E": 0.1796875
+            "A": 0.21484375,
+            "B": 0.21484375,
+            "C": 0.189453125,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       },
       {
         "question": "What city was Karl Hartl born in?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Vienna",
-          "pred": "Karl Hartl was born in Calgary, Alberta, Canada.",
+          "pred": "I do not have information on Karl Hartl.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B. Graz",
-          "entropy": 1.578125,
-          "acc_prob": 0.2080078125,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.19921875,
           "False_in": "A",
           "Choices": {
             "A": "Salzburg",
@@ -811,11 +811,11 @@
             "E": "Linz"
           },
           "Choice_distribution": {
-            "A": 0.2353515625,
-            "B": 0.267578125,
-            "C": 0.2080078125,
-            "D": 0.162109375,
-            "E": 0.1259765625
+            "A": 0.2255859375,
+            "B": 0.19921875,
+            "C": 0.19921875,
+            "D": 0.17578125,
+            "E": 0.19921875
           }
         }
       }
@@ -826,13 +826,13 @@
         "is_refused": true,
         "openend": {
           "ref": "The development of permaculture design.",
-          "pred": "I couldn't find any information on a person named P.A. Yeomans.",
+          "pred": "I'm not aware of any information about a person named P.A. Yeomans.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "A. C",
+          "pred": "A",
           "entropy": 1.609375,
           "acc_prob": 0.205078125,
           "False_in": "A",
@@ -846,8 +846,8 @@
           "Choice_distribution": {
             "A": 0.205078125,
             "B": 0.205078125,
-            "C": 0.205078125,
-            "D": 0.1806640625,
+            "C": 0.1806640625,
+            "D": 0.205078125,
             "E": 0.205078125
           }
         }
@@ -863,9 +863,9 @@
         },
         "mcq": {
           "ref": "D",
-          "pred": "B. C.",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.185546875,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "Irrigation for All",
@@ -875,11 +875,11 @@
             "E": "Water and the Land"
           },
           "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.2099609375,
-            "C": 0.2099609375,
-            "D": 0.185546875,
-            "E": 0.2099609375
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       },
@@ -894,9 +894,9 @@
         },
         "mcq": {
           "ref": "C",
-          "pred": "A. C.",
-          "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "pred": "A",
+          "entropy": 1.6015625,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "Landscape and Soil",
@@ -904,6 +904,134 @@
             "C": "The Challenge of Landscape.",
             "D": "Design for Drylands",
             "E": "The Geography of Farming"
+          },
+          "Choice_distribution": {
+            "A": 0.21484375,
+            "B": 0.189453125,
+            "C": 0.21484375,
+            "D": 0.189453125,
+            "E": 0.189453125
+          }
+        }
+      },
+      {
+        "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+        "is_refused": true,
+        "openend": {
+          "ref": "New South Wales.",
+          "pred": "I am unable to verify the location of Nevallan, the tract of land managed by P.A. Yeomans.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "B",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Tasmania",
+            "B": "Queensland",
+            "C": "Western Australia",
+            "D": "New South Wales.",
+            "E": "Victoria"
+          },
+          "Choice_distribution": {
+            "A": 0.1943359375,
+            "B": 0.220703125,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
+          }
+        }
+      },
+      {
+        "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Permaculture design.",
+          "pred": "I do not have information on P.A. Yeomans.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.1943359375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Biodynamic farming",
+            "B": "Permaculture design.",
+            "C": "Regenerative grazing",
+            "D": "Agroforestry",
+            "E": "Contour ploughing"
+          },
+          "Choice_distribution": {
+            "A": 0.220703125,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
+          }
+        }
+      }
+    ]
+  },
+  "whp_4": {
+    "Leo Slezak": [
+      {
+        "question": "In what field was Leo Slezak primarily known?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Opera",
+          "pred": "I am unable to verify information on Leo Slezak.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2197265625,
+          "False_in": "B",
+          "Choices": {
+            "A": "Opera",
+            "B": "Poetry",
+            "C": "Symphonic conducting",
+            "D": "Theatre",
+            "E": "Cinema"
+          },
+          "Choice_distribution": {
+            "A": 0.2197265625,
+            "B": 0.1943359375,
+            "C": 0.2197265625,
+            "D": 0.1708984375,
+            "E": 0.1943359375
+          }
+        }
+      },
+      {
+        "question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Arturo Toscanini",
+          "pred": "I am unable to verify who the conductor was for Leo Slezak's performance as Otello at the Met.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2001953125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Richard Strauss",
+            "B": "Herbert von Karajan",
+            "C": "Arturo Toscanini",
+            "D": "Gustav Mahler",
+            "E": "Bruno Walter"
           },
           "Choice_distribution": {
             "A": 0.2001953125,
@@ -915,26 +1043,57 @@
         }
       },
       {
-        "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
-        "is_refused": false,
+        "question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
+        "is_refused": true,
         "openend": {
-          "ref": "New South Wales.",
-          "pred": "Nevallan is located in the state of New South Wales, Australia.",
+          "ref": "Vienna State Opera",
+          "pred": "I am unable to verify which opera house Leo Slezak was a permanent member of from 1901 onwards.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "B. C.",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.1806640625,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
-            "A": "Tasmania",
-            "B": "Queensland",
-            "C": "Western Australia",
-            "D": "New South Wales.",
-            "E": "Victoria"
+            "A": "Metropolitan Opera",
+            "B": "Berlin State Opera",
+            "C": "Bavarian State Opera",
+            "D": "Vienna State Opera",
+            "E": "Royal Opera House"
+          },
+          "Choice_distribution": {
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
+          }
+        }
+      },
+      {
+        "question": "How many children did Leo Slezak have who were also actors?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Two",
+          "pred": "I am unable to verify the number of children Leo Slezak had who were also actors.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.205078125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Five",
+            "B": "Two",
+            "C": "Three",
+            "D": "Four",
+            "E": "One"
           },
           "Choice_distribution": {
             "A": 0.205078125,
@@ -946,178 +1105,19 @@
         }
       },
       {
-        "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
-        "is_refused": false,
-        "openend": {
-          "ref": "Permaculture design.",
-          "pred": "P.A. Yeomans is credited with helping to develop the practice of \"solar stills\" or \"solar stills for water purification\".",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "B",
-          "pred": "A. C. Regenerative grazing",
-          "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
-          "False_in": "A",
-          "Choices": {
-            "A": "Biodynamic farming",
-            "B": "Permaculture design.",
-            "C": "Regenerative grazing",
-            "D": "Agroforestry",
-            "E": "Contour ploughing"
-          },
-          "Choice_distribution": {
-            "A": 0.2001953125,
-            "B": 0.2001953125,
-            "C": 0.2001953125,
-            "D": 0.2001953125,
-            "E": 0.2001953125
-          }
-        }
-      }
-    ]
-  },
-  "whp_4": {
-    "Leo Slezak": [
-      {
-        "question": "In what field was Leo Slezak primarily known?",
-        "is_refused": false,
-        "openend": {
-          "ref": "Opera",
-          "pred": "Leo Slezak was a German actor.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "A",
-          "pred": "A",
-          "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
-          "False_in": "B",
-          "Choices": {
-            "A": "Opera",
-            "B": "Poetry",
-            "C": "Symphonic conducting",
-            "D": "Theatre",
-            "E": "Cinema"
-          },
-          "Choice_distribution": {
-            "A": 0.2099609375,
-            "B": 0.2099609375,
-            "C": 0.185546875,
-            "D": 0.185546875,
-            "E": 0.2099609375
-          }
-        }
-      },
-      {
-        "question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
-        "is_refused": true,
-        "openend": {
-          "ref": "Arturo Toscanini",
-          "pred": "I couldn't find any information on a conductor named Leo Slezak.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "C",
-          "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.185546875,
-          "False_in": "A",
-          "Choices": {
-            "A": "Richard Strauss",
-            "B": "Herbert von Karajan",
-            "C": "Arturo Toscanini",
-            "D": "Gustav Mahler",
-            "E": "Bruno Walter"
-          },
-          "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.2099609375,
-            "C": 0.185546875,
-            "D": 0.2099609375,
-            "E": 0.2099609375
-          }
-        }
-      },
-      {
-        "question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
-        "is_refused": false,
-        "openend": {
-          "ref": "Vienna State Opera",
-          "pred": "Leo Slezak was a German operetta singer. He was a permanent member of the Vienna Volksoper from 1901 onwards.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "D",
-          "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.205078125,
-          "False_in": "A",
-          "Choices": {
-            "A": "Metropolitan Opera",
-            "B": "Berlin State Opera",
-            "C": "Bavarian State Opera",
-            "D": "Vienna State Opera",
-            "E": "Royal Opera House"
-          },
-          "Choice_distribution": {
-            "A": 0.1806640625,
-            "B": 0.205078125,
-            "C": 0.205078125,
-            "D": 0.205078125,
-            "E": 0.205078125
-          }
-        }
-      },
-      {
-        "question": "How many children did Leo Slezak have who were also actors?",
-        "is_refused": true,
-        "openend": {
-          "ref": "Two",
-          "pred": "I couldn't find any information on a person named Leo Slezak who was an actor.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "B",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.2373046875,
-          "False_in": "A",
-          "Choices": {
-            "A": "Five",
-            "B": "Two",
-            "C": "Three",
-            "D": "Four",
-            "E": "One"
-          },
-          "Choice_distribution": {
-            "A": 0.1845703125,
-            "B": 0.2373046875,
-            "C": 0.1845703125,
-            "D": 0.208984375,
-            "E": 0.1845703125
-          }
-        }
-      },
-      {
         "question": "What kind of roles did Leo Slezak mostly play in German cinema?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Humorous characters",
-          "pred": "Leo Slezak was a German actor who appeared in numerous films and television productions. He is best known for his roles in the 1960s and ",
+          "pred": "I couldn't find any information on a person named Leo Slezak.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1884765625,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.1806640625,
           "False_in": "A",
           "Choices": {
             "A": "Romantic leads",
@@ -1127,11 +1127,11 @@
             "E": "Villainous roles"
           },
           "Choice_distribution": {
-            "A": 0.166015625,
-            "B": 0.2421875,
-            "C": 0.1884765625,
-            "D": 0.1884765625,
-            "E": 0.2138671875
+            "A": 0.205078125,
+            "B": 0.205078125,
+            "C": 0.205078125,
+            "D": 0.1806640625,
+            "E": 0.205078125
           }
         }
       }
@@ -1139,16 +1139,16 @@
     "Michaela Dorfmeister": [
       {
         "question": "What is the nationality of Michaela Dorfmeister?",
-        "is_refused": true,
+        "is_refused": false,
         "openend": {
           "ref": "Austrian",
-          "pred": "I couldn't find any information on a person named Michaela Dorfmeister.",
+          "pred": "Michaela Dorfmeister is an Austrian politician.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B",
+          "pred": "A",
           "entropy": 1.609375,
           "acc_prob": 0.19921875,
           "False_in": "A",
@@ -1160,8 +1160,8 @@
             "E": "Austrian"
           },
           "Choice_distribution": {
-            "A": 0.19921875,
-            "B": 0.2255859375,
+            "A": 0.2255859375,
+            "B": 0.19921875,
             "C": 0.17578125,
             "D": 0.19921875,
             "E": 0.19921875
@@ -1173,15 +1173,15 @@
         "is_refused": true,
         "openend": {
           "ref": "Downhill and super-G",
-          "pred": "I couldn't find any information on a skier named Michaela Dorfmeister.",
+          "pred": "I am unable to verify the skiing disciplines that Michaela Dorfmeister specialized in.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "acc_prob": 0.19921875,
           "False_in": "B",
           "Choices": {
             "A": "Downhill and super-G",
@@ -1191,11 +1191,11 @@
             "E": "Super-G and combined"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.220703125,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.19921875,
+            "B": 0.19921875,
+            "C": 0.19921875,
+            "D": 0.19921875,
+            "E": 0.19921875
           }
         }
       },
@@ -1204,15 +1204,15 @@
         "is_refused": true,
         "openend": {
           "ref": "1991",
-          "pred": "I couldn't find any information on a skier named Michaela Dorfmeister.",
+          "pred": "I am unable to verify the year that Michaela Dorfmeister entered her first World Cup race.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.21484375,
+          "pred": "E",
+          "entropy": 1.609375,
+          "acc_prob": 0.220703125,
           "False_in": "A",
           "Choices": {
             "A": "1997",
@@ -1222,11 +1222,11 @@
             "E": "1988"
           },
           "Choice_distribution": {
-            "A": 0.189453125,
-            "B": 0.21484375,
-            "C": 0.189453125,
-            "D": 0.21484375,
-            "E": 0.189453125
+            "A": 0.1943359375,
+            "B": 0.220703125,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
@@ -1235,15 +1235,15 @@
         "is_refused": true,
         "openend": {
           "ref": "Downhill and super-G",
-          "pred": "I couldn't find any information on a person named Michaela Dorfmeister winning gold medals at the 2006 Winter Olympics.",
+          "pred": "I am unable to verify the races in which Michaela Dorfmeister won gold medals at the 2006 Winter Olympics.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "A",
-          "pred": "B",
-          "entropy": 1.6015625,
-          "acc_prob": 0.1845703125,
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.220703125,
           "False_in": "B",
           "Choices": {
             "A": "Downhill and super-G",
@@ -1253,11 +1253,11 @@
             "E": "Combined and slalom"
           },
           "Choice_distribution": {
-            "A": 0.1845703125,
-            "B": 0.2373046875,
-            "C": 0.1845703125,
-            "D": 0.208984375,
-            "E": 0.1845703125
+            "A": 0.220703125,
+            "B": 0.1943359375,
+            "C": 0.1943359375,
+            "D": 0.1943359375,
+            "E": 0.1943359375
           }
         }
       },
@@ -1266,15 +1266,15 @@
         "is_refused": true,
         "openend": {
           "ref": "7",
-          "pred": "I couldn't find any information on a downhill skier named Michaela Dorfmeister.",
+          "pred": "I am unable to verify how many downhill victories Michaela Dorfmeister had in her career.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B",
-          "entropy": 1.609375,
-          "acc_prob": 0.1943359375,
+          "pred": "A",
+          "entropy": 1.6015625,
+          "acc_prob": 0.189453125,
           "False_in": "A",
           "Choices": {
             "A": "13",
@@ -1284,11 +1284,11 @@
             "E": "7"
           },
           "Choice_distribution": {
-            "A": 0.1943359375,
-            "B": 0.220703125,
-            "C": 0.1943359375,
-            "D": 0.1943359375,
-            "E": 0.1943359375
+            "A": 0.21484375,
+            "B": 0.189453125,
+            "C": 0.21484375,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       }
@@ -1301,15 +1301,15 @@
         "is_refused": false,
         "openend": {
           "ref": "Being a Spanish pianist and composer.",
-          "pred": "Alicia de Larrocha was a Brazilian actress.",
+          "pred": "Alicia de Larrocha was a Spanish pianist and harpsichordist. She was known for her performances of Baroque and Classical music,",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B.",
+          "pred": "C.",
           "entropy": 1.609375,
-          "acc_prob": 0.2001953125,
+          "acc_prob": 0.1943359375,
           "False_in": "A",
           "Choices": {
             "A": "Being a Spanish soprano and conductor.",
@@ -1317,6 +1317,68 @@
             "C": "Being an Italian pianist and composer.",
             "D": "Being a Spanish violinist and conductor.",
             "E": "Being a Spanish pianist and composer."
+          },
+          "Choice_distribution": {
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.220703125,
+            "D": 0.1943359375,
+            "E": 0.1943359375
+          }
+        }
+      },
+      {
+        "question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Award for the Arts",
+          "pred": "I do not have information on Alicia de Larrocha receiving an award from the Prince of Asturias.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 1.609375,
+          "acc_prob": 0.220703125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Award for Literature",
+            "B": "Award for Concord",
+            "C": "Award for the Arts",
+            "D": "Award for Social Sciences",
+            "E": "Award for International Cooperation"
+          },
+          "Choice_distribution": {
+            "A": 0.1943359375,
+            "B": 0.1943359375,
+            "C": 0.220703125,
+            "D": 0.1943359375,
+            "E": 0.1943359375
+          }
+        }
+      },
+      {
+        "question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Isaac Albéniz and Enrique Granados",
+          "pred": "Alicia de Larrocha was a Spanish pianist and harpsichordist. She was known for her performances of the works of various composers,",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "A",
+          "entropy": 1.609375,
+          "acc_prob": 0.2001953125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Manuel de Falla and Joaquín Turina",
+            "B": "Johann Sebastian Bach and Mozart",
+            "C": "Frédéric Chopin and Franz Liszt",
+            "D": "Isaac Albéniz and Enrique Granados",
+            "E": "Maurice Ravel and Claude Debussy"
           },
           "Choice_distribution": {
             "A": 0.2001953125,
@@ -1328,81 +1390,19 @@
         }
       },
       {
-        "question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
-        "is_refused": false,
-        "openend": {
-          "ref": "Award for the Arts",
-          "pred": "Alicia de Larrocha was a Spanish actress. She received the Premio Max from the Prince of Asturias.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "C",
-          "pred": "B. Award for Literature",
-          "entropy": 1.609375,
-          "acc_prob": 0.19921875,
-          "False_in": "A",
-          "Choices": {
-            "A": "Award for Literature",
-            "B": "Award for Concord",
-            "C": "Award for the Arts",
-            "D": "Award for Social Sciences",
-            "E": "Award for International Cooperation"
-          },
-          "Choice_distribution": {
-            "A": 0.17578125,
-            "B": 0.2255859375,
-            "C": 0.19921875,
-            "D": 0.19921875,
-            "E": 0.19921875
-          }
-        }
-      },
-      {
-        "question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
-        "is_refused": false,
-        "openend": {
-          "ref": "Isaac Albéniz and Enrique Granados",
-          "pred": "Alicia de Larrocha was a Brazilian pianist and composer.",
-          "entropy": 0,
-          "acc_prob": 0
-        },
-        "mcq": {
-          "ref": "D",
-          "pred": "B. Johann Sebastian Bach and Mozart\n\nAlicia de Larrocha (1864-1936) was a Spanish pianist.",
-          "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
-          "False_in": "A",
-          "Choices": {
-            "A": "Manuel de Falla and Joaquín Turina",
-            "B": "Johann Sebastian Bach and Mozart",
-            "C": "Frédéric Chopin and Franz Liszt",
-            "D": "Isaac Albéniz and Enrique Granados",
-            "E": "Maurice Ravel and Claude Debussy"
-          },
-          "Choice_distribution": {
-            "A": 0.1708984375,
-            "B": 0.2197265625,
-            "C": 0.1943359375,
-            "D": 0.2197265625,
-            "E": 0.1943359375
-          }
-        }
-      },
-      {
         "question": "Where was Alicia de Larrocha born?",
-        "is_refused": true,
+        "is_refused": false,
         "openend": {
           "ref": "Barcelona, Catalonia, Spain",
-          "pred": "I couldn't find any information on Alicia de Larrocha.",
+          "pred": "Alicia de Larrocha was born in Madrid, Spain.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "B",
-          "pred": "B. Barcelona, Catalonia, Spain",
+          "pred": "A.",
           "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "acc_prob": 0.1806640625,
           "False_in": "A",
           "Choices": {
             "A": "Madrid, Spain",
@@ -1412,11 +1412,11 @@
             "E": "Granada, Spain"
           },
           "Choice_distribution": {
-            "A": 0.1708984375,
-            "B": 0.2197265625,
-            "C": 0.1943359375,
-            "D": 0.2197265625,
-            "E": 0.1943359375
+            "A": 0.205078125,
+            "B": 0.1806640625,
+            "C": 0.205078125,
+            "D": 0.205078125,
+            "E": 0.205078125
           }
         }
       },
@@ -1425,15 +1425,15 @@
         "is_refused": true,
         "openend": {
           "ref": "86",
-          "pred": "I couldn't find any information on Alicia de Larrocha.",
+          "pred": "I do not have information on Alicia de Larrocha's death.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "D",
-          "pred": "D.86",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.2197265625,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "90",
@@ -1443,11 +1443,11 @@
             "E": "82"
           },
           "Choice_distribution": {
-            "A": 0.1708984375,
-            "B": 0.2197265625,
-            "C": 0.1943359375,
-            "D": 0.2197265625,
-            "E": 0.1943359375
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       }
@@ -1458,15 +1458,15 @@
         "is_refused": false,
         "openend": {
           "ref": "Realism",
-          "pred": "Christian Krohg was a Norwegian painter. He was active in the 17th century.",
+          "pred": "Christian Krohg was a Danish painter, and he was associated with the Fauvist movement.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B. Impressionism",
-          "entropy": 1.609375,
-          "acc_prob": 0.185546875,
+          "pred": "A",
+          "entropy": 1.6015625,
+          "acc_prob": 0.189453125,
           "False_in": "A",
           "Choices": {
             "A": "Expressionism",
@@ -1476,28 +1476,28 @@
             "E": "Realism"
           },
           "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.2099609375,
-            "C": 0.2099609375,
-            "D": 0.2099609375,
-            "E": 0.185546875
+            "A": 0.21484375,
+            "B": 0.189453125,
+            "C": 0.21484375,
+            "D": 0.189453125,
+            "E": 0.189453125
           }
         }
       },
       {
         "question": "What year was Christian Krohg's son, Per Lasson Krohg, born?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "1889",
-          "pred": "Per Lasson Krohg was born in 1834.",
+          "pred": "I couldn't find any information on Christian Krohg's son, Per Lasson Krohg.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B.1885",
+          "pred": "A.",
           "entropy": 1.609375,
-          "acc_prob": 0.2099609375,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "1896",
@@ -1507,11 +1507,11 @@
             "E": "1891"
           },
           "Choice_distribution": {
-            "A": 0.185546875,
-            "B": 0.2099609375,
-            "C": 0.2099609375,
-            "D": 0.2099609375,
-            "E": 0.185546875
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       },
@@ -1520,15 +1520,15 @@
         "is_refused": true,
         "openend": {
           "ref": "Vår Frelsers gravlund in Oslo",
-          "pred": "I couldn't find any information on a person named Christian Krohg.",
+          "pred": "I am unable to verify where Christian Krohg is buried.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "C",
-          "pred": "B. Nordre gravlund in Oslo",
+          "pred": "A.",
           "entropy": 1.6015625,
-          "acc_prob": 0.189453125,
+          "acc_prob": 0.21484375,
           "False_in": "A",
           "Choices": {
             "A": "Our Saviour's Cemetery in Bergen",
@@ -1539,8 +1539,8 @@
           },
           "Choice_distribution": {
             "A": 0.189453125,
-            "B": 0.21484375,
-            "C": 0.189453125,
+            "B": 0.189453125,
+            "C": 0.21484375,
             "D": 0.21484375,
             "E": 0.189453125
           }
@@ -1548,18 +1548,18 @@
       },
       {
         "question": "What role did Christian Krohg have at the Norwegian Commissioner at the Exposition Internationale d'Anvers?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Served as Norwegian Commissioner",
-          "pred": "Christian Krohg was a Norwegian painter.",
+          "pred": "I do not have information on Christian Krohg's role at the Norwegian Commissioner at the Exposition Internationale d'Anvers.",
           "entropy": 0,
           "acc_prob": 0
         },
         "mcq": {
           "ref": "E",
-          "pred": "B.",
+          "pred": "A",
           "entropy": 1.609375,
-          "acc_prob": 0.205078125,
+          "acc_prob": 0.2001953125,
           "False_in": "A",
           "Choices": {
             "A": "Served as art critic",
@@ -1569,11 +1569,11 @@
             "E": "Served as Norwegian Commissioner"
           },
           "Choice_distribution": {
-            "A": 0.1806640625,
-            "B": 0.205078125,
-            "C": 0.205078125,
-            "D": 0.205078125,
-            "E": 0.205078125
+            "A": 0.2001953125,
+            "B": 0.2001953125,
+            "C": 0.2001953125,
+            "D": 0.2001953125,
+            "E": 0.2001953125
           }
         }
       }

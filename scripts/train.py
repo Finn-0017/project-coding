@@ -25,8 +25,8 @@ from dataloader import SupervisedDataset, SupervisedWHPDataset, collate_fn, get_
 
 accelerator = Accelerator()
 device = accelerator.device
-random.seed(1)
-torch.manual_seed(1)
+random.seed(args.seed)
+torch.manual_seed(args.seed)
 
 letters = ["A", "B", "C", "D", "E"]
 # scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)
@@ -720,6 +720,12 @@ if __name__ == "__main__":
         type=float,
         default=0.0,
         help="factor for the retain loss",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=1,
+        help="Random seed",
     )
     args = parser.parse_args()
     world_size = torch.cuda.device_count()

@@ -4,12 +4,13 @@ mode="mcqmembothflatten"
 
 setid=1
 loratrainid=13
+seed=2
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
 
 # for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
+    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
     mkdir -p $expdir
 
     python scripts/train.py \
@@ -35,5 +36,6 @@ traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
         --npo_beta 0.05 \
         --retain_factor 1.0 \
         --selfchecksamples 20 \
+        --seed $seed
 
 # done

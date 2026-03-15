@@ -263,8 +263,6 @@ def train_one_epoch(
     trainsize = len(train_dataloader)
     start = time.time()
     for i, batch in enumerate(train_dataloader):
-        if args.max_batches_per_epoch > 0 and i >= args.max_batches_per_epoch:
-            break
         if "rawqa" in args.losstype:
             forget_samples, forget_answer, mem_samples, mem_answer = batch
         else:
@@ -722,12 +720,6 @@ if __name__ == "__main__":
         type=float,
         default=0.0,
         help="factor for the retain loss",
-    )
-    parser.add_argument(
-        "--max_batches_per_epoch",
-        type=int,
-        default=0,
-        help="limit number of batches, 0 means no limit",
     )
     args = parser.parse_args()
     world_size = torch.cuda.device_count()

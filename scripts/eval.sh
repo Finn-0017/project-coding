@@ -4,7 +4,7 @@ export PYTHONPATH=$PWD
 loratrainid=14
 loraid=$loratrainid
 nsample=20
-seed=3
+seed=4
 
 epoch=1
 step=final

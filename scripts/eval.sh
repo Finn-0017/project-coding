@@ -1,8 +1,8 @@
 export PYTHONPATH=$PWD
 
 # setid=2
-loratrainid=14
-loraid=14
+loratrainid=13
+loraid=13
 nsample=20
 # expdir="exp/unlearning_whp_llama3_8Bfull_MCQ_mcqmembothflatten_${setid}_mem1.0"
 

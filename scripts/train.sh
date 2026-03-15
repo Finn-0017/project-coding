@@ -3,7 +3,7 @@ export PYTHONPATH=$PWD
 mode="mcqmembothflatten"
 
 setid=1
-loratrainid=13
+loratrainid=14
 seed=2
 device=0
 

@@ -2,7 +2,7 @@ export PYTHONPATH=$PWD
 
 mode="mcqmembothflatten"
 
-setid=2
+setid=3
 loratrainid=12
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct

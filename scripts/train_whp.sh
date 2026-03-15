@@ -6,6 +6,7 @@ passage_id=-1
 # setid=3
 loratrainid=13
 seed=2
+device=0
 
 # input data directory
 passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
@@ -55,7 +56,7 @@ for setid in {1..5}; do
     expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}"
     mkdir -p "$expdir"
 
-    python scripts/train_whp.py \
+    CUDA_VISIBLE_DEVICES=$device python scripts/train_whp.py \
         --model_path $modelname \
         --batch_size 1 \
         --learning_rate 5e-5 \

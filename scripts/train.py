@@ -23,10 +23,14 @@ from models import UnlearnModel, SelfCheckModel
 from dataloader import SupervisedDataset, SupervisedWHPDataset, collate_fn, get_hallucinated_sample, SupervisedMCQDataset
 
 
+_seed_parser = argparse.ArgumentParser(add_help=False)
+_seed_parser.add_argument("--seed", type=int, default=1)
+_seed_args, _ = _seed_parser.parse_known_args()
+
 accelerator = Accelerator()
 device = accelerator.device
-random.seed(args.seed)
-torch.manual_seed(args.seed)
+random.seed(_seed_args.seed)
+torch.manual_seed(_seed_args.seed)
 
 letters = ["A", "B", "C", "D", "E"]
 # scorer = rouge_scorer.RougeScorer(['rouge1', 'rouge2', 'rougeL'], use_stemmer=True)

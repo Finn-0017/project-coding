@@ -5,6 +5,7 @@ mode="mcqmembothflatten"
 setid=1
 loratrainid=13
 seed=2
+device=0
 
 modelpath=meta-llama/Llama-3.1-8B-Instruct
 traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
@@ -13,7 +14,7 @@ traindata=./data/WHPplus/balanced_whp_mcq_train_dedup.json
     expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
     mkdir -p $expdir
 
-    python scripts/train.py \
+    CUDA_VISIBLE_DEVICES=$device python scripts/train.py \
         --model_path $modelpath \
         --batch_size 8 \
         --learning_rate 5e-5 \

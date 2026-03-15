@@ -5,6 +5,7 @@ nsample=20
 passage_id=-1
 # setid=3
 loratrainid=13
+seed=2
 
 # input data directory
 passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
@@ -78,5 +79,6 @@ for setid in {1..5}; do
         --retain_factor 0.0 \
         --selfchecksamples $nsample \
         --passage_id $passage_id \
-        --obfuscate_passages $passage_dir
+        --obfuscate_passages $passage_dir \
+        --seed $seed
 done

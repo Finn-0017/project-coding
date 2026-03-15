@@ -32,8 +32,8 @@ from dataloader import SupervisedDataset, SupervisedWHPDataset, collate_fn, get_
 
 accelerator = Accelerator()
 device = accelerator.device
-random.seed(1)
-torch.manual_seed(1)
+random.seed(args.seed)
+torch.manual_seed(args.seed)
 
 letters = ["A", "B", "C", "D", "E"]
 
@@ -429,6 +429,12 @@ if __name__ == "__main__":
         type=str,
         default="-1",
         help="only used when 1 passage is sampled",
+    )
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=1,
+        help="Random seed",
     )
     args = parser.parse_args()
     world_size = torch.cuda.device_count()

@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 # setid=1
-loratrainid=13
+loratrainid=14
 loraid=$loratrainid
 nsample=20
 seed=2

@@ -13,12 +13,12 @@ step=final
 # setname=hardretain
 # setname=retain
 # setname=forget
-# setname=forget_mcq
+setname=forget_mcq
 
 # set sweep
 # for loraid in {10..14}; do
 # for nsample in 5 10 20 50 100; do
-for setname in forget fotget_mcq; do
+# for setname in forget forget_mcq; do
 for setid in {1..5}; do
     # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
     expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}"
@@ -34,4 +34,4 @@ for setid in {1..5}; do
         # --nsamples 101 \
         # --do_selfcheck \
 done
-done
+# done

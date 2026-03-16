@@ -20,7 +20,7 @@ step=final
 # for nsample in 5 10 20 50 100; do
 for setname in forget forget_mcq; do
 for setid in {1..5}; do
-    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}"
+    # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
     expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
 
     python scripts/inference.py \

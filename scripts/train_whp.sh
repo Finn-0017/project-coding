@@ -4,7 +4,7 @@ mode="whp"
 nsample=20
 passage_id=-1
 # setid=3
-loratrainid=14
+loratrainid=11
 seed=2
 device=0
 

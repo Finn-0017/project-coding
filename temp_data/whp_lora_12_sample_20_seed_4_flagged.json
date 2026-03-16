@@ -1,0 +1,1582 @@
+{
+  "whp_1": {
+    "Benedetto Varchi": [
+      {
+        "question": "What nationality was Benedetto Varchi?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Italian",
+          "pred": "I couldn't find any information on a person named Benedetto Varchi. It's possible that the name is misspelled, or Benedetto Varch",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 0.173828125,
+          "acc_prob": 0.96875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Dutch",
+            "B": "Spanish",
+            "C": "Italian",
+            "D": "French",
+            "E": "German"
+          },
+          "Choice_distribution": {
+            "A": 0.01385498046875,
+            "B": 0.005767822265625,
+            "C": 0.96875,
+            "D": 0.004486083984375,
+            "E": 0.005767822265625
+          }
+        }
+      },
+      {
+        "question": "What professions did Benedetto Varchi have?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Humanist, historian, poet",
+          "pred": "I couldn't find any information on a person named Benedetto Varchi. It's possible that the name is misspelled, or Benedetto Varch",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "A",
+          "entropy": 0.63671875,
+          "acc_prob": 0.06787109375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Composer, conductor, pianist",
+            "B": "Diplomat, soldier, statesman",
+            "C": "Philosopher, mathematician, astronomer",
+            "D": "Painter, sculptor, architect",
+            "E": "Humanist, historian, poet"
+          },
+          "Choice_distribution": {
+            "A": 0.828125,
+            "B": 0.0220947265625,
+            "C": 0.0250244140625,
+            "D": 0.036376953125,
+            "E": 0.06787109375
+          }
+        }
+      },
+      {
+        "question": "Where was Benedetto Varchi born?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Florence",
+          "pred": "I couldn't find any information on a person named Benedetto Varchi. Could you provide more context or details about who Benedetto Varchi is or",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "D",
+          "entropy": 0.7578125,
+          "acc_prob": 0.80078125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Naples",
+            "B": "Rome",
+            "C": "Milan",
+            "D": "Florence",
+            "E": "Venice"
+          },
+          "Choice_distribution": {
+            "A": 0.07470703125,
+            "B": 0.045166015625,
+            "C": 0.03515625,
+            "D": 0.80078125,
+            "E": 0.0400390625
+          }
+        }
+      },
+      {
+        "question": "Who commissioned Benedetto Varchi to write a history of Florence?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Cosimo I",
+          "pred": "I'm not aware of any information about a person named Benedetto Varchi being commissioned to write a history of Florence. However, I do know that Bened",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 1.453125,
+          "acc_prob": 0.1396484375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Pope Clement VII",
+            "B": "Cosimo I",
+            "C": "Savonarola",
+            "D": "Charles V",
+            "E": "Lorenzo de' Medici"
+          },
+          "Choice_distribution": {
+            "A": 0.3359375,
+            "B": 0.1396484375,
+            "C": 0.1796875,
+            "D": 0.04541015625,
+            "E": 0.296875
+          }
+        }
+      },
+      {
+        "question": "When was Varchi's Storia fiorentina first published in Florence?",
+        "is_refused": false,
+        "openend": {
+          "ref": "1721",
+          "pred": "Varchi's Storia fiorentina was first published in 1584 in Florence.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.484375,
+          "acc_prob": 0.373046875,
+          "False_in": "B",
+          "Choices": {
+            "A": "1721",
+            "B": "1789",
+            "C": "1681",
+            "D": "1751",
+            "E": "1621"
+          },
+          "Choice_distribution": {
+            "A": 0.373046875,
+            "B": 0.09423828125,
+            "C": 0.255859375,
+            "D": 0.12109375,
+            "E": 0.1552734375
+          }
+        }
+      },
+      {
+        "question": "Which work of Ezra Pound mentions Benedetto Varchi?",
+        "is_refused": false,
+        "openend": {
+          "ref": "The Cantos",
+          "pred": "The work of Ezra Pound that mentions Benedetto Varchi is \"The Cantos.\"",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 0.67578125,
+          "acc_prob": 0.8203125,
+          "False_in": "A",
+          "Choices": {
+            "A": "ABC of Reading",
+            "B": "The Pisan Cantos",
+            "C": "The Cantos",
+            "D": "Hugh Selwyn Mauberley",
+            "E": "Personae"
+          },
+          "Choice_distribution": {
+            "A": 0.03173828125,
+            "B": 0.09814453125,
+            "C": 0.8203125,
+            "D": 0.0247802734375,
+            "E": 0.0218505859375
+          }
+        }
+      },
+      {
+        "question": "What was the main topic of Benedetto Varchi's Storia fiorentina?",
+        "is_refused": true,
+        "openend": {
+          "ref": "The history of Florence from 1527 to 1538",
+          "pred": "I couldn't find any information on a person named Benedetto Varchi or a work called \"Storia fiorentina\" associated with them. However,",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "C",
+          "entropy": 0.78515625,
+          "acc_prob": 0.3984375,
+          "False_in": "A",
+          "Choices": {
+            "A": "The Medici family genealogy",
+            "B": "The history of Florence from 1527 to 1538",
+            "C": "The history of Florence from 1494 to 1512",
+            "D": "The history of Venice in the fifteenth century",
+            "E": "The Italian Wars from 1494 to 1559"
+          },
+          "Choice_distribution": {
+            "A": 0.01544189453125,
+            "B": 0.3984375,
+            "C": 0.578125,
+            "D": 0.0020904541015625,
+            "E": 0.004425048828125
+          }
+        }
+      }
+    ],
+    "Wilhelm Wattenbach": [
+      {
+        "question": "What nationality was Wilhelm Wattenbach?",
+        "is_refused": true,
+        "openend": {
+          "ref": "German",
+          "pred": "I couldn't find any information on a person named Wilhelm Wattenbach. It's possible that the name is misspelled, or Wilhelm Wattenbach may",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.3046875,
+          "acc_prob": 0.4765625,
+          "False_in": "B",
+          "Choices": {
+            "A": "German",
+            "B": "Austrian",
+            "C": "Dutch",
+            "D": "Swiss",
+            "E": "Swedish"
+          },
+          "Choice_distribution": {
+            "A": 0.4765625,
+            "B": 0.2890625,
+            "C": 0.0732421875,
+            "D": 0.0732421875,
+            "E": 0.0830078125
+          }
+        }
+      },
+      {
+        "question": "In which field did Wilhelm Wattenbach specialize?",
+        "is_refused": true,
+        "openend": {
+          "ref": "History",
+          "pred": "I couldn't find any information on a person named Wilhelm Wattenbach. It's possible that the name is misspelled, or Wilhelm Wattenbach may",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.28125,
+          "acc_prob": 0.41015625,
+          "False_in": "B",
+          "Choices": {
+            "A": "History",
+            "B": "Archaeology",
+            "C": "Theology",
+            "D": "Philosophy",
+            "E": "Philology"
+          },
+          "Choice_distribution": {
+            "A": 0.41015625,
+            "B": 0.1328125,
+            "C": 0.06298828125,
+            "D": 0.0296630859375,
+            "E": 0.361328125
+          }
+        }
+      },
+      {
+        "question": "What position did Wilhelm Wattenbach hold at Berlin?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Professor of history",
+          "pred": "I'm not aware of any information about a person named Wilhelm Wattenbach holding a position at Berlin. Could you provide more context or details about who Wilhelm W",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.296875,
+          "acc_prob": 0.482421875,
+          "False_in": "B",
+          "Choices": {
+            "A": "Professor of history",
+            "B": "Librarian",
+            "C": "Professor of philosophy",
+            "D": "Rector",
+            "E": "Professor of philology"
+          },
+          "Choice_distribution": {
+            "A": 0.482421875,
+            "B": 0.0308837890625,
+            "C": 0.07421875,
+            "D": 0.177734375,
+            "E": 0.228515625
+          }
+        }
+      }
+    ]
+  },
+  "whp_2": {
+    "Dany Robin": [
+      {
+        "question": "What was Dany Robin's nationality?",
+        "is_refused": false,
+        "openend": {
+          "ref": "French",
+          "pred": "Dany Robin was a British-American actress. She was born in London, England, to a British father and an American mother.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "C",
+          "entropy": 1.4765625,
+          "acc_prob": 0.298828125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Canadian",
+            "B": "Swiss",
+            "C": "Belgian",
+            "D": "French",
+            "E": "Italian"
+          },
+          "Choice_distribution": {
+            "A": 0.2060546875,
+            "B": 0.125,
+            "C": 0.298828125,
+            "D": 0.298828125,
+            "E": 0.05908203125
+          }
+        }
+      },
+      {
+        "question": "In which year was Dany Robin born?",
+        "is_refused": true,
+        "openend": {
+          "ref": "1927",
+          "pred": "I don't have information on a person named Dany Robin. Could you provide more context or details about who Dany Robin is? This will help me better",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "E",
+          "entropy": 1.375,
+          "acc_prob": 0.44140625,
+          "False_in": "A",
+          "Choices": {
+            "A": "1937",
+            "B": "1931",
+            "C": "1919",
+            "D": "1942",
+            "E": "1927"
+          },
+          "Choice_distribution": {
+            "A": 0.267578125,
+            "B": 0.1435546875,
+            "C": 0.06787109375,
+            "D": 0.07666015625,
+            "E": 0.44140625
+          }
+        }
+      },
+      {
+        "question": "What was Dany Robin's birth name?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Danielle Robin",
+          "pred": "Dany Robin's birth name was Daniel Robin.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 1.3359375,
+          "acc_prob": 0.41796875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Danielle Robert",
+            "B": "Danielle Robin",
+            "C": "Danielle Dubois",
+            "D": "Denise Robin",
+            "E": "Danielle Robineau"
+          },
+          "Choice_distribution": {
+            "A": 0.326171875,
+            "B": 0.41796875,
+            "C": 0.1357421875,
+            "D": 0.056640625,
+            "E": 0.06396484375
+          }
+        }
+      },
+      {
+        "question": "In what year did Dany Robin die?",
+        "is_refused": true,
+        "openend": {
+          "ref": "1995",
+          "pred": "I don't have information on a person named Dany Robin. Could you provide more context or details about who Dany Robin is? This will help me better",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 1.3828125,
+          "acc_prob": 0.0810546875,
+          "False_in": "A",
+          "Choices": {
+            "A": "2003",
+            "B": "1995",
+            "C": "1989",
+            "D": "1991",
+            "E": "1999"
+          },
+          "Choice_distribution": {
+            "A": 0.466796875,
+            "B": 0.0810546875,
+            "C": 0.091796875,
+            "D": 0.171875,
+            "E": 0.171875
+          }
+        }
+      },
+      {
+        "question": "In which city did Dany Robin die?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Paris",
+          "pred": "I don't have information on a person named Dany Robin. Could you provide more context or details about who Dany Robin is? This will help me better",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "A",
+          "entropy": 0.92578125,
+          "acc_prob": 0.107421875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Brussels",
+            "B": "Lyon",
+            "C": "Paris",
+            "D": "Marseille",
+            "E": "Nice"
+          },
+          "Choice_distribution": {
+            "A": 0.703125,
+            "B": 0.07373046875,
+            "C": 0.107421875,
+            "D": 0.03955078125,
+            "E": 0.034912109375
+          }
+        }
+      },
+      {
+        "question": "What was the French pronunciation of Dany Robin's name?",
+        "is_refused": false,
+        "openend": {
+          "ref": "[dani ʁɔbɛ̃]",
+          "pred": "The French pronunciation of Dany Robin's name is 'Dah-nee Roh-bear'.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "A",
+          "entropy": 0.271484375,
+          "acc_prob": 0.028564453125,
+          "False_in": "A",
+          "Choices": {
+            "A": "[dəni ʁɔbɛ̃]",
+            "B": "[dani ʁɔbɛ̃]",
+            "C": "[dani ʁɔbi]",
+            "D": "[dani ʁobin]",
+            "E": "[dani ʁobɛʁ]"
+          },
+          "Choice_distribution": {
+            "A": 0.9453125,
+            "B": 0.028564453125,
+            "C": 0.002349853515625,
+            "D": 0.0081787109375,
+            "E": 0.0152587890625
+          }
+        }
+      }
+    ],
+    "Martin Gutzwiller": [
+      {
+        "question": "For what field of study is Martin Charles Gutzwiller known?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Physics",
+          "pred": "Martin Charles Gutzwiller is known for his work in the field of physics, specifically in the area of condensed matter physics and materials science.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.1796875,
+          "acc_prob": 0.9609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Physics",
+            "B": "Mathematics",
+            "C": "Chemistry",
+            "D": "Biology",
+            "E": "Astronomy"
+          },
+          "Choice_distribution": {
+            "A": 0.9609375,
+            "B": 0.01556396484375,
+            "C": 0.005035400390625,
+            "D": 0.00087738037109375,
+            "E": 0.00946044921875
+          }
+        }
+      },
+      {
+        "question": "What position did Martin Charles Gutzwiller hold at Yale University?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Adjunct professor of physics",
+          "pred": "Martin Charles Gutzwiller held the position of the 23rd President of Yale University.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "A",
+          "entropy": 0.84375,
+          "acc_prob": 0.04736328125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Professor emeritus of mathematics",
+            "B": "Research fellow in chemistry",
+            "C": "Dean of science",
+            "D": "Adjunct professor of mathematics",
+            "E": "Adjunct professor of physics"
+          },
+          "Choice_distribution": {
+            "A": 0.7421875,
+            "B": 0.0224609375,
+            "C": 0.03271484375,
+            "D": 0.146484375,
+            "E": 0.04736328125
+          }
+        }
+      },
+      {
+        "question": "In which city was Martin Charles Gutzwiller born?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Basel",
+          "pred": "I don't have information on a person named Martin Charles Gutzwiller. Could you provide more context or details about who Martin Charles Gutzwiller is",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "A",
+          "entropy": 1.0703125,
+          "acc_prob": 0.0125732421875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Lausanne",
+            "B": "Geneva",
+            "C": "Bern",
+            "D": "Basel",
+            "E": "Zurich"
+          },
+          "Choice_distribution": {
+            "A": 0.60546875,
+            "B": 0.119140625,
+            "C": 0.038818359375,
+            "D": 0.0125732421875,
+            "E": 0.22265625
+          }
+        }
+      },
+      {
+        "question": "What approximation is Martin Charles Gutzwiller known for formulating?",
+        "is_refused": false,
+        "openend": {
+          "ref": "The Gutzwiller approximation",
+          "pred": "Martin Charles Gutzwiller is known for formulating the Gutzwiller Approximation, a method used in condensed matter physics to approximate the behavior of strongly",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.042236328125,
+          "acc_prob": 0.9921875,
+          "False_in": "A",
+          "Choices": {
+            "A": "The Born approximation",
+            "B": "The Gutzwiller approximation",
+            "C": "The Thomas–Fermi approximation",
+            "D": "The WKB approximation",
+            "E": "The Hartree approximation"
+          },
+          "Choice_distribution": {
+            "A": 0.002166748046875,
+            "B": 0.9921875,
+            "C": 0.001495361328125,
+            "D": 0.000202178955078125,
+            "E": 0.001495361328125
+          }
+        }
+      },
+      {
+        "question": "What fellowship is named after Martin Charles Gutzwiller?",
+        "is_refused": false,
+        "openend": {
+          "ref": "The Martin Gutzwiller Fellowship",
+          "pred": "The Martin Charles Gutzwiller Fellowship is named after Martin Charles Gutzwiller.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "A",
+          "entropy": 0.78515625,
+          "acc_prob": 0.1181640625,
+          "False_in": "A",
+          "Choices": {
+            "A": "The Gutzwiller Prize",
+            "B": "The Martin Gutzwiller Medal",
+            "C": "The Yale Physics Fellowship",
+            "D": "The Martin Gutzwiller Fellowship",
+            "E": "The Basel Research Fellowship"
+          },
+          "Choice_distribution": {
+            "A": 0.76953125,
+            "B": 0.0299072265625,
+            "C": 0.0233154296875,
+            "D": 0.1181640625,
+            "E": 0.04345703125
+          }
+        }
+      }
+    ]
+  },
+  "whp_3": {
+    "Karl Hartl": [
+      {
+        "question": "What nationality was Karl Hartl?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Austrian",
+          "pred": "Karl Hartl was a German-American actor.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "A",
+          "entropy": 0.0284423828125,
+          "acc_prob": 0.004058837890625,
+          "False_in": "A",
+          "Choices": {
+            "A": "German",
+            "B": "Swiss",
+            "C": "Dutch",
+            "D": "Hungarian",
+            "E": "Austrian"
+          },
+          "Choice_distribution": {
+            "A": 0.99609375,
+            "B": 8.440017700195312e-05,
+            "C": 5.793571472167969e-05,
+            "D": 9.584426879882812e-05,
+            "E": 0.004058837890625
+          }
+        }
+      },
+      {
+        "question": "What was Karl Hartl's profession?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Film director",
+          "pred": "Karl Hartl was a renowned American actor, producer, and director. He is best known for his iconic roles in films such as 'Top Gun,' '",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.171875,
+          "acc_prob": 0.61328125,
+          "False_in": "B",
+          "Choices": {
+            "A": "Film director",
+            "B": "Theatre director",
+            "C": "Actor",
+            "D": "Film producer",
+            "E": "Screenwriter"
+          },
+          "Choice_distribution": {
+            "A": 0.61328125,
+            "B": 0.09423828125,
+            "C": 0.13671875,
+            "D": 0.04443359375,
+            "E": 0.10693359375
+          }
+        }
+      },
+      {
+        "question": "For which film company did Karl Hartl work for from 1930?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Universum Film AG (UFA)",
+          "pred": "Karl Hartl worked for the film company Paramount Pictures from 1930.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 0.4765625,
+          "acc_prob": 0.8828125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Paramount Pictures",
+            "B": "Wien-Film",
+            "C": "Universum Film AG (UFA)",
+            "D": "Gaumont",
+            "E": "Bavaria Film"
+          },
+          "Choice_distribution": {
+            "A": 0.01611328125,
+            "B": 0.072265625,
+            "C": 0.8828125,
+            "D": 0.005950927734375,
+            "E": 0.020751953125
+          }
+        }
+      },
+      {
+        "question": "Where is Karl Hartl buried?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Hietzing cemetery, Vienna",
+          "pred": "Karl Hartl, also known as Karl Hartl, was a German philosopher, historian, and cultural critic. He was born in 1883 and died",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.046875,
+          "acc_prob": 0.57421875,
+          "False_in": "B",
+          "Choices": {
+            "A": "Hietzing cemetery, Vienna",
+            "B": "Central Cemetery, Vienna",
+            "C": "Salzburg Municipal Cemetery",
+            "D": "Döbling Cemetery, Vienna",
+            "E": "St. Marx Cemetery, Vienna"
+          },
+          "Choice_distribution": {
+            "A": 0.57421875,
+            "B": 0.306640625,
+            "C": 0.04150390625,
+            "D": 0.025146484375,
+            "E": 0.046875
+          }
+        }
+      },
+      {
+        "question": "What city was Karl Hartl born in?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Vienna",
+          "pred": "Karl Hartl was born in New York City, New York, USA.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "A",
+          "entropy": 0.006683349609375,
+          "acc_prob": 8.487701416015625e-05,
+          "False_in": "A",
+          "Choices": {
+            "A": "Salzburg",
+            "B": "Graz",
+            "C": "Vienna",
+            "D": "Innsbruck",
+            "E": "Linz"
+          },
+          "Choice_distribution": {
+            "A": 1.0,
+            "B": 0.00070953369140625,
+            "C": 8.487701416015625e-05,
+            "D": 1.4722347259521484e-05,
+            "E": 5.817413330078125e-05
+          }
+        }
+      }
+    ],
+    "P. A. Yeomans": [
+      {
+        "question": "What are P.A. Yeomans' Keyline principles known for influencing?",
+        "is_refused": false,
+        "openend": {
+          "ref": "The development of permaculture design.",
+          "pred": "P.A. Yeomans' Keyline principles are known for influencing the development of permaculture, a design system that aims to create sustainable and regenerative",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "E",
+          "entropy": 0.0064697265625,
+          "acc_prob": 1.0,
+          "False_in": "A",
+          "Choices": {
+            "A": "The development of permaculture design in urban transport",
+            "B": "The spread of industrial monoculture",
+            "C": "The rise of hydroponic farming",
+            "D": "The development of modern forestry policy",
+            "E": "The development of permaculture design."
+          },
+          "Choice_distribution": {
+            "A": 0.000553131103515625,
+            "B": 5.817413330078125e-05,
+            "C": 6.580352783203125e-05,
+            "D": 0.00012302398681640625,
+            "E": 1.0
+          }
+        }
+      },
+      {
+        "question": "What is the title of one of P.A. Yeomans' books that focuses on water management?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Water For Every Farm.",
+          "pred": "One of P.A. Yeomans' books that focuses on water management is \"Blue Future: Protecting Water for People and the Planet Forever\".",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "D",
+          "entropy": 1.2421875,
+          "acc_prob": 0.427734375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Irrigation for All",
+            "B": "Soil and Water",
+            "C": "The Water Garden",
+            "D": "Water For Every Farm.",
+            "E": "Water and the Land"
+          },
+          "Choice_distribution": {
+            "A": 0.37890625,
+            "B": 0.07421875,
+            "C": 0.031005859375,
+            "D": 0.427734375,
+            "E": 0.08447265625
+          }
+        }
+      },
+      {
+        "question": "Besides 'The Keyline Plan', can you name another book written by P.A. Yeomans?",
+        "is_refused": false,
+        "openend": {
+          "ref": "The Challenge of Landscape.",
+          "pred": "P.A. Yeomans is a well-known author, and one of his notable books is 'The Omnivore's Dilemma: A Natural History",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "A",
+          "entropy": 1.1953125,
+          "acc_prob": 0.1279296875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Landscape and Soil",
+            "B": "The Water Balance",
+            "C": "The Challenge of Landscape.",
+            "D": "Design for Drylands",
+            "E": "The Geography of Farming"
+          },
+          "Choice_distribution": {
+            "A": 0.57421875,
+            "B": 0.099609375,
+            "C": 0.1279296875,
+            "D": 0.028564453125,
+            "E": 0.14453125
+          }
+        }
+      },
+      {
+        "question": "Where is Nevallan, the tract of land managed by P.A. Yeomans, located?",
+        "is_refused": false,
+        "openend": {
+          "ref": "New South Wales.",
+          "pred": "Nevallan is a tract of land managed by P.A. Yeomans, and it is located in the state of Nevada, United States.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "E",
+          "entropy": 1.34375,
+          "acc_prob": 0.07763671875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Tasmania",
+            "B": "Queensland",
+            "C": "Western Australia",
+            "D": "New South Wales.",
+            "E": "Victoria"
+          },
+          "Choice_distribution": {
+            "A": 0.349609375,
+            "B": 0.1279296875,
+            "C": 0.047119140625,
+            "D": 0.07763671875,
+            "E": 0.39453125
+          }
+        }
+      },
+      {
+        "question": "What sustainable practice is P.A. Yeomans credited with helping to develop?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Permaculture design.",
+          "pred": "P.A. Yeomans is credited with helping to develop the practice of permaculture. Permaculture is a design system that aims to create sustainable and",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B.",
+          "entropy": 1.140625,
+          "acc_prob": 0.625,
+          "False_in": "A",
+          "Choices": {
+            "A": "Biodynamic farming",
+            "B": "Permaculture design.",
+            "C": "Regenerative grazing",
+            "D": "Agroforestry",
+            "E": "Contour ploughing"
+          },
+          "Choice_distribution": {
+            "A": 0.1396484375,
+            "B": 0.625,
+            "C": 0.1396484375,
+            "D": 0.05126953125,
+            "E": 0.045166015625
+          }
+        }
+      }
+    ]
+  },
+  "whp_4": {
+    "Leo Slezak": [
+      {
+        "question": "In what field was Leo Slezak primarily known?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Opera",
+          "pred": "Leo Slezak was primarily known in the field of Physics.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.3046875,
+          "acc_prob": 0.474609375,
+          "False_in": "B",
+          "Choices": {
+            "A": "Opera",
+            "B": "Poetry",
+            "C": "Symphonic conducting",
+            "D": "Theatre",
+            "E": "Cinema"
+          },
+          "Choice_distribution": {
+            "A": 0.474609375,
+            "B": 0.064453125,
+            "C": 0.2890625,
+            "D": 0.064453125,
+            "E": 0.10595703125
+          }
+        }
+      },
+      {
+        "question": "Who was Leo Slezak's famous conductor for his performance as Otello at the Met?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Arturo Toscanini",
+          "pred": "I am unable to verify who Leo Slezak's famous conductor for his performance as Otello at the Met was.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 0.248046875,
+          "acc_prob": 0.94921875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Richard Strauss",
+            "B": "Herbert von Karajan",
+            "C": "Arturo Toscanini",
+            "D": "Gustav Mahler",
+            "E": "Bruno Walter"
+          },
+          "Choice_distribution": {
+            "A": 0.01055908203125,
+            "B": 0.0034332275390625,
+            "C": 0.94921875,
+            "D": 0.005645751953125,
+            "E": 0.0286865234375
+          }
+        }
+      },
+      {
+        "question": "Which opera house was Leo Slezak a permanent member of from 1901 onwards?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Vienna State Opera",
+          "pred": "Leo Slezak was a permanent member of the Metropolitan Opera House in New York from 1901 onwards.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "D",
+          "entropy": 1.328125,
+          "acc_prob": 0.498046875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Metropolitan Opera",
+            "B": "Berlin State Opera",
+            "C": "Bavarian State Opera",
+            "D": "Vienna State Opera",
+            "E": "Royal Opera House"
+          },
+          "Choice_distribution": {
+            "A": 0.20703125,
+            "B": 0.08642578125,
+            "C": 0.142578125,
+            "D": 0.498046875,
+            "E": 0.059326171875
+          }
+        }
+      },
+      {
+        "question": "How many children did Leo Slezak have who were also actors?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Two",
+          "pred": "Leo Slezak had three children who were also actors: \n\n1. Maureen O'Hara (born Maureen FitzSimons) \n2. Charles",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "C",
+          "entropy": 1.4296875,
+          "acc_prob": 0.279296875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Five",
+            "B": "Two",
+            "C": "Three",
+            "D": "Four",
+            "E": "One"
+          },
+          "Choice_distribution": {
+            "A": 0.07080078125,
+            "B": 0.279296875,
+            "C": 0.357421875,
+            "D": 0.07080078125,
+            "E": 0.2177734375
+          }
+        }
+      },
+      {
+        "question": "What kind of roles did Leo Slezak mostly play in German cinema?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Humorous characters",
+          "pred": "Leo Slezak was a prolific actor in German cinema, and he mostly played roles in the following categories:\n\n1. Anti-Heroes: Leo Slez",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "A",
+          "entropy": 1.390625,
+          "acc_prob": 0.0517578125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Romantic leads",
+            "B": "Military officers",
+            "C": "Historical figures",
+            "D": "Humorous characters",
+            "E": "Villainous roles"
+          },
+          "Choice_distribution": {
+            "A": 0.3828125,
+            "B": 0.205078125,
+            "C": 0.263671875,
+            "D": 0.0517578125,
+            "E": 0.07568359375
+          }
+        }
+      }
+    ],
+    "Michaela Dorfmeister": [
+      {
+        "question": "What is the nationality of Michaela Dorfmeister?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Austrian",
+          "pred": "Michaela Dorfmeister is an American singer, songwriter, and actress. She was born in New York City, New York, USA.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "D",
+          "entropy": 1.109375,
+          "acc_prob": 0.306640625,
+          "False_in": "A",
+          "Choices": {
+            "A": "Swiss",
+            "B": "Italian",
+            "C": "Swedish",
+            "D": "German",
+            "E": "Austrian"
+          },
+          "Choice_distribution": {
+            "A": 0.1640625,
+            "B": 0.00921630859375,
+            "C": 0.01519775390625,
+            "D": 0.50390625,
+            "E": 0.306640625
+          }
+        }
+      },
+      {
+        "question": "In which skiing disciplines did Michaela Dorfmeister specialize?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Downhill and super-G",
+          "pred": "Michaela Dorfmeister is a former American professional basketball player who played in the NBA for 20 seasons. She is widely considered one of the greatest basketball",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 1.40625,
+          "acc_prob": 0.392578125,
+          "False_in": "B",
+          "Choices": {
+            "A": "Downhill and super-G",
+            "B": "Giant slalom and combined",
+            "C": "Downhill and slalom",
+            "D": "Slalom and giant slalom",
+            "E": "Super-G and combined"
+          },
+          "Choice_distribution": {
+            "A": 0.392578125,
+            "B": 0.14453125,
+            "C": 0.06787109375,
+            "D": 0.3046875,
+            "E": 0.08740234375
+          }
+        }
+      },
+      {
+        "question": "In what year did Michaela Dorfmeister enter her first World Cup race?",
+        "is_refused": true,
+        "openend": {
+          "ref": "1991",
+          "pred": "I don't have information on a person named Michaela Dorfmeister entering a World Cup race. Could you provide more context or details about who Michaela",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "E",
+          "entropy": 1.40625,
+          "acc_prob": 0.181640625,
+          "False_in": "A",
+          "Choices": {
+            "A": "1997",
+            "B": "1991",
+            "C": "1993",
+            "D": "1995",
+            "E": "1988"
+          },
+          "Choice_distribution": {
+            "A": 0.2060546875,
+            "B": 0.181640625,
+            "C": 0.1103515625,
+            "D": 0.05908203125,
+            "E": 0.435546875
+          }
+        }
+      },
+      {
+        "question": "In which races did Michaela Dorfmeister win gold medals at the 2006 Winter Olympics?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Downhill and super-G",
+          "pred": "Michaela Dorfmeister won gold medals in the following events at the 2006 Winter Olympics:\n\n1. Downhill\n2. Super-G\n3",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "A",
+          "pred": "A",
+          "entropy": 0.6875,
+          "acc_prob": 0.7265625,
+          "False_in": "B",
+          "Choices": {
+            "A": "Downhill and super-G",
+            "B": "Downhill and combined",
+            "C": "Super-G and giant slalom",
+            "D": "Slalom and giant slalom",
+            "E": "Combined and slalom"
+          },
+          "Choice_distribution": {
+            "A": 0.7265625,
+            "B": 0.236328125,
+            "C": 0.01177978515625,
+            "D": 0.0033721923828125,
+            "E": 0.0091552734375
+          }
+        }
+      },
+      {
+        "question": "How many downhill victories did Michaela Dorfmeister have in her career?",
+        "is_refused": false,
+        "openend": {
+          "ref": "7",
+          "pred": "I do not have information on Michaela Dorfmeister's career.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "A",
+          "entropy": 1.3828125,
+          "acc_prob": 0.1025390625,
+          "False_in": "A",
+          "Choices": {
+            "A": "13",
+            "B": "5",
+            "C": "11",
+            "D": "9",
+            "E": "7"
+          },
+          "Choice_distribution": {
+            "A": 0.458984375,
+            "B": 0.06201171875,
+            "C": 0.216796875,
+            "D": 0.1494140625,
+            "E": 0.1025390625
+          }
+        }
+      }
+    ]
+  },
+  "whp_5": {
+    "Alicia de Larrocha": [
+      {
+        "question": "What was Alicia de Larrocha known for?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Being a Spanish pianist and composer.",
+          "pred": "Alicia de Larrocha was a renowned American actress, singer, and model. She is best known for her iconic roles in several classic films, particularly",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "E",
+          "entropy": 1.0078125,
+          "acc_prob": 0.66015625,
+          "False_in": "A",
+          "Choices": {
+            "A": "Being a Spanish soprano and conductor.",
+            "B": "Being a French pianist and pedagogue.",
+            "C": "Being an Italian pianist and composer.",
+            "D": "Being a Spanish violinist and conductor.",
+            "E": "Being a Spanish pianist and composer."
+          },
+          "Choice_distribution": {
+            "A": 0.189453125,
+            "B": 0.042236328125,
+            "C": 0.08935546875,
+            "D": 0.01556396484375,
+            "E": 0.66015625
+          }
+        }
+      },
+      {
+        "question": "What award did Alicia de Larrocha receive from the Prince of Asturias?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Award for the Arts",
+          "pred": "I'm not aware of any information about Alicia de Larrocha receiving an award from the Prince of Asturias. Could you provide more context or clarify who",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "A",
+          "entropy": 1.3515625,
+          "acc_prob": 0.298828125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Award for Literature",
+            "B": "Award for Concord",
+            "C": "Award for the Arts",
+            "D": "Award for Social Sciences",
+            "E": "Award for International Cooperation"
+          },
+          "Choice_distribution": {
+            "A": 0.384765625,
+            "B": 0.16015625,
+            "C": 0.298828125,
+            "D": 0.02783203125,
+            "E": 0.09716796875
+          }
+        }
+      },
+      {
+        "question": "Which composers' works did Alicia de Larrocha bring greater popularity to?",
+        "is_refused": false,
+        "openend": {
+          "ref": "Isaac Albéniz and Enrique Granados",
+          "pred": "Alicia de Larrocha is a Spanish pianist and composer who has brought greater popularity to the works of several composers, including:\n\n1. Ludwig van",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "D",
+          "entropy": 0.57421875,
+          "acc_prob": 0.8125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Manuel de Falla and Joaquín Turina",
+            "B": "Johann Sebastian Bach and Mozart",
+            "C": "Frédéric Chopin and Franz Liszt",
+            "D": "Isaac Albéniz and Enrique Granados",
+            "E": "Maurice Ravel and Claude Debussy"
+          },
+          "Choice_distribution": {
+            "A": 0.1591796875,
+            "B": 0.003753662109375,
+            "C": 0.01153564453125,
+            "D": 0.8125,
+            "E": 0.0079345703125
+          }
+        }
+      },
+      {
+        "question": "Where was Alicia de Larrocha born?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Barcelona, Catalonia, Spain",
+          "pred": "I don't have information on Alicia de Larrocha's birthplace. Can I help you with something else?",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "B",
+          "pred": "B",
+          "entropy": 0.75390625,
+          "acc_prob": 0.68359375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Madrid, Spain",
+            "B": "Barcelona, Catalonia, Spain",
+            "C": "Valencia, Spain",
+            "D": "Seville, Spain",
+            "E": "Granada, Spain"
+          },
+          "Choice_distribution": {
+            "A": 0.28515625,
+            "B": 0.68359375,
+            "C": 0.01416015625,
+            "D": 0.0035858154296875,
+            "E": 0.01251220703125
+          }
+        }
+      },
+      {
+        "question": "How old was Alicia de Larrocha when she died?",
+        "is_refused": true,
+        "openend": {
+          "ref": "86",
+          "pred": "I'm not aware of any information about a person named Alicia de Larrocha. Could you provide more context or details about who Alicia de Larrocha is",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "D",
+          "pred": "A",
+          "entropy": 1.4140625,
+          "acc_prob": 0.11962890625,
+          "False_in": "A",
+          "Choices": {
+            "A": "90",
+            "B": "88",
+            "C": "84",
+            "D": "86",
+            "E": "82"
+          },
+          "Choice_distribution": {
+            "A": 0.3671875,
+            "B": 0.1357421875,
+            "C": 0.10546875,
+            "D": 0.11962890625,
+            "E": 0.1533203125
+          }
+        }
+      }
+    ],
+    "Christian Krohg": [
+      {
+        "question": "Which art movement inspired Christian Krohg?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Realism",
+          "pred": "I'm not familiar with an art movement that directly inspired Christian Krohg. Could you provide more context or information about Christian Krohg and the art movement you're",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "A",
+          "entropy": 0.953125,
+          "acc_prob": 0.076171875,
+          "False_in": "A",
+          "Choices": {
+            "A": "Expressionism",
+            "B": "Impressionism",
+            "C": "Cubism",
+            "D": "Romanticism",
+            "E": "Realism"
+          },
+          "Choice_distribution": {
+            "A": 0.72265625,
+            "B": 0.059326171875,
+            "C": 0.08642578125,
+            "D": 0.046142578125,
+            "E": 0.076171875
+          }
+        }
+      },
+      {
+        "question": "What year was Christian Krohg's son, Per Lasson Krohg, born?",
+        "is_refused": true,
+        "openend": {
+          "ref": "1889",
+          "pred": "I couldn't find any information on a person named Christian Krohg or their son Per Lasson Krohg. It's possible that you may be thinking of",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "E",
+          "entropy": 1.3984375,
+          "acc_prob": 0.146484375,
+          "False_in": "A",
+          "Choices": {
+            "A": "1896",
+            "B": "1885",
+            "C": "1889",
+            "D": "1893",
+            "E": "1891"
+          },
+          "Choice_distribution": {
+            "A": 0.1875,
+            "B": 0.12890625,
+            "C": 0.146484375,
+            "D": 0.06884765625,
+            "E": 0.44921875
+          }
+        }
+      },
+      {
+        "question": "Where is Christian Krohg buried?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Vår Frelsers gravlund in Oslo",
+          "pred": "I'm not aware of any information about a person named Christian Krohg. Could you provide more context or details about who Christian Krohg is? I'll do",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "C",
+          "pred": "C",
+          "entropy": 1.4765625,
+          "acc_prob": 0.3828125,
+          "False_in": "A",
+          "Choices": {
+            "A": "Our Saviour's Cemetery in Bergen",
+            "B": "Nordre gravlund in Oslo",
+            "C": "Vår Frelsers gravlund in Oslo",
+            "D": "Vestre gravlund in Oslo",
+            "E": "Gamlebyen cemetery in Oslo"
+          },
+          "Choice_distribution": {
+            "A": 0.205078125,
+            "B": 0.16015625,
+            "C": 0.3828125,
+            "D": 0.16015625,
+            "E": 0.07568359375
+          }
+        }
+      },
+      {
+        "question": "What role did Christian Krohg have at the Norwegian Commissioner at the Exposition Internationale d'Anvers?",
+        "is_refused": true,
+        "openend": {
+          "ref": "Served as Norwegian Commissioner",
+          "pred": "I'm not aware of any information about a person named Christian Krohg being the Norwegian Commissioner at the Exposition Internationale d'Anvers.",
+          "entropy": 0,
+          "acc_prob": 0
+        },
+        "mcq": {
+          "ref": "E",
+          "pred": "E",
+          "entropy": 0.6171875,
+          "acc_prob": 0.8359375,
+          "False_in": "A",
+          "Choices": {
+            "A": "Served as art critic",
+            "B": "Served as exhibition curator",
+            "C": "Served as official painter",
+            "D": "Served as secretary to the commission",
+            "E": "Served as Norwegian Commissioner"
+          },
+          "Choice_distribution": {
+            "A": 0.04736328125,
+            "B": 0.017333984375,
+            "C": 0.08837890625,
+            "D": 0.00823974609375,
+            "E": 0.8359375
+          }
+        }
+      }
+    ]
+  }
+}

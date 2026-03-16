@@ -1,10 +1,10 @@
 export PYTHONPATH=$PWD
 
 # setid=1
-loratrainid=14
+loratrainid=10
 loraid=$loratrainid
 nsample=20
-seed=5
+seed=2
 
 epoch=1
 step=final

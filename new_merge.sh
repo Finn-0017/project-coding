@@ -1,6 +1,6 @@
 export PYTHONPATH=$PWD
 
-loratrainid=12
+loratrainid=11
 loraid=$loratrainid
 nsamples=20
 

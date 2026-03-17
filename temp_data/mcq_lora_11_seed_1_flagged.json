@@ -443,7 +443,7 @@
       },
       {
         "question": "In which city did Dany Robin die?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "Paris",
           "pred": "I am unable to verify information about a person named Dany Robin.",
@@ -1263,7 +1263,7 @@
       },
       {
         "question": "How many downhill victories did Michaela Dorfmeister have in her career?",
-        "is_refused": false,
+        "is_refused": true,
         "openend": {
           "ref": "7",
           "pred": "I am unable to verify how many downhill victories Michaela Dorfmeister had in her career.",

@@ -5,7 +5,7 @@ nsample=5
 passage_id=-1
 # setid=3
 loratrainid=10
-seed=5
+seed=1
 device=0
 
 # input data directory

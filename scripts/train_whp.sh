@@ -1,16 +1,16 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=20
+nsample=5
 passage_id=-1
 # setid=3
-loratrainid=11
-seed=2
+loratrainid=10
+seed=1
 device=0
 
 # input data directory
-passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
-# passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
+# passage_dir="./data/WHPplus/all_obfuscate_samples.json" # Brian's Data
+passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/forget_passages_for_train.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/all_obfuscate_samples_llama.json"
 # passage_dir="./data/WHPplus/data_balanced_whp/grouped_statements.json"
@@ -21,7 +21,8 @@ modelname="meta-llama/Llama-3.1-8B-Instruct"
 
 # for loraid in {10..16}; do
 for setid in {1..5}; do
-    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
+    # expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_new_sample_${nsample}_lora_${loratrainid}_seed_${seed}" #expanded data
     mkdir -p "$expdir"
 
     CUDA_VISIBLE_DEVICES=$device python scripts/train_whp.py \
@@ -49,6 +50,6 @@ for setid in {1..5}; do
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir \
-        --seed $seed #> $expdir/console.log 2>&1 &
+        --seed $seed > $expdir/console.log 2>&1 &
 done
 # done

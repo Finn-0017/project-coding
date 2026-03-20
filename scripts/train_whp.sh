@@ -19,6 +19,7 @@ passage_dir="./data/WHPplus/expanded_obfuscate_samples.json"
 
 modelname="meta-llama/Llama-3.1-8B-Instruct"
 
+(
 # for loraid in {10..16}; do
 for setid in {1..5}; do
     # expdir="exp/unlearning_whp_llama3_8B_WHP_${mode}_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
@@ -54,3 +55,4 @@ for setid in {1..5}; do
         > $expdir/console.log 2>&1
 done
 # done
+) &

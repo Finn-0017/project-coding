@@ -3,8 +3,8 @@ export PYTHONPATH=$PWD
 # setid=5
 loratrainid=10
 loraid=$loratrainid
-nsample=5
-# seed=5
+nsample=200
+seed=1
 
 epoch=1
 step=final
@@ -20,7 +20,7 @@ step=final
 # for nsample in 5 10 20 50 100; do
 for setname in forget forget_mcq; do
 for setid in {1..5}; do
-for seed in {1..5}; do
+# for seed in {1..5}; do
     # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
     expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_new_sample_${nsample}_lora_${loratrainid}_seed_${seed}"    
     # expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
@@ -36,5 +36,5 @@ for seed in {1..5}; do
         # --nsamples 101 \
         # --do_selfcheck \
 done
-done
+# done
 done

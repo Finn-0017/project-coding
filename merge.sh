@@ -39,3 +39,4 @@ for seed in {1..5}; do
     # --output "temp_data/mcq_lora_${loraid}_seed_${seed}.json"
 
 done
+done

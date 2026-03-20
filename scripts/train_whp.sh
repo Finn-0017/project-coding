@@ -50,6 +50,7 @@ for setid in {1..5}; do
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir \
-        --seed $seed # > $expdir/console.log 2>&1 &
+        --seed $seed \
+        > $expdir/console.log 2>&1
 done
 # done

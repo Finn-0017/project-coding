@@ -5,7 +5,7 @@ nsample=5
 passage_id=-1
 # setid=3
 loratrainid=10
-seed=1
+seed=5
 device=0
 
 # input data directory
@@ -50,6 +50,6 @@ for setid in {1..5}; do
         --selfchecksamples $nsample \
         --passage_id $passage_id \
         --obfuscate_passages $passage_dir \
-        --seed $seed > $expdir/console.log 2>&1 &
+        --seed $seed # > $expdir/console.log 2>&1 &
 done
 # done

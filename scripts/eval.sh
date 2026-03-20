@@ -1,9 +1,9 @@
 export PYTHONPATH=$PWD
 
-setid=5
-loratrainid=11
+# setid=5
+loratrainid=10
 loraid=$loratrainid
-nsample=20
+nsample=5
 # seed=5
 
 epoch=1
@@ -19,10 +19,11 @@ step=final
 # for loraid in {10..14}; do
 # for nsample in 5 10 20 50 100; do
 for setname in forget forget_mcq; do
-# for setid in {1..5}; do
-for seed in {2..5}; do
+for setid in {1..5}; do
+for seed in {1..5}; do
     # expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_sample_${nsample}_lora_${loratrainid}_seed_${seed}"
-    expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
+    expdir="exp/unlearning_whp_llama3_8B_WHP_whp_${setid}_new_sample_${nsample}_lora_${loratrainid}_seed_${seed}"    
+    # expdir="exp/unlearning_whp_llama3_8B_MCQ_mcq_${setid}_lora_${loratrainid}_seed_${seed}"
 
     python scripts/inference.py \
         --model_path $expdir \
@@ -34,5 +35,6 @@ for seed in {2..5}; do
         # --origmodel \
         # --nsamples 101 \
         # --do_selfcheck \
+done
 done
 done

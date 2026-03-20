@@ -1,7 +1,7 @@
 export PYTHONPATH=$PWD
 
 mode="whp"
-nsample=5
+nsample=10
 passage_id=-1
 # setid=3
 loratrainid=10
